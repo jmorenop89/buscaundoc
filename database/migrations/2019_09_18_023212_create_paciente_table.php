@@ -19,7 +19,7 @@ class CreatePacienteTable extends Migration
             $table->string('apellidos');
             $table->date('fecha_nac');
             $table->string('celular');
-            $table->unsignedInteger('users_id');
+            $table->unsignedBigInteger('users_id');
             $table->foreign('users_id')->references('id')->on('users');
             $table->timestamps(); 
         });

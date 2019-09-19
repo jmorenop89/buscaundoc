@@ -20,11 +20,11 @@ class CreateDoctorTable extends Migration
             $table->string('fecha_nac');
             $table->string('cod_colegiatura');
             $table->string('direccion');
-            $table->unsignedInteger('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedInteger('especialidad_id');
+            $table->unsignedBigInteger('especialidad_id');
             $table->foreign('especialidad_id')->references('id')->on('especialidad');
-            $table->unsignedInteger('ciudad_id');
+            $table->unsignedBigInteger('ciudad_id');
             $table->foreign('ciudad_id')->references('id')->on('ciudad');
             $table->timestamps();
         });
