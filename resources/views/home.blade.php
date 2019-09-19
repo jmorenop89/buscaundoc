@@ -16,6 +16,11 @@
 
                     You are logged in!
                 </div>
+                <div>
+                    @if ( Auth::user()->role == "paciente" )
+                        <span>paciente</span>
+                    @endif
+                </div>
             </div>
         </div>
     </div>
