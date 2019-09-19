@@ -11,17 +11,17 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('online.layout.index');
-// });
+ Route::get('/', function () {
+     return view('online.layout.index');
+});
 
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('admin.layout.index');
-});
+}); */
 
 Auth::routes();
 

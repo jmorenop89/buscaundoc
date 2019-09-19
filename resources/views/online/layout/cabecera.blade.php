@@ -36,7 +36,7 @@
 							</li>
 
 							<li>
-								<span><a href="#0">¿Cómo Funciona?</a></span>
+								<span><a href="#comofunciona">¿Cómo Funciona?</a></span>
 
 							</li>
 
