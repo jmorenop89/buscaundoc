@@ -15,15 +15,16 @@
 					</div>
 				</div>
 				<div class="col-lg-9 col-6">
-					<ul id="top_access">
+
+					<!-- <ul id="top_access">
 						<li><a href="login.html"><i class="pe-7s-user"></i></a></li>
 						<li><a href="register-doctor.html"><i class="pe-7s-add-user"></i></a></li>
-					</ul>
+					</ul> -->
 					<nav id="menu" class="main-menu">
 						<ul>
 							<li>
-								<span><a href="#0">Home</a></span>
-								<ul>
+								<span><a href="#0">Inicio</a></span>
+								<!-- <ul>
 									<li><a href="index.html">Home Default</a></li>
 									<li><a href="index-2.html">Home Version 2</a></li>
 									<li><a href="index-3.html">Home Version 3</a></li>
@@ -31,9 +32,20 @@
 									<li><a href="index-7.html">Home with Map</a></li>
                                     <li><a href="index-6.html">Revolution Slider</a></li>
 									<li><a href="index-5.html">With Cookie Bar (EU law)</a></li>
-								</ul>
+								</ul> -->
 							</li>
+
 							<li>
+								<span><a href="#0">¿Cómo Funciona?</a></span>
+
+							</li>
+
+							<li>
+								<span><a href="#0">Contáctanos</a></span>
+
+							</li>
+
+							<!-- <li>
 								<span><a href="#0">Pages</a></span>
 								<ul>
 									<li>
@@ -87,6 +99,20 @@
 								</ul>
 							</li>
 							<li><span><a href="#0">Buy this template</a></span></li>
+ -->
+
+							<li>
+								<span><a href="#0">Regístrate</a></span>
+								<ul>
+									<li><a href="index.html">Como Paciente</a></li>
+									<li><a href="index-2.html">Como Mèdico</a></li>							
+								</ul> 
+							</li>
+
+							<li>
+								<span><a href="#0">Iniciar Sesión</a></span>
+															</li>
+
 						</ul>
 					</nav>
 					<!-- /main-menu -->
