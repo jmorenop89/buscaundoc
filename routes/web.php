@@ -11,6 +11,14 @@
 |
 */
 
+// Route::get('/', function () {
+//     return view('online.layout.index');
+// });
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('online.layout.index');
+    return view('admin.layout.index');
 });
