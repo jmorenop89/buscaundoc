@@ -16,6 +16,15 @@
  });
 
 
+
+ Route::get('/paciente', function () {
+    return view('online.registrar.paciente');
+});
+
+Route::get('/doctor', function () {
+    return view('online.registrar.doctor');
+});
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -23,6 +32,11 @@
 //Route::get('/', function () {
 //    return view('admin.layout.index');
 //});
+
+
+/* Route::get('/', function () {
+    return view('admin.layout.index');
+}); */
 
 Auth::routes();
 
