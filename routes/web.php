@@ -13,25 +13,22 @@
 
  Route::get('/', function () {
      return view('online.layout.index');
-<<<<<<< HEAD
  });
-=======
-});
->>>>>>> 9fb23766134508a4b7283149457ba150f556afaf
 
+ Route::get('/paciente', function () {
+    return view('online.registrar.paciente');
+});
+
+Route::get('/doctor', function () {
+    return view('online.registrar.doctor');
+});
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
-<<<<<<< HEAD
 //Route::get('/', function () {
 //    return view('admin.layout.index');
 //});
-=======
-/* Route::get('/', function () {
-    return view('admin.layout.index');
-}); */
->>>>>>> 9fb23766134508a4b7283149457ba150f556afaf
 
 Auth::routes();
 
