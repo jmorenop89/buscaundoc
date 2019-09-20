@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('online.layout.layout')
 
 @section('content')
 <div class="container">
@@ -8,6 +8,8 @@
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
+
+
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -65,6 +67,8 @@
                             </div>
                         </div>
                     </form>
+
+                    
                 </div>
             </div>
         </div>
