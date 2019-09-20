@@ -12,7 +12,10 @@
 				<form method="post" action="list.html">
 					<div id="custom-search-input">
 						<div class="input-group">
-							<input type="text" class=" search-query" placeholder="Ex. Name, Specialization ....">
+
+						<input type="text" class=" search-query" placeholder="Ex. Name, Specialization ....">
+						<input type="text" class=" search-query" placeholder="Ex. Name, Specialization ....">
+
 							<input type="submit" class="btn_search" value="Search">
 						</div>
 						<ul>

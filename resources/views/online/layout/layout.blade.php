@@ -39,11 +39,7 @@
 
 							</li>
 
-							<li>
-								<span><a href="#0">Contáctanos</a></span>
-
-							</li>
-							<li>
+														<li>
 								<span><a href="#0">Regístrate</a></span>
 								<ul>
 									<li><a href="index.html">Como Paciente</a></li>
