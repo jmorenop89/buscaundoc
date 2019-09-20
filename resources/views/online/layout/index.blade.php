@@ -1,18 +1,6 @@
+@extends('online.layout.layout')
 
-@include('online.layout.head')
-
-<body>
-	
-	<div id="preloader" class="Fixed">
-		<div data-loader="circle-side"></div>
-	</div>
-	<!-- /Preload-->
-	
-	<div id="page">		
-
-    <!-- inicio header -->
-    @include('online.layout.cabecera')
-	<!-- /header -->
+@section('content')
 	
 	<main>
 		<div class="hero_home version_1">
@@ -213,20 +201,4 @@
 		<!-- /app_section -->
 	</main>
 	<!-- /main content -->
-	
-	@include('online.layout.footer')
-	<!--/footer-->
-	</div>
-	<!-- page -->
-
-	<div id="toTop"></div>
-	<!-- Back to top button -->
-
-	<!-- COMMON SCRIPTS -->
-	<script src="/online/js/jquery-2.2.4.min.js"></script>
-	<script src="/online/js/common_scripts.min.js"></script>
-	<script src="/online/js/functions.js"></script>
-
-</body>
-
-</html>
+	@endsection
