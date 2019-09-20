@@ -986,7 +986,7 @@ ul#additional_links li:after {
   margin: 0;
   top: 0;
   padding: 0;
-  width: 650px;
+  width: 850px;
   margin: auto;
   position: relative;
 }
@@ -997,7 +997,7 @@ ul#additional_links li:after {
   }
 }
 #custom-search-input .search-query {
-  width: 100%;
+  width: 100%;   
   height: 50px;
   padding-left: 20px;
   border: 0;

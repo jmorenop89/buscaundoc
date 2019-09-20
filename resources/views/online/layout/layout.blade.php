@@ -31,7 +31,7 @@
 					<nav id="menu" class="main-menu">
 						<ul>
 							<li>
-								<span><a href="#0">Inicio</a></span>
+								<span><a href="http://buscaundoc.test/">Inicio</a></span>
 							</li>
 
 							<li>
@@ -42,12 +42,12 @@
 														<li>
 								<span><a href="#0">Regístrate</a></span>
 								<ul>
-									<li><a href="index.html">Como Paciente</a></li>
-									<li><a href="index-2.html">Como Mèdico</a></li>							
+									<li><a href="http://buscaundoc.test/paciente">Como Paciente</a></li>
+									<li><a href="http://buscaundoc.test/doctor">Como Mèdico</a></li>							
 								</ul> 
 							</li>
 
-							<li><span><a href="#">Iniciar Sesión</a></span></li>
+							<li><span><a href="http://buscaundoc.test/login">Iniciar Sesión</a></span></li>
 
 							<li><span id="reserva"><div class="btn_1 text-white" href="#" >Reserva una cita</div></span></li>
 						</ul>

@@ -13,12 +13,12 @@
 					<div id="custom-search-input">
 						<div class="input-group">
 
-						<input type="text" class=" search-query" placeholder="Ex. Name, Specialization ....">
-						<input type="text" class=" search-query" placeholder="Ex. Name, Specialization ....">
+						<input type="text" class="search-query1" placeholder="Especialidad">
+						<input type="text" class="search-query2" placeholder="Ciudad">
 
 							<input type="submit" class="btn_search" value="Search">
 						</div>
-						<ul>
+						<!-- <ul>
 							<li>
 								<input type="radio" id="all" name="radio_search" value="all" checked>
 								<label for="all">All</label>
@@ -31,7 +31,7 @@
 								<input type="radio" id="clinic" name="radio_search" value="clinic">
 								<label for="clinic">Clinic</label>
 							</li>
-						</ul>
+						</ul> -->
 					</div>
 				</form>
 			</div>
