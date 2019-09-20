@@ -35,7 +35,7 @@
 		</div>
 		<!-- /Hero -->
 
-		<div class="container margin_120_95">
+		<div id="comofunciona" class="container margin_120_95">
 			<div class="main_title">
 				<h2>Discover the <strong>online</strong> appointment!</h2>
 				<p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel.</p>
@@ -68,7 +68,7 @@
 		</div>
 		<!-- /container -->
 
-		<div class="bg_color_1">
+	<!-- 	<div class="bg_color_1">
 			<div class="container margin_120_95">
 				<div class="main_title">
 					<h2>Most Viewed doctors</h2>
@@ -115,14 +115,14 @@
 							</div><img src="http://via.placeholder.com/350x500.jpg" alt="">
 						</a>
 					</div>
-				</div>
+				</div> -->
 				<!-- /carousel -->
-			</div>
+			<!--</div> -->
 			<!-- /container -->
-		</div>
+		<!--  </div> -->
 		<!-- /white_bg -->
 
-		<div class="container margin_120_95">
+		<!-- <div class="container margin_120_95">
 			<div class="main_title">
 				<h2>Find your doctor or clinic</h2>
 				<p>Nec graeci sadipscing disputationi ne, mea ea nonumes percipitur. Nonumy ponderum oporteat cu mel, pro movet cetero at.</p>
@@ -169,11 +169,11 @@
 					</div>
 				</div>
 			</div>
-			<!-- /row -->
-		</div>
+ -->			<!-- /row -->
+	<!-- 	</div> -->
 		<!-- /container -->
 
-		<div id="app_section">
+	<!-- 	<div id="app_section">
 			<div class="container">
 				<div class="row justify-content-around">
 					<div class="col-md-5">
@@ -193,11 +193,11 @@
 							<a href="#0" class="fadeIn"><img src="/online/img/google_play_app.png" alt="" width="150" height="50" data-retina="true"></a>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<!-- /row -->
-			</div>
+			<!-- </div> -->
 			<!-- /container -->
-		</div>
+		<!-- </div> -->
 		<!-- /app_section -->
 	</main>
 	<!-- /main content -->
