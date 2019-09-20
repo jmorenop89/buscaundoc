@@ -9,9 +9,8 @@
 					</p>
 				</div>
 				<div class="col-lg-3 col-md-4">
-					<h5>Abouts</h5>
+					<h5>Nosotros</h5>
 					<ul class="links">
-						<li><a href="#0">Acerca de nosotros</a></li>
 						<li><a href="blog.html">Blog</a></li>
 						<li><a href="#0">FAQ</a></li>
 						<li><a href="login.html">Iniciar Sesion</a></li>
@@ -21,10 +20,9 @@
 				<div class="col-lg-3 col-md-4">
 					<h5>Enlaces Utiles</h5>
 					<ul class="links">
-						<li><a href="#0">Doctores</a></li>
-						<li><a href="#0">Clinics</a></li>
-						<li><a href="#0">Especializacion</a></li>
-						<li><a href="#0">Unete como un Doctor</a></li>						
+						<li><a href="#0">Especializaciones</a></li>
+						<li><a href="#0">Reserva una cita</a></li>
+						<li><a href="#0">¿Eres médico?</a></li>						
 					</ul>
 				</div>
 				<div class="col-lg-3 col-md-4">

@@ -35,7 +35,7 @@
 							</li>
 
 							<li>
-								<span><a href="#0">¿Cómo Funciona?</a></span>
+								<span><a href="#funcionamiento">¿Cómo Funciona?</a></span>
 
 							</li>
 
@@ -51,10 +51,9 @@
 								</ul> 
 							</li>
 
-							<li>
-								<span><a href="../login/login.blade">Iniciar Sesión</a></span>
-															</li>
+							<li><span><a href="#">Iniciar Sesión</a></span></li>
 
+							<li><span id="reserva"><div class="btn_1 text-white" href="#" >Reserva una cita</div></span></li>
 						</ul>
 					</nav>
 					<!-- /main-menu -->
