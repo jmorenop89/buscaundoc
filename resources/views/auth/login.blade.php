@@ -1,4 +1,4 @@
-@extends('online.layout.layout')
+@extends('template.layout')
 
 @section('content')
 <div class="container">
@@ -68,7 +68,7 @@
                         </div>
                     </form>
 
-                    
+
                 </div>
             </div>
         </div>

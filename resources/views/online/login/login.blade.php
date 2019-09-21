@@ -1,4 +1,4 @@
-@extends('online.layout.layout')
+@extends('template.layout')
 
 @section('content')
 	<main>
