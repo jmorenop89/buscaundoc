@@ -47,28 +47,33 @@
 						</div>
 						<!-- /row -->
 						<div class="row">
-							<div class="col-lg-12">
+							<div class="col-md-6">
 								<div class="form-group">
 									<input type="text" class="form-control" placeholder="Especialidad" name="specialization" id="specialization">
+								</div>
+							</div>
+							<div class="col-md-6">
+                                <div class="form-group">
+                                    <select class="form-control" name="country_register" id="country_register">
+                                        <option value="">Ciudad</option>
+										<option value="Chiclayo">Chiclayo</option>
+										<option value="Lima">Lima</option>
+										<option value="Trujillo">Trujillo</option>
+									</select>
 								</div>
 							</div>
 						</div>
 						<!-- /row -->
 						<div class="row">
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <select class="form-control" name="country_register" id="country_register">
-                                        <option value="">Country</option>
-										<option value="Europe">Europe</option>
-										<option value="Asia">Asia</option>
-										<option value="Unated States">Unated States</option>
-									</select>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Teléfono Celular" name="mobile_register" id="mobile_register">
 								</div>
 							</div>
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Ciudad" name="city_register" id="city_register">
-                                </div>
+								<div class="form-group">
+									<input type="text" id="verify_register" class="form-control" placeholder="CMP">
+								</div>
                             </div>
 						</div>
 						<!-- /row -->
@@ -79,27 +84,7 @@
 								</div>
 							</div>
 						</div>
-						<!-- /row -->
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Teléfono Celular" name="mobile_register" id="mobile_register">
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Teléfono Oficina" name="office_phone_register" id="office_phone_register">
-								</div>
-							</div>
-						</div>
-						<!-- /row -->
-						<div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <input type="text" id="verify_register" class="form-control" placeholder="CMP">
-								</div>
-							</div>
-						</div>
+						
                         <!-- /row -->
                         <div class="row">
                             <div class="col-lg-12">
@@ -107,9 +92,25 @@
                                     <input type="email" class="form-control" placeholder="Correo" name="email_register" id="email_register">
                                 </div>
                             </div>
-                        </div>
+						</div>
 						<!-- /row -->
-						<div><input type="submit" class="btn_1" value="Submit" id="submit-register"></div>
+                        <div class="row">
+                            <div class="col-lg-12">
+								<div class="form-group">									
+									<input type="password" class="form-control" id="password1" name="password1" placeholder="Ingresa contraseña">
+								</div>
+                            </div>
+						</div>
+						<!-- /row -->
+                        <div class="row">
+                            <div class="col-lg-12">
+								<div class="form-group">									
+									<input type="password" class="form-control" id="password2" name="password2" placeholder="Confirmar constraseña">
+								</div>
+                            </div>
+						</div>
+						<!-- /row -->
+						<div><input type="submit" class="btn_1" value="Enviar" id="submit-register"></div>
 					</form>
 				</div>
 				<!-- /box_form -->
