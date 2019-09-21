@@ -12,11 +12,8 @@
 */
 
  Route::get('/', function () {
-     return view('online.layout.index');
+     return view('online.index');
  });
-
-
-
  Route::get('/paciente', function () {
     return view('online.registrar.paciente');
 });
@@ -24,19 +21,9 @@
 Route::get('/doctor', function () {
     return view('online.registrar.doctor');
 });
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-//Route::get('/', function () {
-//    return view('admin.layout.index');
-//});
-
-
-/* Route::get('/', function () {
-    return view('admin.layout.index');
-}); */
+ Route::get('/admine', function () {
+     return view('admin.layout.index');
+ });
 
 Auth::routes();
 
