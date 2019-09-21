@@ -14,6 +14,15 @@
  Route::get('/', function () {
      return view('online.index');
  });
+
+ Route::get('/list', function () {
+    return view('online.reservar_cita.listadoc');
+});
+
+Route::get('/detalle', function () {
+    return view('online.reservar_cita.detalle');
+});
+
  Route::get('/paciente', function () {
     return view('online.registrar.paciente');
 });

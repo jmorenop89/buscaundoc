@@ -11,7 +11,7 @@
     			<p>
     				Selecciona una especialidad y ciudad donde te encuentras.
     			</p>
-    			<form method="post" action="list.html">
+    			<form method="get" action="/list">
     				<div id="custom-search-input">
     					<div class="row">
         					<input type="text" class="especialidad col-sm-12 col-lg-7" placeholder="Especialidad">
