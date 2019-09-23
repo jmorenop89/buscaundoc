@@ -1,12 +1,13 @@
+/*boton reservar cita*/
 #custom-search-input{
-    width: 80%;
+    width: 90%;
 }
-#custom-search-input .ciudad,.especialidad{
+.ciudad,.especialidad,.buscar{
 
     height: 50px;
     padding-left: 20px;
     border: 0;
-    margin: 0 20px;
+    margin: 10px 20px 10px 0;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
@@ -17,4 +18,53 @@
     font-weight: 500;
     font-size: 16px;
     color: #333;
+}
+
+/*login*/
+#login {
+  width: 400px;
+  margin: 0 0 0 auto;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  #login {
+    /* For less than 767px */
+    width: 85%;
+    margin: 30px auto;
+  }
+}
+.box_form {
+  background-color: #fff;
+  padding: 30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+  margin-bottom: 25px;
+  color: #555;
+}
+.box_form label {
+  font-weight: 600;
+  font-size: 15px;
+  /*font-size: 0.8125rem;*/
+  margin-bottom: 3px;
+}
+.box_form .form-group {
+  margin-bottom: 25px;
+}
+
+/*margin*/
+.margin_60_35 {
+  padding-top: 60px;
+  padding-bottom: 35px;
+}
+@media (max-width: 767px) {
+  .margin_60_35 {
+    /* For less than 767px */
+    padding-top: 30px;
+    padding-bottom: 5px;
+  }
 }

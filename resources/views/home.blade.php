@@ -16,9 +16,9 @@
 
                     You are logged in!
                 </div>
-                <div>
+                <div class="card-body">
                     @if ( Auth::user()->role == "paciente" )
-                        <span>paciente</span>
+                        <div>Bienvenido nuevo usuario {{ Auth::user()->id}}</div>
                     @endif
                 </div>
             </div>

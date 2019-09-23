@@ -9,8 +9,11 @@
 	<!-- GOOGLE WEB FONT -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800" rel="stylesheet">
 
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="/online/img/favicon.ico" type="image/x-icon">
+
 	<!-- BASE CSS -->
-	<link href="/online/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/online/css/bootstrap.css" rel="stylesheet">
 	<link href="/online/css/style.css" rel="stylesheet">
 	<link href="/online/css/menu.css" rel="stylesheet">
 	<link href="/online/css/vendors.css" rel="stylesheet">

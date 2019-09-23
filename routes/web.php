@@ -32,8 +32,12 @@ Route::get('/doctor', function () {
 });
  Route::get('/admine', function () {
      return view('admin.layout.index');
- });
+ })->name('adi');
 
 Auth::routes();
+
+ Route::get('/login', function () {
+     return view('auth.login');
+ })->name('login');
 
 Route::get('/home', 'HomeController@index')->name('home');

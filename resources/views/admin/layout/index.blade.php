@@ -280,8 +280,17 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="login.html">
-                                        <i class="fa fa-sign-out"></i> Log Out </a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                    </div>
                                 </li>
                             </ul>
                         </li>
@@ -981,13 +990,13 @@
 					          <!-- /.info-box -->
 					        </div>
 					        <!-- /.col -->
-                            
-					        
+
+
 					        <!-- /.col -->
 					      </div>
-                        
+
                         <div class="row">
-                        
+
                         <div class="col-12 col-sm-12 col-md-6">
 					          <div class="info-box bg-white">
 					            <span class="info-box-icon push-bottom bg-success"><i class="material-icons">person</i></span>
@@ -1023,12 +1032,12 @@
 					          </div>
 					          <!-- /.info-box -->
 					        </div>
-                        
+
                         </div>
-                        
+
 						</div>
 					<!-- end widget -->
-                    
+
                     <!-- start new patient list -->
                      <div class="row">
                         <div class="col-lg-8 col-md-12 col-sm-12 col-12">
@@ -1049,120 +1058,120 @@
 													<tr>
 														<th>No</th>
 														<th>Doctor</th>
-														
+
 														<th>Cantidad de Citas</th>
-														
+
 													</tr>
 												</thead>
 												<tbody>
 													<tr>
 														<td>01</td>
 														<td>Dr.Rajesh</td>
-														
+
 														<td>
 															<span class="label label-sm label-success">70</span>
 														</td>
-														
+
 													</tr>
 													<tr>
 														<td>02</td>
 														<td>Dr.Sarah Smith</td>
-														
+
 														<td>
 															<span class="label label-sm label-success"> 65 </span>
 														</td>
-														
+
 													</tr>
 													<tr>
 														<td>03</td>
 														<td>Dr.John Deo</td>
-														
+
 														<td>
 															<span class="label label-sm label-success">60</span>
 														</td>
-														
+
 													</tr>
 													<tr>
 														<td>04</td>
 														<td>Dr.Jay Soni </td>
-														
+
 														<td>
 															<span class="label label-sm label-success ">55</span>
 														</td>
-														
+
 													</tr>
 													<tr>
 														<td>05</td>
 														<td>Dr.Jacob Ryan</td>
-														
+
 														<td>
 															<span class="label label-sm label-success ">50</span>
 														</td>
-														
+
 													</tr>
 													<tr>
 														<td>06</td>
 														<td>Dr.Megha Trivedi </td>
-														
+
 														<td>
 															<span class="label label-sm label-warning">45</span>
 														</td>
-														
+
 													</tr>
-                                                    
-                                                    
+
+
                                                     <tr>
 														<td>07</td>
 														<td>Dr. Mark</td>
-														
+
 														<td>
 															<span class="label label-sm label-warning">40</span>
 														</td>
-														
+
 													</tr>
-                                                    
+
                                                     <tr>
 														<td>08</td>
 														<td>Dr.Felix</td>
-														
+
 														<td>
 															<span class="label label-sm label-warning">35</span>
 														</td>
-														
+
 													</tr>
-                                                    
+
                                                     <tr>
 														<td>09</td>
 														<td>Dr.Beryl</td>
-														
+
 														<td>
 															<span class="label label-sm label-warning">30</span>
 														</td>
-														
+
 													</tr>
-                                                    
+
                                                     <tr>
 														<td>10</td>
 														<td>Dr.Jayesh</td>
-														
+
 														<td>
 															<span class="label label-sm label-warning">20</span>
 														</td>
-														
+
 													</tr>
-                                                    
+
 												</tbody>
 											</table>
 										</div>
-									</div>	
+									</div>
                                 </div>
                             </div>
                         </div>
-                         
-                         
-                         
-                         
-                         
+
+
+
+
+
                         <div class="col-lg-4 col-md-12 col-sm-12 col-12">
                              <div class="card card-box">
                                  <div class="card-head">
@@ -1298,8 +1307,8 @@
 						</div>
                     </div>
                     <!-- end new patient list -->
-                        
-					
+
+
                      <!-- start new patient list -->
                      <div class="row">
                         <div class="col-lg-8 col-md-12 col-sm-12 col-12">
@@ -1322,7 +1331,7 @@
 														<th>Nombre</th>
 														<th>Doctor Asignado</th>
 														<th>Enfermedad</th>
-														
+
 													</tr>
 												</thead>
 												<tbody>
@@ -1333,7 +1342,7 @@
 														<td>
 															<span class="label label-sm label-success">Influenza</span>
 														</td>
-														
+
 													</tr>
 													<tr>
 														<td>2</td>
@@ -1342,7 +1351,7 @@
 														<td>
 															<span class="label label-sm label-warning"> colera </span>
 														</td>
-														
+
 													</tr>
 													<tr>
 														<td>4</td>
@@ -1351,7 +1360,7 @@
 														<td>
 															<span class="label label-sm label-danger">ictericia</span>
 														</td>
-														
+
 													</tr>
 													<tr>
 														<td>5</td>
@@ -1360,7 +1369,7 @@
 														<td>
 															<span class="label label-sm label-success ">Leptospirosis</span>
 														</td>
-														
+
 													</tr>
 													<tr>
 														<td>7</td>
@@ -1369,7 +1378,7 @@
 														<td>
 															<span class="label label-sm label-success ">tifoidea</span>
 														</td>
-														
+
 													</tr>
 													<tr>
 														<td>8</td>
@@ -1378,20 +1387,20 @@
 														<td>
 															<span class="label label-sm label-danger">Malaria</span>
 														</td>
-														
+
 													</tr>
 												</tbody>
 											</table>
 										</div>
-									</div>	
+									</div>
                                 </div>
                             </div>
                         </div>
-                         
-                         
-                         
-                         
-                         
+
+
+
+
+
                         <div class="col-lg-4 col-md-12 col-sm-12 col-12">
                              <div class="card card-box">
                                  <div class="card-head">
@@ -1527,13 +1536,13 @@
 						</div>
                     </div>
                     <!-- end new patient list -->
-                    
-                    
-                    
-                    
+
+
+
+
                 </div>
             </div>
-        
+
             <!-- end page content -->
             <!-- start chat sidebar -->
             <div class="chat-sidebar-container" data-close-on-body-click="false">

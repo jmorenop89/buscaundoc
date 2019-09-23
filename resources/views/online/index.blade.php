@@ -12,11 +12,11 @@
     				Selecciona una especialidad y ciudad donde te encuentras.
     			</p>
     			<form method="get" action="/list">
-    				<div id="custom-search-input">
-    					<div class="row">
-        					<input type="text" class="especialidad col-sm-12 col-lg-7" placeholder="Especialidad">
-        					<input type="text" class="ciudad col-sm-12 col-lg-3" placeholder="Ciudad">
-        					<input type="submit" class="btn_search col-sm-2 col-lg-2" value="Search">
+    				<div id="custom-search-input" class="border">
+    					<div class=" border border-danger">
+        					<input type="text" class="especialidad" placeholder="Especialidad">
+        					<input type="text" class="ciudad" placeholder="Ciudad">
+        					<input type="submit" class="buscar" value="Search">
     					</div>
     				</div>
     			</form>
