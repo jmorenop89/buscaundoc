@@ -219,7 +219,7 @@
     line-height: 25px;
   }
   ul.mm-listview li a {
-    color: #555 !important;
+    color: #555 ;
     display: block;
   }
 }

@@ -4,7 +4,7 @@ Theme URI: http://www.ansonika.com/findoctor/
 Author: Ansonika
 Author URI: http://themeforest.net/user/Ansonika/
 
-[Table of contents] 
+[Table of contents]
 
 1. SITE STRUCTURE and TYPOGRAPHY
 - 1.1 Typography
@@ -21,7 +21,7 @@ Author URI: http://themeforest.net/user/Ansonika/
 - 2.7 Contact page
 - 2.8 Booking page/confirm
 - 2.9 Pricing page
-- 2.10 Submit review 
+- 2.10 Submit review
 - 2.11 Home with map
 - 2.12 About
 
@@ -799,7 +799,7 @@ ul#additional_links li:after {
   }
 }
 .hero_home.version_1 .content {
-  background-color: #363768;
+  background-color: #363768; 
   background-color: rgba(63, 64, 121, 0);
 }
 .hero_home.version_2 {
@@ -1011,7 +1011,7 @@ ul#additional_links li:after {
   font-weight: 500;
   font-size: 16px;
   font-size: 1rem;
-  color: #333;
+  color: black;
 }
 #custom-search-input .search-query:focus {
   outline: none;
@@ -1022,7 +1022,7 @@ ul#additional_links li:after {
     padding-left: 15px;
   }
 }
-#custom-search-input ul {
+/*#custom-search-input ul {
   text-align: center;
   margin-top: 25px;
 }
@@ -1066,9 +1066,8 @@ ul#additional_links li:after {
 }
 #custom-search-input ul li:last-child {
   margin-right: 0;
-}
+}*/
 #custom-search-input input[type='submit'] {
-  position: absolute;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -3330,8 +3329,8 @@ label.css-label strong {
 @media (max-width: 767px) {
   #login {
     /* For less than 767px */
-    width: 100%;
-    margin: 30px 0;
+    width: 80%;
+    margin: 30px auto;
   }
 }
 #login h1 {
@@ -3406,8 +3405,6 @@ label.css-label strong {
 
 .box_login {
   width: 50%;
-  float: left;
-  border-right: 1px solid #e1e8ed;
   padding: 15px 25px;
 }
 @media (max-width: 767px) {
@@ -3497,11 +3494,10 @@ a.social_bt.linkedin:before {
   left: 0;
   width: 20px;
   height: 20px;
-  cursor: pointer;
   border: 2px solid #e1e8ed;
   background: transparent;
 }
-.checkbox_2 input[type=checkbox]:focus + label:before {
+.checkbox_2 input[type=checkbox]:focus + input:before {
   background-color: #e53c78;
   background-color: rgba(231, 78, 132, 0.2);
 }
@@ -3519,6 +3515,7 @@ a.social_bt.linkedin:before {
   -webkit-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 .checkbox_2 input[type=checkbox] {
   opacity: 0;
@@ -4522,9 +4519,9 @@ a.box_feat_about h3 {
   color: #555;
 }
 .box_form label {
-  font-weight: 500;
-  font-size: 13px;
-  font-size: 0.8125rem;
+  font-weight: 600;
+  font-size: 15px;
+  /*font-size: 0.8125rem;*/
   margin-bottom: 3px;
 }
 .box_form .form-group {
