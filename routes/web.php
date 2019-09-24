@@ -34,6 +34,15 @@ Route::get('/doctor', function () {
      return view('admin.layout.index');
  })->name('adi');
 
+  Route::get('/doc', function () {
+     return view('online.log-pac.index');
+ });
+
+  Route::get('/pac', function () {
+     return view('online.log-pac.index');
+ });
+
+
 Auth::routes();
 
  Route::get('/login', function () {

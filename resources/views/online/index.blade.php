@@ -12,8 +12,8 @@
     				Selecciona una especialidad y ciudad donde te encuentras.
     			</p>
     			<form method="get" action="/list">
-    				<div id="custom-search-input" class="border">
-    					<div class=" border border-danger">
+    				<div id="custom-search-input" class="">
+    					<div class=" ">
         					<input type="text" class="especialidad" placeholder="Especialidad">
         					<input type="text" class="ciudad" placeholder="Ciudad">
         					<input type="submit" class="buscar" value="Search">
