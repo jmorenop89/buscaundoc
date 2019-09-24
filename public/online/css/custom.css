@@ -114,7 +114,6 @@
   }
 }
 
-<<<<<<< HEAD
 /*horarios*/
 ul.time_select.version_2 li {
   float: left;
@@ -151,8 +150,5 @@ ul.time_select li label:hover {
   background-color: #e74e84;
   color: #fff;
 }
-=======
 .hero_home.version_1 .content {
   background-color:#00c3a5; 
-}
->>>>>>> 61ce02555cb1b0a33b05e6f9232de18541745382
