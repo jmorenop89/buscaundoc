@@ -19,6 +19,10 @@
 	<link href="/online/css/vendors.css" rel="stylesheet">
 	<link href="/online/css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
 
+	 <!-- SPECIFIC CSS -->
+	 <link href="/online/css/date_picker.css" rel="stylesheet">
+    
+
 	<!-- YOUR CUSTOM CSS -->
 	<link href="/online/css/custom.css" rel="stylesheet">
 
