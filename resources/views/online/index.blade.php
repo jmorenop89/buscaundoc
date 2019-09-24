@@ -12,11 +12,12 @@
     				Selecciona una especialidad y ciudad donde te encuentras.
     			</p>
     			<form method="get" action="/list">
-    				<div id="custom-search-input" class="">
-    					<div class=" ">
+    				<div id="custom-search-input">
+    					<div >
+
         					<input type="text" class="especialidad" placeholder="Especialidad">
         					<input type="text" class="ciudad" placeholder="Ciudad">
-        					<input type="submit" class="buscar" value="Search">
+        					<input type="submit" class="buscar" value= "Buscar">
     					</div>
     				</div>
     			</form>
@@ -52,7 +53,60 @@
     			</div>
     		</div>
     		<!-- /row -->
-    		<p class="text-center"><a href="list.html" class="btn_1 medium">Busca un médico</a></p>
-
-    	</div>
+    		<!-- <p class="text-center"><a href="list.html" class="btn_1 medium">Busca un médico</a></p> -->
+		</div>
+		
+		<div class="bg_color_1">
+			<div class="container">  <!-- margin_120_95 -->
+				<div class="main_title">
+					<h2>Últimos médicos registrados</h2>
+					<p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri.</p>
+				</div>
+				<div id="reccomended" class="owl-carousel owl-theme">
+					<div class="item">
+						<a href="detail-page.html">
+							<!-- <div class="views"><i class="icon-eye-7"></i>140</div> -->
+							<div class="title">
+								<h4>Dr. Julia Holmes<em>Pediatrician - Cardiologist</em></h4>
+							</div><img src="http://via.placeholder.com/350x500.jpg" alt="">
+						</a>
+					</div>
+					<div class="item">
+						<a href="detail-page.html">
+							<!-- <div class="views"><i class="icon-eye-7"></i>120</div> -->
+							<div class="title">
+								<h4>Dr. Julia Holmes<em>Pediatrician</em></h4>
+							</div><img src="http://via.placeholder.com/350x500.jpg" alt="">
+						</a>
+					</div>
+					<div class="item">
+						<a href="detail-page.html">
+							<!-- <div class="views"><i class="icon-eye-7"></i>115</div> -->
+							<div class="title">
+								<h4>Dr. Julia Holmes<em>Pediatrician</em></h4>
+							</div><img src="http://via.placeholder.com/350x500.jpg" alt="">
+						</a>
+					</div>
+					<div class="item">
+						<a href="detail-page.html">
+						<!-- 	<div class="views"><i class="icon-eye-7"></i>98</div> -->
+							<div class="title">
+								<h4>Dr. Julia Holmes<em>Pediatrician</em></h4>
+							</div><img src="http://via.placeholder.com/350x500.jpg" alt="">
+						</a>
+					</div>
+					<div class="item">
+						<a href="detail-page.html">
+							<!-- <div class="views"><i class="icon-eye-7"></i>98</div> -->
+							<div class="title">
+								<h4>Dr. Julia Holmes<em>Pediatrician</em></h4>
+							</div><img src="http://via.placeholder.com/350x500.jpg" alt="">
+						</a>
+					</div>
+				</div>
+				<!-- /carousel -->
+			</div>
+			<!-- /container -->
+		</div>
+		
 	@endsection
