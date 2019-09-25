@@ -11,41 +11,27 @@
 |
 */
 
- Route::get('/', function () {
-     return view('online.index');
- });
 
- Route::get('/list', function () {
-    return view('online.reservar_cita.listadoc');
+Route::get('/','OnlineController@index');
+Route::group(['prefix' => 'register'], function(){
+    Route::get('/paciente',['as' => 'reg-pac', 'uses' => 'OnlineController@regpac']);
+    Route::get('/doctor',['as' => 'reg-doc', 'uses' => 'OnlineController@regdoc']);
 });
 
-Route::get('/detalle', function () {
-    return view('online.reservar_cita.detalle');
-});
+Route::get('/list','OnlineController@busqueda');
+Route::get('/detalle','OnlineController@det_hora');
 
- Route::get('/paciente', function () {
-    return view('online.registrar.paciente');
-});
-
-Route::get('/doctor', function () {
-    return view('online.registrar.doctor');
-});
- Route::get('/admine', function () {
-     return view('admin.layout.index');
- })->name('adi');
-
-  Route::get('/doc', function () {
-     return view('online.log-doc.index');
- });
-
-  Route::get('/pac', function () {
-     return view('online.log-pac.index');
- });
+    /*RUTAS POST*/
+Route::group(['prefix' => 'register'], function(){
+    Route::post('/paciente',['as' => 'reg-pac', 'uses' => 'Online\PacienteController@register']);
+    Route::post('/doctor',['as' => 'reg-doc', 'uses' => 'Online\DoctorController@register']);
+});        
+      
 
 
 Auth::routes();
 
- Route::get('/login', function () {
+Route::get('/login', function () {
      return view('auth.login');
  })->name('login');
 

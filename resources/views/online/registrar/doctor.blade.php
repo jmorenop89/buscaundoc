@@ -32,16 +32,17 @@
 			<div class="col-lg-5 ml-auto">
 				<div class="box_form">
 					<div id="message-register"></div>
-					<form method="post" action="assets/register_doctor.php" id="register_doctor">
+					<form method="post" action="{{ route('reg-doc') }}">
+						<input type="hidden" name="_token" value="{{ csrf_token()}}">
 						<div class="row">
 							<div class="col-md-6 ">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Nombres" name="name_register" id="name_register">
+									<input type="text" class="form-control" placeholder="Nombres" name="nombres" id="name_register">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Apellidos" name="lastname_register" id="lastname_register">
+									<input type="text" class="form-control" placeholder="Apellidos" name="apellidos" id="lastname_register">
 								</div>
 							</div>
 						</div>
@@ -49,12 +50,12 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Especialidad" name="specialization" id="specialization">
+									<input type="text" class="form-control" placeholder="Especialidad" name="especialidad_id" id="specialization">
 								</div>
 							</div>
 							<div class="col-md-6">
                                 <div class="form-group">
-                                    <select class="form-control" name="country_register" id="country_register">
+                                    <select class="form-control" name="ciudad_id" id="country_register">
                                         <option value="">Ciudad</option>
 										<option value="Chiclayo">Chiclayo</option>
 										<option value="Lima">Lima</option>
@@ -67,12 +68,12 @@
 						<div class="row">
                             <div class="col-md-6">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Teléfono Celular" name="mobile_register" id="mobile_register">
+									<input type="text" class="form-control" placeholder="Fecha de Nacimiento" name="fecha_nac" id="mobile_register">
 								</div>
 							</div>
                             <div class="col-md-6">
 								<div class="form-group">
-									<input type="text" id="verify_register" class="form-control" placeholder="CMP">
+									<input type="text" id="verify_register" class="form-control" placeholder="CMP" name="cod_colegiatura">
 								</div>
                             </div>
 						</div>
@@ -80,7 +81,7 @@
 						<div class="row">
 							<div class="col-lg-12">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Dirección" name="address_register" id="address_register">
+									<input type="text" class="form-control" placeholder="Dirección" name="direccion" id="address_register">
 								</div>
 							</div>
 						</div>
@@ -89,7 +90,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Correo" name="email_register" id="email_register">
+                                    <input type="email" class="form-control" placeholder="Correo" name="email" id="email_register">
                                 </div>
                             </div>
 						</div>
@@ -97,7 +98,7 @@
                         <div class="row">
                             <div class="col-lg-12">
 								<div class="form-group">									
-									<input type="password" class="form-control" id="password1" name="password1" placeholder="Ingresa contraseña">
+									<input type="password" class="form-control" id="password1" name="password" placeholder="Ingresa contraseña">
 								</div>
                             </div>
 						</div>
