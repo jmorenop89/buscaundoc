@@ -14,6 +14,7 @@
     			<form method="get" action="/list">
     				<div id="custom-search-input">
     					<div >
+
         					<input type="text" class="especialidad" placeholder="Especialidad">
         					<input type="text" class="ciudad" placeholder="Ciudad">
         					<input type="submit" class="buscar" value= "Buscar">
