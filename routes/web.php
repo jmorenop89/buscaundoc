@@ -31,8 +31,13 @@ Route::get('/doctor', function () {
     return view('online.registrar.doctor');
 });
  Route::get('/admine', function () {
-     return view('admin.layout.index');
+     return view('templateadmin.layout');
  })->name('adi');
+
+ Route::get('/admin/prueba', function () {
+    return view('admin.prueba.listadoc');
+});
+
 
   Route::get('/doc', function () {
      return view('online.log-pac.index');
