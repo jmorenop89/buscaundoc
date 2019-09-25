@@ -35,7 +35,7 @@ Route::get('/doctor', function () {
  })->name('adi');
 
   Route::get('/doc', function () {
-     return view('online.log-pac.index');
+     return view('online.log-doc.index');
  });
 
   Route::get('/pac', function () {
@@ -50,3 +50,5 @@ Auth::routes();
  })->name('login');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
