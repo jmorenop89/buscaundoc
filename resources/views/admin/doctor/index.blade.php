@@ -56,14 +56,14 @@
 					                                        <thead>
 					                                            <tr>
 					                                            	<th></th>
-					                                                <th> Name </th>
-					                                                <th> Department </th>
-					                                                <th> Specialization </th>
-					                                                <th> Degree </th>
-					                                                <th> Mobile </th>
-					                                                <th> Email </th>
-					                                                <th>Joining Date</th>
-					                                                <th> Action </th>
+					                                                <th> Nombre </th>
+					                                                <th> Departmento </th>
+					                                                <th> Especializacion </th>
+					                                                <th> Grado </th>
+					                                                <th> Celular </th>
+					                                                <th> Correo Electronico </th>
+					                                                <th> Dia de Ingreso</th>
+					                                                <th> Accion </th>
 					                                            </tr>
 					                                        </thead>
 					                                        <tbody>
