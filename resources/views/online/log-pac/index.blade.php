@@ -26,8 +26,8 @@
             <figure>
               <img src="http://via.placeholder.com/565x565.jpg" alt="" class="img-fluid">
             </figure>
-            <small>Primary care - Internist</small>
-            <h1>DR. Julia Jhones</h1>
+            <small>Paciente</small>
+            <h1>Juan Perez</h1>
             <hr>
                   <div class="nav text-justify nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#ver-citas" role="tab" aria-controls="v-pills-home" aria-selected="true">Ver mis citas </a>
@@ -45,60 +45,76 @@
                   <div class="tab-content" id="v-pills-tabContent">
 
                     <div class="tab-pane fade  show active" id="ver-citas" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                      <h3>ULTIMAS CITAS</h3>
+                      <h3>MIS CITAS</h3>
                       <hr>
+                     
                       <div class="strip_list wow fadeIn">
-                 
-                      <div class="row">
-                     <div class="col-9  border border-primary"> holaaaaaaaaaaaaaaaaaa</div>
-                     <div class="col-3  border border-secondary"> chauuu</div>
-                      </div>
-
-                      </div>
-                   
-                    </div>
-                  <div class="strip_list wow fadeIn">
                   <figure>
                       <a href="detail-page.html"><img src="http://via.placeholder.com/565x565.jpg" alt=""></a>
                     </figure>
                     
                     <small>Urólogo</small>
                     <h3>Dr. Fidel</h3>
-                    <p>Atendida lunes 01/11/2018 14:30 am</p>
+                    <p>Lunes 01/11/2018 4:30 pm</p>
+                    <a class="btn btn-primary" href="#" role="button">Pendiente</a>
+                  </div>
+                   
+                   
+                  <div class="strip_list wow fadeIn">
+                  <figure>
+                      <a href="detail-page.html"><img src="http://via.placeholder.com/565x565.jpg" alt=""></a>
+                    </figure>
                     
+                    <small>Ginecologo</small>
+                    <h3>Dr. alberto</h3>
+                    <p>Mierecoles 21/03/2018 8:30 am</p>
+                    <a class="btn btn-secondary" href="#" role="button">Atendida</a>
                   </div>
                     <div class="strip_list wow fadeIn">
                   <figure>
                       <a href="detail-page.html"><img src="http://via.placeholder.com/565x565.jpg" alt=""></a>
                     </figure>
-                    <small>Urólogo</small>
+                    <small>Pediatra</small>
                     <h3>Dr. Carlos</h3>
-                    <p>Atendida lunes 21/10/2018 18:45 am</p>
+                    <p>23/10/2018 5:30 pm</p>
+                    <a class="btn btn-info" href="#" role="button">Anulada</a>
                     </div>
                     </div>
                     <div class="tab-pane fade" id="notifi" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                       <h3>NOTIFICACIONES</h3>
                       <hr>
-                      <div class="strip_list wow fadeIn">
-                   <!--  <a href="#0" class="wish_bt"></a>
-                    <figure>
-                      <a href="detail-page.html"><img src="http://via.placeholder.com/565x565.jpg" alt=""></a>
-                    </figure>
-                    <small>Pediatrician</small>
-                    <h3>Dr. Cornfield</h3>
-                    <p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cuodo....</p>
-                    <span class="rating"><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i><i class="icon_star"></i> <small>(145)</small></span>
-                    <a href="badges.html" data-toggle="tooltip" data-placement="top" data-original-title="Badge Level" class="badge_list_1"><img src="img/badges/badge_1.svg" width="15" height="15" alt=""></a>
-                    <ul>
-                      <li><a href="#0" onclick="onHtmlClick('Doctors', 0)" class="btn_listing">View on Map</a></li>
-                      <li><a href="https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x0:0xa6a9af76b1e2d899!2sAssistance+%E2%80%93+H%C3%B4pitaux+De+Paris!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361" target="_blank">Directions</a></li>
-                      <li><a href="detail-page.html">Book now</a></li>
-                    </ul> -->
-                  </div>
+                      <!-- <div class="strip_list wow fadeIn"> -->
+                      <div class="alert alert-primary mt-1" id="alerta">
+				            	Le recordamos que en 3 dìas tiene una cita agendada con el médico Alberto Campos.
+				            	<button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+						          <span aria-hidden="true">&times;</span>
+					            </button>
+			              	</div>
+                      <!-- </div> -->
+                      <div class="alert alert-primary mt-1" id="alerta">
+				            	Le recordamos que en 3 dìas tiene una cita agendada con el médico Alberto Campos.
+				            	<button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+						          <span aria-hidden="true">&times;</span>
+					            </button>
+                      </div>
+                      
+                      <div class="alert alert-primary mt-1" id="alerta">
+				            	Le recordamos que en 3 dìas tiene una cita agendada con el médico Alberto Campos.
+				            	<button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+						          <span aria-hidden="true">&times;</span>
+					            </button>
+                      </div>
+                      
+                      <div class="alert alert-primary mt-1" id="alerta">
+				            	Le recordamos que en 3 dìas tiene una cita agendada con el médico Alberto Campos.
+				            	<button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+						          <span aria-hidden="true">&times;</span>
+					            </button>
+			              	</div>
+                   
                     </div>
-
                     <div class="tab-pane fade" id="config" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                      4
+                      <h3>CONFIGURACIÓN</h3>
                       <hr>
                       <form>
                     <div class="box_form">

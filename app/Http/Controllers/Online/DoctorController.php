@@ -4,21 +4,21 @@ namespace App\Http\Controllers\Online;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Paciente;
+use App\Doctor;
 use App\User;
 
-class PacienteController extends Controller
+class DoctorController extends Controller
 {
     public function register(Request $request){
         $data = $request->all();
-        //dd($data);
-        $data['role'] = "paciente";
+        #dd($data);
+        $data['role'] = "doctor";
         $data['password'] = bcrypt($data['password']);
         $user = User::create($data);
-        $data['users_id'] = $user->id;
-        $patient = Paciente::create($data);
+        $data['user_id'] = $user->id;
+        $patient = Doctor::create($data);
         $name = $data['nombres'];
         #dd($data);
-        return "gracias por registrarte".$name;
+        return "gracias por registrarte ".$name;
     }
 }
