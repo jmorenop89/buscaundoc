@@ -134,23 +134,23 @@
                         <label>Correo</label>
                         <input type="email" class="form-control" placeholder="Ingresa tu Correo">
                       </div>
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                         <label>Contraseña</label>
                         <input type="password" class="form-control" id="password1" name="password1" placeholder="Ingresa contraseña">
                       </div>
                       <div class="form-group">
                         <label>Confirmar contraseña</label>
                         <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirmar constraseña">
-                      </div>
-                      <div id="pass-info" class="clearfix"></div>
+                      </div> -->
+<!--                       <div id="pass-info" class="clearfix"></div>
                       <div class="checkbox-holder text-left">
                         <div class="checkbox_2">
                           <input type="checkbox" value="accept_2" id="check_2" name="check_2" checked>
                           <label for="check_2"><span>Estoy de acuerdo con los <strong>terminos y condiciones</strong></span></label>
                         </div>
-                      </div>
+                      </div> -->
                       <div class="form-group text-center add_top_30">
-                        <input class="btn_1" type="submit" value="Enviar">
+                        <input class="btn_1" type="submit" value="Actualizar">
                       </div>
                     </div>
                     <p class="text-center"><small>Has voluptua vivendum accusamus cu. Ut per assueverit temporibus dissentiet. Eum no atqui putant democritum, velit nusquam sententiae vis no.</small></p>
