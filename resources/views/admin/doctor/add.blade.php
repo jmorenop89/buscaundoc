@@ -1,4 +1,4 @@
-@extends('layout.index')
+@extends('templateadmin.layout')
 
 @section('titulo')
     Doctor
