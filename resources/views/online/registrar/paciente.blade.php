@@ -12,31 +12,36 @@
 			<h1>Por favor registrese en Buscaundoc!</h1>
 			<div class="row justify-content-center">
 				<div class="col-md-5">
-					<form>
+					<form action="{{ route('reg-pac') }}" method="post">
+						<input type="hidden" name="_token" value="{{ csrf_token()}}">
 						<div class="box_form">
 							<div class="form-group">
 								<label>Nombres</label>
-								<input type="text" class="form-control" placeholder="Ingresa tus nombres">
+								<input type="text" class="form-control" placeholder="Ingresa tus nombres" name="nombres">
 							</div>
 							<div class="form-group">
 								<label>Apellidos</label>
-								<input type="text" class="form-control" placeholder="Ingresa tus apellidos">
+								<input type="text" class="form-control" placeholder="Ingresa tus apellidos" name="apellidos">
                             </div>
                             <div class="form-group">
+								<label>Fecha de nacimiento</label>
+								<input type="text" class="form-control" placeholder="Ingresa Nº Celular" name="fecha_nac">
+							</div>
+                            <div class="form-group">
 								<label>Teléfono Celular</label>
-								<input type="text" class="form-control" placeholder="Ingresa Nº Celular">
+								<input type="text" class="form-control" placeholder="Ingresa Nº Celular" name="celular">
 							</div>
 							<div class="form-group">
 								<label>Correo</label>
-								<input type="email" class="form-control" placeholder="Ingresa tu Correo">
+								<input type="email" class="form-control" placeholder="Ingresa tu Correo" name="email">
 							</div>
 							<div class="form-group">
 								<label>Contraseña</label>
-								<input type="password" class="form-control" id="password1" name="password1" placeholder="Ingresa contraseña">
+								<input type="password" class="form-control" id="password1" placeholder="Ingresa contraseña" name="password">
 							</div>
 							<div class="form-group">
 								<label>Confirmar contraseña</label>
-								<input type="password" class="form-control" id="password2" name="password2" placeholder="Confirmar constraseña">
+								<input type="password" class="form-control" id="password2"  placeholder="Confirmar constraseña">
 							</div>
 							<div id="pass-info" class="clearfix"></div>
 							<div class="checkbox-holder text-left">

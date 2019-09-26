@@ -10,7 +10,7 @@ class Paciente extends Model
     public $table = 'paciente';
 
     protected $fillable = [
-        'nombres', 'apellidos', 'fecha_nac','celular','user_id'
+        'nombres', 'apellidos', 'fecha_nac','celular','users_id'
     ];
 
 }

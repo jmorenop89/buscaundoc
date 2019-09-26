@@ -40,8 +40,8 @@
                             <li>
 								<span><a href="">Regístrate</a></span>
 								<ul>
-									<li><a href="/paciente">Como Paciente</a></li>
-									<li><a href="/doctor">Como Mèdico</a></li>
+									<li><a href="{{ route('reg-pac') }}">Como Paciente</a></li>
+									<li><a href="{{ route('reg-doc') }}">Como Mèdico</a></li>
 								</ul>
 							</li>
 

@@ -113,100 +113,100 @@ class EspecialidadesSeeder extends Seeder
             ),
             array(
         			'nombre'=>"Infectólogo",
-        		),
-        		array(
-        			'nombre'=>"Anestesiólogo",
-        		),
-        		array(
-        			'nombre'=>"Neonatólogo",
-        		),
-        		array(
-        			'nombre'=>"Especialista en Medicina Intensiva",
-        		),
-        		array(
-        			'nombre'=>"Especialista en Emergencias",
-        		),
-        		array(
-        			'nombre'=>"Especialista en Administración de Salud",
-        		),
-        		array(
-        			'nombre'=>"Patólogo",
-        		),
-        		array(
-        			'nombre'=>"Patólogo clínico",
-        		),
-        		array(
-        			'nombre'=>"Neurofisiólogo clínico",
-        		),
-        		array(
-        			'nombre'=>"Médico familiar",
-        		),
-        		array(
-        			'nombre'=>"Genetista",
-        		),
-        		array(
-        			'nombre'=>"Cirujano vascular",
-        		),
-        		array(
-        			'nombre'=>"Epidemiólogo",
-        		),
-        		array(
-        			'nombre'=>"Médico del Deporte",
-        		),
-        		array(
-        			'nombre'=>"Terapeuta complementario",
-        		),
-        		array(
-        			'nombre'=>"Médico legal",
-        		),
-        		array(
-        			'nombre'=>"Homeópata",
-        		),
-        		array(
-        			'nombre'=>"Fisioterapeuta",
-        		),
-        		array(
-        			'nombre'=>"Bioquímico",
-        		),
-        		array(
-        			'nombre'=>"Especialista en Medicina Estética",
-        		),
-        		array(
-        			'nombre'=>"Médico del Trabajo",
-        		),
-        		array(
-        			'nombre'=>"Fonoaudiólogo",
-        		),
-        		array(
-        			'nombre'=>"Especialista en Medicina Nuclear",
-        		),
-        		array(
-        			'nombre'=>"Médico ocupacional",
-        		),
-        		array(
-        			'nombre'=>"Especialista en Medicina Natura",
-        		),
-        		array(
-        			'nombre'=>"Especialista en Salud Pública",
-        		),
-        		array(
-        			'nombre'=>"Farmacólogo",
-        		),
-        		array(
-        			'nombre'=>"Técnico en Laboratorio Clínico",
-        		),
-        		array(
-        			'nombre'=>"Podólogo",
-        		),
-        		array(
-        			'nombre'=>"Quiropráctico",
-        		),
-        		array(
-        			'nombre'=>"Enfermero",
-        		),
-        		array(
-        			'nombre'=>"Óptico",
-        		)
+    		),
+    		array(
+    			'nombre'=>"Anestesiólogo",
+    		),
+    		array(
+    			'nombre'=>"Neonatólogo",
+    		),
+    		array(
+    			'nombre'=>"Especialista en Medicina Intensiva",
+    		),
+    		array(
+    			'nombre'=>"Especialista en Emergencias",
+    		),
+    		array(
+    			'nombre'=>"Especialista en Administración de Salud",
+    		),
+    		array(
+    			'nombre'=>"Patólogo",
+    		),
+    		array(
+    			'nombre'=>"Patólogo clínico",
+    		),
+    		array(
+    			'nombre'=>"Neurofisiólogo clínico",
+    		),
+    		array(
+    			'nombre'=>"Médico familiar",
+    		),
+    		array(
+    			'nombre'=>"Genetista",
+    		),
+    		array(
+    			'nombre'=>"Cirujano vascular",
+    		),
+    		array(
+    			'nombre'=>"Epidemiólogo",
+    		),
+    		array(
+    			'nombre'=>"Médico del Deporte",
+    		),
+    		array(
+    			'nombre'=>"Terapeuta complementario",
+    		),
+    		array(
+    			'nombre'=>"Médico legal",
+    		),
+    		array(
+    			'nombre'=>"Homeópata",
+    		),
+    		array(
+    			'nombre'=>"Fisioterapeuta",
+    		),
+    		array(
+    			'nombre'=>"Bioquímico",
+    		),
+    		array(
+    			'nombre'=>"Especialista en Medicina Estética",
+    		),
+    		array(
+    			'nombre'=>"Médico del Trabajo",
+    		),
+    		array(
+    			'nombre'=>"Fonoaudiólogo",
+    		),
+    		array(
+    			'nombre'=>"Especialista en Medicina Nuclear",
+    		),
+    		array(
+    			'nombre'=>"Médico ocupacional",
+    		),
+    		array(
+    			'nombre'=>"Especialista en Medicina Natura",
+    		),
+    		array(
+    			'nombre'=>"Especialista en Salud Pública",
+    		),
+    		array(
+    			'nombre'=>"Farmacólogo",
+    		),
+    		array(
+    			'nombre'=>"Técnico en Laboratorio Clínico",
+    		),
+    		array(
+    			'nombre'=>"Podólogo",
+    		),
+    		array(
+    			'nombre'=>"Quiropráctico",
+    		),
+    		array(
+    			'nombre'=>"Enfermero",
+    		),
+    		array(
+    			'nombre'=>"Óptico",
+    		)
             ]
             
         );
