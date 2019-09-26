@@ -84,7 +84,7 @@
 	<!-- SPECIFIC SCRIPTS -->
     <script src="/online/js/bootstrap-datepicker.js"></script>
     <script>
-			$('#calendar').datepicker({
+			$('.calendar').datepicker({
 			    todayHighlight: true,
 				daysOfWeekDisabled: [0],
 				weekStart: 1,

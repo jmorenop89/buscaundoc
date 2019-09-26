@@ -117,8 +117,13 @@
 /*horarios*/
 ul.time_select.version_2 li {
   float: left;
-  width: 25%;
+  width:50%;
 }
+ul.pac.time_select.version_2 li {
+  float: left;
+  width:20%;
+}
+
 ul.time_select li input[type="radio"] {
   display: none;
   cursor: pointer;
