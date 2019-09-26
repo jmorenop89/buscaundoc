@@ -28,6 +28,13 @@ Route::group(['prefix' => 'register'], function(){
     Route::post('/doctor',['as' => 'reg-doc', 'uses' => 'Online\DoctorController@register']);
 });        
       
+Route::get('/doc', function () {
+    return view('online.log-doc.index');
+});
+
+ Route::get('/pac', function () {
+    return view('online.log-pac.index');
+});
 
 
 Auth::routes();
