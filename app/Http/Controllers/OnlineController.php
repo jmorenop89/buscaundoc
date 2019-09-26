@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Ciudad;
+use App\Especialidad;
 use Illuminate\Http\Request;
 
 class OnlineController extends Controller
@@ -13,7 +15,10 @@ class OnlineController extends Controller
     	return view('online.registrar.paciente');
     }
     public function regdoc(){
-    	return view('online.registrar.doctor');	
+        $espe = Especialidad::all();
+        $ciud = Ciudad::all();
+        #dd($espe);
+    	return view('online.registrar.doctor', compact('espe','ciud'));	
     }
     public function paciente(){
     	return view('online.log-pac.index');

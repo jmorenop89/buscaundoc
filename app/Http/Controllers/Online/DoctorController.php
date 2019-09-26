@@ -11,11 +11,11 @@ class DoctorController extends Controller
 {
     public function register(Request $request){
         $data = $request->all();
-        //dd($data);
+        #dd($data);
         $data['role'] = "doctor";
         $data['password'] = bcrypt($data['password']);
         $user = User::create($data);
-        $data['users_id'] = $user->id;
+        $data['user_id'] = $user->id;
         $patient = Doctor::create($data);
         $name = $data['nombres'];
         #dd($data);

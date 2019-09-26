@@ -50,16 +50,19 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Especialidad" name="especialidad_id" id="specialization">
+									 <select class="form-control" name="especialidad_id" id="country_register">
+                                        @foreach($espe as $espes)
+				                            <option value="{{ $espes->id }}" >{{$espes->nombre}}</option>
+				                        @endforeach
+									</select>
 								</div>
 							</div>
 							<div class="col-md-6">
                                 <div class="form-group">
                                     <select class="form-control" name="ciudad_id" id="country_register">
-                                        <option value="">Ciudad</option>
-										<option value="Chiclayo">Chiclayo</option>
-										<option value="Lima">Lima</option>
-										<option value="Trujillo">Trujillo</option>
+                                        @foreach($ciud as $ciuds)
+				                            <option value="{{ $ciuds->id }}" >{{$ciuds->nombre}}</option>
+				                        @endforeach
 									</select>
 								</div>
 							</div>
@@ -106,7 +109,7 @@
                         <div class="row">
                             <div class="col-lg-12">
 								<div class="form-group">									
-									<input type="password" class="form-control" id="password2" name="password2" placeholder="Confirmar constraseña">
+									<input type="password" class="form-control" id="" name="password2" placeholder="Confirmar constraseña">
 								</div>
                             </div>
 						</div>
