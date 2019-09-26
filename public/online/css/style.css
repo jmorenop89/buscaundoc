@@ -2878,12 +2878,12 @@ ul.list_edu li strong {
   margin-bottom: 10px;
 }
 
-#calendar {
+.calendar {
   padding: 0;
   margin-bottom: 30px;
 }
-#calendar .datepicker.datepicker-inline,
-#calendar .datepicker.datepicker-inline table {
+.calendar .datepicker.datepicker-inline,
+.calendar .datepicker.datepicker-inline table {
   width: 100%;
 }
 

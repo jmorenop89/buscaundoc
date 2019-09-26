@@ -14,14 +14,14 @@
                     <div class="page-bar">
                         <div class="page-title-breadcrumb">
                             <div class=" pull-left">
-                                <div class="page-title">Patients List</div>
+                                <div class="page-title">Lista de Pacientes</div>
                             </div>
                             <ol class="breadcrumb page-breadcrumb pull-right">
                                 <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
-                                <li><a class="parent-item" href="">Patients</a>&nbsp;<i class="fa fa-angle-right"></i>
+                                <li><a class="parent-item" href="">Pacientes</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
-                                <li class="active">Patient List</li>
+                                <li class="active">Lista de Pacientes</li>
                             </ol>
                         </div>
                     </div>
@@ -53,15 +53,15 @@
 					                                        <thead>
 					                                            <tr>
 					                                            	<th></th>
-					                                                <th> Name </th>
-					                                                <th> Sex </th>
-					                                                <th> Address </th>
-					                                                <th> Mobile </th>
-					                                                <th> Birth Date </th>
-					                                                <th>Age</th>
-					                                                <th>Blood Group</th>
-					                                                <th>Status</th>
-					                                                <th> Action </th>
+					                                                <th> Nombre </th>
+					                                                <th> Sexo</th>
+					                                                <th> Direccion </th>
+					                                                <th> Celualr</th>
+					                                                <th> Dia Cumpleaños</th>
+					                                                <th>Edad</th>
+					                                                <th>Grupo Sanguineo</th>
+					                                                <th>Estado Civil</th>
+					                                                <th> Accion</th>
 					                                            </tr>
 					                                        </thead>
 					                                        <tbody>

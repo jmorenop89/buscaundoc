@@ -14,14 +14,14 @@
                     <div class="page-bar">
                         <div class="page-title-breadcrumb">
                             <div class=" pull-left">
-                                <div class="page-title">Add Patient</div>
+                                <div class="page-title">Agregar Paciente</div>
                             </div>
                             <ol class="breadcrumb page-breadcrumb pull-right">
                                 <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
-                                <li><a class="parent-item" href="">Doctors</a>&nbsp;<i class="fa fa-angle-right"></i>
+                                <li><a class="parent-item" href="">Doctores</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
-                                <li class="active">Add Patient</li>
+                                <li class="active">Agregar Paciente</li>
                             </ol>
                         </div>
                     </div>
@@ -29,7 +29,7 @@
                         <div class="col-md-12 col-sm-12">
                             <div class="card card-box">
                                 <div class="card-head">
-                                    <header>Basic Information</header>
+                                    <header>Informacion Basica</header>
                                      <button id = "panel-button" 
 				                           class = "mdl-button mdl-js-button mdl-button--icon pull-right" 
 				                           data-upgraded = ",MaterialButton">
@@ -46,56 +46,56 @@
                                     <form action="#" id="form_sample_1" class="form-horizontal">
                                         <div class="form-body">
                                         <div class="form-group row">
-                                                <label class="control-label col-md-3">First Name
+                                                <label class="control-label col-md-3">Nombres
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input type="text" name="firstname" data-required="1" placeholder="enter first name" class="form-control input-height" /> </div>
+                                                    <input type="text" name="firstname" data-required="1" placeholder="Ingresar Nombres" class="form-control input-height" /> </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label class="control-label col-md-3">Last Name
+                                                <label class="control-label col-md-3">Apellidos
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input type="text" name="lastname" data-required="1" placeholder="enter last name" class="form-control input-height" /> </div>
+                                                    <input type="text" name="lastname" data-required="1" placeholder="Ingresar Apellidos" class="form-control input-height" /> </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label class="control-label col-md-3">Date Of Birth
+                                                <label class="control-label col-md-3">Fecha de Nacimiento
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
                                                     <div class="input-group date form_date " data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-		                                                <input class="form-control input-height" size="16" placeholder="date of Birth" type="text" value="">
+		                                                <input class="form-control input-height" size="16" placeholder="Fecha de Nacimiento" type="text" value="">
 		                                                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
 	                                            	</div>
 	                                            	<input type="hidden" id="dtp_input2" value="" />
 	                                            </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label class="control-label col-md-3">Gender
+                                                <label class="control-label col-md-3">Genero
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
                                                     <select class="form-control input-height" name="gender">
                                                         <option value="">Select...</option>
-                                                        <option value="Category 1">Male</option>
-                                                        <option value="Category 2">Female</option>
+                                                        <option value="Category 1">Hombre</option>
+                                                        <option value="Category 2">Mujer</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label class="control-label col-md-3">Age
+                                                <label class="control-label col-md-3">Edad
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input type="text" name="age" data-required="1" placeholder="enter your age" class="form-control input-height" /> </div>
+                                                    <input type="text" name="age" data-required="1" placeholder="Ingresar edad" class="form-control input-height" /> </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label class="control-label col-md-3">Mobile No.
+                                                <label class="control-label col-md-3">Nro Celular
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input name="number" type="text" placeholder="mobile number" class="form-control input-height" /> </div>
+                                                    <input name="number" type="text" placeholder="Nro Celularr" class="form-control input-height" /> </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="control-label col-md-3">Email
@@ -109,11 +109,11 @@
                                                 </div>
                                             </div>
                                              <div class="form-group row">
-                                                <label class="control-label col-md-3">Address
+                                                <label class="control-label col-md-3">Direccion
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <textarea name="address" placeholder="address" class="form-control-textarea" rows="5" ></textarea>
+                                                    <textarea name="address" placeholder="Ingresar Direccion" class="form-control-textarea" rows="5" ></textarea>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -154,7 +154,7 @@
                                                 </div>
                                             </div>
                                          	<div class="form-group row">
-                                                 <label class="control-label col-md-3">Blood Presure
+                                                 <label class="control-label col-md-3">Grupo saguineo
                                                  </label>
                                                  <div class="col-md-5">
                                                      <input type="text" class="form-control input-height" placeholder="blood presure" name="bp" >
@@ -177,8 +177,8 @@
 											<div class="form-actions">
                                             <div class="row">
                                                 <div class="offset-md-3 col-md-9">
-                                                    <button type="submit" class="btn btn-info">Submit</button>
-                                                    <button type="button" class="btn btn-default">Cancel</button>
+                                                    <button type="submit" class="btn btn-info">Enviar</button>
+                                                    <button type="button" class="btn btn-default">Cancelar</button>
                                                 </div>
                                             	</div>
                                         	</div>
