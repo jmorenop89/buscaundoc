@@ -23,7 +23,7 @@
                                     </span>
                                 @enderror
                         </div>
-                        <div class="text-center offset-md">
+                        <div class="text-center">
                                 <button type="submit" class="btn_1 medium">
                                     {{ __('Send Password Reset Link') }}
                                 </button>
