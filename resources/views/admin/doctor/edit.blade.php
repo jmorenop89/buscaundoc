@@ -8,7 +8,7 @@
     Doctor
 @endsection
 
-@section('contenido')
+@section('content')
 
 
 			<!-- start page content -->
