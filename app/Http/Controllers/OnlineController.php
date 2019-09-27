@@ -27,10 +27,10 @@ class OnlineController extends Controller
     	return view('online.log-doc.index');
     }
     public function busqueda(){
-    	return view('online.reserva_cita.listado');
+    	return view('online.reservar_cita.listadoc');
     }
     public function det_hora(){
-    	return view('online.reserva_cita.detalle');
+    	return view('online.reservar_cita.detalle');
     }
     
 }
