@@ -46,7 +46,7 @@
 							</li>
 
 							<li>
-                                <span><a href="/login">Iniciar Sesión</a></span>
+                                <span><a href="{{ route('login')}}">Iniciar Sesión</a></span>
                             </li>
 
 							<li>

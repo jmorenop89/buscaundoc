@@ -29,7 +29,10 @@ class HomeController extends Controller
         };
 
         if (Auth::user()->role == "paciente") {
-            return view('home');
+            return "paciente logueado";
+        };
+        if (Auth::user()->role == "doctor") {
+            return "doctor logueado";
         }
 
         return '/home';

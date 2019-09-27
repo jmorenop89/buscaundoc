@@ -78,6 +78,19 @@
     margin: 30px auto;
   }
 }
+/*reset*/
+#reset {
+  width: 400px;
+  margin: 20vh auto;
+  color: #000;
+}
+@media (max-width: 767px) {
+  #reset {
+    /* For less than 767px */
+    width: 85%;
+    margin: 30px auto;
+  }
+}
 .box_form {
   background-color: #fff;
   padding: 30px;
