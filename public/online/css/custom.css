@@ -24,18 +24,18 @@
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   border-radius: 3px;
-  background-color: #74d1c6;
+ /*  background-color: #74d1c6; */
 }
 
-#custom-search-input input[type='submit']:hover {
+/* #custom-search-input input[type='submit']:hover {
   background-color: #e74e84;
-}
+} */
 
 @media (max-width: 575px) {
   #custom-search-input input[type='submit'] {
     /* For less than 575px */
     text-indent: -999px;
-    background: #74d1c6 url(../img/search.svg) no-repeat center center;
+  /*   background: #74d1c6 url(../img/search.svg) no-repeat center center; */
   }
 }
 
@@ -64,6 +64,12 @@
 .ciudad {
   width:300px;
 }
+
+.buscar {
+  right: 230px !important;
+  top: 7px !important;
+}
+
 
 /*login*/
 #login {
@@ -164,10 +170,14 @@ ul.time_select li label {
   text-align: center;
   cursor: pointer;
 }
+
+
 ul.time_select li label:hover {
   background-color: #e74e84;
   color: #fff;
 }
+
+
 .hero_home.version_1 .content {
   background-color:#00c3a5; 
 }
@@ -188,3 +198,4 @@ ul.time_select li label:hover {
   ul.time_select.version_2 li {
     width:20%;
 }}
+
