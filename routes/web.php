@@ -40,7 +40,7 @@ Route::get('/doc', function () {
 Auth::routes();
 
 Route::get('/login', function () {
-     return view('onine.login.login');
+     return view('online.login.login');
  })->name('login');
 
 Route::get('/home', 'HomeController@index')->name('home');
