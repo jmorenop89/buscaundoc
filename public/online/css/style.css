@@ -1999,7 +1999,7 @@ a.wish_bt {
       box-shadow: none;
       color: #fff; }
   .switch-field label {
-    float: left;
+    float:left;
     display: inline-block;
     min-width: 70px;
     background-color: #fff;
