@@ -18,39 +18,10 @@ class PacientesController extends Controller
         //
           //----ORM -----
         // ORM -> trabajando una paginacion (4 elementos)
-        $objects = Paciente::paginate(10);
-        //ORM select * from artista
-        $objects = Paciente::all();
-        $objects = Paciente::first();
+        $pac = Paciente::all();
         //dd($objects);
         
-        $objects = Paciente::where('nombre','like','%a%')->get();
-        $objects = Paciente::where('nombre','like','%a%')
-            ->orWhere('nacionalidad','like','%a%')
-            ->get();
-        dd($objects);
-        //-----DB--------
-        //_DB => select from artista//
-        $ar = DB::table('paciente')->get();
-        $ar = DB::table('paciente')->first();
-        
-        $ar = DB::table('paciente')->where('nombre','like','%a%')->get();
-        $ar = DB::table('paciente')
-            ->where('nombre','like','%a%')
-            ->where('nacionalidad','like','%c%')
-            ->get();
-        $ar = DB::table('paciente')
-            ->where('nombre','like','%r%')
-            ->orWhere('nacionalidad','like','%w%')
-            ->get();
-        $ar = DB::table('paciente')->orderBy('id','desc')->get();
-        $ar = DB::table('paciente')->orderBy('nacionalidad','asc')->get(); 
-        $x = 'je';
-        $ar = DB::table('paciente')
-            ->where('nombre','like','%'.$x.'%')
-            ->orWhere('nacionalidad','like','%'.$x.'%')
-            ->get();
-        $ar = DB::table('paciente')->skip(0)->take(5)->get();
+        return view('admin.paciente.index',compact('pac'));
         
     }
 
@@ -95,6 +66,13 @@ class PacientesController extends Controller
     public function edit($id)
     {
         //
+          //----ORM -----
+        // ORM -> trabajando una paginacion (4 elementos)
+        $pac = Paciente::get($id);
+        dd($pac);
+        //dd($objects);
+        
+        return view('admin.paciente.index',compact('pac'));
     }
 
     /**
