@@ -58,7 +58,7 @@
 						<div class="row add_bottom_45">
 							<div class="col-lg-7">
 								<div class="form-group">
-									<div id="calendar"></div>
+									<div class="calendar"> </div>
 									<input type="hidden" id="my_hidden_input">
 									<ul class="legend">
 										<li><strong></strong>Disponible</li>
@@ -67,7 +67,7 @@
 								</div>
 							</div>
 							<div class="col-lg-5">
-								<ul class="time_select version_2 add_top_20">
+								<ul class="pac time_select version_2 add_top_20">
 									<li>
 										<input type="radio" id="radio1" name="radio_time" value="09.30am">
 										<label for="radio1">09.30am</label>
