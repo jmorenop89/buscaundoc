@@ -36,23 +36,18 @@ Route::get('/doc', function () {
     return view('online.log-pac.index');
 });
 
-Route::get('/logeado', function () {
-    return view('online.logeado.index');
-});
 
-Route::get('/logeadolista', function () {
-    return view('online.logeado.listadoc');
-});
-
-Route::get('/logeadodetalle', function () {
-    return view('online.logeado.detalle');
+Route::get('/admine',
+function(){
+	return view('admin.paciente.index');
 });
 
 Auth::routes();
 
-Route::get('/login', function () {
-     return view('online.login.login');
- })->name('login');
+Route::get('/login', 'Online\Logincontroller@index')->name('login');
+Route::post('/login','Online\LoginController@login');
+Route::post('/login','Online\LoginController@logout');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
