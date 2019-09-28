@@ -56,9 +56,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admine', 'admin\PacientesController@index');
 
 
-Route::get('/admindoc', 'admin\DoctoresController@index');
 
-Route::get('/admine_edit', ['as'=>'pac.edit','uses'=> 'admin\PacientesController@edit']);
 Route::get('/logeado', function () {
     return view('online.logeado.index');
 });
@@ -70,5 +68,10 @@ Route::get('/logeadolista', function () {
 Route::get('/logeadodetalle', function () {
     return view('online.logeado.detalle');
 });
+Route::get('/repo', 'admin\UserController@listado');
 Route::get('/prueba', "OnlineController@prueba");
+
+Route::get('/admindoc', 'admin\DoctoresController@index');
+
+Route::get('/admine_edit', ['as'=>'pac.edit','uses'=> 'admin\PacientesController@edit']);
 

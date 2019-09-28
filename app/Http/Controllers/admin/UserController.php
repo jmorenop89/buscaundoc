@@ -14,6 +14,11 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function listado()
+    {
+       return view('admin.reportes.listadoc');
+    }
+
     public function index()
     {
         //
