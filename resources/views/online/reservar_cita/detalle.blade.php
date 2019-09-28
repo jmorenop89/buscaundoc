@@ -67,7 +67,7 @@
 								</div>
 							</div>
 							<div class="col-lg-5">
-								<ul class="pac time_select version_2 add_top_20">
+								<ul class="pac time_select version_2 doc add_top_20">
 									<li>
 										<input type="radio" id="radio1" name="radio_time" value="09.30am">
 										<label for="radio1">09.30am</label>
