@@ -12,10 +12,10 @@
     				Selecciona una especialidad y ciudad donde te encuentras.
     			</p>
 				<form method="get" action="/list">
-    				<div id=""> <!-- custom-search-input revisar mañana-->
+    				<div id="custom-search-input"> <!-- custom-search-input revisar mañana-->
 			
         					<input type="text" class="typeahead especialidad" placeholder="Especialidad"> 
-        					 <input type="text" class="ciudad" placeholder="Ciudad">
+        					 <input type="text" class="typeahead2 ciudad" placeholder="Ciudad">
         					<input type="submit" class="buscar" value= "Buscar"> 
     					<div >
 

@@ -821,6 +821,7 @@ ul#additional_links {
   width: 650px;
   margin: auto;
   position: relative; }
+  
   @media (max-width: 991px) {
     #custom-search-input {
       /* For less than 991px */
@@ -848,7 +849,7 @@ ul#additional_links {
         /* For less than 575px */
         padding-left: 15px; } }
   #custom-search-input ul {
-    text-align: center;
+    text-align: center; 
     margin-top: 25px; }
     #custom-search-input ul li {
       display: inline-block;
@@ -856,6 +857,7 @@ ul#additional_links {
       font-size: 13px;
       font-size: 0.8125rem;
       font-weight: 600; }
+
       #custom-search-input ul li input[type="radio"] {
         display: none; }
         #custom-search-input ul li input[type="radio"]:checked + label, #custom-search-input ul li input[type="radio"]:checked + label:hover {
@@ -864,6 +866,7 @@ ul#additional_links {
         #custom-search-input ul li input[type="radio"]:hover + label {
           background-color: #3173ec;
           color: #fff; }
+          
       #custom-search-input ul li label {
         display: inline-block;
         -moz-transition: all 0.3s ease-in-out;

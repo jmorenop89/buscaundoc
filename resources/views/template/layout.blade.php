@@ -104,9 +104,17 @@
 
 	 <!-- Bootstrap Typeahead Plugin -->
 	 <script src="/online/jQuery-Bootstrap-4-Typeahead-Plugin/bootstrap3-typeahead.js"></script>
-	 <script>
-var $input = $(".typeahead");
-$input.typeahead({
+
+<script>
+
+
+var $input = $(".typeahead") ;
+var $input = $(".typeahead2") ;
+
+
+if ($input = $(".typeahead")) {
+    
+	$input.typeahead({
   source: [
 	{id:"id1", name:"Ginecólogo"},
 {id:"id2", name:"Traumatólogo y Ortopedista"},
@@ -171,10 +179,34 @@ $input.typeahead({
 {id:"id61", name:"Podólogo"},
 {id:"id62", name:"Quiropráctico"},
 {id:"id63", name:"Enfermero"},
-{id:"id64", name:"óptico"}
-  ],
-  autoSelect: true
-});
+{id:"id64", name:"óptico"}  ] , autoSelect: true
+}) ;
+
+};
+
+
+if ($input = $(".typeahead2")) {
+    
+	$input.typeahead({
+  source: [
+	{id:"id1", name:"Trujillo"},
+{id:"id2", name:"Lima"},
+{id:"id3", name:"Arequipa"},
+{id:"id4", name:"Chiclayo"},
+{id:"id5", name:"Piura"},
+{id:"id6", name:"Chimbote"},
+{id:"id7", name:"Tacna"},
+{id:"id8", name:"Tumbes"},
+{id:"id9", name:"Iquitos"},
+{id:"id10", name:"Tarapoto"},
+{id:"id11", name:"Ayacucho"},
+{id:"id12", name:"Huancayo"}
+
+  ] , autoSelect: true
+}) ;
+
+};
+
 $input.change(function() {
   var current = $input.typeahead("getActive");
   if (current) {
@@ -188,8 +220,13 @@ $input.change(function() {
   } else {
     // Nothing is active so it is a new value (or maybe empty value)
   }
-});
+}); 
+
+
+
 </script>
+
+ 
 
 </body>
 
