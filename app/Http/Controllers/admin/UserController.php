@@ -16,7 +16,7 @@ class UserController extends Controller
      */
     public function listado()
     {
-       return view('admin.reportes.listadoc');
+       return view('admin.reportes.index');
     }
 
     public function index()
