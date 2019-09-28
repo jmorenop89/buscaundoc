@@ -36,6 +36,17 @@ Route::get('/doc', function () {
     return view('online.log-pac.index');
 });
 
+Route::get('/logeado', function () {
+    return view('online.logeado.index');
+});
+
+Route::get('/logeadolista', function () {
+    return view('online.logeado.listadoc');
+});
+
+Route::get('/logeadodetalle', function () {
+    return view('online.logeado.detalle');
+});
 
 Auth::routes();
 
