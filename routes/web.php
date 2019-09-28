@@ -43,9 +43,10 @@ function(){
 
 Auth::routes();
 
-Route::get('/login', 'Online\Logincontroller@index')->name('login');
-Route::post('/login','Online\LoginController@login');
-Route::post('/login','Online\LoginController@logout');
+
+Route::post('/logout','Online\LoginController@logout')->name('logout');
+
+Route::post('/login','Auth\LoginController@validateLogin');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -54,3 +55,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admine', 'admin\PacientesController@index');
 
 Route::get('/admine_edit', ['as'=>'pac.edit','uses'=> 'admin\PacientesController@edit']);
+Route::get('/prueba', "OnlineController@prueba");

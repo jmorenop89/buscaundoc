@@ -20,13 +20,16 @@ class LoginController extends Controller
  	public function login(Request $request)
 	{
 	    if ($this->request->is('post')) {
-	        $user = $this->Auth->identify();
+	        $user = $this->Auth->identify($user);
 	        if ($user) {
 	            $this->Auth->setUser($user);
 	            return $this->redirect($this->Auth->redirectUrl());
 	        }
-	        $this->Flash->error(__('Invalid username or password, try again'));
+	        $this->Flash->error(__('Usuario o contraseña invalidos intentelo nuevamente'));
 	    }
+	}
+	public function dlogin(){
+		return view('online.login.confirmado');
 	}
 
 	public function logout(Request $request)
