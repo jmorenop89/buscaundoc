@@ -37,11 +37,17 @@ Route::get('/doc', function () {
 });
 
 
+Route::get('/admine',
+function(){
+	return view('admin.paciente.index');
+});
+
 Auth::routes();
 
-Route::get('/login', function () {
-     return view('online.login.login');
- })->name('login');
+Route::get('/login', 'Online\Logincontroller@index')->name('login');
+Route::post('/login','Online\LoginController@login');
+Route::post('/login','Online\LoginController@logout');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
