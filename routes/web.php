@@ -51,3 +51,6 @@ Route::post('/login','Online\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+Route::get('/admine', 'admin\PacientesController@index');
+
+Route::get('/admine_edit', ['as'=>'pac.edit','uses'=> 'admin\PacientesController@edit']);

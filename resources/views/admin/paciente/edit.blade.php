@@ -8,20 +8,20 @@
    Editar Paciente
 @endsection
 ​
-@section('contenido')
+@section('content')
 <div class="page-content-wrapper">
                 <div class="page-content">
                     <div class="page-bar">
                         <div class="page-title-breadcrumb">
                             <div class=" pull-left">
-                                <div class="page-title">Edit Patient</div>
+                                <div class="page-title">Editar Paciente</div>
                             </div>
                             <ol class="breadcrumb page-breadcrumb pull-right">
                                 <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
-                                <li><a class="parent-item" href="">Patients</a>&nbsp;<i class="fa fa-angle-right"></i>
+                                <li><a class="parent-item" href="">Pacientes</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
-                                <li class="active">Edit Patient</li>
+                                <li class="active">Editar Paciente</li>
                             </ol>
                         </div>
                     </div>
@@ -29,7 +29,7 @@
                         <div class="col-md-12 col-sm-12">
                             <div class="card card-box">
                                 <div class="card-head">
-                                    <header>Basic Information</header>
+                                    <header>Informacion Basica</header>
                                      <button id = "panel-button" 
 				                           class = "mdl-button mdl-js-button mdl-button--icon pull-right" 
 				                           data-upgraded = ",MaterialButton">
@@ -46,21 +46,21 @@
                                     <form action="#" id="form_sample_1" class="form-horizontal">
                                         <div class="form-body">
                                         <div class="form-group row">
-                                                <label class="control-label col-md-3">First Name
+                                                <label class="control-label col-md-3">Nombres
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
                                                     <input type="text" name="firstname" data-required="1" placeholder="enter first name" value="Ricky" class="form-control input-height" /> </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label class="control-label col-md-3">Last Name
+                                                <label class="control-label col-md-3">Apellidos
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
                                                     <input type="text" name="lastname" data-required="1" placeholder="enter last name" value="Tailer" class="form-control input-height" /> </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label class="control-label col-md-3">Date Of Birth
+                                                <label class="control-label col-md-3">Fecha de Nacimiento
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
@@ -72,113 +72,20 @@
 	                                            </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label class="control-label col-md-3">Gender
+                                                <label class="control-label col-md-3">N° Celular
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <select class="form-control input-height" name="gender">
-                                                        <option value="">Select...</option>
-                                                        <option selected="selected" value="Category 1">Male</option>
-                                                        <option value="Category 2">Female</option>
-                                                    </select>
-                                                </div>
+                                                    <input name="number" type="text" placeholder="ingrese celular" value="1234567890" class="form-control input-height" /> </div>
                                             </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Age
-                                                    <span class="required"> * </span>
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <input type="text" name="designation" data-required="1" placeholder="enter your age" value ="30" class="form-control input-height" /> </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Mobile No.
-                                                    <span class="required"> * </span>
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <input name="number" type="text" placeholder="mobile number" value="1234567890" class="form-control input-height" /> </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Email
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                                <i class="fa fa-envelope"></i>
-                                                            </span>
-                                                        <input type="text" class="form-control input-height" name="email" value="test@gmail.com" placeholder="Email Address"> </div>
-                                                </div>
-                                            </div>
-                                             <div class="form-group row">
-                                                <label class="control-label col-md-3">Address
-                                                    <span class="required"> * </span>
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <textarea name="address" placeholder="address" class="form-control-textarea" rows="5" >A-101, Sun Velly, Paris</textarea>
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Marital Status 
-                                                    <span class="required"> * </span>
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <select class="form-control input-height" name="gender">
-                                                        <option value="">Select...</option>
-                                                        <option selected="selected" value="Category 1">Single</option>
-                                                        <option value="Category 2">Married</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Upload Picture
-                                                </label>
-                                                <div class="compose-editor">
-                                                  <input type="file" class="default" multiple>
-                                              </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Blood Group
-                                                    <span class="required"> * </span>
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <select class="form-control input-height" name="selectbg">
-                                                        <option value="">Select...</option>
-                                                        <option value="Category 1">A+</option>
-                                                        <option value="Category 2">A-</option>
-                                                        <option selected="selected" value="Category 3">B+</option>
-                                                        <option value="Category 4">B-</option>
-                                                        <option value="Category 5">AB+</option>
-                                                        <option value="Category 6">AB-</option>
-                                                        <option value="Category 7">O+</option>
-                                                        <option value="Category 8">O-</option>	
-                                                    </select>
-                                                </div>
-                                            </div>
-                                         	<div class="form-group row">
-                                                 <label class="control-label col-md-3">Blood Presure
-                                                 </label>
-                                                 <div class="col-md-5">
-                                                     <input type="text" class="form-control input-height" placeholder="blood presure" name="bp" value="102">
-                                                 </div>
-                                             </div>
-											<div class="form-group row">
-                                                <label class="control-label col-md-3">Sugger
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <input type="text" class="form-control input-height" placeholder="sugger" name="sug" value="89">
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                 <label class="control-label col-md-3">Injury/Condition
-                                                 </label>
-                                                 <div class="col-md-5">
-                                                     <input type="text" class="form-control input-height" placeholder="injury/condition" name="injury" value="fever">
-                                                 </div>
-                                             </div>
+                                           
+                                          
+                                           
 											<div class="form-actions">
                                             <div class="row">
                                                 <div class="offset-md-3 col-md-9">
-                                                    <button type="submit" class="btn btn-info">Submit</button>
-                                                    <button type="button" class="btn btn-default">Cancel</button>
+                                                    <button type="submit" class="btn btn-info">Guardar</button>
+                                                    <button type="button" class="btn btn-default">Cancelar</button>
                                                 </div>
                                             	</div>
                                         	</div>
@@ -191,4 +98,4 @@
                 </div>
             </div>
 
-            @endsection('contenido')
+            @endsection

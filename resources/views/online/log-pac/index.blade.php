@@ -45,7 +45,9 @@
                   <div class="tab-content" id="v-pills-tabContent">
 
                     <div class="tab-pane fade  show active" id="ver-citas" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                      <h3>MIS CITAS</h3>
+                    <div class="main_title_4">
+										<h3><i class="icon_circle-slelected"></i>Mis citas</h3>
+									</div>
                       <hr>
                      
                       <div class="strip_list wow fadeIn">
@@ -81,7 +83,9 @@
                     </div>
                     </div>
                     <div class="tab-pane fade" id="notifi" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                      <h3>NOTIFICACIONES</h3>
+                    <div class="main_title_4">
+										<h3><i class="icon_circle-slelected"></i>Notificaciones</h3>
+									</div>
                       <hr>
                       <!-- <div class="strip_list wow fadeIn"> -->
                       <div class="alert alert-primary mt-1" id="alerta">
@@ -114,47 +118,58 @@
                    
                     </div>
                     <div class="tab-pane fade" id="config" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                      <h3>CONFIGURACIÓN</h3>
+                    <div class="main_title_4">
+										<h3><i class="icon_circle-slelected"></i>Actualizar Datos</h3>
+									</div>
                       <hr>
-                      <form>
-                    <div class="box_form">
-                      <div class="form-group">
-                        <label>Nombres</label>
-                        <input type="text" class="form-control" placeholder="Ingresa tus nombres">
-                      </div>
-                      <div class="form-group">
-                        <label>Apellidos</label>
-                        <input type="text" class="form-control" placeholder="Ingresa tus apellidos">
-                                    </div>
-                                    <div class="form-group">
-                        <label>Teléfono Celular</label>
-                        <input type="text" class="form-control" placeholder="Ingresa Nº Celular">
-                      </div>
-                      <div class="form-group">
-                        <label>Correo</label>
-                        <input type="email" class="form-control" placeholder="Ingresa tu Correo">
-                      </div>
-                      <div class="form-group">
-                        <label>Contraseña</label>
-                        <input type="password" class="form-control" id="password1" name="password1" placeholder="Ingresa contraseña">
-                      </div>
-                      <div class="form-group">
-                        <label>Confirmar contraseña</label>
-                        <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirmar constraseña">
-                      </div>
-                      <div id="pass-info" class="clearfix"></div>
-                      <div class="checkbox-holder text-left">
-                        <div class="checkbox_2">
-                          <input type="checkbox" value="accept_2" id="check_2" name="check_2" checked>
-                          <label for="check_2"><span>Estoy de acuerdo con los <strong>terminos y condiciones</strong></span></label>
-                        </div>
-                      </div>
-                      <div class="form-group text-center add_top_30">
-                        <input class="btn_1" type="submit" value="Enviar">
-                      </div>
-                    </div>
-                    <p class="text-center"><small>Has voluptua vivendum accusamus cu. Ut per assueverit temporibus dissentiet. Eum no atqui putant democritum, velit nusquam sententiae vis no.</small></p>
-                  </form>
+							      	<form>
+										<!--<div class="box_form">-->
+											<div class="form-row">
+												<div class="form-group col-md-6">
+													<label>Nombres</label>
+													<input type="text" class="form-control" id="" placeholder="Ingresa tus nombres">
+												</div>
+												<div class="form-group col-md-6">
+													<label>Apellidos</label>
+													<input type="text" class="form-control" id="" placeholder="Ingresa tus apellidos">
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="form-group col-md-6">
+													<label>Sexo</label>
+													<input type="text" class="form-control" id="" placeholder="Sexo">
+												</div>
+												<div class="form-group col-md-6">
+													<label>Fecha Nacimiento</label>
+													<input type="text" class="form-control" id="" placeholder="Fecha Nacimiento">
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="form-group col-md-6">
+													<label>Telefono Celular</label>
+													<input type="text" class="form-control" id="" placeholder="Ingresa Nº Celular">
+												</div>
+												<div class="form-group col-md-6">
+													<label>Correo</label>
+													<input type="email" class="form-control" id="" placeholder="Ingresa tu Correo">
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="form-group col-md-6">
+													<label>Contraseña</label>
+													<input type="password" class="form-control" id="" placeholder="Ingresa contraseña">
+												</div>
+												<div class="form-group col-md-6">
+													<label>Confirmar contraseña</label>
+													<input type="password" class="form-control" id="" placeholder="Confirmar contraseña">
+												</div>
+											</div>
+											<hr>
+											<div class="form-group text-center add_top_30">
+												<input class="btn_1" type="submit" value="Actualizar">
+											</div>								
+										<!--</div> -->
+									</form>
                     </div>
 
                   </div>
