@@ -5,4 +5,4 @@
             <div class="scroll-to-top">
                 <i class="material-icons">eject</i>
             </div>
-        </div>
+</div>
