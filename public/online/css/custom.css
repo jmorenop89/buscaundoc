@@ -178,9 +178,9 @@ ul.time_select li label:hover {
 }
 
 
-.hero_home.version_1 .content {
+/* .hero_home.version_1 .content {
   background-color:#00c3a5; 
-}
+} */
 
 @media (min-width: 320px) {
   ul.time_select.version_2 li {
@@ -198,4 +198,7 @@ ul.time_select li label:hover {
   ul.time_select.version_2 li {
     width:20%;
 }}
+
+
+
 

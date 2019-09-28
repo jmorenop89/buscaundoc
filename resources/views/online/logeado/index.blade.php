@@ -1,7 +1,7 @@
-@extends('template.layout')
+@extends('template.layoutlogeo')
 
 @section('tittle')
-    FINDOCTOR - Find easily a doctor and book online an appointment
+    FINDOCTOR - Logeado
 @endsection
 
 @section('content')
@@ -11,14 +11,13 @@
     			<p>
     				Selecciona una especialidad y ciudad donde te encuentras.
     			</p>
-				<form method="get" action="/list">
-    				<div id=""> <!-- custom-search-input revisar mañana-->
-			
-        					<input type="text" class="typeahead especialidad" placeholder="Especialidad"> 
-        					 <input type="text" class="ciudad" placeholder="Ciudad">
-        					<input type="submit" class="buscar" value= "Buscar"> 
+    			<form method="get" action="/list">
+    				<div id="custom-search-input">
     					<div >
 
+        					<input type="text" class="especialidad" placeholder="Especialidad">
+        					<input type="text" class="ciudad" placeholder="Ciudad">
+        					<input type="submit" class="buscar" value= "Buscar">
     					</div>
     				</div>
     			</form>
@@ -108,14 +107,6 @@
 				<!-- /carousel -->
 			</div>
 			<!-- /container -->
-
-
-			<!-- <div class="pruebas">
-				especialidades: <input class="typeahead form-control">		
-			</div> -->
 		</div>
 		
-	
-
-
 	@endsection

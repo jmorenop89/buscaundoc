@@ -36,16 +36,42 @@ Route::get('/doc', function () {
     return view('online.log-pac.index');
 });
 
+Route::get('/admine',
+function(){
+	return view('admin.paciente.index');
+
+});
 
 Auth::routes();
 
-Route::get('/login', function () {
-     return view('online.login.login');
- })->name('login');
+
+Route::post('/logout','Online\LoginController@logout')->name('logout');
+
+Route::post('/login','Auth\LoginController@validateLogin');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/admine', 'admin\PacientesController@index');
 
+
+
+Route::get('/logeado', function () {
+    return view('online.logeado.index');
+});
+
+Route::get('/logeadolista', function () {
+    return view('online.logeado.listadoc');
+});
+
+Route::get('/logeadodetalle', function () {
+    return view('online.logeado.detalle');
+});
+Route::get('/repo', 'admin\UserController@listado');
+Route::get('/prueba', "OnlineController@prueba");
+
+Route::get('/admindoc', 'admin\DoctoresController@index');
+
 Route::get('/admine_edit', ['as'=>'pac.edit','uses'=> 'admin\PacientesController@edit']);
+

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Paciente;
+use App\User;
 
 class PacientesController extends Controller
 {
@@ -18,8 +19,16 @@ class PacientesController extends Controller
         //
           //----ORM -----
         // ORM -> trabajando una paginacion (4 elementos)
+        $pac = Paciente::paginate(10);
         $pac = Paciente::all();
-        //dd($objects);
+        $pac = Paciente::first();
+        /*$pac = Paciente::where('nombres','like','%a%')->get();*/
+        $pac = Paciente::where('nombres','like','%a%')
+            ->orWhere('apellidos','like','%a%')
+            ->get();
+        /*dd($pac->id);
+        $users = User::where('id','')->get();
+        //dd($objects);*/
         
         return view('admin.paciente.index',compact('pac'));
         

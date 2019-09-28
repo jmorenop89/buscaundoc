@@ -24,17 +24,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if (Auth::user()->role == "admin") {
-            return redirect(route('adi'));
-        };
-
-        if (Auth::user()->role == "paciente") {
-            return "paciente logueado";
-        };
-        if (Auth::user()->role == "doctor") {
-            return "doctor logueado";
-        }
-
-        return '/home';
+        return "Estamos en problemass";
     }
 }

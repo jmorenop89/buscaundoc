@@ -95,28 +95,28 @@
 													<label for="radio4">11.00am</label>
 												</li>
 												<li>
-													<input type="radio" id="radio1" name="radio_time" value="09.30am">
-													<label for="radio1">11.30am</label>
+													<input type="radio" id="radio5" name="radio_time" value="09.30am">
+													<label for="radio5">11.30am</label>
 												</li>
 												<li>
-													<input type="radio" id="radio2" name="radio_time" value="10.00am">
-													<label for="radio2">12.00pm</label>
+													<input type="radio" id="radio6" name="radio_time" value="10.00am">
+													<label for="radio6">12.00pm</label>
 												</li>
 												<li>
-													<input type="radio" id="radio3" name="radio_time" value="10.30am">
-													<label for="radio3">12.30pm</label>
+													<input type="radio" id="radio7" name="radio_time" value="10.30am">
+													<label for="radio7">12.30pm</label>
 												</li>
 												<li>
-													<input type="radio" id="radio4" name="radio_time" value="11.00am">
-													<label for="radio4">13.00am</label>
+													<input type="radio" id="radio8" name="radio_time" value="11.00am">
+													<label for="radio8">13.00am</label>
 												</li>
 												<li>
-													<input type="radio" id="radio3" name="radio_time" value="10.30am">
-													<label for="radio3">13.30pm</label>
+													<input type="radio" id="radio9" name="radio_time" value="10.30am">
+													<label for="radio9">13.30pm</label>
 												</li>
 												<li>
-													<input type="radio" id="radio4" name="radio_time" value="11.00am">
-													<label for="radio4">14.00am</label>
+													<input type="radio" id="radio10" name="radio_time" value="11.00am">
+													<label for="radio10">14.00am</label>
 												</li>
 											</ul>
 										</div>
