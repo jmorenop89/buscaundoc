@@ -9,14 +9,14 @@
 		<div id="breadcrumb">
 			<div class="container">
 				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Category</a></li>
-					<li>Page active</li>
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#">Categoria</a></li>
+					<li>Pagina Activa</li>
 				</ul>
 			</div>
 		</div>
 		<!-- /breadcrumb -->
-		
+
 		<div class="container margin_60">
 			<div class="row">
 				<aside class="col-xl-3 col-lg-4" id="sidebar">
@@ -24,8 +24,8 @@
 						<figure>
 							<img src="http://via.placeholder.com/565x565.jpg" alt="" class="img-fluid">
 						</figure>
-						<small>Primary care - Internist</small>
-						<h1>DR. Gustavo</h1>
+						<small>Atencion Principal - Medico Cardiologo</small>
+						<h1>Dr. Michel Butron</h1>
 						<span class="rating">
 							<i class="icon_star voted"></i>
 							<i class="icon_star voted"></i>
@@ -47,18 +47,18 @@
 					</div>
 				</aside>
 				<!-- /asdide -->
-				
+
 				<div class="col-xl-9 col-lg-8">
-					
+
 					<div class="box_general_2 add_bottom_45">
 						<div class="main_title_4">
-							<h3><i class="icon_circle-slelected"></i>Selecciona tu fecha y hora</h3>
+							<h3><i class="icon_circle-slelected"></i>Selecciona fecha y hora</h3>
 						</div>
-						
+
 						<div class="row add_bottom_45">
 							<div class="col-lg-7">
 								<div class="form-group">
-									<div class="calendar"></div>
+									<div class="calendar"> </div>
 									<input type="hidden" id="my_hidden_input">
 									<ul class="legend">
 										<li><strong></strong>Disponible</li>
@@ -120,14 +120,14 @@
 							</div>
 						</div>
 						<!-- /row -->
-						
-									
+
+
 						<hr>
-						<div class="text-center"><a href="booking-page.html" class="btn_1 medium">Reservar ahora</a></div>
+						<div class="text-center"><a href="booking-page.html" class="btn_1 medium">Reservar Cita</a></div>
 					</div>
 					<!-- /box_general -->
-					
-					
+
+
 				</div>
 				<!-- /col -->
 			</div>

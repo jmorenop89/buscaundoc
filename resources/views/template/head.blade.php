@@ -21,9 +21,12 @@
 
 	 <!-- SPECIFIC CSS -->
 	 <link href="/online/css/date_picker.css" rel="stylesheet">
-    
 
-	<!-- YOUR CUSTOM CSS -->
+    	<!-- YOUR CUSTOM CSS -->
 	<link href="/online/css/custom.css" rel="stylesheet">
+
+
+	<!-- Bootstrap Typeahead Plugin -->
+	<script src="/online/jQuery-Bootstrap-4-Typeahead-Plugin/bootstrap3-typeahead.js"></script>
 
 </head>
