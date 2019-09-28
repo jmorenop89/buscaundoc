@@ -16,16 +16,7 @@ class PacientesController extends Controller
      */
     public function index()
     {
-        //
-          //----ORM -----
-        // ORM -> trabajando una paginacion (4 elementos)
-        $pac = Paciente::paginate(10);
         $pac = Paciente::all();
-        $pac = Paciente::first();
-        /*$pac = Paciente::where('nombres','like','%a%')->get();*/
-        $pac = Paciente::where('nombres','like','%a%')
-            ->orWhere('apellidos','like','%a%')
-            ->get();
         /*dd($pac->id);
         $users = User::where('id','')->get();
         //dd($objects);*/

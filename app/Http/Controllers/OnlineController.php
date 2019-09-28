@@ -32,5 +32,8 @@ class OnlineController extends Controller
     public function det_hora(){
     	return view('online.reservar_cita.detalle');
     }
+    public function prueba(){
+        return "estamos haciendo algo mal";
+    }
     
 }

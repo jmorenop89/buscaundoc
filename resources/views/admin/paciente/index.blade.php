@@ -1,13 +1,9 @@
 @extends('templateadmin.layout')
-​
-@section('titulo')
-    Lista de Pacientes
+
+@section('tittle')
+	Lista de Pacientes
 @endsection
-​
-@section('titulo-seccion')
-   Lista de  Pacientes
-@endsection
-​
+
 @section('content')
 <div class="page-content-wrapper">
                 <div class="page-content">
@@ -19,7 +15,7 @@
                             <ol class="breadcrumb page-breadcrumb pull-right">
                                 <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
-                                <li><a class="parent-item" href="">Pacientes</a>&nbsp;<i class="fa fa-angle-right"></i>
+                                <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">dashoboar</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
                                 <li class="active">Lista de Pacientes</li>
                             </ol>
@@ -64,9 +60,9 @@
 																@foreach ($pac as $pacs)
 																<tr class="odd gradeX">
 																	<td class="patient-img">
-																			<img src="../assets/img/user/user1.jpg" alt="">
+																			<img src="" alt="">
 																	</td>
-																	<td>{{ $pacs->nombres}}</td>
+																	<td>{{ $pacs->user }}</td>
 																	<td>{{ $pacs->apellidos}}</td>
 																	<td>{{ $pacs->fecha_nac}}</td>
 																	<td>{{ $pacs->celular}}</td>
@@ -95,7 +91,7 @@
 				                                <div class="card card-box">
 				                                    <div class="card-body no-padding ">
 				                                    	<div class="doctor-profile">
-				                                                <img src="../assets/img/user/user10.jpg" class="doctor-pic" alt=""> 
+				                                                <img src="" class="doctor-pic" alt=""> 
 					                                        <div class="profile-usertitle">
 					                                            <div class="doctor-name">{{ $pacs->nombres}}  {{ $pacs->apellidos}}</div>
 					                                        </div>
@@ -117,4 +113,4 @@
 					</div>
 				</div>
 			</div>
-            @endsection
+@endsection
