@@ -44,15 +44,17 @@ function(){
 
 Auth::routes();
 
-Route::get('/login', 'Online\Logincontroller@index')->name('login');
-Route::post('/login','Online\LoginController@login');
-Route::post('/login','Online\LoginController@logout');
+
+Route::post('/logout','Online\LoginController@logout')->name('logout');
+
+Route::post('/login','Auth\LoginController@validateLogin');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/admine', 'admin\PacientesController@index');
+
 
 Route::get('/admindoc', 'admin\DoctoresController@index');
 
@@ -68,3 +70,5 @@ Route::get('/logeadolista', function () {
 Route::get('/logeadodetalle', function () {
     return view('online.logeado.detalle');
 });
+Route::get('/prueba', "OnlineController@prueba");
+
