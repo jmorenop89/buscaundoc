@@ -105,7 +105,7 @@
 					                                            <div class="doctor-name">{{ $docs->nombres}}  {{ $docs->apellidos}}</div>
 					                                            <div class="name-center"> {{ $docs->fecha_nac}}</div>
 					                                        </div>
-				                                                <p>{{ $docs->cod_colegiatura}} <br />M{{ $docs->direccion}}</p>
+				                                                <p>{{ $docs->cod_colegiatura}} <br />{{ $docs->direccion}}</p>
 				                                                
 					                                        <div class="profile-userbuttons">
 					                                            <a href="doctor_profile.html" class="btn btn-circle deepPink-bgcolor btn-sm">Leer Mas</a>
