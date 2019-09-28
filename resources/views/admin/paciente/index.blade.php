@@ -30,9 +30,9 @@
                             <div class="tabbable-line">
                                 <ul class="nav nav-pills nav-pills-rose">
 									<li class="nav-item tab-all"><a class="nav-link active show"
-										href="#tab1" data-toggle="tab">List View</a></li>
+										href="#tab1" data-toggle="tab">Vista de Lista</a></li>
 									<li class="nav-item tab-all"><a class="nav-link" href="#tab2"
-										data-toggle="tab">Grid View</a></li>
+										data-toggle="tab">Vista en Cuadricula</a></li>
 								</ul>
                                 <div class="tab-content">
                                     <div class="tab-pane active fontawesome-demo" id="tab1">
@@ -57,7 +57,6 @@
 					                                                <th> Apellidos </th>
 					                                                <th> Fecha de Nacimiento</th>
 					                                                <th> Celular</th>
-					                                                
 					                                                <th> Accion</th>
 					                                            </tr>
 					                                        </thead>
@@ -71,7 +70,6 @@
 																	<td>{{ $pacs->apellidos}}</td>
 																	<td>{{ $pacs->fecha_nac}}</td>
 																	<td>{{ $pacs->celular}}</td>
-																	
 																	<td>
 																		<a href="{{ route('pac.edit')}}" class="btn btn-tbl-edit btn-xs">
 																			<i class="fa fa-pencil"></i>

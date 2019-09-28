@@ -36,6 +36,7 @@ Route::get('/doc', function () {
     return view('online.log-pac.index');
 });
 
+
 Route::get('/admine',
 function(){
 	return view('admin.paciente.index');
@@ -54,5 +55,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admine', 'admin\PacientesController@index');
 
+
 Route::get('/repo', 'admin\UserController@listado');
 Route::get('/prueba', "OnlineController@prueba");
+
+Route::get('/admindoc', 'admin\DoctoresController@index');
+
+Route::get('/admine_edit', ['as'=>'pac.edit','uses'=> 'admin\PacientesController@edit']);
+
