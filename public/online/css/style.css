@@ -481,7 +481,7 @@ ul#top_access {
       ul#top_access li#user figure {
         position: absolute;
         left: 15px;
-        top: 0;
+        top: 2px;
         width: 35px;
         height: 35px;
         overflow: hidden;
@@ -490,7 +490,7 @@ ul#top_access {
         -ms-border-radius: 50%;
         border-radius: 50%; }
         ul#top_access li#user figure img {
-          width: auto;
+          width: 40px;
           height: 35px; }
         @media (max-width: 991px) {
           ul#top_access li#user figure {

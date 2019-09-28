@@ -29,8 +29,9 @@
 					</div>
 				</div>
 				<div class="col-lg-9 col-6">
+					
 					<nav id="menu" class="main-menu">
-						<ul>
+						<ul  id="top_access">
 							<li>
 								<span><a href="/">Inicio</a></span>
 							</li>
@@ -53,7 +54,14 @@
                                 <span id="reserva">
                                 <div><a class="btn_1 text-white">Reserva una cita</a></div>
                             </span>
-                        </li>
+						</li>
+						<li id="user">
+						<figure><img src="http://via.placeholder.com/150x150.jpg" alt="">
+						</figure>
+							<span><a href="">
+								Jhon Smith</a>
+							</span>
+						</li>
 						</ul>
 					</nav>
 				</div>
