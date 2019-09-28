@@ -11,13 +11,14 @@
     			<p>
     				Selecciona una especialidad y ciudad donde te encuentras.
     			</p>
-    			<form method="get" action="/list">
-    				<div id="custom-search-input">
+				<form method="get" action="/list">
+    				<div id=""> <!-- custom-search-input revisar mañana-->
+			
+        					<input type="text" class="typeahead especialidad" placeholder="Especialidad"> 
+        					 <input type="text" class="ciudad" placeholder="Ciudad">
+        					<input type="submit" class="buscar" value= "Buscar"> 
     					<div >
 
-        					<input type="text" class="especialidad" placeholder="Especialidad">
-        					<input type="text" class="ciudad" placeholder="Ciudad">
-        					<input type="submit" class="buscar" value= "Buscar">
     					</div>
     				</div>
     			</form>
@@ -107,6 +108,14 @@
 				<!-- /carousel -->
 			</div>
 			<!-- /container -->
+
+
+			<!-- <div class="pruebas">
+				especialidades: <input class="typeahead form-control">		
+			</div> -->
 		</div>
 		
+	
+
+
 	@endsection
