@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Doctor;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -15,6 +16,12 @@ class DoctoresController extends Controller
     public function index()
     {
         //
+        $doc = Doctor::all();
+        /*dd($pac->id);
+        $users = User::where('id','')->get();
+        //dd($objects);*/
+        
+        return view('admin.doctor.index',compact('doc'));
     }
 
     /**
