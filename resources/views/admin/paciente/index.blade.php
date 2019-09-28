@@ -66,7 +66,7 @@
 																	<td class="patient-img">
 																			<img src="../assets/img/user/user1.jpg" alt="">
 																	</td>
-																	<td>{{ $pacs->nombres}}</td>
+																	<td>{{ $pacs->user }}</td>
 																	<td>{{ $pacs->apellidos}}</td>
 																	<td>{{ $pacs->fecha_nac}}</td>
 																	<td>{{ $pacs->celular}}</td>
