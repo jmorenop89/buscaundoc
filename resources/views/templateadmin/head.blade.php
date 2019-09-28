@@ -23,4 +23,6 @@
     <link href="/admin/css/theme-color.css" rel="stylesheet" type="text/css"/>
 	<!-- favicon -->
     <link rel="shortcut icon" href="/admin/img/favicon.ico"/>
+    <!-- data tables -->
+    <link href="/admin/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
  </head>

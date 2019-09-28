@@ -46,6 +46,11 @@
     <script src="/admin/plugins/morris/morris.min.js" ></script>
     <script src="/admin/plugins/morris/raphael-min.js" ></script>
     <script src="/admin/js/pages/chart/morris/morris-home-data.js" ></script>
+    {{-- data tables --}}
+    <script src="/admin/plugins/datatables/jquery.dataTables.min.js" ></script>
+    <script src="/admin/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js" ></script>
+    <script src="/admin/js/pages/table/table_data.js" ></script>
     {{-- end js include path --}}
+
   </body>
 </html>
