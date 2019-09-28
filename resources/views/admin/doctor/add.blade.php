@@ -63,73 +63,6 @@
                                                     <input type="text" name="lastname" data-required="1" placeholder="Ingresar Apellidos" class="form-control input-height" /> </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label class="control-label col-md-3">Correo Electronico
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <div class="input-group">
-                                                        <span class="input-group-addon">
-                                                                <i class="fa fa-envelope"></i>
-                                                            </span>
-                                                        <input type="text" class="form-control input-height" name="email" placeholder="Correo Electronico"> </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Contraseña
-                                                    <span class="required"> * </span>
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <input type="password" name="pswd" data-required="1" placeholder="Ingresar Contraseña" class="form-control input-height" /> </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Confirmar Contraseña
-                                                    <span class="required"> * </span>
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <input type="text" name="cnfmPwd" data-required="1" placeholder="Confirmar Contraseña" class="form-control input-height" /> </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Designacion
-                                                    <span class="required"> * </span>
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <input type="text" name="designation" data-required="1" placeholder="Ingresar tu Designacion" class="form-control input-height" /> </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Departamentos
-                                                    <span class="required"> * </span>
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <select class="form-control input-height" name="department">
-                                                        <option value="">Seleccionar...</option>
-                                                        <option value="Category 1">Neurologia</option>
-                                                        <option value="Category 2">Ortopedia</option>
-                                                        <option value="Category 3">Ginecologia</option>
-                                                        <option value="Category 3">Microbiologia</option>
-                                                        <option value="Category 3">Radioterapia</option>
-                                                        <option value="Category 3">Farmacia</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Genero
-                                                    <span class="required"> * </span>
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <select class="form-control input-height" name="gender">
-                                                        <option value="">Seleccionar...</option>
-                                                        <option value="Category 1">Masculino</option>
-                                                        <option value="Category 2">Femenino</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Numero Celular
-                                                    <span class="required"> * </span>
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <input name="number" type="text" placeholder="Numero Celular" class="form-control input-height" /> </div>
-                                            </div>
-                                               <div class="form-group row">
                                                 <label class="control-label col-md-3">Fecha de Nacimiento
                                                     <span class="required"> * </span>
                                                 </label>
@@ -141,6 +74,14 @@
                                             <input type="hidden" id="dtp_input2" value="" />
                                                 </div>
                                             </div>
+                                            <div class="form-group row">
+                                                <label class="control-label col-md-3">Codigo de Colegiatura
+                                                    <span class="required"> * </span>
+                                                </label>
+                                                <div class="col-md-5">
+                                                    <input type="password" name="pswd" data-required="1" placeholder="Ingresar Contraseña" class="form-control input-height" /> </div>
+                                            </div>
+                                                                                    
                                         	 <div class="form-group row">
                                                 <label class="control-label col-md-3">Direccion
                                                     <span class="required"> * </span>
@@ -156,13 +97,7 @@
                                                   <input type="file" class="default" multiple>
                                               </div>
                                             </div>
-											<div class="form-group row">
-												<label class="control-label col-md-3">Educacion
-												</label>
-												<div class="col-md-5">
-													<textarea name="address" class="form-control-textarea" placeholder="Educacion" rows="5"></textarea>
-												</div>
-											</div>
+											
 											<div class="form-actions">
                                             <div class="row">
                                                 <div class="offset-md-3 col-md-9">
