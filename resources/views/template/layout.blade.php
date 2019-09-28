@@ -35,9 +35,9 @@
 							<li>
 								<span><a href="/">Inicio</a></span>
 							</li>
-							<li>
+							<!-- <li>
 								<span><a href="">¿Cómo Funciona?</a></span>
-							</li>
+							</li> -->
                             <li>
 								<span><a href="">Regístrate</a></span>
 								<ul>
