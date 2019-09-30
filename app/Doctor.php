@@ -12,4 +12,8 @@ class Doctor extends Model
     protected $fillable = [
         'nombres', 'apellidos', 'fecha_nac', 'cod_colegiatura', 'direccion' , 'user_id', 'especialidad_id', 'ciudad_id'
     ];
+
+    public function user(){
+    	return $this->belongsTo('App\User');
+    }
 }
