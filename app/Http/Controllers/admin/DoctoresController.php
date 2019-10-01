@@ -15,13 +15,7 @@ class DoctoresController extends Controller
      */
     public function index()
     {
-        $doc = Doctor::paginate(10);
-        $doc = Doctor::all();
-        $doc = Doctor::first();
-        $doc = Doctor::where('nombres','like','%a%')->get();
-        $doc = Doctor::where('nombres','like','%a%')
-            ->orWhere('apellidos','like','%a%')
-            ->get();
+       $doc = Doctor::all();
         /*dd($pac->id);
         $users = User::where('id','')->get();
         //dd($objects);*/

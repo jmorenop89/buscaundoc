@@ -73,7 +73,7 @@ Route::get('/prueba', "OnlineController@prueba");
 
 Route::get('/admindoc', 'admin\DoctoresController@index');
 
-Route::get('/admine_edit', ['as'=>'pac.edit','uses'=> 'admin\PacientesController@edit']);
+Route::get('/admine_edit/{id}', ['as'=>'pac.edit','uses'=> 'admin\PacientesController@edit']);
 
 Route::group(['prefix' => 'ladmin'],function(){
     Route::get('/',['as' => 'admin.index', 'uses' => 'admin\LoginController@login']);

@@ -68,11 +68,11 @@ class PacientesController extends Controller
         //
           //----ORM -----
         // ORM -> trabajando una paginacion (4 elementos)
-        $pac = Paciente::get($id);
-        dd($pac);
+        $pac = Paciente::find($id);
+       /*dd($pac);*/
         //dd($objects);
         
-        return view('admin.paciente.index',compact('pac'));
+        return view('admin.paciente.edit',compact('pac'));
     }
 
     /**
