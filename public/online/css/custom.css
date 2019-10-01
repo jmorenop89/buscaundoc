@@ -209,3 +209,24 @@ ul.time_select li label:hover {
 
 
 
+@media (max-width:768px) {
+  .especialidad {
+    width:360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ciudad {
+    width:360px;
+  }
+}
+
+@media (max-width: 768px) {
+  #custom-search-input input[type='submit'] {
+    position: relative;
+    width:360px;
+    height: 45px;
+    top:-2px;
+   
+    }
+}
