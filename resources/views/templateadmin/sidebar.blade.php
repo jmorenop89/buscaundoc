@@ -28,13 +28,13 @@
 	                <ul class="sub-menu">
 	                    <li class="nav-item  active open">
 	                        <a href="index.html" class="nav-link ">
-	                            <span class="title">Dashboard 1</span>
+	                            <span class="title">Estadisticas</span>
 	                            <span class="selected"></span>
 	                        </a>
 	                    </li>
 	                    <li class="nav-item ">
 	                        <a href="dashboard2.html" class="nav-link ">
-	                            <span class="title">Dashboard 2</span>
+	                            <span class="title">Graficas</span>
 	                        </a>
 	                    </li>
 	                </ul>
@@ -49,7 +49,7 @@
 	                <ul class="sub-menu">
 	                	<li class="nav-item">
 	                        <a href="index.html" class="nav-link ">
-	                            <span class="title">Todos los Paciente</span>
+	                            <span class="title">Todos los Pacientes</span>
 	                            <span class="selected"></span>
 	                        </a>
 	                    </li>
