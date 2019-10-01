@@ -14,9 +14,11 @@
                         @csrf
                         <div class="form-group">
                             <label for="email" class="col-form-label">{{ __('E-Mail Address') }}</label>
-                            @session('status')
-                            <p>bien</p>
-                            @endsession
+                            @if (session('status'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
 
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
