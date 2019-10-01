@@ -22,7 +22,7 @@
                             <ol class="breadcrumb page-breadcrumb pull-right">
                                 <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
-                                <li><a class="parent-item" href="">Doctores</a>&nbsp;<i class="fa fa-angle-right"></i>
+                                <li><a class="parent-item" href="">Dashboard</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
                                 <li class="active">Lista Doctores</li>
                             </ol>
@@ -76,7 +76,7 @@
 																	<td class="left">{{ $docs->fecha_nac}}</td>
 																	<td class="left">{{ $docs->cod_colegiatura}}</td>
 																	<td> {{ $docs->direccion}}</td>
-																	<td> {{ $docs->user }}</td>
+																	<td> {{ $docs->user->email }}</td>
 																	<td class="center">
 																		<a href="edit_doctor.html" class="btn btn-tbl-edit btn-xs">
 																			<i class="fa fa-pencil"></i>
@@ -106,7 +106,8 @@
 					                                        <div class="profile-usertitle">
 					                                            <div class="doctor-name">{{ $docs->nombres}}  {{ $docs->apellidos}}</div>
 					                                            <div class="name-center"> {{ $docs->fecha_nac}}</div>
-					                                        </div>
+															</div>
+															<div>{{ $docs->user->email }}</div>
 				                                                <p>{{ $docs->cod_colegiatura}} <br />{{ $docs->direccion}}</p>
 				                                                
 					                                        <div class="profile-userbuttons">

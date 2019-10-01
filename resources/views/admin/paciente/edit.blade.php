@@ -50,14 +50,14 @@
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input type="text" name="firstname" data-required="1" placeholder="enter first name" value="Ricky" class="form-control input-height" /> </div>
+                                                    <input type="text" name="firstname" data-required="1" placeholder="enter first name" value="{{ $pac->nombres }}" class="form-control input-height" /> </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="control-label col-md-3">Apellidos
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input type="text" name="lastname" data-required="1" placeholder="enter last name" value="Tailer" class="form-control input-height" /> </div>
+                                                    <input type="text" name="lastname" data-required="1" placeholder="enter last name" value="{{ $pac->apellidos }}" class="form-control input-height" /> </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="control-label col-md-3">Fecha de Nacimiento

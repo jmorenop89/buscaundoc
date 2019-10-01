@@ -21,7 +21,7 @@
 		<div class="container margin_60">
 			<div class="row">
 				
-				<aside class="col-xl-3 col-lg-4" id="sidebar">
+				<aside class="col-xl-3 col-lg-4" id=""> <!--id="sidebar"-->
 					<div class="box_profile">
 						<figure>
 							<img src="http://via.placeholder.com/565x565.jpg" alt="" class="img-fluid">
