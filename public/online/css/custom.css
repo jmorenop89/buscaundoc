@@ -1,4 +1,10 @@
 /*boton reservar cita*/
+
+ul#top_access li a {
+  color: #333; }
+  ul#top_access li a:hover {
+    color:  #00c3a5; }
+
 #custom-search-input{
     width: 90%;
 }
@@ -8,6 +14,10 @@
   text-align: left; 
   font-size: 17px;
 
+}
+
+.dropdown-menu{
+  margin-top: 5px !important ;
 }
 
 #custom-search-input input[type='submit'] {
