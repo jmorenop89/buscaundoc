@@ -76,7 +76,7 @@
 																	<td class="left">{{ $docs->fecha_nac}}</td>
 																	<td class="left">{{ $docs->cod_colegiatura}}</td>
 																	<td> {{ $docs->direccion}}</td>
-																	<td> {{ $docs->user }}</td>
+																	<td> {{ $docs->user->email }}</td>
 																	<td class="center">
 																		<a href="edit_doctor.html" class="btn btn-tbl-edit btn-xs">
 																			<i class="fa fa-pencil"></i>
@@ -106,7 +106,8 @@
 					                                        <div class="profile-usertitle">
 					                                            <div class="doctor-name">{{ $docs->nombres}}  {{ $docs->apellidos}}</div>
 					                                            <div class="name-center"> {{ $docs->fecha_nac}}</div>
-					                                        </div>
+															</div>
+															<div>{{ $docs->user->email }}</div>
 				                                                <p>{{ $docs->cod_colegiatura}} <br />{{ $docs->direccion}}</p>
 				                                                
 					                                        <div class="profile-userbuttons">
