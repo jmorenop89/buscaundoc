@@ -173,7 +173,7 @@
 				</div>
 				<!-- /col -->
 				
-				<aside class="col-lg-5" id="sidebar">
+				<aside class="col-lg-5" id=""> <!-- id="sidebar"-->
 					<div id="map_listing" class="normal_list">
 					</div>
 				</aside>
