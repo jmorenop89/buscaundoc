@@ -58,7 +58,7 @@
 						<div class="row add_bottom_45">
 							<div class="col-lg-7">
 								<div class="form-group">
-									<div class="calendar"> </div>
+									<div class="calendar"></div>
 									<input type="hidden" id="my_hidden_input">
 									<ul class="legend">
 										<li><strong></strong>Disponible</li>
