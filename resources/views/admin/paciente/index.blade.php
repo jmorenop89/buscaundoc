@@ -50,7 +50,8 @@
 					                                            <tr>
 					                                            	<th></th>
 					                                                <th> Nombres </th>
-					                                                <th> Apellidos </th>
+																	<th> Apellidos </th>
+																	<th> Email </th>
 					                                                <th> Fecha de Nacimiento</th>
 					                                                <th> Celular</th>
 					                                                <th> Accion</th>
@@ -62,8 +63,9 @@
 																	<td class="patient-img">
 																			<img src="" alt="">
 																	</td>
-																	<td>{{ $pacs->user }}</td>
+																	<td>{{ $pacs->nombres }}</td>
 																	<td>{{ $pacs->apellidos}}</td>
+																	<td>{{ $pacs->user->email}}</td>
 																	<td>{{ $pacs->fecha_nac}}</td>
 																	<td>{{ $pacs->celular}}</td>
 																	<td>
@@ -94,7 +96,8 @@
 				                                                <img src="" class="doctor-pic" alt=""> 
 					                                        <div class="profile-usertitle">
 					                                            <div class="doctor-name">{{ $pacs->nombres}}  {{ $pacs->apellidos}}</div>
-					                                        </div>
+															</div>
+															<div>{{ $pacs->user->email}}</div>
 				                                                <p><br />{{ $pacs->fecha_nac}}</p> 
 				                                                <div><p><i class="fa fa-phone"></i>{{ $pacs->celular}}</p> </div>
 					                                        <div class="profile-userbuttons">
