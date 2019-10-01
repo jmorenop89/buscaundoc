@@ -32,12 +32,10 @@
 					
 					<nav id="menu" class="main-menu">
 						<ul  id="top_access">
+							@guest
 							<li>
 								<span><a href="/">Inicio</a></span>
 							</li>
-							<!-- <li>
-								<span><a href="">¿Cómo Funciona?</a></span>
-							</li> -->
                             <li>
 								<span><a href="">Regístrate</a></span>
 								<ul>
@@ -54,14 +52,26 @@
                                 <span id="reserva">
                                 <div><a class="btn_1 text-white">Reserva una cita</a></div>
                             </span>
-						</li>
-						<li id="user">
-						<figure><img src="http://via.placeholder.com/150x150.jpg" alt="">
-						</figure>
-							<span><a href="">
-								Jhon Smith</a>
-							</span>
-						</li>
+							</li>
+							@else
+							<li>
+								<span><a href="/">Inicio</a></span>
+							</li>
+							<li id="user">
+								<figure><img src="http://via.placeholder.com/150x150.jpg" alt=""></figure>
+								<span><a href="">Jhon Smith</a></span>
+								<ul>
+									<li><a href="{{ route('reg-pac') }}">Como Paciente</a></li>
+									<li><a href="{{ route('reg-doc') }}">Como Mèdico</a></li>
+								</ul>
+							</li>
+							<li>
+                                <span id="reserva">
+                                <div><a class="btn_1 text-white">Reserva una cita</a></div>
+                            </span>
+							</li>
+							
+						@endguest
 						</ul>
 					</nav>
 				</div>
@@ -92,13 +102,17 @@
 	<!-- SPECIFIC SCRIPTS -->
     <script src="/online/js/bootstrap-datepicker.js"></script>
     <script>
-			$('.calendar').datepicker({
+			var calendar = $('.calendar').datepicker({
 			    todayHighlight: true,
 				daysOfWeekDisabled: [0],
 				weekStart: 1,
 			    format: "yyyy-mm-dd",
     			datesDisabled: ["2017/10/20", "2017/11/21","2017/12/21", "2018/01/21","2018/02/21","2018/03/21"],
+    			onSelect: function(dateText, inst) {
+			      $("input[name='something']").val(dateText);
+			    }
 			});
+			console.log(calendar.val());
 	</script>
 
 
