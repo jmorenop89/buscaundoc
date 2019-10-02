@@ -12,10 +12,16 @@
     				Selecciona una especialidad y ciudad donde te encuentras.
     			</p>
 				<form method="get" action="/list">
-    				<div id="custom-search-input"> <!-- custom-search-input revisar mañana-->							
-        					<input type="text" class="typeahead especialidad" placeholder="Especialidad"> 
-        					 <input type="text" class="typeahead ciudad" placeholder="Ciudad">
-							<input type="submit" class="buscar" value= "Buscar"> 
+    				<div id="custom-search-input"> <!-- custom-search-input revisar mañana-->
+                        <div class="">
+        					<input type="text" class="especialidad" placeholder="Especialidad">
+                            <p id="especialidad"></p>
+
+                        </div>
+                        <div>
+        					 <input type="text" class="ciudad" placeholder="Ciudad">
+                        </div>
+							<input type="submit" class="buscar" value= "Buscar">
 		    		</div>
     			</form>
     		</div>
@@ -52,7 +58,7 @@
     		<!-- /row -->
     		<!-- <p class="text-center"><a href="list.html" class="btn_1 medium">Busca un médico</a></p> -->
 		</div>
-		
+
 		<div class="bg_color_1">
 			<div class="container">  <!-- margin_120_95 -->
 				<div class="main_title">
@@ -107,11 +113,11 @@
 
 
 			<!-- <div class="pruebas">
-				especialidades: <input class="typeahead form-control">		
+				especialidades: <input class="typeahead form-control">
 			</div> -->
 		</div>
-		
-	
+
+
 
 
 	@endsection
