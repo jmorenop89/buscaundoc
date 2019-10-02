@@ -74,27 +74,41 @@
 
     </div>
     <!-- page -->
-<!-- 
-	<div id="toTop"></div> -->
+	<div id="toTop"></div>
 	<!-- Back to top button -->
 
     <!-- COMMON SCRIPTS -->
-    <script src="/online/js/jquery-2.2.4.min.js"></script>
+	<script src="/online/js/jquery-2.2.4.min.js"></script>
+	<!-- Bootstrap Typeahead Plugin -->
+	<script src="/online/jQuery-Bootstrap-4-Typeahead-Plugin/bootstrap3-typeahead.js"></script>
     <script src="/online/js/common_scripts.min.js"></script>
 	<script src="/online/js/functions.js"></script>
-	
+	<script src="/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+	<script src="/plugins/jquery-validation/js/localization/messages_es_PE.js"></script>
 	<!-- SPECIFIC SCRIPTS -->
-	<script src="http://maps.googleapis.com/maps/api/js"></script>
-	<script src="/online/js/markerclusterer.js"></script>
-    <script src="/online/js/map_listing.js"></script>
-	<script src="/online/js/infobox.js"></script>
+	<!-- script src="http://maps.googleapis.com/maps/api/js"></script -->
+	<!-- script src="/online/js/markerclusterer.js"></script -->
+    <!-- script src="/online/js/map_listing.js"></script -->
+	<!-- script src="/online/js/infobox.js"></script -->
 	
 	<!-- SPECIFIC SCRIPTS -->
 	@yield('js')
-
-
-	 <!-- Bootstrap Typeahead Plugin -->
-	 <script src="/online/jQuery-Bootstrap-4-Typeahead-Plugin/bootstrap3-typeahead.js"></script>
+    <script src="/online/js/bootstrap-datepicker.js"></script>
+    <script>
+		$(document).ready(function(){
+			var dd = $('.calendar').datepicker({
+			    todayHighlight: true,
+				daysOfWeekDisabled: [0],
+				weekStart: 1,
+				format: "yyyy-mm-dd",
+				datesDisabled: ["2017/10/20", "2017/11/21","2017/12/21", "2018/01/21","2018/02/21","2018/03/21"],
+			}).on('changeDate', function(e) {
+				console.log(e.date);
+				console.log(e.format('yyyy-mm-dd'));
+        		// `e` here contains the extra attributes
+    		});
+    	});
+	</script>
 
 <script>
 
