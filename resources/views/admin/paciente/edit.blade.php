@@ -1,13 +1,9 @@
 @extends('templateadmin.layout')
-​
-@section('titulo')
+
+@section('tittle')
      Editar Paciente
 @endsection
-​
-@section('titulo-seccion')
-   Editar Paciente
-@endsection
-​
+
 @section('content')
 <div class="page-content-wrapper">
                 <div class="page-content">
@@ -43,21 +39,22 @@
 				                        </ul>
                                 </div>
                                 <div class="card-body" id="bar-parent">
-                                    <form action="#" id="form_sample_1" class="form-horizontal">
-                                        <div class="form-body">
+                                    <form action="{{ route('pac.actualizar',$pac->id)}}" id="form_sample_1" class="form-horizontal" method="post">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <div class="form-body">
                                         <div class="form-group row">
                                                 <label class="control-label col-md-3">Nombres
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input type="text" name="firstname" data-required="1" placeholder="enter first name" value="{{ $pac->nombres }}" class="form-control input-height" /> </div>
+                                                    <input type="text" name="nombres" data-required="1" placeholder="enter first name" value="{{ $pac->nombres }}" class="form-control input-height" /> </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="control-label col-md-3">Apellidos
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input type="text" name="lastname" data-required="1" placeholder="enter last name" value="{{ $pac->apellidos }}" class="form-control input-height" /> </div>
+                                                    <input type="text" name="apellidos" data-required="1" placeholder="enter last name" value="{{ $pac->apellidos }}" class="form-control input-height" /> </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="control-label col-md-3">Fecha de Nacimiento
@@ -65,7 +62,7 @@
                                                 </label>
                                                 <div class="col-md-5">
                                                     <div class="input-group date form_date " data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-		                                                <input class="form-control input-height" size="16" placeholder="date of Birth" type="text" value="12 January 1987">
+		                                                <input class="form-control input-height" size="16" name="fecha_nac" placeholder="date of Birth" type="text" value="{{ $pac->fecha_nac }}">
 		                                                <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
 	                                            	</div>
 	                                            	<input type="hidden" id="dtp_input2" value="" />
@@ -76,7 +73,7 @@
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input name="number" type="text" placeholder="ingrese celular" value="1234567890" class="form-control input-height" /> </div>
+                                                    <input name="celular" type="text" placeholder="ingrese celular" value="{{ $pac->celular }}" class="form-control input-height" /> </div>
                                             </div>
                                            
                                           
