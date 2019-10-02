@@ -42,12 +42,13 @@ class UserResetPassword extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->subject('Solicitud de reestablecimiento de contraseña')
-                    ->greeting('Hola que tal')
-                    ->line('Como nos has solicitado, aqui tienes una URL para resetear tu contraseña de Buscaundoc para tu cuenta asociada con el mail ')
+                    ->subject('Restablece tu contraseña')
+                    ->greeting('Estimado Usuario')
+                    ->line('A continuacón puede resetear su contraseña.')
+                    ->line('Recibimos una solicitud ya que presenta problemas para acceder a su cuenta.')
                     ->action('Reestablecer Contraseña', url('/').route('password.reset', ['token' => $this->token, 'email' => $notifiable->getEmailForPasswordReset()], false))
-                    ->line('Si tu no has solicitado esta peticion, ignora este mensaje')
-                    ->salutation('Gracias mamao');
+                    ->line('Si  no has solicitado esta peticion, ignora este mensaje')
+                    ->salutation('Gracias!');
     }
 
     /**
