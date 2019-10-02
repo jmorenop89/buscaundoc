@@ -97,8 +97,11 @@ class DoctoresController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function eliminar($id)
     {
         //
+        $doc = Doctor::find($id);
+        $doc->delete();
+        return redirect()->route('doc.index');
     }
 }

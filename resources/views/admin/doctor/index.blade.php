@@ -81,7 +81,7 @@
 																		<a href="{{ route('doc.editar', $docs->id)}}" class="btn btn-tbl-edit btn-xs">
 																			<i class="fa fa-pencil"></i>
 																		</a>
-																		<a class="btn btn-tbl-delete btn-xs">
+																		<a href="{{ route('doc.eliminar', $docs->id)}}" class="btn btn-tbl-delete btn-xs">
 																			<i class="fa fa-trash-o "></i>
 																		</a>
 																	</td>

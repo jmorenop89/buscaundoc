@@ -101,5 +101,8 @@ class PacientesController extends Controller
     public function eliminar($id)
     {
         //
+        $pac = Paciente::find($id);
+        $pac->delete();
+        return redirect()->route('pac.index');
     }
 }

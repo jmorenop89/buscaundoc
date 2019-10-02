@@ -71,7 +71,7 @@ Route::group(['prefix' => 'ladmin'],function(){
         Route::post('/editar/{id}',['as' => 'pac.actualizar', 'uses' => 'admin\PacientesController@actualizar']);
         Route::get('/agregar',['as' => 'pac.crear', 'uses' => 'admin\PacientesController@crear']);
         Route::post('/agregar',['as' => 'pac.agregar', 'uses' => 'admin\PacientesController@agregar']);
-        Route::get('/delete',['as' => 'pac.eliminar', 'uses' => 'admin\PacientesController@eliminar']);
+        Route::get('/delete/{id}',['as' => 'pac.eliminar', 'uses' => 'admin\PacientesController@eliminar']);
         Route::get('/show',['as' => 'pac.mostrar', 'uses' => 'admin\PacientesController@mostrar']);
     });
     
@@ -81,7 +81,7 @@ Route::group(['prefix' => 'ladmin'],function(){
         Route::post('/editar/{id}',['as' => 'doc.actualizar', 'uses' => 'admin\DoctoresController@actualizar']);
         Route::get('/agregar',['as' => 'doc.crear', 'uses' => 'admin\DoctoresController@crear']);
         Route::post('/agregar',['as' => 'doc.agregar', 'uses' => 'admin\DoctoresController@agregar']);
-        Route::get('/delete',['as' => 'doc.eliminar', 'uses' => 'admin\DoctoresController@eliminar']);
+        Route::get('/delete/{id}',['as' => 'doc.eliminar', 'uses' => 'admin\DoctoresController@eliminar']);
         Route::get('/show',['as' => 'doc.mostrar', 'uses' => 'admin\DoctoresController@mostrar']);
     });
 });

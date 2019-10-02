@@ -72,7 +72,7 @@
 																		<a href="{{ route('pac.editar', $pacs->id)}}" class="btn btn-tbl-edit btn-xs">
 																			<i class="fa fa-pencil"></i>
 																		</a>
-																		<a class="btn btn-tbl-delete btn-xs">
+																		<a href="{{ route('pac.eliminar', $pacs->id)}}" class="btn btn-tbl-delete btn-xs">
 																			<i class="fa fa-trash-o "></i>
 																		</a>
 																	</td>

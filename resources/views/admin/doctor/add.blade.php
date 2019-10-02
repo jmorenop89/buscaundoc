@@ -46,21 +46,22 @@
 				                        </ul>
                                 </div>
                                 <div class="card-body" id="bar-parent">
-                                    <form action="#" id="form_sample_1" class="form-horizontal">
+                                    <form action="{{ route('doc.agregar')}}" id="form_sample_1" class="form-horizontal" method="post">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">  
                                         <div class="form-body">
                                         <div class="form-group row">
                                                 <label class="control-label col-md-3">Nombres
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input type="text" name="firstname" data-required="1" placeholder="Ingresar Nombres" class="form-control input-height" /> </div>
+                                                    <input type="text" name="nombres" data-required="1" placeholder="Ingresar Nombres" class="form-control input-height" /> </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="control-label col-md-3">Apellidos
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input type="text" name="lastname" data-required="1" placeholder="Ingresar Apellidos" class="form-control input-height" /> </div>
+                                                    <input type="text" name="apellidos" data-required="1" placeholder="Ingresar Apellidos" class="form-control input-height" /> </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="control-label col-md-3">Fecha de Nacimiento
@@ -68,7 +69,7 @@
                                                 </label>
                                                 <div class="col-md-5">
                                                     <div class="input-group date form_date " data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                                <input class="form-control input-height" size="16" placeholder="Fecha de Nacimiento" type="text" value="">
+                                                <input class="form-control input-height" size="16" name="fecha_nac" placeholder="Fecha de Nacimiento" type="text" value="">
                                                 <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
                                             </div>
                                             <input type="hidden" id="dtp_input2" value="" />
@@ -79,16 +80,37 @@
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input type="password" name="pswd" data-required="1" placeholder="Ingresar Contraseña" class="form-control input-height" /> </div>
+                                                    <input type="text" name="cod_colegiatura" data-required="1" placeholder="Ingresar Codigo" class="form-control input-height" /> </div>
                                             </div>
-                                                                                    
+                                            <div class="form-group row">
+                                                <label class="control-label col-md-3">email
+                                                    <span class="required"> * </span>
+                                                </label>
+                                                <div class="col-md-5">
+                                                    <input type="email" name="email" data-required="1" placeholder="Ingresar Codigo" class="form-control input-height" /> </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="control-label col-md-3">password
+                                                    <span class="required"> * </span>
+                                                </label>
+                                                <div class="col-md-5">
+                                                    <input type="password" name="password" data-required="1" placeholder="Ingresar Codigo" class="form-control input-height" /> </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="control-label col-md-3">Repetir password
+                                                    <span class="required"> * </span>
+                                                </label>
+                                                <div class="col-md-5">
+                                                    <input type="password" name="" data-required="1" placeholder="Ingresar Codigo" class="form-control input-height" /> </div>
+                                            </div>                                 
                                         	 <div class="form-group row">
                                                 <label class="control-label col-md-3">Direccion
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <textarea name="address" placeholder="Direccion" class="form-control-textarea" rows="5" ></textarea>
+                                                    <textarea name="direccion" placeholder="Direccion" class="form-control-textarea" rows="5" ></textarea>
                                                 </div>
+                                   
                                             </div>
                                             <div class="form-group row">
                                                 <label class="control-label col-md-3">Imagen de Perfil
