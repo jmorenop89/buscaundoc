@@ -12,7 +12,7 @@
 			<h1>Por favor registrese en Buscaundoc!</h1>
 			<div class="row justify-content-center">
 				<div class="col-md-5">
-					<form action="{{ route('reg-pac') }}" method="post">
+					<form action="{{ route('reg-pac') }}" method="post" id="frm-validate">
 						<input type="hidden" name="_token" value="{{ csrf_token()}}">
 						<div class="box_form">
 							<div class="form-group">
@@ -63,4 +63,27 @@
 		<!-- /register -->
 	</div>
 </div>
-	@endsection
+@endsection
+
+@section('script')
+	<script>
+		var form = $('#frm-validate');
+		form.validate({
+            focusInvalid: false,
+            rules: {
+                nombres: {
+                    required: true
+                },
+                apellidos: {
+                    required: true
+                },
+                email: {
+                    required: true
+                },
+                password: {
+                    required: true
+				}
+			}
+        });
+	</script>
+@endsection
