@@ -7,7 +7,7 @@
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css"/>
 	<!-- icons -->
-    <link href="admin/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/admin/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
 	<!--bootstrap -->
 	<link href="/admin/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
