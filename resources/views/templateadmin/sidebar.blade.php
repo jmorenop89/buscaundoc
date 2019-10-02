@@ -47,7 +47,7 @@
 	                	<span class="arrow open"></span>
 	                </a>
 	                <ul class="sub-menu">
-	                	<li class="nav-item">
+	                	<li href="{{route('pac.index')}}" class="nav-item">
 	                        <a href="" class="nav-link ">
 	                            <span class="title">Todos los Pacientes</span>
 	                            <span class="selected"></span>
@@ -59,11 +59,7 @@
 	                            <span class="selected"></span>
 	                        </a>
 	                    </li>
-	                    <li class="nav-item ">
-	                        <a href="" class="nav-link ">
-	                            <span class="title">Editar Paciente</span>
-	                        </a>
-	                    </li>
+	                    
 	                </ul>
 	            </li>
 	            <li class="nav-item open">
@@ -74,7 +70,7 @@
 	                	<span class="arrow open"></span>
 	                </a>
 	                <ul class="sub-menu">
-	                	<li class="nav-item">
+	                	<li href="{{route('doc.index')}}" class="nav-item">
 	                        <a href="" class="nav-link ">
 	                            <span class="title">Todos los Doctores</span>
 	                            <span class="selected"></span>
@@ -86,11 +82,7 @@
 	                            <span class="selected"></span>
 	                        </a>
 	                    </li>
-	                    <li class="nav-item ">
-	                        <a href="" class="nav-link ">
-	                            <span class="title">Editar Doctor</span>
-	                        </a>
-	                    </li>
+	                   
 	                </ul>
 	            </li>
 	        </ul>
