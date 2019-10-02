@@ -100,6 +100,7 @@
 	<script src="/online/js/infobox.js"></script>
 	
 	<!-- SPECIFIC SCRIPTS -->
+<<<<<<< HEAD
     <script src="/online/js/bootstrap-datepicker.js"></script>
     <script>
 			var calendar = $('.calendar').datepicker({
@@ -123,6 +124,9 @@
 		  });
 	  });
 	</script>
+=======
+	@yield('js')
+>>>>>>> 2d2c4d9f2c7ee2c9a50f036fdbef5deda61e528f
 
 
 	 <!-- Bootstrap Typeahead Plugin -->

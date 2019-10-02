@@ -39,7 +39,11 @@ class PacientesController extends Controller
     {
         //
         $data = $request->all();
+        $data['role'] = "paciente";
+        $use = User::create($data);
+        $data['users_id'] = $use->id;
         Paciente::create($data);
+
         //redirect: redireccionar a la url o ruta especifica (alias)
         return redirect()->route('pac.index');
     }
