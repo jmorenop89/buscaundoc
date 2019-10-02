@@ -36,11 +36,7 @@ Route::get('/doc', function () {
     return view('online.log-pac.index');
 });
 
-Route::get('/admine',
-function(){
-	return view('admin.paciente.index');
 
-});
 
 Auth::routes();
 
@@ -51,11 +47,6 @@ Route::post('/login','Auth\LoginController@validateLogin');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::get('/admine', 'admin\PacientesController@index');
-
-
 
 Route::get('/logeado', function () {
     return view('online.logeado.index');
@@ -68,13 +59,29 @@ Route::get('/logeadolista', function () {
 Route::get('/logeadodetalle', function () {
     return view('online.logeado.detalle');
 });
-Route::get('/repo', 'admin\UserController@listado');
-Route::get('/prueba', "OnlineController@prueba");
-
-Route::get('/admindoc', 'admin\DoctoresController@index');
-
-Route::get('/admine_edit/{id}', ['as'=>'pac.edit','uses'=> 'admin\PacientesController@edit']);
 
 Route::group(['prefix' => 'ladmin'],function(){
     Route::get('/',['as' => 'admin.index', 'uses' => 'admin\LoginController@login']);
+    Route::get('/repo', 'admin\UserController@listado');
+    Route::get('/prueba', "OnlineController@prueba");
+
+    Route::group(['prefix' => 'paciente'],function(){
+        Route::get('/',['as' => 'pac.index', 'uses' => 'admin\PacientesController@index']);
+        Route::get('/editar/{id}',['as' => 'pac.editar', 'uses' => 'admin\PacientesController@editar']);
+        Route::post('/editar/{id}',['as' => 'pac.actualizar', 'uses' => 'admin\PacientesController@actualizar']);
+        Route::get('/agregar',['as' => 'pac.crear', 'uses' => 'admin\PacientesController@crear']);
+        Route::post('/agregar',['as' => 'pac.agregar', 'uses' => 'admin\PacientesController@agregar']);
+        Route::get('/delete/{id}',['as' => 'pac.eliminar', 'uses' => 'admin\PacientesController@eliminar']);
+        Route::get('/show',['as' => 'pac.mostrar', 'uses' => 'admin\PacientesController@mostrar']);
+    });
+    
+    Route::group(['prefix' => 'doctor'],function(){
+        Route::get('/',['as' => 'doc.index', 'uses' => 'admin\DoctoresController@index']);
+        Route::get('/editar/{id}',['as' => 'doc.editar', 'uses' => 'admin\DoctoresController@editar']);
+        Route::post('/editar/{id}',['as' => 'doc.actualizar', 'uses' => 'admin\DoctoresController@actualizar']);
+        Route::get('/agregar',['as' => 'doc.crear', 'uses' => 'admin\DoctoresController@crear']);
+        Route::post('/agregar',['as' => 'doc.agregar', 'uses' => 'admin\DoctoresController@agregar']);
+        Route::get('/delete/{id}',['as' => 'doc.eliminar', 'uses' => 'admin\DoctoresController@eliminar']);
+        Route::get('/show',['as' => 'doc.mostrar', 'uses' => 'admin\DoctoresController@mostrar']);
+    });
 });

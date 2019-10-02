@@ -48,19 +48,19 @@
 	                </a>
 	                <ul class="sub-menu">
 	                	<li class="nav-item">
-	                        <a href="index.html" class="nav-link ">
+	                        <a href="" class="nav-link ">
 	                            <span class="title">Todos los Pacientes</span>
 	                            <span class="selected"></span>
 	                        </a>
 	                    </li>
 	                    <li class="nav-item">
-	                        <a href="index.html" class="nav-link ">
+	                        <a href="{{route('pac.crear')}}" class="nav-link ">
 	                            <span class="title">Agregar Paciente</span>
 	                            <span class="selected"></span>
 	                        </a>
 	                    </li>
 	                    <li class="nav-item ">
-	                        <a href="dashboard2.html" class="nav-link ">
+	                        <a href="" class="nav-link ">
 	                            <span class="title">Editar Paciente</span>
 	                        </a>
 	                    </li>
@@ -75,19 +75,19 @@
 	                </a>
 	                <ul class="sub-menu">
 	                	<li class="nav-item">
-	                        <a href="index.html" class="nav-link ">
+	                        <a href="" class="nav-link ">
 	                            <span class="title">Todos los Doctores</span>
 	                            <span class="selected"></span>
 	                        </a>
 	                    </li>
 	                    <li class="nav-item">
-	                        <a href="index.html" class="nav-link ">
+	                        <a href="{{route('doc.crear')}}" class="nav-link ">
 	                            <span class="title">Agregar Doctor</span>
 	                            <span class="selected"></span>
 	                        </a>
 	                    </li>
 	                    <li class="nav-item ">
-	                        <a href="dashboard2.html" class="nav-link ">
+	                        <a href="" class="nav-link ">
 	                            <span class="title">Editar Doctor</span>
 	                        </a>
 	                    </li>

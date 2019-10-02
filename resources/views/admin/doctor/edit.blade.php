@@ -44,21 +44,22 @@
 				                        </ul>
                                 </div>
                                 <div class="card-body" id="bar-parent">
-                                    <form action="#" id="form_sample_1" class="form-horizontal">
+                                    <form action="{{ route('doc.actualizar',$doc->id)}}" id="form_sample_1" class="form-horizontal" method="post">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <div class="form-body">
                                         <div class="form-group row">
                                                 <label class="control-label col-md-3">Nombres
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input type="text" name="firstname" data-required="1" placeholder="Ingresar Nombres" value="Lalit" class="form-control input-height" /> </div>
+                                                    <input type="text" name="nombres" data-required="1" placeholder="Ingresar Nombres" value="{{ $doc->nombres }}" class="form-control input-height" /> </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="control-label col-md-3">Apellidos
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input type="text" name="lastname" data-required="1" placeholder="Ingresar Apellidos" value="Joshi" class="form-control input-height" /> </div>
+                                                    <input type="text" name="apellidos" data-required="1" placeholder="Ingresar Apellidos" value="{{ $doc->apellidos }}" class="form-control input-height" /> </div>
                                             </div>
                     
                                                <div class="form-group row">
@@ -67,7 +68,7 @@
                                                 </label>
                                                 <div class="col-md-5">
                                                     <div class="input-group date form_date " data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                                <input class="form-control input-height" size="16" placeholder="Fecha de Nacimiento" type="text" value="23/07/1988">
+                                                <input class="form-control input-height" size="16" name="fecha_nac"  placeholder="Fecha de Nacimiento" type="text" value="{{ $doc->fecha_nac }}">
                                                 <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
                                             </div>                                            
                                             <div class="form-group row">
@@ -75,7 +76,7 @@
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <input name="number" type="text" placeholder="ingrese codigo" value="1234567890" class="form-control input-height" /> </div>
+                                                    <input name="cod_colegiatura" type="text" placeholder="ingrese codigo" value="{{ $doc->cod_colegiatura }}" class="form-control input-height" /> </div>
                                             </div>
                                             <input type="hidden" id="dtp_input2" value="" />
                                                 </div>
@@ -85,7 +86,7 @@
                                                     <span class="required"> * </span>
                                                 </label>
                                                 <div class="col-md-5">
-                                                    <textarea name="address" placeholder="Direccion" class="form-control-textarea" rows="5" >23, Sagar Appartment, Near Nationl Bank</textarea>
+                                                    <textarea name="direccion" placeholder="Direccion" class="form-control-textarea" rows="5" value="{{ $doc->direccion }}">{{ $doc->direccion }}</textarea>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -100,7 +101,7 @@
                                         <div class="form-actions">
                                             <div class="row">
                                                 <div class="offset-md-3 col-md-9">
-                                                    <button type="submit" class="btn btn-info">Enviar</button>
+                                                    <button type="submit" class="btn btn-info">Guardar</button>
                                                     <button type="button" class="btn btn-default">Cancelar</button>
                                                 </div>
                                             </div>

@@ -1,7 +1,7 @@
 <tr>
     <td class="header">
         <a href="{{ $url }}">
-            {{ $slot }}
+<span>RESTABLECE TU CONTRASEÑA</span>
         </a>
     </td>
 </tr>
