@@ -18,6 +18,8 @@ class EspecialidadesController extends Controller
     {
         //
         $especialidades = Especialidad::all();
+
+        return view('admin.paciente.index',compact('especialidades'));
     }
 
     /**
