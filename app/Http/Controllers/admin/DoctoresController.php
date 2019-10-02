@@ -28,9 +28,10 @@ class DoctoresController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function crear()
     {
         //
+        return view('admin.doctor.add');
     }
 
     /**
@@ -39,9 +40,10 @@ class DoctoresController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function guardar(Request $request)
     {
         //
+        return view('admin.doctor.index',compact('doc'));
     }
 
     /**
@@ -61,9 +63,12 @@ class DoctoresController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function editar($id)
     {
         //
+        $doc = Doctor::find($id);
+
+        return view('admin.doctor.edit',compact('doc'));
     }
 
     /**
@@ -73,9 +78,17 @@ class DoctoresController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function actualizar(Request $request, $id)
     {
         //
+        $data = $request->all();
+        $doc = Doctor::find($id);
+        //dd($data);
+        $doc->update($data);
+        $doc->save();
+       /*dd($alumno);*/
+       return redirect()->route('doc.index');
+
     }
 
     /**

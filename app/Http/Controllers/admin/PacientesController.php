@@ -24,15 +24,24 @@ class PacientesController extends Controller
         return view('admin.paciente.index',compact('pac'));
         
     }
+    public function crear()
+    {
+        //
+        return view('admin.paciente.add');
+    }
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function agregar(Request $request)
     {
         //
+        $data = $request->all();
+        Paciente::create($data);
+        //redirect: redireccionar a la url o ruta especifica (alias)
+        return redirect()->route('pac.index');
     }
 
     /**
@@ -41,9 +50,10 @@ class PacientesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function guardar(Request $request)
     {
         //
+        return view('admin.paciente.index',compact('pac'));
     }
 
     /**
@@ -63,28 +73,23 @@ class PacientesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function editar($id)
     {
-        //
-          //----ORM -----
-        // ORM -> trabajando una paginacion (4 elementos)
+
         $pac = Paciente::find($id);
-       /*dd($pac);*/
-        //dd($objects);
-        
+
         return view('admin.paciente.edit',compact('pac'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function actualizar(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $pac = Paciente::find($id);
+        /*dd($data,$alumno);*/
+        $pac->update($data);
+        $pac->save();
+       /*dd($alumno);*/
+       return redirect()->route('pac.index');
     }
 
     /**
@@ -93,7 +98,7 @@ class PacientesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function eliminar($id)
     {
         //
     }
