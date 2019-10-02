@@ -1,4 +1,10 @@
 /*boton reservar cita*/
+
+ul#top_access li a {
+  color: #333; }
+  ul#top_access li a:hover {
+    color:  #00c3a5; }
+
 #custom-search-input{
     width: 90%;
 }
@@ -8,6 +14,10 @@
   text-align: left; 
   font-size: 17px;
 
+}
+
+.dropdown-menu{
+  margin-top: 5px !important ;
 }
 
 #custom-search-input input[type='submit'] {
@@ -199,3 +209,24 @@ ul.time_select li label:hover {
 
 
 
+@media (max-width:768px) {
+  .especialidad {
+    width:360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ciudad {
+    width:360px;
+  }
+}
+
+@media (max-width: 768px) {
+  #custom-search-input input[type='submit'] {
+    position: relative;
+    width:360px;
+    height: 45px;
+    top:-2px;
+   
+    }
+}
