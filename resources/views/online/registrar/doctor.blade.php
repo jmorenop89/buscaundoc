@@ -4,6 +4,10 @@
     FINDOCTOR - Find easily a doctor and book online an appointment
 @endsection
 
+@section('css')
+    <link href="/online/css/date_picker.css" rel="stylesheet">
+@endsection
+
 @section('content')
 
 <div id="hero_register">
