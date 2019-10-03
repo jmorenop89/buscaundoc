@@ -36,7 +36,9 @@ Route::get('/doc', function () {
     return view('online.log-pac.index');
 });
 
-
+Route::get('confirmation',function(){
+    return view('online.login.confirmado');
+});
 
 Auth::routes();
 
