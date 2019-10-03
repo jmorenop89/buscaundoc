@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Ciudad;
 use App\Doctor;
+use App\Especialidad;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\User;
 
 class DoctoresController extends Controller
 {
@@ -30,10 +33,21 @@ class DoctoresController extends Controller
      */
     public function crear()
     {
-        //
-        return view('admin.doctor.add');
+        $espe = Especialidad::all();
+        $ciud = Ciudad::all();
+        return view('admin.doctor.add', compact('espe','ciud'));
+        
     }
 
+    public function agregar(Request $request){
+        $data = $request->all();
+        $data['role'] = "doctor";
+        $use = User::create($data);
+        $data['user_id'] = $use->id;
+        Doctor::create($data);
+
+        return redirect()->route('doc.index');
+    }
     /**
      * Store a newly created resource in storage.
      *
