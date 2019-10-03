@@ -93,14 +93,14 @@
 	                	<span class="arrow open"></span>
 	                </a>
 	                <ul class="sub-menu">
-	                	<li href="{{route('doc.index')}}" class="nav-item">
+	                	<li href="{{route('espec.index')}}" class="nav-item">
 	                        <a href="" class="nav-link ">
 	                            <span class="title">Todas las Especialidades</span>
 	                            <span class="selected"></span>
 	                        </a>
 	                    </li>
 	                    <li class="nav-item">
-	                        <a href="{{route('doc.crear')}}" class="nav-link ">
+	                        <a href="{{route('espec.crear')}}" class="nav-link ">
 	                            <span class="title">Agregar Especialidad</span>
 	                            <span class="selected"></span>
 	                        </a>

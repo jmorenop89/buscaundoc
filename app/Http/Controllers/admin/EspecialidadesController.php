@@ -16,10 +16,9 @@ class EspecialidadesController extends Controller
      */
     public function index()
     {
-        //
-        $especialidades = Especialidad::all();
+        $espec = Especialidad::all();
 
-        return view('admin.paciente.index',compact('especialidades'));
+        return view('admin.especialidades.index',compact('espec'));
     }
 
     /**
@@ -27,22 +26,28 @@ class EspecialidadesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function crear()
+    {
+        return view('admin.especialidades.add');
+    }
+    public function agregar(Request $request)
     {
         //
         $data = $request->all();
         Especialidad::create($data);
+        return redirect()->route('espec.index');
+        
     }
-
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function guardar(Request $request)
     {
         //
+        return view('admin.especialidades.index',compact('espec'));
     }
 
     /**
@@ -62,27 +67,23 @@ class EspecialidadesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function editar($id)
     {
-        //
-        $especialidades = Especialidad::find($id);
+
+        $espec = Especialidad::find($id);
+
+        return view('admin.especialidades.edit',compact('espec'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function actualizar(Request $request, $id)
     {
-        //
         $data = $request->all();
-        $especialidades = Especialidad::find($id);
-        /*dd($data,$alumno);*/
-        $especialidades->update($data);
-        $especialidades->save();
+        $espec = Especialidad::find($id);
+        
+        $espec->update($data);
+        $espec->save();
+      
+       return redirect()->route('espec.index');
     }
 
     /**
@@ -91,10 +92,5 @@ class EspecialidadesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
-        $especialidades = Especialidad::find($id);
-        $especialidades->delete();
-    }
+   
 }

@@ -84,4 +84,12 @@ Route::group(['prefix' => 'ladmin'],function(){
         Route::get('/delete/{id}',['as' => 'doc.eliminar', 'uses' => 'admin\DoctoresController@eliminar']);
         Route::get('/show',['as' => 'doc.mostrar', 'uses' => 'admin\DoctoresController@mostrar']);
     });
+    Route::group(['prefix' => 'especialidad'],function(){
+        Route::get('/',['as' => 'espec.index', 'uses' => 'admin\EspecialidadesController@index']);
+        Route::get('/editar/{id}',['as' => 'espec.editar', 'uses' => 'admin\EspecialidadesController@editar']);
+        Route::post('/editar/{id}',['as' => 'espec.actualizar', 'uses' => 'admin\EspecialidadesController@actualizar']);
+        Route::get('/agregar',['as' => 'espec.crear', 'uses' => 'admin\EspecialidadesController@crear']);
+        Route::post('/agregar',['as' => 'espec.agregar', 'uses' => 'admin\EspecialidadesController@agregar']);
+        Route::get('/show',['as' => 'espec.mostrar', 'uses' => 'admin\EspecialidadesController@mostrar']);
+    });
 });
