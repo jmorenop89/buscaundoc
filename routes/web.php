@@ -92,4 +92,13 @@ Route::group(['prefix' => 'ladmin'],function(){
         Route::post('/agregar',['as' => 'espec.agregar', 'uses' => 'admin\EspecialidadesController@agregar']);
         Route::get('/show',['as' => 'espec.mostrar', 'uses' => 'admin\EspecialidadesController@mostrar']);
     });
+
+    Route::group(['prefix' => 'ciudad'],function(){
+        Route::get('/',['as' => 'ciud.index', 'uses' => 'admin\CiudadController@index']);
+        Route::get('/editar/{id}',['as' => 'ciud.editar', 'uses' => 'admin\CiudadController@editar']);
+        Route::post('/editar/{id}',['as' => 'ciud.actualizar', 'uses' => 'admin\CiudadController@actualizar']);
+        Route::get('/agregar',['as' => 'ciud.crear', 'uses' => 'admin\CiudadController@crear']);
+        Route::post('/agregar',['as' => 'ciud.agregar', 'uses' => 'admin\CiudadController@agregar']);
+        Route::get('/show',['as' => 'ciud.mostrar', 'uses' => 'admin\CiudadController@mostrar']);
+    });
 });

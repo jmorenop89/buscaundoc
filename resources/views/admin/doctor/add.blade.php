@@ -1,11 +1,7 @@
 @extends('templateadmin.layout')
 
-@section('titulo')
-    Doctor
-@endsection
-
-@section('titulo-seccion')
-    Doctor
+@section('tittle')
+	Agregar Doctores
 @endsection
 
 @section('content')
@@ -152,7 +148,7 @@
                                             <div class="row">
                                                 <div class="offset-md-3 col-md-9">
                                                     <button type="submit" class="btn btn-info">Enviar</button>
-                                                    <button type="button" class="btn btn-default">Cancelar</button>
+                                                    <a href="{{route('doc.index')}}" type="" class="btn btn-default">Cancelar</a>
                                                 </div>
                                             	</div>
                                        		 </div>
