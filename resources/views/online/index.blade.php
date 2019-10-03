@@ -13,14 +13,9 @@
     			</p>
 				<form method="get" action="/list">
     				<div id="custom-search-input"> <!-- custom-search-input revisar mañana-->
-                        <div class="">
-        					<input type="text" class="especialidad" placeholder="Especialidad">
-                            <p id="especialidad"></p>
-
-                        </div>
-                        <div>
-        					 <input type="text" class="ciudad" placeholder="Ciudad">
-                        </div>
+        					<input name="especialidad"type="text" class="especialidad" placeholder="Especialidad">
+                            <ul id="especialidad" class="list-group"></ul>
+        					 <input name="ciudad"type="text" class="ciudad" placeholder="Ciudad">
 							<input type="submit" class="buscar" value= "Buscar">
 		    		</div>
     			</form>
@@ -121,3 +116,56 @@
 
 
 	@endsection
+@section('js')
+<script>
+var search = document.querySelector('.especialidad')
+var contenido = document.querySelector('#especialidad')
+
+
+
+//buscar especialidades.json y filtrarlos
+
+const buscarEspecialidades = async buscarTexto =>{
+    const resultado = await fetch('http://buscaundoc.test/api/especialidad')
+    const especialidades = await resultado.json()
+
+    //Obtener coincidencias con el texto del input
+    let coincidencias = especialidades.filter(especialidad =>{
+        const regex = new RegExp(`^${buscarTexto}`,'gi')
+        return especialidad.nombre.match(regex)
+    })
+    if(buscarTexto.length === 0){
+        coincidencias = []
+        contenido.innerHTML = ""
+    }
+    //mostar coincidencias en el html
+
+    const outputHtml = coincidencias =>{
+        if (coincidencias.length > 0) {
+            const html = coincidencias.map(match =>
+                `<li class="list-group-item" value="${match.id}" >
+                    <a href="#" class="text-dark">${match.nombre}</a>
+                    </li>
+                `).join('')
+            contenido.innerHTML = html
+            if (contenido.querySelectorAll('li').length>0) {
+            var selec = document.querySelectorAll('#especialidad li a')
+            console.log(selec.length)
+            for(var i=0; i<selec.length;i++)
+            {
+                selec[i].addEventListener('click',function(){
+                    search.value = this.innerHTML
+                    contenido.innerHTML = ""
+            })
+            }
+        }
+    }
+    }
+    outputHtml(coincidencias)
+}
+
+search.addEventListener('input', ()=> buscarEspecialidades(search.value))
+
+</script>
+
+@endsection

@@ -95,47 +95,6 @@
 
 	 <!-- Bootstrap Typeahead Plugin -->
 
-<script>
-var search = document.querySelector('.especialidad')
-var contenido = document.querySelector('#especialidad')
-
-
-//buscar especialidades.json y filtrarlos
-
-const buscarEspecialidades = async buscarTexto =>{
-    const resultado = await fetch('http://buscaundoc.test/api/especialidad')
-    const especialidades = await resultado.json()
-
-    //Obtener coincidencias con el texto del input
-    let coincidencias = especialidades.filter(especialidad =>{
-        const regex = new RegExp(`^${buscarTexto}`,'gi')
-        return especialidad.nombre.match(regex)
-    })
-    if(buscarTexto.length === 0){
-        coincidencias = []
-        contenido.innerHTML = ""
-    }
-    //mostar coincidencias en el html
-
-    const outputHtml = coincidencias =>{
-        if (coincidencias.length > 0) {
-            const html = coincidencias.map(match =>
-                `<div class="card card-body mb-1">
-                    <h4>${match.nombre}</h4>
-                    <small>especialidad</small>
-                `).join('')
-            contenido.innerHTML = html
-        }
-    }
-    outputHtml(coincidencias)
-}
-
-
-search.addEventListener('input', ()=> buscarEspecialidades(search.value))
-
-</script>
-
-
 
 </body>
 
