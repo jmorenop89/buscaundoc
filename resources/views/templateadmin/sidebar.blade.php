@@ -116,8 +116,8 @@ j<div class="sidebar-container">
 	                	<span class="arrow open"></span>
 	                </a>
 	                <ul class="sub-menu">
-	                	<li href="{{route('ciud.index')}}" class="nav-item">
-	                        <a href="" class="nav-link ">
+	                	<li href="" class="nav-item">
+	                        <a href="{{route('ciud.index')}}" class="nav-link ">
 	                            <span class="title">Todas las Ciudades</span>
 	                            <span class="selected"></span>
 	                        </a>
