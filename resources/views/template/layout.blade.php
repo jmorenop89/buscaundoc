@@ -59,10 +59,11 @@
 							</li>
 							<li id="user">
 								<figure><img src="http://via.placeholder.com/150x150.jpg" alt=""></figure>
-								<span><a href="">Jhon Smith</a></span>
+								<span><a href="">{{Auth::user()->email}}</a></span>
 								<ul>
 									<li><a href="{{ route('reg-pac') }}">Como Paciente</a></li>
-									<li><a href="{{ route('reg-doc') }}">Como Mèdico</a></li>
+									<li><a href="{{ route('logout') }}" onclick="event.preventDefault();$('#logout-form').submit();">Cerrar Sesion</a></li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none;">@csrf</form>
 								</ul>
 							</li>
 							<li>
@@ -95,6 +96,7 @@
 	<script src="/online/js/functions.js"></script>
 	<script src="/plugins/jquery-validation/js/jquery.validate.min.js"></script>
 	<script src="/plugins/jquery-validation/js/localization/messages_es_PE.js"></script>
+	<script src="/online/js/bootstrap-datepicker.js"></script>
 	<!-- SPECIFIC SCRIPTS -->
 	<!-- script src="http://maps.googleapis.com/maps/api/js"></script -->
 	<!-- script src="/online/js/markerclusterer.js"></script -->
@@ -102,7 +104,7 @@
 	<!-- script src="/online/js/infobox.js"></script -->
 	
 	<!-- SPECIFIC SCRIPTS -->
-    <script src="/online/js/bootstrap-datepicker.js"></script>
+	@yield('js')
     <script>
 		$(document).ready(function(){
 			var dd = $('.calendar').datepicker({

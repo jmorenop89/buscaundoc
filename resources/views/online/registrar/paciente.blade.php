@@ -4,6 +4,10 @@
     FINDOCTOR - Find easily a doctor and book online an appointment
 @endsection
 
+@section('css')
+    <link href="/online/css/date_picker.css" rel="stylesheet">
+@endsection
+
 @section('content')
 
 <div class="bg_color_2">
@@ -25,7 +29,7 @@
                             </div>
                             <div class="form-group">
 								<label>Fecha de nacimiento</label>
-								<input type="text" class="form-control" placeholder="Ingresa Nº Celular" name="fecha_nac">
+								<input class="form-control" type="text" placeholder="Ingrese Fecha de Nacimiento" id="birthday" name="fecha_nac" data-lang="es">
 							</div>
                             <div class="form-group">
 								<label>Teléfono Celular</label>
@@ -54,7 +58,11 @@
 								<input class="btn_1" type="submit" value="Enviar">
 							</div>
 						</div>
-						<p class="text-center"><small>Has voluptua vivendum accusamus cu. Ut per assueverit temporibus dissentiet. Eum no atqui putant democritum, velit nusquam sententiae vis no.</small></p>
+						<p class="text-center">
+							<small>Has voluptua vivendum accusamus cu. Ut per assueverit temporibus dissentiet. 
+								Eum no atqui putant democritum, velit nusquam sententiae vis no.
+							</small>
+						</p>
 					</form>
 				</div>
 			</div>
@@ -66,24 +74,5 @@
 @endsection
 
 @section('js')
-	<script>
-		var form = $('#frm-validate');
-		form.validate({
-            focusInvalid: false,
-            rules: {
-                nombres: {
-                    required: true
-                },
-                apellidos: {
-                    required: true
-                },
-                email: {
-                    required: true
-                },
-                password: {
-                    required: true
-				}
-			}
-        });
-	</script>
+	<script src="/online/scripts/patient.js"></script>
 @endsection
