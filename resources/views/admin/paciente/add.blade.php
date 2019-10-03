@@ -1,7 +1,7 @@
 @extends('templateadmin.layout')
 
 @section('tittle')
-	Lista de Pacientes
+	Agregar Pacientes
 @endsection
 
 @section('content')

@@ -1,11 +1,7 @@
 @extends('templateadmin.layout')
 
-@section('titulo')
-    Doctor
-@endsection
-
-@section('titulo-seccion')
-    Doctor
+@section('tittle')
+	Editar Doctores
 @endsection
 
 @section('content')
