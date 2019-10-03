@@ -47,8 +47,8 @@ j<div class="sidebar-container">
 	                	<span class="arrow open"></span>
 	                </a>
 	                <ul class="sub-menu">
-	                	<li href="{{route('pac.index')}}" class="nav-item">
-	                        <a href="" class="nav-link ">
+	                	<li href="" class="nav-item">
+	                        <a href="{{route('pac.index')}}" class="nav-link ">
 	                            <span class="title">Todos los Pacientes</span>
 	                            <span class="selected"></span>
 	                        </a>
@@ -70,8 +70,8 @@ j<div class="sidebar-container">
 	                	<span class="arrow open"></span>
 	                </a>
 	                <ul class="sub-menu">
-	                	<li href="{{route('doc.index')}}" class="nav-item">
-	                        <a href="" class="nav-link ">
+	                	<li href="" class="nav-item">
+	                        <a href="{{route('doc.index')}}" class="nav-link ">
 	                            <span class="title">Todos los Doctores</span>
 	                            <span class="selected"></span>
 	                        </a>
@@ -93,8 +93,8 @@ j<div class="sidebar-container">
 	                	<span class="arrow open"></span>
 	                </a>
 	                <ul class="sub-menu">
-	                	<li href="{{route('espec.index')}}" class="nav-item">
-	                        <a href="" class="nav-link ">
+	                	<li href="" class="nav-item">
+	                        <a href="{{route('espec.index')}}" class="nav-link ">
 	                            <span class="title">Todas las Especialidades</span>
 	                            <span class="selected"></span>
 	                        </a>

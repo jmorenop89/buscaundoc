@@ -61,7 +61,13 @@
                                                 <div class="col-md-5">
                                                     <input type="text" name="apellidos" data-required="1" placeholder="Ingresar Apellidos" value="{{ $doc->apellidos }}" class="form-control input-height" /> </div>
                                             </div>
-                    
+                                            <div class="form-group row">
+                                                <label class="control-label col-md-3">Codigo de Colegiatura
+                                                    <span class="required"> * </span>
+                                                </label>
+                                                <div class="col-md-5">
+                                                    <input name="cod_colegiatura" type="text" placeholder="ingrese codigo" value="{{ $doc->cod_colegiatura }}" class="form-control input-height" /> </div>
+                                            </div>
                                                <div class="form-group row">
                                                 <label class="control-label col-md-3">Fecha de Nacimiento
                                                     <span class="required"> * </span>
@@ -71,13 +77,7 @@
                                                 <input class="form-control input-height" size="16" name="fecha_nac"  placeholder="Fecha de Nacimiento" type="text" value="{{ $doc->fecha_nac }}">
                                                 <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
                                             </div>                                            
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Codigo de Colegiatura
-                                                    <span class="required"> * </span>
-                                                </label>
-                                                <div class="col-md-5">
-                                                    <input name="cod_colegiatura" type="text" placeholder="ingrese codigo" value="{{ $doc->cod_colegiatura }}" class="form-control input-height" /> </div>
-                                            </div>
+                                            
                                             <input type="hidden" id="dtp_input2" value="" />
                                                 </div>
                                             </div>
@@ -102,7 +102,7 @@
                                             <div class="row">
                                                 <div class="offset-md-3 col-md-9">
                                                     <button type="submit" class="btn btn-info">Guardar</button>
-                                                    <button type="button" class="btn btn-default">Cancelar</button>
+                                                    <a href="{{route('doc.index')}}"  class="btn btn-default">Cancelar</a>
                                                 </div>
                                             </div>
                                         </div>
