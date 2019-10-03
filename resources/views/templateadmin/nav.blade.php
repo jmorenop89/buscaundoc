@@ -23,9 +23,9 @@
                         <li>
                             <ul class="dropdown-menu-list app-icon-dropdown" data-handle-color="#637283">
 								<li>
-									<a href="add_patient.html" class="patient-icon">
+									<a href="{{route('pac.crear')}}" class="patient-icon">
 										<i class="material-icons">local_hotel</i>
-										<span class="block">Add Patient</span>
+										<span class="block">Pacientes</span>
 									</a>
 								</li>
 								<li>
@@ -41,7 +41,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="all_doctors.html" class="doctor-icon">
+									<a href="{{route('doc.crear')}}" class="doctor-icon">
 										<i class="material-icons">people</i>
 										<span class="block">Doctors</span>
 									</a>
