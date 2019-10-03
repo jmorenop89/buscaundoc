@@ -111,7 +111,7 @@
 				                                                <p>{{ $docs->cod_colegiatura}} <br />{{ $docs->direccion}}</p>
 				                                                
 					                                        <div class="profile-userbuttons">
-					                                            <a href="doctor_profile.html" class="btn btn-circle deepPink-bgcolor btn-sm">Leer Mas</a>
+					                                            <a href="{{route('doc.index')}}" class="btn btn-circle deepPink-bgcolor btn-sm">Leer Mas</a>
 					                                        </div>
 				                                        </div>
 				                                    </div>
