@@ -1,4 +1,4 @@
-<div class="sidebar-container">
+j<div class="sidebar-container">
 	<div class="sidemenu-container navbar-collapse collapse fixed-menu">
 	    <div id="remove-scroll" class="left-sidemenu">
 	        <ul class="sidemenu  page-header-fixed slimscroll-style" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
@@ -116,14 +116,14 @@
 	                	<span class="arrow open"></span>
 	                </a>
 	                <ul class="sub-menu">
-	                	<li href="{{route('doc.index')}}" class="nav-item">
+	                	<li href="{{route('ciud.index')}}" class="nav-item">
 	                        <a href="" class="nav-link ">
 	                            <span class="title">Todas las Ciudades</span>
 	                            <span class="selected"></span>
 	                        </a>
 	                    </li>
 	                    <li class="nav-item">
-	                        <a href="{{route('doc.crear')}}" class="nav-link ">
+	                        <a href="{{route('ciud.crear')}}" class="nav-link ">
 	                            <span class="title">Agregar Ciudad</span>
 	                            <span class="selected"></span>
 	                        </a>
