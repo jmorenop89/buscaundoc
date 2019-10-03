@@ -12,9 +12,11 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $dash = Doctor::all();
+        $pac = Paciente::all()->count();
+        $doc = Doctor::all()->count();
+        //dd($pac);
                
-        return view('admin.reportes.index',compact('dash'));
+        return view('admin.reportes.index',compact('pac','doc'));
     }
     
 }

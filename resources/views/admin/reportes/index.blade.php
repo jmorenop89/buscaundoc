@@ -38,6 +38,23 @@
 					            <!-- /.info-box-content -->
 					          </div>
 					          <!-- /.info-box -->
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6">
+					          <div class="info-box bg-white">
+					            <span class="info-box-icon push-bottom bg-primary"><i class="material-icons">person</i></span>
+					            <div class="info-box-content">
+					              <span class="info-box-text">CITAS CANCELADAS</span>
+					              <span class="info-box-number">50</span>
+					              <div class="progress">
+					                <div class="progress-bar bg-primary" style="width: 40%"></div>
+					              </div>
+					              <span class="progress-description">
+					                    40% de aumento en 28 dias.
+					                  </span>
+					            </div>
+					            <!-- /.info-box-content -->
+					          </div>
+					          <!-- /.info-box -->
 					        </div>
 					    </div>
 
@@ -47,9 +64,26 @@
 					            <span class="info-box-icon push-bottom bg-success"><i class="material-icons">person</i></span>
 					            <div class="info-box-content">
 					              <span class="info-box-text">NUMERO DE PACIENTES</span>
-					              <span class="info-box-number">120</span>
+					              <span class="info-box-number">{{$pac}}</span>
 					              <div class="progress">
-					                <div class="progress-bar bg-success" style="width: 85%"></div>
+					                <div class="progress-bar bg-success" style="width: 50%"></div>
+					              </div>
+					              <span class="progress-description">
+					                    85% de aumento en 28 dias.
+					                  </span>
+					            </div>
+					            <!-- /.info-box-content -->
+					          </div>
+					          <!-- /.info-box -->
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6">
+					          <div class="info-box bg-white">
+					            <span class="info-box-icon push-bottom bg-success"><i class="material-icons">person</i></span>
+					            <div class="info-box-content">
+					              <span class="info-box-text">NUMERO DE DOCTORES</span>
+					              <span class="info-box-number">{{$doc}}</span>
+					              <div class="progress">
+					                <div class="progress-bar bg-success" style="width: 50%"></div>
 					              </div>
 					              <span class="progress-description">
 					                    85% de aumento en 28 dias.
@@ -60,8 +94,8 @@
 					          <!-- /.info-box -->
 					        </div>
                         </div>
-
-						</div>
+                       
+                      
 					<!-- end widget -->
 
                     <!-- start new patient list -->
