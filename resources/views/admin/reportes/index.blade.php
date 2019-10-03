@@ -1,7 +1,7 @@
 @extends('templateadmin.layout')
 
 @section('tittle')
-   Lista Doctores del Sistema
+   DASHBOARD
 @endsection
 
 @section('content')

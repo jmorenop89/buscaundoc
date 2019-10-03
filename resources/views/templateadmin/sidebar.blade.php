@@ -27,7 +27,7 @@ j<div class="sidebar-container">
 	                </a>
 	                <ul class="sub-menu">
 	                    <li class="nav-item  active open">
-	                        <a href="index.html" class="nav-link ">
+	                        <a href="{{route('dash.index')}}" class="nav-link ">
 	                            <span class="title">Estadisticas</span>
 	                            <span class="selected"></span>
 	                        </a>

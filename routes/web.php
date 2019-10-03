@@ -101,4 +101,13 @@ Route::group(['prefix' => 'ladmin'],function(){
         Route::post('/agregar',['as' => 'ciud.agregar', 'uses' => 'admin\CiudadController@agregar']);
         Route::get('/show',['as' => 'ciud.mostrar', 'uses' => 'admin\CiudadController@mostrar']);
     });
+
+    Route::group(['prefix' => 'dashboard'],function(){
+        Route::get('/',['as' => 'dash.index', 'uses' => 'admin\DashboardController@index']);
+        Route::get('/editar/{id}',['as' => 'dash.editar', 'uses' => 'admin\CiudadController@editar']);
+        Route::post('/editar/{id}',['as' => 'dash.actualizar', 'uses' => 'admin\CiudadController@actualizar']);
+        Route::get('/agregar',['as' => 'dash.crear', 'uses' => 'admin\CiudadController@crear']);
+        Route::post('/agregar',['as' => 'dash.agregar', 'uses' => 'admin\CiudadController@agregar']);
+        Route::get('/show',['as' => 'dash.mostrar', 'uses' => 'admin\CiudadController@mostrar']);
+    });
 });
