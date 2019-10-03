@@ -27,7 +27,7 @@
 	                </a>
 	                <ul class="sub-menu">
 	                    <li class="nav-item  active open">
-	                        <a href="index.html" class="nav-link ">
+	                        <a href="{{route('dash.index')}}" class="nav-link ">
 	                            <span class="title">Estadisticas</span>
 	                            <span class="selected"></span>
 	                        </a>
@@ -47,8 +47,8 @@
 	                	<span class="arrow open"></span>
 	                </a>
 	                <ul class="sub-menu">
-	                	<li href="{{route('pac.index')}}" class="nav-item">
-	                        <a href="" class="nav-link ">
+	                	<li href="" class="nav-item">
+	                        <a href="{{route('pac.index')}}" class="nav-link ">
 	                            <span class="title">Todos los Pacientes</span>
 	                            <span class="selected"></span>
 	                        </a>
@@ -70,8 +70,8 @@
 	                	<span class="arrow open"></span>
 	                </a>
 	                <ul class="sub-menu">
-	                	<li href="{{route('doc.index')}}" class="nav-item">
-	                        <a href="" class="nav-link ">
+	                	<li href="" class="nav-item">
+	                        <a href="{{route('doc.index')}}" class="nav-link ">
 	                            <span class="title">Todos los Doctores</span>
 	                            <span class="selected"></span>
 	                        </a>
@@ -79,6 +79,52 @@
 	                    <li class="nav-item">
 	                        <a href="{{route('doc.crear')}}" class="nav-link ">
 	                            <span class="title">Agregar Doctor</span>
+	                            <span class="selected"></span>
+	                        </a>
+	                    </li>
+	                   
+	                </ul>
+				</li>
+				<li class="nav-item open">
+	                <a href="#" class="nav-link nav-toggle">
+	                    <i class="material-icons">dashboard</i>
+	                    <span class="title">Especialidades</span>
+	                    <span class="selected"></span>
+	                	<span class="arrow open"></span>
+	                </a>
+	                <ul class="sub-menu">
+	                	<li href="" class="nav-item">
+	                        <a href="{{route('espec.index')}}" class="nav-link ">
+	                            <span class="title">Todas las Especialidades</span>
+	                            <span class="selected"></span>
+	                        </a>
+	                    </li>
+	                    <li class="nav-item">
+	                        <a href="{{route('espec.crear')}}" class="nav-link ">
+	                            <span class="title">Agregar Especialidad</span>
+	                            <span class="selected"></span>
+	                        </a>
+	                    </li>
+	                   
+	                </ul>
+				</li>
+				<li class="nav-item open">
+	                <a href="#" class="nav-link nav-toggle">
+	                    <i class="material-icons">dashboard</i>
+	                    <span class="title">Ciudades</span>
+	                    <span class="selected"></span>
+	                	<span class="arrow open"></span>
+	                </a>
+	                <ul class="sub-menu">
+	                	<li href="" class="nav-item">
+	                        <a href="{{route('ciud.index')}}" class="nav-link ">
+	                            <span class="title">Todas las Ciudades</span>
+	                            <span class="selected"></span>
+	                        </a>
+	                    </li>
+	                    <li class="nav-item">
+	                        <a href="{{route('ciud.crear')}}" class="nav-link ">
+	                            <span class="title">Agregar Ciudad</span>
 	                            <span class="selected"></span>
 	                        </a>
 	                    </li>

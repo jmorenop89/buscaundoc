@@ -102,7 +102,7 @@
 				                                                <p><br />{{ $pacs->fecha_nac}}</p> 
 				                                                <div><p><i class="fa fa-phone"></i>{{ $pacs->celular}}</p> </div>
 					                                        <div class="profile-userbuttons">
-					                                            <a href="patient_profile.html" class="btn btn-circle deepPink-bgcolor btn-sm">Read More</a>
+					                                            <a href="{{route('pac.index')}}" class="btn btn-circle deepPink-bgcolor btn-sm">Read More</a>
 					                                        </div>
 				                                        </div>
 				                                    </div>

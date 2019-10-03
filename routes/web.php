@@ -36,7 +36,9 @@ Route::get('/doc', function () {
     return view('online.log-pac.index');
 });
 
-
+Route::get('confirmation',function(){
+    return view('online.login.confirmado');
+});
 
 Auth::routes();
 
@@ -83,5 +85,31 @@ Route::group(['prefix' => 'ladmin'],function(){
         Route::post('/agregar',['as' => 'doc.agregar', 'uses' => 'admin\DoctoresController@agregar']);
         Route::get('/delete/{id}',['as' => 'doc.eliminar', 'uses' => 'admin\DoctoresController@eliminar']);
         Route::get('/show',['as' => 'doc.mostrar', 'uses' => 'admin\DoctoresController@mostrar']);
+    });
+    Route::group(['prefix' => 'especialidad'],function(){
+        Route::get('/',['as' => 'espec.index', 'uses' => 'admin\EspecialidadesController@index']);
+        Route::get('/editar/{id}',['as' => 'espec.editar', 'uses' => 'admin\EspecialidadesController@editar']);
+        Route::post('/editar/{id}',['as' => 'espec.actualizar', 'uses' => 'admin\EspecialidadesController@actualizar']);
+        Route::get('/agregar',['as' => 'espec.crear', 'uses' => 'admin\EspecialidadesController@crear']);
+        Route::post('/agregar',['as' => 'espec.agregar', 'uses' => 'admin\EspecialidadesController@agregar']);
+        Route::get('/show',['as' => 'espec.mostrar', 'uses' => 'admin\EspecialidadesController@mostrar']);
+    });
+
+    Route::group(['prefix' => 'ciudad'],function(){
+        Route::get('/',['as' => 'ciud.index', 'uses' => 'admin\CiudadController@index']);
+        Route::get('/editar/{id}',['as' => 'ciud.editar', 'uses' => 'admin\CiudadController@editar']);
+        Route::post('/editar/{id}',['as' => 'ciud.actualizar', 'uses' => 'admin\CiudadController@actualizar']);
+        Route::get('/agregar',['as' => 'ciud.crear', 'uses' => 'admin\CiudadController@crear']);
+        Route::post('/agregar',['as' => 'ciud.agregar', 'uses' => 'admin\CiudadController@agregar']);
+        Route::get('/show',['as' => 'ciud.mostrar', 'uses' => 'admin\CiudadController@mostrar']);
+    });
+
+    Route::group(['prefix' => 'dashboard'],function(){
+        Route::get('/',['as' => 'dash.index', 'uses' => 'admin\DashboardController@index']);
+        Route::get('/editar/{id}',['as' => 'dash.editar', 'uses' => 'admin\CiudadController@editar']);
+        Route::post('/editar/{id}',['as' => 'dash.actualizar', 'uses' => 'admin\CiudadController@actualizar']);
+        Route::get('/agregar',['as' => 'dash.crear', 'uses' => 'admin\CiudadController@crear']);
+        Route::post('/agregar',['as' => 'dash.agregar', 'uses' => 'admin\CiudadController@agregar']);
+        Route::get('/show',['as' => 'dash.mostrar', 'uses' => 'admin\CiudadController@mostrar']);
     });
 });

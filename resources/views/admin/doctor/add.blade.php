@@ -1,11 +1,7 @@
 @extends('templateadmin.layout')
 
-@section('titulo')
-    Doctor
-@endsection
-
-@section('titulo-seccion')
-    Doctor
+@section('tittle')
+	Agregar Doctores
 @endsection
 
 @section('content')
@@ -62,6 +58,34 @@
                                                 </label>
                                                 <div class="col-md-5">
                                                     <input type="text" name="apellidos" data-required="1" placeholder="Ingresar Apellidos" class="form-control input-height" /> </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="control-label col-md-3">Especialidad
+                                                    <span class="required"> * </span>
+                                                </label>
+                                                <div class="col-md-5">
+                                                    <div class="form-group">
+                                                        <select class="form-control form-control-lg" name="especialidad_id" id="country_register">
+                                                            @foreach($espe as $espes)
+                                                                <option value="{{ $espes->id }}">{{$espes->nombre}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="control-label col-md-3">Ciudad
+                                                    <span class="required"> * </span>
+                                                </label>
+                                                <div class="col-md-5">
+                                                    <div class="form-group">
+                                                        <select class="form-control form-control-lg" name="ciudad_id" id="country_register">
+                                                            @foreach($ciud as $ciuds)
+                                                                <option value="{{ $ciuds->id}}">{{$ciuds->nombre}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label class="control-label col-md-3">Fecha de Nacimiento
@@ -124,7 +148,7 @@
                                             <div class="row">
                                                 <div class="offset-md-3 col-md-9">
                                                     <button type="submit" class="btn btn-info">Enviar</button>
-                                                    <button type="button" class="btn btn-default">Cancelar</button>
+                                                    <a href="{{route('doc.index')}}" type="" class="btn btn-default">Cancelar</a>
                                                 </div>
                                             	</div>
                                        		 </div>

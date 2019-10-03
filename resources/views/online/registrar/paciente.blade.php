@@ -4,6 +4,10 @@
     FINDOCTOR - Find easily a doctor and book online an appointment
 @endsection
 
+@section('css')
+    <link href="/online/css/date_picker.css" rel="stylesheet">
+@endsection
+
 @section('content')
 
 <div class="bg_color_2">
@@ -12,7 +16,7 @@
 			<h1>Por favor registrese en Buscaundoc!</h1>
 			<div class="row justify-content-center">
 				<div class="col-md-5">
-					<form action="{{ route('reg-pac') }}" method="post">
+					<form action="{{ route('reg-pac') }}" method="post" id="frm-validate">
 						<input type="hidden" name="_token" value="{{ csrf_token()}}">
 						<div class="box_form">
 							<div class="form-group">
@@ -25,7 +29,7 @@
                             </div>
                             <div class="form-group">
 								<label>Fecha de nacimiento</label>
-								<input type="text" class="form-control" placeholder="Ingresa Nº Celular" name="fecha_nac">
+								<input class="form-control" type="text" placeholder="Ingrese Fecha de Nacimiento" id="birthday" name="fecha_nac" data-lang="es">
 							</div>
                             <div class="form-group">
 								<label>Teléfono Celular</label>
@@ -54,7 +58,11 @@
 								<input class="btn_1" type="submit" value="Enviar">
 							</div>
 						</div>
-						<p class="text-center"><small>Has voluptua vivendum accusamus cu. Ut per assueverit temporibus dissentiet. Eum no atqui putant democritum, velit nusquam sententiae vis no.</small></p>
+						<p class="text-center">
+							<small>Has voluptua vivendum accusamus cu. Ut per assueverit temporibus dissentiet. 
+								Eum no atqui putant democritum, velit nusquam sententiae vis no.
+							</small>
+						</p>
 					</form>
 				</div>
 			</div>
@@ -63,4 +71,8 @@
 		<!-- /register -->
 	</div>
 </div>
-	@endsection
+@endsection
+
+@section('js')
+	<script src="/online/scripts/patient.js"></script>
+@endsection

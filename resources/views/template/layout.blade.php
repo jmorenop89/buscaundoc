@@ -32,12 +32,10 @@
 
 					<nav id="menu" class="main-menu">
 						<ul  id="top_access">
+							@guest
 							<li>
 								<span><a href="/">Inicio</a></span>
 							</li>
-							<!-- <li>
-								<span><a href="">¿Cómo Funciona?</a></span>
-							</li> -->
                             <li>
 								<span><a href="">Regístrate</a></span>
 								<ul>
@@ -54,14 +52,27 @@
                                 <span id="reserva">
                                 <div><a class="btn_1 text-white">Reserva una cita</a></div>
                             </span>
-						</li>
-						<li id="user">
-						<figure><img src="http://via.placeholder.com/150x150.jpg" alt="">
-						</figure>
-							<span><a href="">
-								Jhon Smith</a>
-							</span>
-						</li>
+							</li>
+							@else
+							<li>
+								<span><a href="/">Inicio</a></span>
+							</li>
+							<li id="user">
+								<figure><img src="http://via.placeholder.com/150x150.jpg" alt=""></figure>
+								<span><a href="">{{Auth::user()->email}}</a></span>
+								<ul>
+									<li><a href="{{ route('reg-pac') }}">Como Paciente</a></li>
+									<li><a href="{{ route('logout') }}" onclick="event.preventDefault();$('#logout-form').submit();">Cerrar Sesion</a></li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none;">@csrf</form>
+								</ul>
+							</li>
+							<li>
+                                <span id="reserva">
+                                <div><a class="btn_1 text-white">Reserva una cita</a></div>
+                            </span>
+							</li>
+
+						@endguest
 						</ul>
 					</nav>
 				</div>
@@ -74,12 +85,14 @@
 
     </div>
     <!-- page -->
-<!--
-	<div id="toTop"></div> -->
+
+	<div id="toTop"></div>
 	<!-- Back to top button -->
 
     <!-- COMMON SCRIPTS -->
-    <script src="/online/js/jquery-2.2.4.min.js"></script>
+	<script src="/online/js/jquery-2.2.4.min.js"></script>
+	<!-- Bootstrap Typeahead Plugin -->
+	<script src="/online/jQuery-Bootstrap-4-Typeahead-Plugin/bootstrap3-typeahead.js"></script>
     <script src="/online/js/common_scripts.min.js"></script>
 	<script src="/online/js/functions.js"></script>
 
