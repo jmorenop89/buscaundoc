@@ -85,6 +85,7 @@
 	<script src="/online/js/functions.js"></script>
 	<script src="/plugins/jquery-validation/js/jquery.validate.min.js"></script>
 	<script src="/plugins/jquery-validation/js/localization/messages_es_PE.js"></script>
+	<script src="/online/js/bootstrap-datepicker.js"></script>
 	<!-- SPECIFIC SCRIPTS -->
 	<!-- script src="http://maps.googleapis.com/maps/api/js"></script -->
 	<!-- script src="/online/js/markerclusterer.js"></script -->
@@ -93,7 +94,6 @@
 	
 	<!-- SPECIFIC SCRIPTS -->
 	@yield('js')
-    <script src="/online/js/bootstrap-datepicker.js"></script>
     <script>
 		$(document).ready(function(){
 			var dd = $('.calendar').datepicker({
