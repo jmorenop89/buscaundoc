@@ -55,35 +55,24 @@ ul#top_access li a {
   width:360px;
 } */
 
-
-
-
-
-
 /*login*/
 #login {
   width: 400px;
-  margin: 0 0 0 auto;
   color: #fff;
 }
-@media (max-width: 767px) {
+@media (min-width: 320px) {
   #login {
-    /* For less than 767px */
     width: 85%;
     margin: 30px auto;
   }
 }
-/*reset*/
-#reset {
-  width: 400px;
-  margin: 20vh auto;
-  color: #000;
-}
-@media (max-width: 767px) {
-  #reset {
-    /* For less than 767px */
-    width: 85%;
+@media (max-width: 320px) {
+  #login {
+    width: 95%;
     margin: 30px auto;
+  }
+  #login .box_form{
+    padding: 10px 30px
   }
 }
 .box_form {
@@ -255,7 +244,6 @@ ul.time_select li label:hover {
     top:0px;
   }
 }
-
 @media (max-width:992px) {
   .main-menu ul figure img {    
     border-radius: 50%;
@@ -278,11 +266,12 @@ ul.time_select li label:hover {
   .ciudad {
     width:360px;    
   }
+}
+@media (max-width: 991px) {
   #custom-search-input input[type='submit'] {
     position: relative;
     width: 100px;
     height: 45px;
     top:0px;
-  }
 }
-
+}
