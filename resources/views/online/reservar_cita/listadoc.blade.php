@@ -152,7 +152,7 @@
 
 
 @section('js')
-	<script src="http://maps.googleapis.com/maps/api/js"></script >
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
 	<script src="/online/js/markerclusterer.js"></script>
     <script src="/online/js/map_listing.js"></script>
 	<script src="/online/js/infobox.js"></script>
