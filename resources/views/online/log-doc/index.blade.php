@@ -3,71 +3,71 @@
 @section('tittle')
     FINDOCTOR - Find easily a doctor and book online an appointment
 @endsection
+
 @section('css')
-	<link href="/online/css/date_picker.css" rel="stylesheet">
+	<link href="/assets/online/css/date_picker.css" rel="stylesheet">
 	<style>
-	 /* Menù */
-@media (max-width: 2560px) {
-  .nav-pills .nav-link {
-      width:100%;
-      text-align: center;   
-    }
-}
+		/* Menù */
+		@media (max-width: 2560px) {
+			.nav-pills .nav-link {
+				width:100%;
+				text-align: center;   
+			}
+		}
 
-@media (max-width: 1200px) {
-  .nav-pills .nav-link {
-      width:100%;
-      text-align: center;   
-    }
-}
+		@media (max-width: 1200px) {
+			.nav-pills .nav-link {
+				width:100%;
+				text-align: center;   
+			}
+		}
 
-@media (max-width: 992px) {
-  .nav-pills .nav-link {
-      width:100%;
-      text-align: center;   
-    }
-}
+		@media (max-width: 992px) {
+			.nav-pills .nav-link {
+				width:100%;
+				text-align: center;   
+			}
+		}
 
-@media (max-width: 991px) {
-  .nav-pills .nav-link {
-      width:25%;
-      text-align: center;   
-    }
-}
+		@media (max-width: 991px) {
+			.nav-pills .nav-link {
+				width:25%;
+				text-align: center;   
+			}
+		}
 
-@media (max-width: 768px) {
-  .nav-pills .nav-link {
-      width:50%;
-      text-align: center;   
-    }
-}
+		@media (max-width: 768px) {
+			.nav-pills .nav-link {
+				width:50%;
+				text-align: center;   
+			}
+		}
 
-@media (max-width: 576px) {
-  .nav-pills .nav-link {
-      width:100%;
-      text-align: center;   
-    }
-}
+		@media (max-width: 576px) {
+			.nav-pills .nav-link {
+				width:100%;
+				text-align: center;   
+			}
+		}
 
-@media (max-width: 320px) {
-  .nav-pills .nav-link {
-      width:100%;
-      text-align: center;   
-    }
-}
+		@media (max-width: 320px) {
+			.nav-pills .nav-link {
+				width:100%;
+				text-align: center;   
+			}
+		}
 
-
-@media (min-width: 100px){
-  .doc_citas {
-    overflow-x:scroll;
-  }
-}
+		@media (min-width: 100px){
+			.doc_citas {
+				overflow-x:scroll;
+			}
+		}
 	</style>
 @endsection
 
 @section('content')
 
-			<main>
+	<main>
 		<div id="breadcrumb">
 			<div class="container">
 				<ul>
@@ -377,8 +377,8 @@
 @endsection
 
 @section('js')
-<script src="/assets/online/js/bootstrap-datepicker.js"></script>
-        <script>
+	<script src="/assets/online/js/bootstrap-datepicker.js"></script>
+    <script>
 		$(document).ready(function(){
 			var dd = $('.calendar').datepicker({
 			    todayHighlight: true,

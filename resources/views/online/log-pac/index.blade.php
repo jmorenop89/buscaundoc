@@ -6,7 +6,7 @@
 
 @section('content')
 
-      <main>
+    <main>
     <div id="breadcrumb">
       <div class="container">
         <ul>
