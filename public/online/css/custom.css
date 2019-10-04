@@ -189,7 +189,9 @@ ul.time_select li label:hover {
 }}
 
 .main-menu figure {
-  width:40px;  
+  /*width:40px;  */
+  width:100%;
+  text-align:center;
 }
 
 @media (max-width:992px) {
@@ -198,7 +200,7 @@ ul.time_select li label:hover {
     width: 100px;
     height: 100px;
     margin-top:20px;
-    margin-left: 167px;    
+    /*margin-left: 167px;    */
   }
 }
 @media (max-width:992px) {
@@ -312,22 +314,7 @@ ul.time_select li label:hover {
     position: relative;
     width: 250px;
     height: 45px;
-    top:0px;
-   
+    top:0px;   
     }
 }
-
-
-
-/*
-*/
-/* @media (max-width: 991px) {
-  #custom-search-input input[type='submit'] {
-    position: relative;
-    width: 360px;
-    height: 45px;
-    top:0px;
-   
-    }
-} */
 
