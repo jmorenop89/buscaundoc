@@ -36,8 +36,6 @@ ul#top_access li a {
     text-decoration: none; */
     background-color:  #96f3e4;
   }
-
-
 .ciudad, .especialidad {
   height: 45px;
   padding-left: 20px;
@@ -50,11 +48,6 @@ ul.time_select.version_2 li {
   float: left;
   width:20%;
 }
-ul.pac.time_select.version_2 li {
-  float: left;
-  width:50%;
-}
-
 ul.time_select li input[type="radio"] {
   display: none;
   cursor: pointer;
@@ -63,27 +56,6 @@ ul.time_select li input[type="radio"]:checked + label {
   background-color: #333;
   color: #fff;
 }
-ul.time_select li label {
-  display: inline-block;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: #f8f8f8;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  border-radius: 3px;
-  padding: 8px 10px 6px 10px;
-  line-height: 1;
-  min-width: 100px;
-  margin: 5px;
-  text-align: center;
-  cursor: pointer;
-}
-
-
 ul.time_select li label:hover {
   background-color: #e74e84;
   color: #fff;
@@ -109,20 +81,6 @@ ul.time_select li label:hover {
   }
 }
 
-@media (min-width: 320px) {
-  ul.time_select.version_2 li {
-    width:50%;
-  }
-}
-
-@media (min-width: 480px) { 
-  ul.time_select.version_2 li {
-    width:30%;
-  }
-  ul.pac.time_select.version_2 li {
-    width: 30%;
-  }
-}
 
 @media (max-width: 576px) {
   .especialidad {
@@ -154,11 +112,6 @@ ul.time_select li label:hover {
   }
 }
 
-@media (min-width: 768px) {
-  ul.time_select.version_2 li {
-    width:20%;
-  }
-}
 
 /* .main-menu figure {
   width:40px;  
