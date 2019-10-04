@@ -104,10 +104,6 @@
                         </p>
                     </form>
                 </div>
-<<<<<<< HEAD
-=======
-                <p class="text-center link_bright">No tienes una cuenta <a href="#0"><strong>Registrate ahora!</strong></a></p>
->>>>>>> 15f4ab78f58c60c0db7583c808671f52ce6cf989
         </div>
     </div>
 </div>
