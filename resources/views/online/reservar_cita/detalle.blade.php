@@ -6,6 +6,33 @@
 
 @section('css')
     <link href="/assets/online/css/date_picker.css" rel="stylesheet">
+    <style>
+    	@media(min-width: 320px){
+    		ul.pac.time_select.version_2 li {
+			width:50%;
+			}
+    	}
+    	@media(min-width: 480px){
+			ul.pac.time_select.version_2 li {
+				width:33%;
+			}
+    	}
+    	@media(min-width: 553px){
+			ul.pac.time_select.version_2 li {
+				width:25%;
+			}
+    	}
+    	@media(min-width: 768px){
+			ul.pac.time_select.version_2 li {
+				width:20%;
+			}
+    	}
+    	@media(min-width: 992px){
+			ul.pac.time_select.version_2 li {
+				width:5s0%;
+			}
+    	}
+    </style>
 @endsection
 
 @section('content')
@@ -71,7 +98,7 @@
 								</div>
 							</div>
 							<div class="col-lg-5">
-								<ul class="pac time_select version_2 add_top_20">
+								<ul class="pac time_select version_2 add_top_20 text-center">
 									<li>
 										<input type="radio" id="radio1" name="radio_time" value="09.30am">
 										<label for="radio1">09.30am</label>

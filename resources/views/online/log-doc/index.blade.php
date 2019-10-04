@@ -31,8 +31,11 @@
 
 		@media (max-width: 991px) {
 			.nav-pills .nav-link {
-				width:25%;
+				width:50%;
 				text-align: center;   
+			}
+			.box_profile figure{
+				margin:10px auto;
 			}
 		}
 
@@ -41,13 +44,25 @@
 				width:50%;
 				text-align: center;   
 			}
+			.container{
+				max-width: 540px
+			}
+			ul.doc.time_select.version_2 li {
+				width:25%;
+			}
 		}
 
 		@media (max-width: 576px) {
 			.nav-pills .nav-link {
-				width:100%;
+				width:50%;
 				text-align: center;   
 			}
+
+		}
+		@media (max-width: 480px) {
+			ul.doc.time_select.version_2 li {
+				width: 33%;
+		  	}
 		}
 
 		@media (max-width: 320px) {
@@ -55,11 +70,11 @@
 				width:100%;
 				text-align: center;   
 			}
-		}
-
-		@media (min-width: 100px){
 			.doc_citas {
 				overflow-x:scroll;
+			}
+			ul.doc.time_select.version_2 li {
+			    width:50%;
 			}
 		}
 	</style>
@@ -90,12 +105,12 @@
 						<small>Primary care - Internist</small>
 						<h1>DR. Julia Jhones</h1>
 						<hr>
-							    <div class="nav text-justify nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-							      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#agregar-ho" role="tab" aria-controls="v-pills-home" aria-selected="true">Agregar Horarios</a>
-							      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#eliminar-ho" role="tab" aria-controls="v-pills-profile" aria-selected="false">Eliminar Horarios</a>
-							      <a class="nav-link" id="" data-toggle="pill" href="#ver-citas" role="tab" aria-controls="v-pills-messages" aria-selected="false">Ver Citas</a>
-							      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#config" role="tab" aria-controls="v-pills-messages" aria-selected="false">Configuración</a>
-							    </div>
+					    <div class="nav text-justify nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+					      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#agregar-ho" role="tab" aria-controls="v-pills-home" aria-selected="true">Agregar Horarios</a>
+					      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#eliminar-ho" role="tab" aria-controls="v-pills-profile" aria-selected="false">Eliminar Horarios</a>
+					      <a class="nav-link" id="" data-toggle="pill" href="#ver-citas" role="tab" aria-controls="v-pills-messages" aria-selected="false">Ver Citas</a>
+					      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#config" role="tab" aria-controls="v-pills-messages" aria-selected="false">Configuración</a>
+					    </div>
 					</div>
 				</aside>
 				<!-- /asdide -->
@@ -138,7 +153,7 @@
 											</form>
 										</div>
 										<div class="col-lg-12">
-											<ul class="time_select version_2 doc add_top_20">
+											<ul class="doc time_select version_2 doc add_top_20 text-center">
 												<li>
 													<input type="radio" id="radio1" name="radio_time" value="09.30am">
 													<label for="radio1">09.30am</label>
@@ -198,7 +213,7 @@
 										</div>
 										
 										<div class="col-lg-12">
-											<ul class="time_select version_2 add_top_20">
+											<ul class="doc time_select version_2 add_top_20 text-center">
 												<li>
 													<input type="radio" id="radio1" name="radio_time" value="09.30am">
 													<label for="radio1">09.30am</label>

@@ -4,7 +4,7 @@
         <div class="page-logo">
             <a href="index.html">
                 <img alt="" src="/admin/img/logo.png">
-                <span class="logo-default" >Sunray</span>
+                <span class="logo-default" >Admin</span>
             </a>
         </div>
         <!-- logo end -->
