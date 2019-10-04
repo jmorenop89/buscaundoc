@@ -24,6 +24,7 @@ Route::group(['prefix' => 'register'], function(){
     Route::post('doctor',['as' => 'reg-doc', 'uses' => 'Online\DoctorController@register']);
 });
 
+
 Route::get('/list','OnlineController@busqueda');
 Route::get('/detalle','OnlineController@det_hora');
       
@@ -35,9 +36,11 @@ Route::get('/doc', function () {
     return view('online.log-pac.index');
 });
 
-Route::get('confirmation',function(){
-    return view('online.login.confirmado');
+Route::group(['middleware' => 'auth'],function(){
+    Route::get('profile',['as' =>'profile','uses'=>'Online\ProfileController@index']);
 });
+
+
 
 Route::get('getspec','OnlineController@json_specialty');
 Route::get('getcity','OnlineController@json_city');
