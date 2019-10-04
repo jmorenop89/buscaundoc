@@ -74,5 +74,6 @@
 @endsection
 
 @section('js')
+	<script src="/online/js/bootstrap-datepicker.js"></script>
 	<script src="/online/scripts/patient.js"></script>
 @endsection

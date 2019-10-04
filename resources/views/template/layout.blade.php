@@ -25,7 +25,7 @@
 			<div class="row">
 				<div class="col-lg-3 col-6">
 					<div id="logo_home">
-						<h1><a href="" title="Findoctor">Findoctor</a></h1>
+						<h1><a href="/" title="Findoctor">Findoctor</a></h1>
 					</div>
 				</div>
 				<div class="col-lg-9 col-6">
@@ -89,12 +89,12 @@
 	<!-- Back to top button -->
 
     <!-- COMMON SCRIPTS -->
-	<script src="/online/js/jquery-2.2.4.min.js"></script>
+	<script src="/assets/online/js/jquery-2.2.4.min.js"></script>
 	<!-- Bootstrap Typeahead Plugin -->
-    <script src="/online/js/common_scripts.min.js"></script>
-	<script src="/online/js/functions.js"></script>
-	<script src="/plugins/jquery-validation/js/jquery.validate.min.js"></script>
-	<script src="/plugins/jquery-validation/js/localization/messages_es_PE.js"></script>
+    <script src="/assets/online/js/common_scripts.min.js"></script>
+	<script src="/assets/online/js/functions.js"></script>
+	<script src="/assets/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+	<script src="/assets/plugins/jquery-validation/js/localization/messages_es_PE.js"></script>
 	<!-- SPECIFIC SCRIPTS -->
 	@yield('js')
 </body>
