@@ -2907,26 +2907,28 @@ a.social_bt {
     left: 0;
     width: 20px;
     height: 20px;
-    cursor: pointer;
     border: 2px solid #e1e8ed;
-    background: transparent; }
+    background: transparent;
+    border-radius: 5px }
   .checkbox_2 input[type=checkbox]:focus + label:before {
     background-color: #1e66ea;
     background-color: rgba(49, 115, 236, 0.2); }
   .checkbox_2 label:after {
     content: '';
     position: absolute;
-    top: 6px;
-    left: 6px;
-    width: 8px;
-    height: 8px;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
     opacity: 0;
     background: #3173ec;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px }
   .checkbox_2 input[type=checkbox] {
     opacity: 0;
     position: absolute;
