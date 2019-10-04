@@ -39,7 +39,8 @@ Route::get('confirmation',function(){
     return view('online.login.confirmado');
 });
 
-
+Route::get('getspec','OnlineController@json_specialty');
+Route::get('getcity','OnlineController@json_city');
 //Route::get('/home', 'HomeController@index')->name('home');
 
 /*Route::get('/logeado', function () {
