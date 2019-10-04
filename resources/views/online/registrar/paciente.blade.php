@@ -5,7 +5,7 @@
 @endsection
 
 @section('css')
-    <link href="/online/css/date_picker.css" rel="stylesheet">
+    <link href="/assets/online/css/date_picker.css" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -74,6 +74,6 @@
 @endsection
 
 @section('js')
-	<script src="/online/js/bootstrap-datepicker.js"></script>
-	<script src="/online/scripts/patient.js"></script>
+	<script src="/assets/online/js/bootstrap-datepicker.js"></script>
+	<script src="/assets/online/scripts/patient.js"></script>
 @endsection

@@ -5,7 +5,7 @@
 @endsection
 
 @section('css')
-    <link href="/online/css/date_picker.css" rel="stylesheet">
+    <link href="/assets/online/css/date_picker.css" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -85,8 +85,10 @@
 	<!-- /container -->
 </div>
 <!-- /hero_register -->
+@endsection
 
-<script src="online/js/bootstrap-datepicker.js"></script>
+@section('js')
+	<script src="/assets/online/js/bootstrap-datepicker.js"></script>
     <script>
 			$('#calendar').datepicker({
 			    todayHighlight: true,
