@@ -57,71 +57,6 @@ ul#top_access li a {
 
 
 
-
-
-
-/*login*/
-#login {
-  width: 400px;
-  margin: 0 0 0 auto;
-  color: #fff;
-}
-@media (max-width: 767px) {
-  #login {
-    /* For less than 767px */
-    width: 85%;
-    margin: 30px auto;
-  }
-}
-/*reset*/
-#reset {
-  width: 400px;
-  margin: 20vh auto;
-  color: #000;
-}
-@media (max-width: 767px) {
-  #reset {
-    /* For less than 767px */
-    width: 85%;
-    margin: 30px auto;
-  }
-}
-.box_form {
-  background-color: #fff;
-  padding: 30px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
-  margin-bottom: 25px;
-  color: #555;
-}
-.box_form label {
-  font-weight: 600;
-  font-size: 15px;
-  /*font-size: 0.8125rem;*/
-  margin-bottom: 3px;
-}
-.box_form .form-group {
-  margin-bottom: 25px;
-}
-
-/*margin*/
-.margin_60_35 {
-  padding-top: 60px;
-  padding-bottom: 35px;
-}
-@media (max-width: 767px) {
-  .margin_60_35 {
-    /* For less than 767px */
-    padding-top: 30px;
-    padding-bottom: 5px;
-  }
-}
-
 /*horarios*/
 ul.time_select.version_2 li {
   float: left;
@@ -171,6 +106,21 @@ ul.time_select li label:hover {
   background-color:#00c3a5; 
 } */
 
+@media (max-width: 320px) {
+  .especialidad {
+    width:250px;    
+  }
+  .ciudad {
+    width:250px;    
+  }
+  #custom-search-input input[type='submit'] {
+    position: relative;
+    width: 250px;
+    height: 45px;
+    top:0px;
+  }
+}
+
 @media (min-width: 320px) {
   ul.time_select.version_2 li {
     width:50%;
@@ -181,29 +131,73 @@ ul.time_select li label:hover {
   ul.time_select.version_2 li {
     width:30%;
   }
+  ul.pac.time_select.version_2 li {
+    width: 30%;
+  }
+}
+
+@media (max-width: 576px) {
+  .especialidad {
+    width:260px;    
+  }
+  .ciudad {
+    width:260px;    
+  }
+  #custom-search-input input[type='submit'] {
+    position: relative;
+    width: 260px;
+    height: 45px;
+    top:0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .especialidad {
+    width:360px;    
+  }
+  .ciudad {
+    width:360px;    
+  }
+  #custom-search-input input[type='submit'] {
+    position: relative;
+    width: 360px;
+    height: 45px;
+    top:0px;
+  }
 }
 
 @media (min-width: 768px) {
   ul.time_select.version_2 li {
     width:20%;
-}}
-
-.main-menu figure {
-  /*width:40px;  */
-  width:100%;
-  text-align:center;
+  }
 }
 
+/* .main-menu figure {
+  width:40px;  
+} */
+
+@media (max-width: 991px) {
+  .especialidad {
+    width:440px;
+  }
+  .ciudad {
+    width:440px;    
+  }
+  #custom-search-input input[type='submit'] {
+    position: relative;
+    width: 440px;
+    height: 45px;
+    top:0px;
+  }
+}
 @media (max-width:992px) {
   .main-menu ul figure img {    
     border-radius: 50%;
     width: 100px;
     height: 100px;
     margin-top:20px;
-    /*margin-left: 167px;    */
+    margin-left: 167px;    
   }
-}
-@media (max-width:992px) {
   .main-menu ul span {
     text-align: center;
   }
@@ -211,108 +205,18 @@ ul.time_select li label:hover {
 
 /** Especialidad - Ciudad - Buscar **/
 
-
 @media (max-width: 1200px) {
   .especialidad {
     width:360px;    
   }
-}
-@media (max-width: 1200px) {
   .ciudad {
     width:360px;    
   }
 }
-
-@media (max-width: 1200px) {
+@media (max-width: 991px) {
   #custom-search-input input[type='submit'] {
     position: relative;
     width: 100px;
-    height: 45px;
-    top:0px;
-   
-    }
-} 
-
-
-
-@media (max-width: 991px) {
-  .especialidad {
-    width:440px;    
-  }
-}
-@media (max-width: 991px) {
-  .ciudad {
-    width:440px;    
-  }
-}
-
-@media (max-width: 991px) {
-  #custom-search-input input[type='submit'] {
-    position: relative;
-    width: 440px;
-    height: 45px;
-    top:0px;
-   
-    }
-} 
-
-
-@media (max-width: 768px) {
-  .especialidad {
-    width:360px;    
-  }
-}
-@media (max-width: 768px) {
-  .ciudad {
-    width:360px;    
-  }
-}
-
-@media (max-width: 768px) {
-  #custom-search-input input[type='submit'] {
-    position: relative;
-    width: 360px;
-    height: 45px;
-    top:0px;
-   
-    }
-}
-
-@media (max-width: 576px) {
-  .especialidad {
-    width:260px;    
-  }
-}
-@media (max-width: 576px) {
-  .ciudad {
-    width:260px;    
-  }
-}
-
-@media (max-width: 576px) {
-  #custom-search-input input[type='submit'] {
-    position: relative;
-    width: 260px;
-    height: 45px;
-    top:0px;
-   
-    }
-}
-@media (max-width: 320px) {
-  .especialidad {
-    width:250px;    
-  }
-}
-@media (max-width: 320px) {
-  .ciudad {
-    width:250px;    
-  }
-}
-
-@media (max-width: 320px) {
-  #custom-search-input input[type='submit'] {
-    position: relative;
-    width: 250px;
     height: 45px;
     top:0px;   
     }

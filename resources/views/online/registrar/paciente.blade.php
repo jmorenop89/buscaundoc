@@ -10,12 +10,13 @@
 
 @section('content')
 
-<div class="bg_color_2">
-	<div class="container margin_60_35">
-		<div id="register">
-			<h1>Por favor registrese en Buscaundoc!</h1>
+<div class="bg_color_2"><!--  bg_color_2 -->
+	<div class="container pt-3"> <!-- margin_60_35 -->
+		<!-- <div id="register"> -->
+			
 			<div class="row justify-content-center">
-				<div class="col-md-5">
+				<div class="col-md-6">
+				<h2 class="text-center text-white">Registro de Paciente</h2>
 					<form action="{{ route('reg-pac') }}" method="post" id="frm-validate">
 						<input type="hidden" name="_token" value="{{ csrf_token()}}">
 						<div class="box_form">
@@ -67,7 +68,7 @@
 				</div>
 			</div>
 			<!-- /row -->
-		</div>
+		<!-- </div> -->
 		<!-- /register -->
 	</div>
 </div>

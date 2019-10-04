@@ -4,12 +4,58 @@
     FINDOCTOR - Find easily a doctor and book online an appointment
 @endsection
 
+@section('css')
+ <style>
+        /*login*/
+    #login {
+      width: 400px;
+      color: #fff;
+    }
+    @media (min-width: 320px) {
+      #login {
+        width: 85%;
+        margin: 30px auto;
+      }
+    }
+    @media (max-width: 320px) {
+      #login {
+        width: 95%;
+        margin: 30px auto;
+      }
+      #login .box_form{
+        padding: 10px 30px
+      }
+    }
+    .box_form {
+      background-color: #fff;
+      padding: 30px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+      margin-bottom: 25px;
+      color: #555;
+    }
+    .box_form label {
+      font-weight: 600;
+      font-size: 15px;
+      /*font-size: 0.8125rem;*/
+      margin-bottom: 3px;
+    }
+    .box_form .form-group {
+      margin-bottom: 25px;
+    }
+</style> 
+@endsection
+
 @section('content')
 <div class="bg_color_2">
     <div class="justify-content-center">
-        <div class="container margin_60_35">
-            <div id="login">
-                <h1>{{ __('Inicia sesion en BuscaunDoc') }}</h1>
+        <div class="container pt-3"> 
+                <h2 class="text-center text-white">{{ __('Iniciar sesion') }}</h2>
                 <div class="box_form ">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -54,7 +100,6 @@
                     </form>
                 </div>
                 <p class="text-center link_bright">No tienes una cuenta <a href="#0"><strong>Registrate ahora!</strong></a></p>
-            </div>
         </div>
     </div>
 </div>

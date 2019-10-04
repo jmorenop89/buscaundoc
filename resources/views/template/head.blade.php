@@ -24,9 +24,4 @@
 
     	<!-- YOUR CUSTOM CSS -->
 	<link href="/online/css/custom.css" rel="stylesheet">
-
-
-	<!-- Bootstrap Typeahead Plugin -->
-	<script src="/online/jQuery-Bootstrap-4-Typeahead-Plugin/bootstrap3-typeahead.js"></script>
-
 </head>

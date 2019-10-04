@@ -13,4 +13,4 @@ form.validate({
     }
 });
 
-$('#birthday').datepicker({});
+$('#birthday').datepicker({format: "dd/mm/yyyy"});

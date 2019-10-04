@@ -378,22 +378,19 @@
 
 @section('js')
 <script src="/online/js/bootstrap-datepicker.js"></script>
-    <script>
-			$('.calendar').datepicker({
+        <script>
+		$(document).ready(function(){
+			var dd = $('.calendar').datepicker({
 			    todayHighlight: true,
 				daysOfWeekDisabled: [0],
 				weekStart: 1,
-			    format: "yyyy-mm-dd",
-    			datesDisabled: ["2017/10/20", "2017/11/21","2017/12/21", "2018/01/21","2018/02/21","2018/03/21"],
-			});
-	</script>
-	<script>
-	  $(function(){
-		  $('.calendar').datepicker({
-			  onclick: function(date) {
-				  alert(date);
-			  }
-		  });
-	  });
+				format: "yyyy-mm-dd",
+				datesDisabled: ["2017/10/20", "2017/11/21","2017/12/21", "2018/01/21","2018/02/21","2018/03/21"],
+			}).on('changeDate', function(e) {
+				console.log(e.date);
+				console.log(e.format('yyyy-mm-dd'));
+        		// `e` here contains the extra attributes
+    		});
+    	});
 	</script>
 @endsection
