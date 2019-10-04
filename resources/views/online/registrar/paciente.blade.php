@@ -13,7 +13,6 @@
 <div class="bg_color_2"><!--  bg_color_2 -->
 	<div class="container pt-3"> <!-- margin_60_35 -->
 		<!-- <div id="register"> -->
-			
 			<div class="row justify-content-center">
 				<div class="col-md-6">
 				<h2 class="text-center text-white">Registro de Paciente</h2>
