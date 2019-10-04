@@ -10,9 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Auth::routes();
 
 Route::get('/','OnlineController@index');
+Route::get('/login','Online\LoginController@index')->name('login');
     /*RUTAS GET*/
 Route::group(['prefix' => 'register'], function(){
     Route::get('/paciente',['as' => 'reg-pac', 'uses' => 'OnlineController@regpac']);
@@ -39,9 +40,6 @@ Route::get('/doc', function () {
 Route::get('confirmation',function(){
     return view('online.login.confirmado');
 });
-
-Auth::routes();
-
 
 Route::post('/logout','Online\LoginController@logout')->name('logout');
 
