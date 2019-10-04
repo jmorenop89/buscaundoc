@@ -7,9 +7,9 @@
 @section('content')
 <div class="bg_color_2">
     <div class="justify-content-center">
-        <div class="container margin_60_35">
-            <div id="login">
-                <h1>{{ __('Inicia sesion en BuscaunDoc') }}</h1>
+        <div class="container"> 
+          
+                <h2 class="text-center text-white">{{ __('Iniciar sesión') }}</h2>
                 <div class="box_form ">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -54,7 +54,7 @@
                     </form>
                 </div>
                 <p class="text-center link_bright">No tienes una cuenta <a href="#0"><strong>Registrate ahora!</strong></a></p>
-            </div>
+ 
         </div>
     </div>
 </div>
