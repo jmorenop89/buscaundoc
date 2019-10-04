@@ -13,7 +13,7 @@
 	                        <img src="/admin/img/dp.jpg" class="/admin/img-circle user-img-circle" alt="User Image" />
 	                    </div>
 	                    <div class="pull-left info">
-	                        <p> Dr. Emily</p>
+	                        <p>BuscaUnDoc</p>
 	                        <small>Admin</small>
 	                    </div>
 	                </div>
