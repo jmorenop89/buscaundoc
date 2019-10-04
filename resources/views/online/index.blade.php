@@ -14,7 +14,7 @@
 				<form method="get" action="/list">
     				<div id="custom-search-input"> <!-- custom-search-input revisar mañana-->							
         					<input type="text" class="typeahead especialidad" placeholder="Especialidad"> 
-        					 <input type="text" class="typeahead ciudad" placeholder="Ciudad">
+        					 <input type="text" class="typeahead2 ciudad" placeholder="Ciudad">
 							<input type="submit" class="buscar" value= "Buscar"> 
 		    		</div>
     			</form>

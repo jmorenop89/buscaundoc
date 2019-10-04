@@ -7,29 +7,13 @@
 @section('content')
 
 <div id="hero_register">
-	<div class="container margin_120_95">
+
+	<div class="container pt-3"> <!-- margin_120_95 -->
 		<div class="row">
-			<div class="col-lg-6">
-				<h1>Es hora de encontrarte!</h1>
-				<p class="lead">Te pri adhuc simul. No eros errem mea. Diam mandamus has ad. Invenire senserit ad has, has ei quis iudico, ad mei nonumes periculis.</p>
-				<div class="box_feat_2">
-					<i class="pe-7s-map-2"></i>
-					<h3>Deje que los pacientes lo encuentren!</h3>
-					<p>Ut nam graece accumsan cotidieque. Has voluptua vivendum accusamus cu. Ut per assueverit temporibus dissentiet.</p>
-				</div>
-				<div class="box_feat_2">
-					<i class="pe-7s-date"></i>
-					<h3>Administre facilmente sus citas</h3>
-					<p>Has voluptua vivendum accusamus cu. Ut per assueverit temporibus dissentiet. Eum no atqui putant democritum, velit nusquam sententiae vis no.</p>
-				</div>
-				<div class="box_feat_2">
-					<i class="pe-7s-phone"></i>
-					<h3>Al instante a través de una Web</h3>
-					<p>Eos eu epicuri eleifend suavitate, te primis placerat suavitate his. Nam ut dico intellegat reprehendunt, everti audiam diceret in pri, id has clita consequat suscipiantur.</p>
-				</div>
-			</div>
-			<!-- /col -->
-			<div class="col-lg-5 ml-auto">
+			<div class="col-3"></div>
+
+			<div class="col-6"> <!-- cambie el valor 5 , ml-auto    col-lg-5-->
+			<h2 class="text-center text-white">Registro de Médico</h2>
 				<div class="box_form">
 					<div id="message-register"></div>
 					<form method="post" action="{{ route('reg-doc') }}">
@@ -120,6 +104,7 @@
 				<!-- /box_form -->
 			</div>
 			<!-- /col -->
+			<div class="col-3"></div>	
 		</div>
 		<!-- /row -->
 	</div>
