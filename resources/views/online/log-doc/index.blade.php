@@ -4,7 +4,65 @@
     FINDOCTOR - Find easily a doctor and book online an appointment
 @endsection
 @section('css')
-    <link href="/online/css/date_picker.css" rel="stylesheet">
+	<link href="/online/css/date_picker.css" rel="stylesheet">
+	<style>
+	 /* Menù */
+@media (max-width: 2560px) {
+  .nav-pills .nav-link {
+      width:100%;
+      text-align: center;   
+    }
+}
+
+@media (max-width: 1200px) {
+  .nav-pills .nav-link {
+      width:100%;
+      text-align: center;   
+    }
+}
+
+@media (max-width: 992px) {
+  .nav-pills .nav-link {
+      width:100%;
+      text-align: center;   
+    }
+}
+
+@media (max-width: 991px) {
+  .nav-pills .nav-link {
+      width:25%;
+      text-align: center;   
+    }
+}
+
+@media (max-width: 768px) {
+  .nav-pills .nav-link {
+      width:50%;
+      text-align: center;   
+    }
+}
+
+@media (max-width: 576px) {
+  .nav-pills .nav-link {
+      width:100%;
+      text-align: center;   
+    }
+}
+
+@media (max-width: 320px) {
+  .nav-pills .nav-link {
+      width:100%;
+      text-align: center;   
+    }
+}
+
+
+@media (min-width: 100px){
+  .doc_citas {
+    overflow-x:scroll;
+  }
+}
+	</style>
 @endsection
 
 @section('content')
@@ -140,7 +198,7 @@
 										</div>
 										
 										<div class="col-lg-12">
-											<ul class="pac time_select version_2 add_top_20">
+											<ul class="time_select version_2 add_top_20">
 												<li>
 													<input type="radio" id="radio1" name="radio_time" value="09.30am">
 													<label for="radio1">09.30am</label>
@@ -193,6 +251,7 @@
 										<h3><i class="icon_circle-slelected"></i>Ver cita de pacientes</h3>
 									</div>
 									  <hr>
+									  <div class="doc_citas">
 									  <table class="table">
 											<thead class="thead-primary">
 												<tr>
@@ -227,6 +286,7 @@
 												</tr>
 											</tbody>
 										</table>
+										</div>
 							      	<!-- <div class="strip_list wow fadeIn">
 										<a href="#0" class="wish_bt"></a>
 										<figure>
