@@ -15,6 +15,7 @@
 					<div class="col-md-6">
 						<div class="search_bar_list">
 							<input type="text" class="form-control" placeholder="Especialidades....">
+							<!-- form-control -->
 							<input type="submit" value="Buscar">
 						</div>
 					</div>

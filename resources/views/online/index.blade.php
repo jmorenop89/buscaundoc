@@ -32,20 +32,20 @@
     				<div class="box_feat" id="icon_1">
     					<span></span>
     					<h3>Busca un médico</h3>
-    					<p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie.</p>
+    					<p>Te ayudamos a encontrar al especialista que necesitas, indica la ciudad en la que te encuentras. </p>
     				</div>
     			</div>
     			<div class="col-lg-4">
     				<div class="box_feat" id="icon_2">
     					<span></span>
     					<h3>Revisa su perfil</h3>
-    					<p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie.</p>
+    					<p>Profesionales de la salud altamente preparados para brindarte la mejor atención.</p>
     				</div>
     			</div>
     			<div class="col-lg-4">
     				<div class="box_feat" id="icon_3">
     					<h3>Reserva una cita</h3>
-    					<p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie.</p>
+    					<p>Nuestro compromiso es contactarte con el mejor especialista de tu ciudad.</p>
     				</div>
     			</div>
     		</div>
@@ -55,8 +55,8 @@
 		<div class="bg_color_1">
 			<div class="container">  <!-- margin_120_95 -->
 				<div class="main_title">
-					<h2>Últimos médicos registrados</h2>
-					<p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri.</p>
+					<h2>Médicos registrados</h2>
+					<p>Forma parte de nuestro staff y aumenta tus atenciones.</p>
 				</div>
 				<div id="reccomended" class="owl-carousel owl-theme">
 					<div class="item">
