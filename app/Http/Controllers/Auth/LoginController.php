@@ -51,7 +51,7 @@ class LoginController extends Controller
         ];
 
         if (Auth::attempt($data)){
-                return Redirect::intended('/admine');
+                return Redirect::intended('/');
         }
         
         return Redirect::back()->with('error_message', 'Invalid data')->withInput();

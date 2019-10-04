@@ -18,44 +18,44 @@
                     </a>
                     <ul class="dropdown-menu app-icon">
                     	<li class="app-dropdown-header">
-                            <p><span class="bold">Applications</span></p>
+                            <p><span class="bold">Aplicaciones</span></p>
                         </li>
                         <li>
                             <ul class="dropdown-menu-list app-icon-dropdown" data-handle-color="#637283">
 								<li>
-									<a href="add_patient.html" class="patient-icon">
+									<a href="{{route('pac.crear')}}" class="patient-icon">
 										<i class="material-icons">local_hotel</i>
-										<span class="block">Add Patient</span>
+										<span class="block">Agregar Paciente</span>
 									</a>
 								</li>
 								<li>
-									<a href="email_inbox.html" class="email-icon">
-										<i class="material-icons">drafts</i>
-										<span class="block">Email</span>
-									</a>
-								</li>
-								<li>
-									<a href="view_appointment.html" class="appoint-icon">
-										<i class="material-icons">assignment</i>
-										<span class="block">Appointment</span>
-									</a>
-								</li>
-								<li>
-									<a href="all_doctors.html" class="doctor-icon">
+									<a href="{{route('pac.index')}}" class="patient-icon">
 										<i class="material-icons">people</i>
-										<span class="block">Doctors</span>
+										<span class="block">Todos los Pacientes</span>
 									</a>
 								</li>
 								<li>
-									<a href="google_maps.html" class="map-icon">
-										<i class="material-icons">map</i>
-										<span class="block">Map</span>
+									<a href="{{route('dash.index')}}" class="appoint-icon">
+										<i class="material-icons">assignment</i>
+										<span class="block">Ver Estadisticas</span>
 									</a>
 								</li>
 								<li>
-									<a href="payments.html" class="payment-icon">
-										<i class="material-icons">monetization_on</i>
-										<span class="block">Payments</span>
+									<a href="{{route('doc.crear')}}" class="doctor-icon">
+										<i class="material-icons">person</i>
+										<span class="block">Agregar Doctor</span>
+									</a>
+								</li>
+								<li>
+									<a href="{{route('doc.index')}}" class="doctor-icon">
+										<i class="material-icons">people</i>
+										<span class="block">Todos los Doctores</span>
+									</a>
+								</li>
+								<li>
+									<a href="payments.html" class="appoint-icon">
+										<i class="material-icons">assignment</i>
+										<span class="block">Ver las Graficas</span>
 									</a>
 								</li>
                             </ul>
