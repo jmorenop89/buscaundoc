@@ -5,6 +5,50 @@
 @endsection
 
 @section('css')
+ <style>
+        /*login*/
+    #login {
+      width: 400px;
+      color: #fff;
+    }
+    @media (min-width: 320px) {
+      #login {
+        width: 85%;
+        margin: 30px auto;
+      }
+    }
+    @media (max-width: 320px) {
+      #login {
+        width: 95%;
+        margin: 30px auto;
+      }
+      #login .box_form{
+        padding: 10px 30px
+      }
+    }
+    .box_form {
+      background-color: #fff;
+      padding: 30px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+      margin-bottom: 25px;
+      color: #555;
+    }
+    .box_form label {
+      font-weight: 600;
+      font-size: 15px;
+      /*font-size: 0.8125rem;*/
+      margin-bottom: 3px;
+    }
+    .box_form .form-group {
+      margin-bottom: 25px;
+    }
+</style> 
 @endsection
 
 @section('content')
@@ -60,6 +104,10 @@
                         </p>
                     </form>
                 </div>
+<<<<<<< HEAD
+=======
+                <p class="text-center link_bright">No tienes una cuenta <a href="#0"><strong>Registrate ahora!</strong></a></p>
+>>>>>>> 15f4ab78f58c60c0db7583c808671f52ce6cf989
         </div>
     </div>
 </div>
