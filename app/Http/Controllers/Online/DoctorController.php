@@ -4,19 +4,23 @@ namespace App\Http\Controllers\Online;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\DoctorRequest;
 use App\Doctor;
 use App\User;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class DoctorController extends Controller
 {
-    public function register(Request $request){
+    public function register(DoctorRequest $request){
         $data = $request->all();
-        #dd($data);
+        $date = Carbon::createFromFormat('d/m/Y', $data['fecha_nac']);
+        $data['fecha_nac'] = $date->format('Y-m-d');
         $data['role'] = "doctor";
         $data['password'] = bcrypt($data['password']);
         $user = User::create($data);
         $data['user_id'] = $user->id;
-        $patient = Doctor::create($data);
+        Doctor::create($data);
         $bi = $data['nombres'];
         return view('online.login.confirmado',compact('bi'));
     }
