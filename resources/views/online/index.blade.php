@@ -166,7 +166,9 @@
 						<a href="detail-page.html">
 							<div class="title">
 								{{-- <h4>Dr. Julia Holmes<em>Pediatrician - Cardiologist</em></h4> --}}
-								<h4>Dr. {{ $object->nombres}}</h4>
+								<h4>Dr. {{ $object->nombres}} {{ $object->apellidos}}
+								<em>{{ $object->especialidad->nombre}}</em>
+								</h4>
 							</div><img src="http://via.placeholder.com/350x500.jpg" alt="">
 						</a>
 					</div>
