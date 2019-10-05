@@ -10,6 +10,10 @@ class ProfileController extends Controller
 {
     public function index(){
         $user = Auth::user();
-        dd($user);
+        if($user->role == 'paciente'){
+            return view('online.log-pac.index');
+        }else{
+            return view('online.log-doc.index');
+        }
     }
 }
