@@ -3,7 +3,7 @@
         <!-- logo start -->
         <div class="page-logo">
             <a href="index.html">
-                <img alt="" src="/assets/admin/img/logo.png">
+                <img alt="" src="/assets/admin/img/heart1.png">
                 <span class="logo-default" >Admin</span>
             </a>
         </div>
