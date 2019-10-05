@@ -15,18 +15,17 @@ class CiudadSeeder extends Seeder
         DB::table("ciudad")->insert(
             [
                 array(
-
-                            'nombre'=>"Trujillo",
-                        ),
+                    'nombre'=>"Trujillo",
+                    'slug' => str_slug('Trujillo')
+                ),
                 array(
-
-                           'nombre'=>"Chiclayo",
-
-                        ),
+                    'nombre'=>"Chiclayo",
+                    'slug' => str_slug('Chiclayo')
+                ),
                 array(
-
-                            'nombre'=>"Lima",
-                        )
+                    'nombre'=>"Lima",
+                    'slug' => str_slug('Lima')
+                )
             ]
         );
     }

@@ -80,11 +80,11 @@
 								<input type="submit" class="btn_1" value="Enviar" id="submit-register">
 							</div>
 						</div>
-						<p class="text-center">
+						<!-- <p class="text-center">
 							<small>Has voluptua vivendum accusamus cu. Ut per assueverit temporibus dissentiet. 
 								Eum no atqui putant democritum, velit nusquam sententiae vis no.
 							</small>
-						</p>
+						</p> -->
 					</form>
 				</div>
 				<!-- /box_form -->
