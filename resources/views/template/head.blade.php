@@ -13,15 +13,15 @@
     <link rel="shortcut icon" href="/online/img/favicon.ico" type="image/x-icon">
 
 	<!-- BASE CSS -->
-	<link href="/online/css/bootstrap.css" rel="stylesheet">
-	<link href="/online/css/style.css" rel="stylesheet">
-	<link href="/online/css/menu.css" rel="stylesheet">
-	<link href="/online/css/vendors.css" rel="stylesheet">
-	<link href="/online/css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
+	<link href="/assets/online/css/bootstrap.css" rel="stylesheet">
+	<link href="/assets/online/css/style.css" rel="stylesheet">
+	<link href="/assets/online/css/menu.css" rel="stylesheet">
+	<link href="/assets/online/css/vendors.css" rel="stylesheet">
+	<link href="/assets/online/css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
 
 	 <!-- SPECIFIC CSS -->
 	 @yield('css')
 
     	<!-- YOUR CUSTOM CSS -->
-	<link href="/online/css/custom.css" rel="stylesheet">
+	<link href="/assets/online/css/custom.css" rel="stylesheet">
 </head>

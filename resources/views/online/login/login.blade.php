@@ -6,47 +6,22 @@
 
 @section('css')
  <style>
-        /*login*/
-    #login {
-      width: 400px;
-      color: #fff;
+        .box_form{
+        margin: auto;
     }
-    @media (min-width: 320px) {
-      #login {
-        width: 85%;
-        margin: 30px auto;
-      }
-    }
-    @media (max-width: 320px) {
-      #login {
-        width: 95%;
-        margin: 30px auto;
-      }
-      #login .box_form{
-        padding: 10px 30px
-      }
-    }
-    .box_form {
-      background-color: #fff;
-      padding: 30px;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
-      border-radius: 5px;
-      -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
-      -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
-      box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
-      margin-bottom: 25px;
-      color: #555;
-    }
-    .box_form label {
-      font-weight: 600;
-      font-size: 15px;
-      /*font-size: 0.8125rem;*/
-      margin-bottom: 3px;
-    }
-    .box_form .form-group {
-      margin-bottom: 25px;
+    @media(min-width: 320px){
+        .container.margin_60_35{
+            padding-bottom: 30px
+        }
+        .box_form{
+            margin: 10px auto;
+        }
+    }@media(min-width: 480px){
+
+        .box_form{
+            width: 400px;
+            margin:30px auto;
+        }
     }
 </style> 
 @endsection
@@ -59,7 +34,7 @@
                 <h2 class="text-center text-white">{{ __('Iniciar sesión') }}</h2>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-                        <div class="box_form">
+                        <div class="box_form mb-4">
                             <div class="form-group">
                                     <label for="email" class="col-form-label">Correo electrónico</label>
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Correo Electrónico">
@@ -83,25 +58,28 @@
                                         <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                         <label class="" for="remember">
                                             <span>
-                                                {{ __('Remember Me') }}
+                                                {{ __('Recordar contraseña') }}
                                             </span>
                                         </label>
                                 </div>
                             </div>
-                            <div class="text-left">
-                                    <a class="btn btn-link form-group" href="{{ route('password.request') }}">
-                                            {{ __('Olvidaste tu conraseña') }}
-                                    </a>
-                            </div>
-                            <div class="form-group text-center add_top_30">
+                           
+                            <div class="form-group text-center">   <!-- add_top_30 -->
                                 <button type="submit" class="btn_1">
                                         {{ __('Iniciar Sesion') }}
                                     </button>
+
+                                    <p class="text-left mt-3">
+                                No tienes una cuenta , <a href="#0"><strong>Registrate ahora!</strong></a>
+                        </p>
+
+                        <a class="btn btn-link form-group" href="{{ route('password.request') }}">
+                                            {{ __('¿Olvidaste tu contraseña?') }}
+                                    </a>
+                            </div>
                             </div>
                         </div>
-                        <p class="text-center">
-                                No tienes una cuenta <a href="#0"><strong>Registrate ahora!</strong></a>
-                        </p>
+                        
                     </form>
                 </div>
         </div>

@@ -6,7 +6,7 @@
 
 @section('content')
 
-      <main>
+    <main>
     <div id="breadcrumb">
       <div class="container">
         <ul>
@@ -27,7 +27,7 @@
               <img src="http://via.placeholder.com/565x565.jpg" alt="" class="img-fluid">
             </figure>
             <small>Paciente</small>
-            <h1>Juan Perez</h1>
+            <h1>{{ $model->nombres }}</h1>
             <hr>
                   <div  class="nav text-justify nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="display:inline-block;">
                     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#ver-citas" role="tab" aria-controls="v-pills-home" aria-selected="true">Ver mis citas </a>
@@ -127,11 +127,11 @@
 											<div class="form-row">
 												<div class="form-group col-md-6">
 													<label>Nombres</label>
-													<input type="text" class="form-control" id="" placeholder="Ingresa tus nombres">
+													<input type="text" class="form-control" id="" placeholder="Ingresa tus nombres" name="nombres" value="{{ $model->nombres }}">
 												</div>
 												<div class="form-group col-md-6">
 													<label>Apellidos</label>
-													<input type="text" class="form-control" id="" placeholder="Ingresa tus apellidos">
+													<input type="text" class="form-control" id="" placeholder="Ingresa tus apellidos" name="apellidos" value="{{ $model->apellidos }}">
 												</div>
 											</div>
 											<div class="form-row">
@@ -141,17 +141,17 @@
 												</div>
 												<div class="form-group col-md-6">
 													<label>Fecha Nacimiento</label>
-													<input type="text" class="form-control" id="" placeholder="Fecha Nacimiento">
+													<input type="text" class="form-control" id="" placeholder="Fecha Nacimiento" name="fecha_nac" value="{{ $model->fecha_nac }}">
 												</div>
 											</div>
 											<div class="form-row">
 												<div class="form-group col-md-6">
 													<label>Telefono Celular</label>
-													<input type="text" class="form-control" id="" placeholder="Ingresa Nº Celular">
+													<input type="text" class="form-control" id="" placeholder="Ingresa Nº Celular" name="celular" value="{{ $model->celular }}">
 												</div>
 												<div class="form-group col-md-6">
-													<label>Correo</label>
-													<input type="email" class="form-control" id="" placeholder="Ingresa tu Correo">
+                          <label>Correo</label>
+													<input type="email" class="form-control" id="" placeholder="Ingresa tu Correo" name="email" value="{{ $model->user->email}}">
 												</div>
 											</div>
 											<div class="form-row">

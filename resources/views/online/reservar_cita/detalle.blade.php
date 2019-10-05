@@ -5,7 +5,34 @@
 @endsection
 
 @section('css')
-    <link href="/online/css/date_picker.css" rel="stylesheet">
+    <link href="/assets/online/css/date_picker.css" rel="stylesheet">
+    <style>
+    	@media(min-width: 320px){
+    		ul.pac.time_select.version_2 li {
+			width:50%;
+			}
+    	}
+    	@media(min-width: 480px){
+			ul.pac.time_select.version_2 li {
+				width:33%;
+			}
+    	}
+    	@media(min-width: 553px){
+			ul.pac.time_select.version_2 li {
+				width:25%;
+			}
+    	}
+    	@media(min-width: 768px){
+			ul.pac.time_select.version_2 li {
+				width:20%;
+			}
+    	}
+    	@media(min-width: 992px){
+			ul.pac.time_select.version_2 li {
+				width:50%;
+			}
+    	}
+    </style>
 @endsection
 
 @section('content')
@@ -71,7 +98,11 @@
 								</div>
 							</div>
 							<div class="col-lg-5">
+<<<<<<< HEAD
 								<ul class="pac time_select version_2 doc add_top_20">
+=======
+								<ul class="pac time_select version_2 add_top_20 text-center">
+>>>>>>> 2d07c58828447a042938402b20b9941c02af3212
 									<li>
 										<input type="radio" id="radio1" name="radio_time" value="09.30am">
 										<label for="radio1">09.30am</label>
@@ -143,7 +174,7 @@
 @endsection
 
 @section('js')
-<script src="/online/js/bootstrap-datepicker.js"></script>
+	<script src="/assets/online/js/bootstrap-datepicker.js"></script>
      <script>
 		$(document).ready(function(){
 			var dd = $('.calendar').datepicker({

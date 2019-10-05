@@ -4,7 +4,7 @@
 				<div class="col-lg-3 col-md-12 col-sm-6 col-12">
 					<p>
 						<a href="index.html" title="Findoctor">
-							<img src="/online/img/logo.png" data-retina="true" alt="" width="163" height="36" class="img-fluid">
+							<img src="assets/online/img/logo.png" data-retina="true" alt="" width="163" height="36" class="img-fluid">
 						</a>
 					</p>
 				</div>

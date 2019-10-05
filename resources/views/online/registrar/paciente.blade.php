@@ -5,7 +5,7 @@
 @endsection
 
 @section('css')
-    <link href="/online/css/date_picker.css" rel="stylesheet">
+    <link href="/assets/online/css/date_picker.css" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -21,23 +21,23 @@
 						<div class="box_form">
 							<div class="form-group">
 								<label>Nombres</label>
-								<input type="text" class="form-control" placeholder="Ingresa tus nombres" name="nombres">
+								<input type="text" class="form-control" placeholder="Ingresa tus nombres" name="nombres" value="{{ old('nombres') }}">
 							</div>
 							<div class="form-group">
 								<label>Apellidos</label>
-								<input type="text" class="form-control" placeholder="Ingresa tus apellidos" name="apellidos">
+								<input type="text" class="form-control" placeholder="Ingresa tus apellidos" name="apellidos" value="{{ old('apellidos') }}">
                             </div>
                             <div class="form-group">
 								<label>Fecha de nacimiento</label>
-								<input class="form-control" type="text" placeholder="Ingrese Fecha de Nacimiento" id="birthday" name="fecha_nac" data-lang="es">
+								<input class="form-control" type="text" placeholder="Ingrese Fecha de Nacimiento" id="birthday" name="fecha_nac" data-lang="es" value="{{ old('fecha_nac') }}">
 							</div>
                             <div class="form-group">
 								<label>Teléfono Celular</label>
-								<input type="text" class="form-control" placeholder="Ingresa Nº Celular" name="celular">
+								<input type="text" class="form-control" placeholder="Ingresa Nº Celular" name="celular" value="{{ old('celular') }}">
 							</div>
 							<div class="form-group">
 								<label>Correo</label>
-								<input type="email" class="form-control" placeholder="Ingresa tu Correo" name="email">
+								<input type="email" class="form-control" placeholder="Ingresa tu Correo" name="email" value="{{ old('email') }}">
 							</div>
 							<div class="form-group">
 								<label>Contraseña</label>
@@ -45,7 +45,7 @@
 							</div>
 							<div class="form-group">
 								<label>Confirmar contraseña</label>
-								<input type="password" class="form-control" id="password2"  placeholder="Confirmar constraseña">
+								<input type="password" class="form-control" name="password2"  placeholder="Confirmar constraseña">
 							</div>
 							<div id="pass-info" class="clearfix"></div>
 							<div class="checkbox-holder text-left">
@@ -58,11 +58,11 @@
 								<input class="btn_1" type="submit" value="Enviar">
 							</div>
 						</div>
-						<p class="text-center">
+			<!-- 			<p class="text-center">
 							<small>Has voluptua vivendum accusamus cu. Ut per assueverit temporibus dissentiet. 
 								Eum no atqui putant democritum, velit nusquam sententiae vis no.
 							</small>
-						</p>
+						</p> -->
 					</form>
 				</div>
 			</div>
@@ -74,5 +74,6 @@
 @endsection
 
 @section('js')
-	<script src="/online/scripts/patient.js"></script>
+	<script src="/assets/online/js/bootstrap-datepicker.js"></script>
+	<script src="/assets/online/scripts/patient.js"></script>
 @endsection

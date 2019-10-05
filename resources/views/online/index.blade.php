@@ -4,23 +4,125 @@
     FINDOCTOR - Find easily a doctor and book online an appointment
 @endsection
 
+@section('css')
+<style>
+    .especialidad, .ciudad{
+        height: 45px;
+        padding-left: 20px;
+        margin-bottom:10px;
+    }
+@media (max-width: 1200px) {
+  .especialidad {
+    width:360px;
+  }
+  .ciudad {
+    width:360px;
+  }
+  #custom-search-input input[type='submit'] {
+    position: relative;
+    width: 100px;
+    height: 45px;
+    top:0px;
+    }
+}
+
+@media (max-width: 991px) {
+  .especialidad {
+    width:440px;
+  }
+  .ciudad {
+    width:440px;
+  }
+  #custom-search-input input[type='submit'] {
+    position: relative;
+    width: 440px;
+    height: 45px;
+    top:0px;
+    }
+}
+
+@media (max-width: 768px) {
+  .especialidad {
+    width:360px;
+  }
+  .ciudad {
+    width:360px;
+  }
+  #custom-search-input input[type='submit'] {
+    position: relative;
+    width: 360px;
+    height: 45px;
+    top:0px;
+    }
+}
+
+@media (max-width: 576px) {
+  .especialidad {
+    width:260px;
+  }
+  .ciudad {
+    width:260px;
+  }
+  #custom-search-input input[type='submit'] {
+    position: relative;
+    width: 260px;
+    height: 45px;
+    top:0px;
+    }
+}
+
+@media (max-width: 320px) {
+  .especialidad {
+    width:250px;
+  }
+  .ciudad {
+    width:250px;
+  }
+  #custom-search-input input[type='submit'] {
+    position: relative;
+    width: 250px;
+    height: 45px;
+    top:0px;
+    }
+}
+
+@media (max-width: 280px) {
+  .especialidad {
+    width:200px;
+  }
+  .ciudad {
+    width:200px;
+  }
+  #custom-search-input input[type='submit'] {
+    position: relative;
+    width: 200px;
+    height: 45px;
+    top:0px;
+
+    }
+}
+
+</style>
+
+@endsection
+
 @section('content')
-    	<div class="hero_home version_1">
-    		<div  id="reserva" class="content">
-    			<h3>Busca un médico</h3>
-    			<p>
-    				Selecciona una especialidad y ciudad donde te encuentras.
-    			</p>
-				<form method="get" action="/list">
-    				<div id="custom-search-input"> <!-- custom-search-input revisar mañana-->							
-        					<input type="text" class="typeahead especialidad" placeholder="Especialidad"> 
-        					 <input type="text" class="typeahead2 ciudad" placeholder="Ciudad">
-							<input type="submit" class="buscar" value= "Buscar"> 
-		    		</div>
-    			</form>
-    		</div>
+
+	<!-- Hero -->
+    <div class="hero_home version_1">
+    	<div  id="reserva" class="content">
+    		<h3>Busca un médico</h3>
+    		<p>Selecciona una especialidad y ciudad donde te encuentras.</p>
+			<form method="get" action="/list">
+    			<div id="custom-search-input"> <!-- custom-search-input revisar mañana-->
+        			<input name="specialty" type="text" class="tspecialty especialidad" placeholder="Especialidad">
+        			<input name="city" type="text" class="tcity ciudad" placeholder="Ciudad">
+					<input type="submit" class="buscar" value="Buscar">
+		    	</div>
+    		</form>
     	</div>
-    	<!-- /Hero -->
+    </div>
+    <!-- /Hero -->
 
     	<div id="funcionamiento" class="container margin_120_95">
     		<div class="main_title">
@@ -51,7 +153,7 @@
     		</div>
     		<!-- /row -->
 		</div>
-		
+
 		<div class="bg_color_1">
 			<div class="container">  <!-- margin_120_95 -->
 				<div class="main_title">
@@ -102,120 +204,34 @@
 @endsection
 
 @section('js')
-	<script src="/online/jQuery-Bootstrap-4-Typeahead-Plugin/bootstrap3-typeahead.js"></script>
+	<script src="/assets/online/jQuery-Bootstrap-4-Typeahead-Plugin/bootstrap3-typeahead.js"></script>
 	<script>
-		var $input = $(".typeahead") ;
-		var $input = $(".typeahead2") ;
+		var $specialty = $(".tspecialty") ;
+		var $city = $(".tcity") ;
 
-		if ($input = $(".typeahead")) {
-		    
-			$input.typeahead({
-		  source: [
-			{id:"id1", name:"Ginecólogo"},
-		{id:"id2", name:"Traumatólogo y Ortopedista"},
-		{id:"id3", name:"Dermatólogo"},
-		{id:"id4", name:"Pediatra"},
-		{id:"id5", name:"Cirujano general"},
-		{id:"id6", name:"Gastroenterólogo"},
-		{id:"id7", name:"Urólogo"},
-		{id:"id8", name:"Oftalmólogo"},
-		{id:"id9", name:"Neurólogo"},
-		{id:"id10", name:"Otorrino"},
-		{id:"id11", name:"Psiquiatra"},
-		{id:"id12", name:"Endocrinólogo"},
-		{id:"id13", name:"Neumólogo"},
-		{id:"id14", name:"Cardiólogo"},
-		{id:"id15", name:"Neurocirujano"},
-		{id:"id16", name:"Internista"},
-		{id:"id17", name:"Psicólogo"},
-		{id:"id18", name:"Reumatólogo"},
-		{id:"id19", name:"Médico general"},
-		{id:"id20", name:"Cirujano plástico"},
-		{id:"id21", name:"Nefrólogo"},
-		{id:"id22", name:"Cirujano cardiovascular y torácico"},
-		{id:"id23", name:"Cirujano maxilofacial"},
-		{id:"id24", name:"Oncólogo"},
-		{id:"id25", name:"Hematólogo"},
-		{id:"id26", name:"Nutricionista"},
-		{id:"id27", name:"Especialista en Medicina Física y Rehabilitación"},
-		{id:"id28", name:"Radiólogo"},
-		{id:"id29", name:"Dentista"},
-		{id:"id30", name:"Alergista"},
-		{id:"id31", name:"Geriatra"},
-		{id:"id32", name:"Cirujano pediátrico"},
-		{id:"id33", name:"Infectólogo"},
-		{id:"id34", name:"Anestesiólogo"},
-		{id:"id35", name:"Neonatólogo"},
-		{id:"id36", name:"Especialista en Medicina Intensiva"},
-		{id:"id37", name:"Especialista en Emergencias"},
-		{id:"id38", name:"Especialista en Administración de Salud"},
-		{id:"id39", name:"Patólogo"},
-		{id:"id40", name:"Patólogo clínico"},
-		{id:"id41", name:"Neurofisiólogo clínico"},
-		{id:"id42", name:"Médico familiar"},
-		{id:"id43", name:"Genetista"},
-		{id:"id44", name:"Cirujano vascular"},
-		{id:"id45", name:"Epidemiólogo"},
-		{id:"id46", name:"Médico del Deporte"},
-		{id:"id47", name:"Terapeuta complementario"},
-		{id:"id48", name:"Médico legal"},
-		{id:"id49", name:"Homeópata"},
-		{id:"id50", name:"Fisioterapeuta"},
-		{id:"id51", name:"Bioquímico"},
-		{id:"id52", name:"Especialista en Medicina Estética"},
-		{id:"id53", name:"Médico del Trabajo"},
-		{id:"id54", name:"Fonoaudiólogo"},
-		{id:"id55", name:"Especialista en Medicina Nuclear"},
-		{id:"id56", name:"Médico ocupacional"},
-		{id:"id57", name:"Especialista en Medicina Natural"},
-		{id:"id58", name:"Especialista en Salud Pública"},
-		{id:"id59", name:"Farmacólogo"},
-		{id:"id60", name:"Técnico en Laboratorio Clínico"},
-		{id:"id61", name:"Podólogo"},
-		{id:"id62", name:"Quiropráctico"},
-		{id:"id63", name:"Enfermero"},
-		{id:"id64", name:"óptico"}  ] , autoSelect: true
-		}) ;
+		$.get("/getspec", function(data){
+  			$specialty.typeahead({ source:data,autoSelect:true});
+		},'json');
 
-		};
+		$.get("/getcity", function(data){
+  			$city.typeahead({ source:data,autoSelect:true});
+		},'json');
 
-
-		if ($input = $(".typeahead2")) {
-		    
-			$input.typeahead({
-		  source: [
-			{id:"id1", name:"Trujillo"},
-		{id:"id2", name:"Lima"},
-		{id:"id3", name:"Arequipa"},
-		{id:"id4", name:"Chiclayo"},
-		{id:"id5", name:"Piura"},
-		{id:"id6", name:"Chimbote"},
-		{id:"id7", name:"Tacna"},
-		{id:"id8", name:"Tumbes"},
-		{id:"id9", name:"Iquitos"},
-		{id:"id10", name:"Tarapoto"},
-		{id:"id11", name:"Ayacucho"},
-		{id:"id12", name:"Huancayo"}
-
-		  ] , autoSelect: true
-		}) ;
-
-		};
-
-		$input.change(function() {
-		  var current = $input.typeahead("getActive");
-		  if (current) {
-		    // Some item from your model is active!
-		    if (current.name == $input.val()) {
-		      // This means the exact match is found. Use toLowerCase() if you want case insensitive match.
-		    } else {
-		      // This means it is only a partial match, you can either add a new item
-		      // or take the active if you don't want new items
-		    }
-		  } else {
-		    // Nothing is active so it is a new value (or maybe empty value)
-		  }
-		}); 
+		$specialty.change(function() {
+			var current = $specialty.typeahead("getActive");
+			console.log(current);
+			if (current) {
+		    	// Some item from your model is active!
+		    	if (current.name == $specialty.val()) {
+		      	// This means the exact match is found. Use toLowerCase() if you want case insensitive match.
+		    	}else{
+		      	// This means it is only a partial match, you can either add a new item
+		      	// or take the active if you don't want new items
+		    	}
+			}else{
+		    	// Nothing is active so it is a new value (or maybe empty value)
+		  	}
+		});
 
 </script>
 

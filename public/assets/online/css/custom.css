@@ -1,0 +1,62 @@
+/*boton reservar cita*/
+
+ul#top_access li a {
+  color: #333;
+}
+ul#top_access li a:hover {
+    color:  #00c3a5;
+}
+#custom-search-input{
+    width: 90%;
+}
+
+#custom-search-input input[type='submit'] {
+  position: relative;
+  height: 45px;
+  top:-2px;
+}
+
+.hero_home .content  {
+    text-shadow: none;
+}
+.container ul ul {
+    display: inline-block;
+    min-width: auto;
+    text-align: center;
+}
+@media (min-width: 768px) {
+}
+ .main-menu figure {
+  width:100%;
+  text-align:center;
+}
+
+
+@media (max-width:991px) {
+    .main-menu figure{
+        margin:10px auto;
+    }
+  .main-menu ul figure img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+  .main-menu ul span {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
