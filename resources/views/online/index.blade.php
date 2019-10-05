@@ -110,7 +110,7 @@
     		<p>Selecciona una especialidad y ciudad donde te encuentras.</p>
 			<form method="get" action="/list">
     			<div id="custom-search-input"> <!-- custom-search-input revisar mañana-->							
-        			<input name="specialty" type="text" class="tspecialty especialidad" placeholder="Especialidad">z 
+        			<input name="specialty" type="text" class="tspecialty especialidad" placeholder="Especialidad">
         			<input name="city" type="text" class="tcity ciudad" placeholder="Ciudad">
 					<input type="submit" class="buscar" value="Buscar"> 
 		    	</div>
@@ -214,8 +214,8 @@
 
 		$specialty.change(function() {
 			var current = $specialty.typeahead("getActive");
-			console.log(current); 
-		  	if (current) {
+			console.log(current);
+			if (current) {
 		    	// Some item from your model is active!
 		    	if (current.name == $specialty.val()) {
 		      	// This means the exact match is found. Use toLowerCase() if you want case insensitive match.
