@@ -15,24 +15,29 @@
 		<div class="row justify-content-center">
 			<div class="col-md-6"> <!-- cambie el valor 5 , ml-auto    col-lg-5-->
 			<h2 class="text-center text-white">Registro de Médico</h2>
-					<form method="post" action="{{ route('reg-doc') }}">
+					<form method="post" action="{{ route('reg-doc') }}" id="frm-doctor-vld">
 						<input type="hidden" name="_token" value="{{ csrf_token()}}">
 						<div class="box_form">
 							<div class="form-group">
+								<label>Nombres</label>
 								<input type="text" class="form-control" placeholder="Nombres" name="nombres" id="name_register">
 							</div>
 							<div class="form-group">
+								<label>Apellidos</label>
 								<input type="text" class="form-control" placeholder="Apellidos" name="apellidos" id="lastname_register">
 							</div>
 							<div class="row">
 								<div class="form-group col-md-6">
+									<label>Especialidad</label>
 									 <select class="form-control" name="especialidad_id" id="country_register">
+									 	<option disabled selected >Selecione una especialidad</option>
 		                                @foreach($espe as $espes)
 				                            <option value="{{ $espes->id }}" >{{$espes->nombre}}</option>
 				                        @endforeach
 									</select>
 								</div>
 		                        <div class="form-group col-md-6">
+		                        	<label>Ciudad</label>
 		                            <select class="form-control" name="ciudad_id" id="country_register">
 		                                @foreach($ciud as $ciuds)
 				                            <option value="{{ $ciuds->id }}" >{{$ciuds->nombre}}</option>
@@ -41,21 +46,27 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Fecha de Nacimiento" name="fecha_nac" id="mobile_register">
+								<label>Fecha de Nacimiento</label>
+								<input type="text" class="form-control" placeholder="Fecha de Nacimiento" name="fecha_nac" id="fecha">
 							</div>
 							<div class="form-group">
+								<label>Codigo de Colegiatura</label>
 								<input type="text" id="verify_register" class="form-control" placeholder="CMP" name="cod_colegiatura">
 							</div>
 							<div class="form-group">
+								<label>Direccion</label>
 								<input type="text" class="form-control" placeholder="Dirección" name="direccion" id="address_register">
 							</div>
 	                        <div class="form-group">
+	                        	<label>Corero electronico</label>
 	                            <input type="email" class="form-control" placeholder="Correo" name="email" id="email_register">
 	                        </div>
-							<div class="form-group">									
+							<div class="form-group">
+								<label>Contraseña</label>
 								<input type="password" class="form-control" id="password1" name="password" placeholder="Ingresa contraseña">
 							</div>
 							<div class="form-group">
+								<label>Verificar contraseña</label>
 								<input type="password" class="form-control" id="" name="password2" placeholder="Confirmar constraseña">
 							</div>
 							<div id="pass-info" class="clearfix"></div>
@@ -89,13 +100,5 @@
 
 @section('js')
 	<script src="/assets/online/js/bootstrap-datepicker.js"></script>
-    <script>
-			$('#calendar').datepicker({
-			    todayHighlight: true,
-				daysOfWeekDisabled: [0],
-				weekStart: 1,
-			    format: "yyyy-mm-dd",
-    			datesDisabled: ["2017/10/20", "2017/11/21","2017/12/21", "2018/01/21","2018/02/21","2018/03/21"],
-			});
-	</script>
+	<script src="/assets/online/scripts/doctor.js"></script>
 @endsection

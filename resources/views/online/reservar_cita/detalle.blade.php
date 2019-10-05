@@ -29,7 +29,7 @@
     	}
     	@media(min-width: 992px){
 			ul.pac.time_select.version_2 li {
-				width:5s0%;
+				width:50%;
 			}
     	}
     </style>
