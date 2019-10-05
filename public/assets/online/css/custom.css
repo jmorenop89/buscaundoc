@@ -47,7 +47,7 @@ ul#top_access li a:hover {
 }
 
 ul#top_access li a {
-  width: 300px!important;
+  /* width: 300px!important; */
 }
 
 
@@ -56,8 +56,6 @@ ul#top_access li a {
   text-align: left; 
   font-size: 17px;
 }
-
-
 
 
 
