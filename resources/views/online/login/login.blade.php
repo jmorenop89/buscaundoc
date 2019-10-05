@@ -7,9 +7,22 @@
 @section('css')
  <style>
         .box_form{
-          width: 410px;
-          margin:auto;
+        margin: auto;
+    }
+    @media(min-width: 320px){
+        .container.margin_60_35{
+            padding-bottom: 30px
         }
+        .box_form{
+            margin: 10px auto;
+        }
+    }@media(min-width: 480px){
+
+        .box_form{
+            width: 400px;
+            margin:30px auto;
+        }
+    }
 </style> 
 @endsection
 

@@ -3,6 +3,31 @@
 @section('tittle')
     FINDOCTOR - Find easily a doctor and book online an appointment
 @endsection
+@section('css')
+<style>
+    .box_form{
+        margin: auto;
+    }
+    @media(min-width: 320px){
+        .container.margin_60_35{
+            padding-bottom: 30px
+        }
+        .box_form{
+            height: 180px;
+            margin: 10px auto;
+        }
+    }@media(min-width: 480px){
+        .container{
+            max-height: 60vh;
+        }
+        .box_form{
+            width: 400px;
+            height: 180px;
+            margin:30px auto;
+        }
+    }
+</style>
+@endsection
 
 @section('content')
 <div class="bg_color_2">
@@ -13,13 +38,12 @@
                     <form method="POST" action="{{ route('password.email') }}">
                         @csrf
                         <div class="form-group">
-                            <label for="email" class="col-form-label">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-form-label">Correo Electronico</label>
                             @if (session('status'))
                                 <div class="alert alert-success" role="alert">
                                     {{ session('status') }}
                                 </div>
                             @endif
-
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
@@ -29,8 +53,8 @@
                                 @enderror
                         </div>
                         <div class="text-center">
-                                <button type="submit" class="btn_1 medium">
-                                    {{ __('Send Password Reset Link') }}
+                                <button type="submit" class="btn_1">
+                                    Enviar correo
                                 </button>
                         </div>
                     </form>

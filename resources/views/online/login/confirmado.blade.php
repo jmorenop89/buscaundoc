@@ -1,10 +1,18 @@
-@extends('template.layout')
-
-@section('tittle')
-    BuscaunDoc -  Gracias por Registrarte
-@endsection
-
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Refresh" content="3;{{route('login')}}">
+    <title>BuscaunDoc -  Gracias por Registrarte</title>
+    @extends('template.head')
+    <style>
+        .container{
+            margin:20vh auto;
+        }
+    </style>
+</head>
+<body>
+    
 <div class="container margin_120">
     <div class=" row justify-content-center">
         <div class="col-lg-8">
@@ -17,10 +25,12 @@
                         </g>
                     </svg>
                 </div>
-            <h2>Gracias por Registrarte en BuscaunDoc</h2>
-            <p>Recibiras una confirmacion de registro en tu email {{--mail--}}</p>
+            <h2>Gracias por Registrarte {{$bi}}</h2>
+            <p>Recibiras una confirmacion con tus datos a tu correo</p>
             </div>
         </div>
     </div>
 </div>
-@endsection
+
+</body>
+</html>

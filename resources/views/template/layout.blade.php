@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
     @include('template.head')
+    <style>
+    	@media(min-width: 992px){
+    		ul#top_access li{
+    			margin-left:10px;
+    		}
+    		.main-menu ul ul{
+    			display:inline-block;
+    			min-width: auto;
+
+    		}
+    		.main-menu ul ul li{
+    			margin: 0 10px;
+    		}
+    		.main-menu ul ul li a{
+    			border:none;
+    		}
+    	}
+    </style>
 <body>
     <!-- preloader -->
-    	<!-- <div id="preloader" class="Fixed">
+    	<div id="preloader" class="Fixed">
     	<div data-loader="circle-side"></div>
-    	</div> -->
+    	</div>
 	<!-- /Preload-->
 
 	<div id="page">
