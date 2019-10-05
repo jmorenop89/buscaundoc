@@ -2,20 +2,12 @@
 <html lang="en">
     @include('template.head')
     <style>
-
     	@media(min-width: 992px){
-    		ul#top_access li{
-    			margin-left:10px;
-    		}
     		.container ul ul{
-    			display:inline-block;
-    			min-width: auto;
-                margin: 10px 0 0 0;
+                margin: 5px 0 0 0;
                 border-top: blue 2px solid;
     		}
-    		.container ul ul li{
-    			margin: 0 10px;
-    		}.container ul ul li p{
+            .container ul ul li p{
                 margin: 10px;
             }
     		.container ul ul li a{
@@ -80,7 +72,6 @@
                                 <figure><img src="http://via.placeholder.com/150x150.jpg" alt=""></figure>
                                 <span><a>{{Auth::user()->email}}</a></span>
                                 <ul>
-                                    <br>
                                     <li><a href="{{ route('profile') }}"> Mi Perfil</a></li>
                                     <li><a href="{{ route('logout') }}" onclick="event.preventDefault();$('#logout-form').submit();">Cerrar Sesion</a></li>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none;">@csrf</form>

@@ -19,7 +19,11 @@ ul#top_access li a:hover {
 .hero_home .content  {
     text-shadow: none;
 }
-
+.container ul ul {
+    display: inline-block;
+    min-width: auto;
+    text-align: center;
+}
 @media (min-width: 768px) {
 }
  .main-menu figure {
