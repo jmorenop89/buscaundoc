@@ -8,6 +8,7 @@ use App\Http\Requests\PacienteRequest;
 use App\Paciente;
 use App\User;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class PacienteController extends Controller
 {
@@ -22,4 +23,12 @@ class PacienteController extends Controller
         Paciente::create($data);
         return view('online.login.confirmado');
     }
+
+    /* Pruebas */
+    /*public function edit() {
+        $user = Auth::user();
+        dd($user);
+        //$object = Paciente::find($id);
+        //dd($object);
+    }*/
 }
