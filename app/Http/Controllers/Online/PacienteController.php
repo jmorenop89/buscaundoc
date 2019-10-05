@@ -19,10 +19,7 @@ class PacienteController extends Controller
         $data['password'] = bcrypt($data['password']);
         $user = User::create($data);
         $data['users_id'] = $user->id;
-        $patient = Paciente::create($data);
-        dd($patient);
-        #$name = $data['nombres'];
-        #return "gracias por registrarte".$name;
+        Paciente::create($data);
+        return view('online.login.confirmado');
     }
-
 }
