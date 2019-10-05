@@ -118,8 +118,10 @@
 								@endif
                         	</div>
 						</figure>
+						
 						<small>Primary care - Internist</small>
 						<h1>DR. Julia Jhones</h1>
+						
 						<hr>
 					    <div class="nav text-justify nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 					      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#agregar-ho" role="tab" aria-controls="v-pills-home" aria-selected="true">Agregar Horarios</a>
