@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Ciudad;
+use App\Doctor;
 use App\Especialidad;
 use Illuminate\Http\Request;
 
 class OnlineController extends Controller
 {
     public function index(){
+/*        $objects = Doctor::all();
+       dd($objects); */
+
     	return view('online.index');
     }
 
