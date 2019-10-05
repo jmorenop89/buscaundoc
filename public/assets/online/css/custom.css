@@ -46,8 +46,16 @@ ul#top_access li a:hover {
   }
 }
 
+ul#top_access li a {
+  width: 300px!important;
+}
 
 
+#custom-search-input ul li {
+  display: block;
+  text-align: left; 
+  font-size: 17px;
+}
 
 
 
