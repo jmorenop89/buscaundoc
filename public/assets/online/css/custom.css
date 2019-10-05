@@ -19,7 +19,7 @@ ul#top_access li a:hover {
 .hero_home .content  {
     text-shadow: none;
 }
-.container ul ul {
+.container ul#top_access ul {
     display: inline-block;
     min-width: auto;
     text-align: center;

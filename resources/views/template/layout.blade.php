@@ -7,6 +7,9 @@
                 margin: 5px 0 0 0;
                 border-top: blue 2px solid;
     		}
+            .container ul ul li{
+                margin-right: 20px
+            }
             .container ul ul li p{
                 margin: 10px;
             }
