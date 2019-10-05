@@ -214,8 +214,8 @@
 
 		$specialty.change(function() {
 			var current = $specialty.typeahead("getActive");
-			console.log(current); 
-		  	if (current) {
+			console.log(current);
+			if (current) {
 		    	// Some item from your model is active!
 		    	if (current.name == $specialty.val()) {
 		      	// This means the exact match is found. Use toLowerCase() if you want case insensitive match.
