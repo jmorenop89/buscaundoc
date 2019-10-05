@@ -113,6 +113,17 @@
 	<script src="/assets/online/js/functions.js"></script>
 	<script src="/assets/plugins/jquery-validation/js/jquery.validate.min.js"></script>
 	<script src="/assets/plugins/jquery-validation/js/localization/messages_es_PE.js"></script>
+
+	{{-- CSRF Token --}}
+	<script>
+		$.ajaxSetup({
+			headers: {
+				'X-CSRF-TOKEN': '{{ csrf_token() }}'
+			}
+		});
+	</script>
+	{{-- --}}
+
 	<!-- SPECIFIC SCRIPTS -->
 	@yield('js')
 </body>
