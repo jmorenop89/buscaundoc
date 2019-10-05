@@ -1,8 +1,9 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="description" content="Responsive Admin Template"/>
-    <meta name="author" content="Sunray"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Admin - BuscaUnDoc"/>
+    <meta name="author" content="BuscaUnDoc"/>
     <title>@yield('tittle')</title>
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css"/>
