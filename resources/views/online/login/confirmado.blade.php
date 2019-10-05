@@ -26,7 +26,7 @@
                     </svg>
                 </div>
             <h2>Gracias por Registrarte {{$bi}}</h2>
-            <p>Recibiras una confirmacion con tus datos a tu correo</p>
+            <p>Recibiras una confirmación con tus datos a tu correo</p>
             </div>
         </div>
     </div>

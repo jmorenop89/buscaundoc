@@ -1,7 +1,7 @@
 @extends('template.layout')
 
 @section('tittle')
-    FINDOCTOR - Find easily a doctor and book online an appointment
+    BUSCAUNDOC - Find easily a doctor and book online an appointment
 @endsection
 
 @section('css')

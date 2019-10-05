@@ -1,7 +1,7 @@
 @extends('template.layout')
 
 @section('tittle')
-    FINDOCTOR - Find easily a doctor and book online an appointment
+    BUSCAUNDOC - Find easily a doctor and book online an appointment
 @endsection
 
 @section('css')
@@ -20,7 +20,7 @@
 
         .box_form{
             width: 400px;
-            margin:30px auto;
+         /*    margin:30px auto; */
         }
     }
 </style> 
@@ -34,7 +34,7 @@
                 <h2 class="text-center text-white">{{ __('Iniciar sesión') }}</h2>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-                        <div class="box_form mb-4">
+                        <div class="box_form "> <!-- mb-4 -->
                             <div class="form-group">
                                     <label for="email" class="col-form-label">Correo electrónico</label>
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Correo Electrónico">

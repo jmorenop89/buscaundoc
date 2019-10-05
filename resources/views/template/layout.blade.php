@@ -42,7 +42,7 @@
 			<div class="row">
 				<div class="col-lg-3 col-6">
 					<div id="logo_home">
-						<h1><a href="/" title="Findoctor">Findoctor</a></h1>
+						<h1><a href="/" title="BUSCAUNDOC">BUSCAUNDOC</a></h1>
 					</div>
 				</div>
 				<div class="col-lg-7 col-6">
@@ -57,7 +57,7 @@
 								<span><a style="cursor:pointer">Regístrate</a></span>
 								<ul>
 									<li><a href="{{ route('reg-pac') }}">Como Paciente</a></li>
-									<li><a href="{{ route('reg-doc') }}">Como Mèdico</a></li>
+									<li><a href="{{ route('reg-doc') }}">Como Médico</a></li>
 								</ul>
 							</li>
 

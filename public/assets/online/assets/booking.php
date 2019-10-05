@@ -70,8 +70,8 @@ $headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 
 $user = "$email_booking";
 $usersubject = "Thank You";
-$userheaders = "From: info@findoctor.com\n";
-$usermessage = "Thank you for booking via Findoctor. We will confirm shortly!";
+$userheaders = "From: info@BUSCAUNDOC.com\n";
+$usermessage = "Thank you for booking via BUSCAUNDOC. We will confirm shortly!";
 mail($user,$usersubject,$usermessage,$userheaders);
 
 if(mail($address, $e_subject, $msg, $headers)) {
