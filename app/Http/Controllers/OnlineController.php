@@ -30,6 +30,7 @@ class OnlineController extends Controller
     }
 
     public function doctor(){
+         
     	return view('online.log-doc.index');
     }
 

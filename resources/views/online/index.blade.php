@@ -160,21 +160,22 @@
 					<h2>Médicos registrados</h2>
 					<p>Forma parte de nuestro staff y aumenta tus atenciones.</p>
 				</div>
+				
 				<div id="reccomended" class="owl-carousel owl-theme">
 					@foreach($objects as $object)
-					<div class="item">
-						<a href="detail-page.html">
-							<div class="title">
+					<div class="item">					
+						<a href="detail-page.html">						
+							<div class="title">						
 								{{-- <h4>Dr. Julia Holmes<em>Pediatrician - Cardiologist</em></h4> --}}
 								<h4>Dr. {{ $object->nombres}} {{ $object->apellidos}}
 								<em>{{ $object->especialidad->nombre}}</em>
-								</h4>
-							</div><img src="http://via.placeholder.com/350x500.jpg" alt="">
-						</a>
-					</div>
-					@endforeach
-					
+								</h4>						
+							</div><img src="http://via.placeholder.com/350x500.jpg" alt="">							
+						</a>						
+					</div>					
+					@endforeach					
 				</div>
+				
 				<!-- /carousel -->
 			</div>
 			<!-- /container -->
