@@ -65,72 +65,32 @@ ul.time_select li label:hover {
 /* .hero_home.version_1 .content {
   background-color:#00c3a5; 
 } */
-
-@media (max-width: 320px) {
-  .especialidad {
-    width:250px;    
-  }
-  .ciudad {
-    width:250px;    
-  }
-  #custom-search-input input[type='submit'] {
-    position: relative;
-    width: 250px;
-    height: 45px;
-    top:0px;
+@media (min-width: 320px) {
+  ul.time_select.version_2 li {
+    width:50%;
   }
 }
 
-
-@media (max-width: 576px) {
-  .especialidad {
-    width:260px;    
+@media (min-width: 480px) { 
+  ul.time_select.version_2 li {
+    width:30%;
   }
-  .ciudad {
-    width:260px;    
-  }
-  #custom-search-input input[type='submit'] {
-    position: relative;
-    width: 260px;
-    height: 45px;
-    top:0px;
+  ul.pac.time_select.version_2 li {
+    width: 30%;
   }
 }
 
-@media (max-width: 768px) {
-  .especialidad {
-    width:360px;    
-  }
-  .ciudad {
-    width:360px;    
-  }
-  #custom-search-input input[type='submit'] {
-    position: relative;
-    width: 360px;
-    height: 45px;
-    top:0px;
+@media (min-width: 768px) {
+  ul.time_select.version_2 li {
+    width:20%;
   }
 }
-
 
 /* .main-menu figure {
   width:40px;  
 } */
 
-@media (max-width: 991px) {
-  .especialidad {
-    width:440px;
-  }
-  .ciudad {
-    width:440px;    
-  }
-  #custom-search-input input[type='submit'] {
-    position: relative;
-    width: 440px;
-    height: 45px;
-    top:0px;
-  }
-}
+
 @media (max-width:992px) {
   .main-menu ul figure img {    
     border-radius: 50%;
@@ -144,22 +104,16 @@ ul.time_select li label:hover {
   }
 }
 
-/** Especialidad - Ciudad - Buscar **/
 
-@media (max-width: 1200px) {
-  .especialidad {
-    width:360px;    
-  }
-  .ciudad {
-    width:360px;    
-  }
-}
-@media (max-width: 991px) {
-  #custom-search-input input[type='submit'] {
-    position: relative;
-    width: 100px;
-    height: 45px;
-    top:0px;   
-    }
-}
+
+
+
+
+
+ 
+
+
+
+
+
 
