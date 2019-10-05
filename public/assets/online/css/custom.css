@@ -85,10 +85,10 @@ ul.time_select li label:hover {
     width:20%;
   }
 }
-
-/* .main-menu figure {
-  width:40px;  
-} */
+ .main-menu figure {
+  width:100%;  
+  text-align:center;
+} 
 
 
 @media (max-width:992px) {
@@ -97,7 +97,7 @@ ul.time_select li label:hover {
     width: 100px;
     height: 100px;
     margin-top:20px;
-    margin-left: 167px;    
+    /*margin-left: 167px;    */
   }
   .main-menu ul span {
     text-align: center;
