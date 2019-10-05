@@ -3,8 +3,8 @@
 			<div class="row">
 				<div class="col-lg-3 col-md-12 col-sm-6 col-12">
 					<p>
-						<a href="index.html" title="Findoctor">
-							<img src="assets/online/img/logo.png" data-retina="true" alt="" width="163" height="36" class="img-fluid">
+						<a href="index.html" title="BUSCAUNDOC">
+							<img src="/assets/online/img/logo.png" data-retina="true" alt="" width="163" height="36" class="img-fluid">
 						</a>
 					</p>
 				</div>
@@ -29,7 +29,7 @@
 					<h5>Contacta con nosotros</h5>
 					<ul class="contacts">
 						<li><a href="tel://61280932400"><i class="icon_mobile"></i> 987567312</a></li>
-						<li><a href="mailto:info@findoctor.com"><i class="icon_mail_alt"></i> informes@buscaundoc.com</a></li>
+						<li><a href="mailto:info@BUSCAUNDOC.com"><i class="icon_mail_alt"></i> informes@buscaundoc.com</a></li>
 					</ul>
 					<div class="follow_us">
 						<h5>Siguenos</h5>

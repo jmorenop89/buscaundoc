@@ -85,13 +85,6 @@
                                                     <textarea name="direccion" placeholder="Direccion" class="form-control-textarea" rows="5" value="{{ $doc->direccion }}">{{ $doc->direccion }}</textarea>
                                                 </div>
                                             </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Imagen de Perfil
-                                                </label>
-                                                <div class="compose-editor">
-                                                  <input type="file" class="default" multiple>
-                                              </div>
-                                            </div>
 											
 										</div>
                                         <div class="form-actions">

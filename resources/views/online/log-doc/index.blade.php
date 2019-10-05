@@ -1,10 +1,15 @@
 @extends('template.layout')
 
 @section('tittle')
-    FINDOCTOR - Find easily a doctor and book online an appointment
+    BUSCAUNDOC - Find easily a doctor and book online an appointment
 @endsection
 
 @section('css')
+	<style>
+		.croppic img{
+			width: 100%;
+		}
+	</style>
 	<link href="/assets/online/css/date_picker.css" rel="stylesheet">
 	<style>
 		/* Menù */
@@ -78,6 +83,7 @@
 			}
 		}
 	</style>
+	<link rel="stylesheet" href="/assets/plugins/croppic/croppic.css">
 @endsection
 
 @section('content')
@@ -100,7 +106,17 @@
 				<aside class="col-xl-3 col-lg-4" id=""> <!--id="sidebar"-->
 					<div class="box_profile">
 						<figure>
-							<img src="http://via.placeholder.com/565x565.jpg" alt="" class="img-fluid">
+							<div class="croppic" style="width: 250px;height: 250px;margin:0px"
+                             	id="cropImgProfile"
+                             	data-model="{{ $model->id }}"
+                             	data-id="{{ $model->id }}"
+                             	data-image="{{ $model->imagen?true:false }}"
+                             	data-width="500"
+                             	data-placement="bottom">
+                            	@if($model->imagen)
+                                	<img src="/{{ config('app.dir_image').$model->imagen }}" class="croppedImg">
+								@endif
+                        	</div>
 						</figure>
 						<small>Primary care - Internist</small>
 						<h1>DR. Julia Jhones</h1>
@@ -300,6 +316,8 @@
 @endsection
 
 @section('js')
+	<script src="/assets/plugins/croppic/croppic.min.js"></script>
+	<script src="/assets/online/scripts/croppic.js"></script>
 	<script src="/assets/online/js/bootstrap-datepicker.js"></script>
     <script>
 		$(document).ready(function(){
@@ -346,5 +364,6 @@
 				crear(hi,hf,inter)
 			}
 		})	
+		fn_croppic('cropImgProfile', '/profile/save-image', '/profile/delete-image');
 	</script>
 @endsection

@@ -48,8 +48,21 @@ ul#top_access li a:hover {
 
 
 
+#custom-search-input ul li {
+  display: block;
+  text-align: left; 
+  font-size: 17px;
+}
 
 
+.dropdown-menu{
+   margin-top: 5px !important ; 
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+
+  background-color:  #96f3e4; 
+    }
 
 
 

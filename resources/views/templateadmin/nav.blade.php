@@ -2,8 +2,8 @@
     <div class="page-header-inner ">
         <!-- logo start -->
         <div class="page-logo">
-            <a href="index.html">
-                <img alt="" src="/assets/admin/img/logo.png">
+            <a href="{{route('dash.index')}}">
+                <img alt="" src="/assets/admin/img/heart1.png">
                 <span class="logo-default" >Admin</span>
             </a>
         </div>

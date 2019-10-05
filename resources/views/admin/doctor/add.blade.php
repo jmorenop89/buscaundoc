@@ -136,14 +136,6 @@
                                                 </div>
                                    
                                             </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Imagen de Perfil
-                                                </label>
-                                                <div class="compose-editor">
-                                                  <input type="file" class="default" multiple>
-                                              </div>
-                                            </div>
-											
 											<div class="form-actions">
                                             <div class="row">
                                                 <div class="offset-md-3 col-md-9">

@@ -56,6 +56,8 @@ return [
 
     'asset_url' => env('ASSET_URL', null),
 
+    'dir_image' => env('DIR_IMAGE','elements/doctor/'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
