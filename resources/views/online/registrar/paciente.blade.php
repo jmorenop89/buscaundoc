@@ -1,7 +1,7 @@
 @extends('template.layout')
 
 @section('tittle')
-    FINDOCTOR - Find easily a doctor and book online an appointment
+BUSCAUNDOC - Encuentra fácilmente un médico y reserva en linea una cita.
 @endsection
 
 @section('css')
@@ -45,7 +45,7 @@
 							</div>
 							<div class="form-group">
 								<label>Confirmar contraseña</label>
-								<input type="password" class="form-control" name="password2"  placeholder="Confirmar constraseña">
+								<input type="password" class="form-control" name="password2"  placeholder="Confirmar contraseña">
 							</div>
 							<div id="pass-info" class="clearfix"></div>
 							<div class="checkbox-holder text-left">

@@ -46,9 +46,6 @@ ul#top_access li a:hover {
   }
 }
 
-ul#top_access li a {
-  /* width: 300px!important; */
-}
 
 
 #custom-search-input ul li {
@@ -59,12 +56,12 @@ ul#top_access li a {
 
 
 .dropdown-menu{
-   margin-top: 5px !important ; */
+   margin-top: 5px !important ; 
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
 
-  background-color:  #96f3e4; */
+  background-color:  #96f3e4; 
     }
 
 
