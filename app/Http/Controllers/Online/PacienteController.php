@@ -20,6 +20,7 @@ class PacienteController extends Controller
         $user = User::create($data);
         $data['users_id'] = $user->id;
         Paciente::create($data);
-        return view('online.login.confirmado');
+        $bi = $data['nombres'];
+        return view('online.login.confirmado',compact('bi'));
     }
 }
