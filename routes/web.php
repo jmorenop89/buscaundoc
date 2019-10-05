@@ -12,7 +12,7 @@
 */
 Auth::routes();
 
-Route::get('/','OnlineController@index');
+Route::get('/','OnlineController@index')->name('inicio');
 Route::get('login',[ 'as' => 'login','uses'=>'Online\LoginController@index']);
 Route::post('login',['as' => 'login','uses'=>'Auth\LoginController@validateLogin']);
 Route::post('logout',[ 'as' => 'logout','uses'=>'Online\LoginController@logout']);

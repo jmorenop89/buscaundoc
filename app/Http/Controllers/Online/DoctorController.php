@@ -17,8 +17,7 @@ class DoctorController extends Controller
         $user = User::create($data);
         $data['user_id'] = $user->id;
         $patient = Doctor::create($data);
-        $name = $data['nombres'];
-        #dd($data);
-        return "gracias por registrarte ".$name;
+        $bi = $data['nombres'];
+        return view('online.login.confirmado',compact('bi'));
     }
 }
