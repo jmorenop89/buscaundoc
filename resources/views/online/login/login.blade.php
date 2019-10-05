@@ -21,7 +21,7 @@
                 <h2 class="text-center text-white">{{ __('Iniciar sesión') }}</h2>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-                        <div class="box_form">
+                        <div class="box_form mb-4">
                             <div class="form-group">
                                     <label for="email" class="col-form-label">Correo electrónico</label>
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Correo Electrónico">
@@ -45,25 +45,28 @@
                                         <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                         <label class="" for="remember">
                                             <span>
-                                                {{ __('Remember Me') }}
+                                                {{ __('Recordar contraseña') }}
                                             </span>
                                         </label>
                                 </div>
                             </div>
-                            <div class="text-left">
-                                    <a class="btn btn-link form-group" href="{{ route('password.request') }}">
-                                            {{ __('Olvidaste tu conraseña') }}
-                                    </a>
-                            </div>
-                            <div class="form-group text-center add_top_30">
+                           
+                            <div class="form-group text-center">   <!-- add_top_30 -->
                                 <button type="submit" class="btn_1">
                                         {{ __('Iniciar Sesion') }}
                                     </button>
+
+                                    <p class="text-left mt-3">
+                                No tienes una cuenta , <a href="#0"><strong>Registrate ahora!</strong></a>
+                        </p>
+
+                        <a class="btn btn-link form-group" href="{{ route('password.request') }}">
+                                            {{ __('¿Olvidaste tu contraseña?') }}
+                                    </a>
+                            </div>
                             </div>
                         </div>
-                        <p class="text-center">
-                                No tienes una cuenta <a href="#0"><strong>Registrate ahora!</strong></a>
-                        </p>
+                        
                     </form>
                 </div>
         </div>
