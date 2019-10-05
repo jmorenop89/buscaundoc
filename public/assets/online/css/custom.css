@@ -1,103 +1,45 @@
 /*boton reservar cita*/
 
 ul#top_access li a {
-  color: #333; }
-  ul#top_access li a:hover {
-    color:  #00c3a5; }
-
+  color: #333;
+}
+ul#top_access li a:hover {
+    color:  #00c3a5;
+}
 #custom-search-input{
     width: 90%;
-}
-
-#custom-search-input ul li {
-  display: block;
-  text-align: left; 
-  font-size: 17px;
-
-}
-
-.dropdown-menu{
-  margin-top: 5px !important ;
 }
 
 #custom-search-input input[type='submit'] {
   position: relative;
   height: 45px;
   top:-2px;
- 
-  }
+}
 
-  .hero_home .content  {
+.hero_home .content  {
     text-shadow: none;
-  }
-
-  .dropdown-item:hover, .dropdown-item:focus {
-/*     color: #16181b;
-    text-decoration: none; */
-    background-color:  #96f3e4;
-  }
-.ciudad, .especialidad {
-  height: 45px;
-  padding-left: 20px;
-  
-  margin-bottom:10px;
 }
-
-/*horarios*/
-ul.time_select.version_2 li {
-  float: left;
-  width:20%;
+.container ul#top_access ul {
+    display: inline-block;
+    min-width: auto;
+    text-align: center;
 }
-ul.time_select li input[type="radio"] {
-  display: none;
-  cursor: pointer;
-}
-ul.time_select li input[type="radio"]:checked + label {
-  background-color: #333;
-  color: #fff;
-}
-ul.time_select li label:hover {
-  background-color: #e74e84;
-  color: #fff;
-}
-
-
-/* .hero_home.version_1 .content {
-  background-color:#00c3a5; 
-} */
-@media (min-width: 320px) {
-  ul.time_select.version_2 li {
-    width:50%;
-  }
-}
-
-@media (min-width: 480px) { 
-  ul.time_select.version_2 li {
-    width:30%;
-  }
-  ul.pac.time_select.version_2 li {
-    width: 30%;
-  }
-}
-
 @media (min-width: 768px) {
-  ul.time_select.version_2 li {
-    width:20%;
-  }
 }
  .main-menu figure {
-  width:100%;  
+  width:100%;
   text-align:center;
-} 
+}
 
 
-@media (max-width:992px) {
-  .main-menu ul figure img {    
+@media (max-width:991px) {
+    .main-menu figure{
+        margin:10px auto;
+    }
+  .main-menu ul figure img {
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    margin-top:20px;
-    /*margin-left: 167px;    */
   }
   .main-menu ul span {
     text-align: center;
@@ -119,7 +61,7 @@ ul#top_access li a {
 
 
 
- 
+
 
 
 

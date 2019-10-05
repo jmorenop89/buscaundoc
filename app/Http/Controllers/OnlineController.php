@@ -10,9 +10,8 @@ use Illuminate\Http\Request;
 class OnlineController extends Controller
 {
     public function index(){
-/*        $objects = Doctor::all();
-       dd($objects); */
-
+        /*$objets = Doctor::all();
+        dd($objets);*/
     	return view('online.index');
     }
 

@@ -20,17 +20,17 @@
 						<div class="box_form">
 							<div class="form-group">
 								<label>Nombres</label>
-								<input type="text" class="form-control" placeholder="Nombres" name="nombres" id="name_register">
+								<input type="text" class="form-control" placeholder="Ingresar Nombres" name="nombres" id="name_register" value="{{ old('nombres') }}">
 							</div>
 							<div class="form-group">
 								<label>Apellidos</label>
-								<input type="text" class="form-control" placeholder="Apellidos" name="apellidos" id="lastname_register">
+								<input type="text" class="form-control" placeholder="Ingresar Apellidos" name="apellidos" id="lastname_register" value="{{ old('apellidos') }}">
 							</div>
 							<div class="row">
 								<div class="form-group col-md-6">
 									<label>Especialidad</label>
 									 <select class="form-control" name="especialidad_id" id="country_register">
-									 	<option disabled selected >Selecione una especialidad</option>
+									 	<option disabled selected >Seleccionar una especialidad</option>
 		                                @foreach($espe as $espes)
 				                            <option value="{{ $espes->id }}" >{{$espes->nombre}}</option>
 				                        @endforeach
@@ -47,23 +47,27 @@
 							</div>
 							<div class="form-group">
 								<label>Fecha de Nacimiento</label>
-								<input type="text" class="form-control" placeholder="Fecha de Nacimiento" name="fecha_nac" id="fecha">
+								<input type="text" class="form-control" placeholder="Ingresar Fecha de Nacimiento" name="fecha_nac" id="fecha" data-lang="es" value="{{ old('fecha_nac') }}">
 							</div>
 							<div class="form-group">
 								<label>Codigo de Colegiatura</label>
-								<input type="text" id="verify_register" class="form-control" placeholder="CMP" name="cod_colegiatura">
+								<input type="text" id="verify_register" class="form-control" placeholder="Ingresar CMP" name="cod_colegiatura">
 							</div>
 							<div class="form-group">
 								<label>Direccion</label>
-								<input type="text" class="form-control" placeholder="Dirección" name="direccion" id="address_register">
+								<input type="text" class="form-control" placeholder="Ingresar Dirección" name="direccion" id="address_register">
+                            </div>
+                            <div class="form-group">
+								<label>Teléfono Celular</label>
+								<input type="text" class="form-control" placeholder="Ingresar Numero" name="celular" value="{{ old('celular') }}">
 							</div>
 	                        <div class="form-group">
-	                        	<label>Corero electronico</label>
-	                            <input type="email" class="form-control" placeholder="Correo" name="email" id="email_register">
+	                        	<label>Correo Electronico</label>
+	                            <input type="email" class="form-control" placeholder="Ingresar Correo" name="email" id="email_register" value="{{ old('email') }}">
 	                        </div>
 							<div class="form-group">
 								<label>Contraseña</label>
-								<input type="password" class="form-control" id="password1" name="password" placeholder="Ingresa contraseña">
+								<input type="password" class="form-control" id="password1" name="password" placeholder="Ingresar contraseña">
 							</div>
 							<div class="form-group">
 								<label>Verificar contraseña</label>
@@ -81,7 +85,7 @@
 							</div>
 						</div>
 						<!-- <p class="text-center">
-							<small>Has voluptua vivendum accusamus cu. Ut per assueverit temporibus dissentiet. 
+							<small>Has voluptua vivendum accusamus cu. Ut per assueverit temporibus dissentiet.
 								Eum no atqui putant democritum, velit nusquam sententiae vis no.
 							</small>
 						</p> -->
@@ -89,13 +93,12 @@
 				</div>
 				<!-- /box_form -->
 			</div>
-			<!-- /col -->	
+			<!-- /col -->
 		</div>
 		<!-- /row -->
 	</div>
 	<!-- /container -->
-</div>
-<!-- /hero_register -->
+
 @endsection
 
 @section('js')

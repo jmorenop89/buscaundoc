@@ -6,12 +6,17 @@
 
 @section('css')
 <style>
+    .especialidad, .ciudad{
+        height: 45px;
+        padding-left: 20px;
+        margin-bottom:10px;
+    }
 @media (max-width: 1200px) {
   .especialidad {
-    width:360px;    
+    width:360px;
   }
   .ciudad {
-    width:360px;    
+    width:360px;
   }
   #custom-search-input input[type='submit'] {
     position: relative;
@@ -22,11 +27,11 @@
 }
 
 @media (max-width: 991px) {
-  .especialidad {    
-    width:440px;    
+  .especialidad {
+    width:440px;
   }
   .ciudad {
-    width:440px;    
+    width:440px;
   }
   #custom-search-input input[type='submit'] {
     position: relative;
@@ -38,25 +43,25 @@
 
 @media (max-width: 768px) {
   .especialidad {
-    width:360px;    
+    width:360px;
   }
-  .ciudad {    
-    width:360px;    
+  .ciudad {
+    width:360px;
   }
   #custom-search-input input[type='submit'] {
-    position: relative;    
+    position: relative;
     width: 360px;
-    height: 45px;    
+    height: 45px;
     top:0px;
     }
 }
 
 @media (max-width: 576px) {
   .especialidad {
-    width:260px;    
+    width:260px;
   }
   .ciudad {
-    width:260px;    
+    width:260px;
   }
   #custom-search-input input[type='submit'] {
     position: relative;
@@ -68,10 +73,10 @@
 
 @media (max-width: 320px) {
   .especialidad {
-    width:250px;    
+    width:250px;
   }
   .ciudad {
-    width:250px;    
+    width:250px;
   }
   #custom-search-input input[type='submit'] {
     position: relative;
@@ -83,10 +88,10 @@
 
 @media (max-width: 280px) {
   .especialidad {
-    width:200px;    
+    width:200px;
   }
   .ciudad {
-    width:200px;    
+    width:200px;
   }
   #custom-search-input input[type='submit'] {
     position: relative;
@@ -102,17 +107,17 @@
 @endsection
 
 @section('content')
-	
+
 	<!-- Hero -->
     <div class="hero_home version_1">
     	<div  id="reserva" class="content">
     		<h3>Busca un médico</h3>
     		<p>Selecciona una especialidad y ciudad donde te encuentras.</p>
 			<form method="get" action="/list">
-    			<div id="custom-search-input"> <!-- custom-search-input revisar mañana-->							
+    			<div id="custom-search-input"> <!-- custom-search-input revisar mañana-->
         			<input name="specialty" type="text" class="tspecialty especialidad" placeholder="Especialidad">
         			<input name="city" type="text" class="tcity ciudad" placeholder="Ciudad">
-					<input type="submit" class="buscar" value="Buscar"> 
+					<input type="submit" class="buscar" value="Buscar">
 		    	</div>
     		</form>
     	</div>
@@ -148,7 +153,7 @@
     		</div>
     		<!-- /row -->
 		</div>
-		
+
 		<div class="bg_color_1">
 			<div class="container">  <!-- margin_120_95 -->
 				<div class="main_title">
@@ -203,11 +208,11 @@
 	<script>
 		var $specialty = $(".tspecialty") ;
 		var $city = $(".tcity") ;
-			
+
 		$.get("/getspec", function(data){
   			$specialty.typeahead({ source:data,autoSelect:true});
 		},'json');
-	
+
 		$.get("/getcity", function(data){
   			$city.typeahead({ source:data,autoSelect:true});
 		},'json');
@@ -226,7 +231,7 @@
 			}else{
 		    	// Nothing is active so it is a new value (or maybe empty value)
 		  	}
-		}); 
+		});
 
 </script>
 
