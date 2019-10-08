@@ -12,32 +12,46 @@
 	</style>
 	<link href="/assets/online/css/date_picker.css" rel="stylesheet">
 	<style>
+        /* Alerta */
+        div[role=alert]{
+            position: absolute;
+            right: -90px;
+            top: -114px;
+        }
+        /* Enviar horarios*/
+        #enviar_ho{
+            margin: 0 auto;
+            display: block
+        }
+        #horas li input[type="text"]{
+            display: none;
+        }
 		/* Menù */
 		@media (max-width: 2560px) {
 			.nav-pills .nav-link {
 				width:100%;
-				text-align: center;   
+				text-align: center;
 			}
 		}
 
 		@media (max-width: 1200px) {
 			.nav-pills .nav-link {
 				width:100%;
-				text-align: center;   
+				text-align: center;
 			}
 		}
 
 		@media (max-width: 992px) {
 			.nav-pills .nav-link {
 				width:100%;
-				text-align: center;   
+				text-align: center;
 			}
 		}
 
 		@media (max-width: 991px) {
 			.nav-pills .nav-link {
 				width:50%;
-				text-align: center;   
+				text-align: center;
 			}
 			.box_profile figure{
 				margin:10px auto;
@@ -47,7 +61,7 @@
 		@media (max-width: 768px) {
 			.nav-pills .nav-link {
 				width:50%;
-				text-align: center;   
+				text-align: center;
 			}
 			.container{
 				max-width: 540px
@@ -60,7 +74,7 @@
 		@media (max-width: 576px) {
 			.nav-pills .nav-link {
 				width:50%;
-				text-align: center;   
+				text-align: center;
 			}
 
 		}
@@ -73,7 +87,7 @@
 		@media (max-width: 320px) {
 			.nav-pills .nav-link {
 				width:100%;
-				text-align: center;   
+				text-align: center;
 			}
 			.doc_citas {
 				overflow-x:scroll;
@@ -99,10 +113,10 @@
 			</div>
 		</div>
 		<!-- /breadcrumb -->
-		
+
 		<div class="container margin_60">
 			<div class="row">
-				
+
 				<aside class="col-xl-3 col-lg-4" id=""> <!--id="sidebar"-->
 					<div class="box_profile">
 						<figure>
@@ -118,10 +132,10 @@
 								@endif
                         	</div>
 						</figure>
-						
+
 						<small>Primary care - Internist</small>
-						<h1>DR. Julia Jhones</h1>
-						
+						<h1>DR. {{$model->nombres }}</h1>
+
 						<hr>
 					    <div class="nav text-justify nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 					      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#agregar-ho" role="tab" aria-controls="v-pills-home" aria-selected="true">Agregar Horarios</a>
@@ -132,7 +146,7 @@
 					</div>
 				</aside>
 				<!-- /asdide -->
-				
+
 				<div class="col-xl-9 col-lg-8">
 
 					<div class="tabs_styled_2">
@@ -151,30 +165,43 @@
 												<input type="hidden" id="my_hidden_input">
 											</div>
 										</div>
-										<div class="col-lg-5 ">											
-											<form>
+										<div class="col-lg-5 ">
 												<div class="form-row">
 													<div class="form-group col-md-6">
 														<label>Hora Inico</label>
-														<input type="number" class="form-control" id="hora_i" placeholder="Hora inicio">
+														<input type="time" class="form-control" id="hora_i">
 													</div>
 													<div class="form-group col-md-6">
 														<label>Hora Fin</label>
-														<input type="number" class="form-control" id="hora_f" placeholder="Hora fin">
-													</div>													
+														<input type="time" class="form-control" id="hora_f">
+													</div>
 													<div class="form-group col-6">
 														<label>Intervalo</label>
-														<input type="number" class="form-control" id="inter" placeholder="Intervalo">
+														<input type="time" valueAsNumber class="form-control" id="inter">
 													</div>
 												</div>
-												<div class="text-center" id="crear"><a class="btn_1 medium">Guardar</a></div>	
-												
-											</form>
+												<div class="text-center" id="crear"><div class="btn_1 medium">Guardar</div></div>
 										</div>
 										<div class="col-lg-12">
 											<ul class="doc time_select version_2 doc add_top_20 text-center" id="horas">
+                                                <li v-for="horai of horas">
+                                                    <input type="text" name="hora[]" :id="horai.name" form="hor_doc" v-model="horai.hora">
+                                                    <label :for=horai.name>@{{horai.hora}}</label>
+                                                </li>
 											</ul>
 										</div>
+                                        <div class="col-lg-12">
+                                            <input type="text"  id="fecha" name="fecha" v-model="fec" hidden form="hor_doc">
+                                            <input type="submit" id="enviar_ho"class="btn btn-primary"value="Añadir Horarios" form="hor_doc">
+                                        </div>
+                                        <form action="{{route('horarios',$model->id)}}" method="post" id="hor_doc" hidden>
+                                            @csrf
+                                        </form>
+                                        @if (session('status'))
+                                        <div class="alert alert-primary" role="alert">
+                                        {{ session('status') }}
+                                        </div>
+                                        @endif
 									</div>
 								</div>
 
@@ -190,13 +217,9 @@
 												<input type="hidden" id="my_hidden_input">
 											</div>
 										</div>
-										
+
 										<div class="col-lg-12">
 											<ul class="doc time_select version_2 add_top_20 text-center">
-												<li>
-													<input type="radio" id="radio1" name="radio_time" value="09.30am">
-													<label for="radio1">09.30am</label>
-												</li>
 											</ul>
 										</div>
 									</div>
@@ -257,52 +280,52 @@
 										<div class="form-row">
 											<div class="form-group col-md-6">
 												<label>Nombres</label>
-												<input type="text" class="form-control" id="" placeholder="Ingresa tus nombres">
+												<input type="text" class="form-control"  placeholder="Ingresa tus nombres">
 											</div>
 											<div class="form-group col-md-6">
 												<label>Apellidos</label>
-												<input type="text" class="form-control" id="" placeholder="Ingresa tus apellidos">
+												<input type="text" class="form-control"  placeholder="Ingresa tus apellidos">
 											</div>
 										</div>
 										<div class="form-row">
 											<div class="form-group col-md-6">
 												<label>Sexo</label>
-												<input type="text" class="form-control" id="" placeholder="Sexo">
+												<input type="text" class="form-control"  placeholder="Sexo">
 											</div>
 											<div class="form-group col-md-6">
 												<label>Edad</label>
-												<input type="text" class="form-control" id="" placeholder="Ingresa tus edad">
+												<input type="text" class="form-control"  placeholder="Ingresa tus edad">
 											</div>
 										</div>
 										<div class="form-row">
 											<div class="form-group col-md-6">
 												<label>Telefono Celular</label>
-												<input type="text" class="form-control" id="" placeholder="Ingresa Nº Celular">
+												<input type="text" class="form-control"  placeholder="Ingresa Nº Celular">
 											</div>
 											<div class="form-group col-md-6">
 												<label>Correo</label>
-												<input type="email" class="form-control" id="" placeholder="Ingresa tu Correo">
+												<input type="email" class="form-control"  placeholder="Ingresa tu Correo">
 											</div>
 										</div>
 										<div class="form-row">
 											<div class="form-group col-md-6">
 												<label>Contraseña</label>
-												<input type="password" class="form-control" id="" placeholder="Ingresa contraseña">
+												<input type="password" class="form-control"  placeholder="Ingresa contraseña">
 											</div>
 											<div class="form-group col-md-6">
 												<label>Confirmar contraseña</label>
-												<input type="password" class="form-control" id="" placeholder="Confirmar contraseña">
+												<input type="password" class="form-control"  placeholder="Confirmar contraseña">
 											</div>
 										</div>
 										<hr>
 										<div class="form-group text-center add_top_30">
 											<input class="btn_1" type="submit" value="Guardar">
-										</div>								
+										</div>
 										<!--</div> -->
 									</form>
 				     	 		</div>
 						    </div>
-									
+
 						<!-- /tab-content -->
 					</div>
 					<!-- /tabs_styled -->
@@ -314,25 +337,45 @@
 		<!-- /container -->
 	</main>
 	<!-- /main -->
-	
+
 @endsection
 
 @section('js')
 	<script src="/assets/plugins/croppic/croppic.min.js"></script>
 	<script src="/assets/online/scripts/croppic.js"></script>
 	<script src="/assets/online/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+        var app = new Vue({
+          el: '#agregar-ho',
+          data: {
+            fec:'',
+            horas:[
+                {hora:"" ,fecha:"", name:""}
+            ],
+            dessa:["2019/10/03"],
+          }
+        })
+    </script>
     <script>
+
+        //app.dessa.push(desactivar)
+
 		$(document).ready(function(){
 			var dd = $('.calendar').datepicker({
 			    todayHighlight: true,
 				daysOfWeekDisabled: [0],
 				weekStart: 1,
 				format: "yyyy-mm-dd",
-				datesDisabled: ["2017/10/20", "2017/11/21","2017/12/21", "2018/01/21","2018/02/21","2018/03/21"],
+				datesDisabled: app.dessa,
 			}).on('changeDate', function(e) {
-				console.log(e.date);
-				console.log(e.format('yyyy-mm-dd'));
+				    desactivar = e.format("yyyy/mm/dd")
+                    app.fec = (e.format('yyyy-mm-dd'));
         		// `e` here contains the extra attributes
+                    var fecha = $('#fecha')
+                    fecha.value= app.fec
+                    console.log(fecha)
+                    console.log(app.dessa)
     		});
     	});
 	</script>
@@ -342,30 +385,93 @@
 		var inter = $('#inter')
 		var botn = $('#crear')
 		var resul = $('#horas')
+        botn.on('click',()=>{
+            $('#horas li').remove()
+            if (app.fec.length == 0) {
+                console.log("falta seleccionar una fecha")
+            }
+            else{
+                if (hi.val() == 0 || hf.val()== 0 || inter.val() == 0) {
+                    console.log("falta crear sus intervalos")
+                }
+                else{
+                      inMi = parseInt(hi.val().substr(3,2));
+                      inHo = parseInt(hi.val().substr(0,2));
 
-		botn.on('click',()=>{
-			if (hi.val() == 0 || hf.val()== 0 || inter.val() == 0) {
-				console.log("aun no hay datos")
-			}
-			else{
-				function crear(hi,hf,inter){
-					hi = parseInt(hi.val())
-					hf = parseInt(hf.val())
-					inter = parseInt(inter.val())
-					for (var i = hi; i <= hf; i += inter) {
+                      intMi = parseInt(inter.val().substr(3,2))
+                      intHo = parseInt(inter.val().substr(0,2))
 
-						if ( i < 12) {
-							resul.append("<li><input type='radio' id='radio"+i+"' name='radio_time[]' value='"+i+" am'/><label for='radio"+i+"'>"+i+" am</label></li>")
-						}
-						else{
-							resul.append("<li><input type='radio' id='radio"+i+"' name='radio_time[]' value='"+i+" pm'/><label for='radio"+i+"'>"+i+" pm</label></li>")
-						}
-					}
-					return console.log("fin")
-				}
-				crear(hi,hf,inter)
-			}
-		})	
+                      finMi = parseInt(hf.val().substr(3,2));
+                      finHo = parseInt(hf.val().substr(0,2));
+
+
+                    var i= 1
+                  do {
+                    if (inMi>=60) {
+                    inMi = inMi - 60
+                    inHo = inHo + 1
+                    inMi = inMi.toString()
+                    if (inMi.length<2) {
+                        inMi = "0"+inMi
+                    }
+                    if (inHo === finHo) {
+                        if (inMi>=finMi){
+                            console.log("mal")
+                        }
+                        else{
+                            hresu = inHo+":"+inMi
+                            horp = inHo+"."+inMi
+                            console.log(inHo+":"+inMi)
+                            // resul.append("<li><input type='radio' id='radio"+i+"' name='radio_time[]' value='"+horp+"'form='hor_doc'/><label for='radio"+i+"'>"+hora+"</label></li>")
+                            app.horas.push({
+                                hora:hresu ,fecha:app.fec, name:"radio"+i
+                            })
+                        }
+                    }
+                    else{
+                        hresu = inHo+":"+inMi
+                        horp = inHo+"."+inMi
+                        console.log(inHo+":"+inMi)
+                        app.horas.push({
+                                hora:hresu ,fecha:app.fec, name:"radio"+i
+                            })
+                    }
+                    }
+                    else{
+                        inMi = inMi.toString()
+                    if (inMi.length<2) {
+                        inMi = "0"+inMi
+                    }
+                    if (inHo === finHo) {
+                        if (inMi>=finMi){
+                            console.log("mal")
+                        }
+                        else{
+                        hresu = inHo+":"+inMi
+                        horp = inHo+"."+inMi
+                        console.log(inHo+":"+inMi)
+                        app.horas.push({
+                                hora:hresu ,fecha:app.fec, name:"radio"+i
+                            })
+                        }
+                    }
+                    else{
+                        hresu = inHo+":"+inMi
+                        horp = inHo+"."+inMi
+                        console.log(inHo+":"+inMi)
+                        app.horas.push({
+                                hora:hresu ,fecha:app.fec, name:"radio"+i
+                            })
+                    }
+                    }
+                    inMi = parseInt(inMi)
+                    inMi = inMi + intMi
+                    i = i +1
+
+                    }while (inHo < finHo);
+                }
+            }
+        })
 		fn_croppic('cropImgProfile', '/profile/save-image', '/profile/delete-image');
 	</script>
 @endsection
