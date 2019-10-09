@@ -1,7 +1,7 @@
 @extends('template.layout')
 
 @section('tittle')
-    FINDOCTOR - Find easily a doctor and book online an appointment
+    BUSCAUNDOC - Encuentra fácilmente un médico y reserva en linea una cita.
 @endsection
 
 @section('css')
@@ -59,7 +59,7 @@
                             </div>
                             <div class="form-group">
 								<label>Teléfono Celular</label>
-								<input type="text" class="form-control" placeholder="Ingresar Numero" name="celular" value="{{ old('celular') }}">
+								<input type="text" class="form-control" placeholder="Ingresar Número" name="celular" value="{{ old('celular') }}">
 							</div>
 	                        <div class="form-group">
 	                        	<label>Correo Electronico</label>

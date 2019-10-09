@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Online;
 
-use Illuminate\Http\Request;
+use App\Doctor;
 use App\Http\Controllers\Controller;
-use App\User;
+use App\Library\Croppic;
 use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
@@ -18,6 +18,50 @@ class ProfileController extends Controller
         }else{
             $model = $user->doctor;
             return view('online.log-doc.index',compact('model'));
+        }
+    }
+
+    public function store_image(){
+        $data = request()->all();
+        $model = Doctor::find($data['id']);
+        $url_image = config('app.dir_image');
+        $croppic_img = array(250, 250);
+        $response = Croppic::croppic_imagen(
+            $data,
+            'doc'.$data['id'],
+            $url_image,
+            $croppic_img);
+        if ($response['status'] == 'success') {
+            $response['image'] = $response['url'];
+            $response['url'] = '/' . $url_image . $response['url'];
+            if($model){
+                $model->imagen = $response['image'];
+                $model->save();
+                $response['state'] = 200;
+                $response['id'] = $model->id;
+            }
+        }else{
+            $response['state'] = 500;
+        }
+
+        return response()->json($response);
+    }
+
+    public function delete_image(){
+        $data = request()->all();
+        $model = Doctor::find($data['id']);
+        $url_image = config('app.dir_image');
+        if($model){
+            unlink($url_image.$model->imagen);
+            $model->imagen = null;
+            $model->save();
+            return response()->json([
+                'status' => 200
+            ]);
+        }else{
+            return response()->json([
+                'status' => 500
+            ]);
         }
     }
 }

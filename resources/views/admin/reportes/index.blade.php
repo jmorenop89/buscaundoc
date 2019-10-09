@@ -101,14 +101,14 @@
 
                     <!-- start new patient list -->
                      <div class="row">
-                        <div class="col-lg-8 col-md-12 col-sm-12 col-12">
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                             <div class="card card-box">
                                 <div class="card-head">
                                     <header>DOCTORES MÁS SOLICITADOS</header>
                                     <div class="tools">
                                         <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
 	                                    <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
-	                                    <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+	                                    <!--<a class="t-close btn-color fa fa-times" href="javascript:;"></a> -->
                                     </div>
                                 </div>
                                 <div class="card-body ">
