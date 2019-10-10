@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Online;
 
+use App\Disponibilidad;
 use App\Doctor;
 use App\Http\Controllers\Controller;
 use App\Library\Croppic;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
@@ -13,12 +15,27 @@ class ProfileController extends Controller
         $user = Auth::user();
         if($user->role == 'paciente'){
             $model = $user->paciente;
-                      
+
             return view('online.log-pac.index',compact('model','modela'));
         }else{
             $model = $user->doctor;
             return view('online.log-doc.index',compact('model'));
         }
+    }
+    public function guardar_horarios(Request $request,$id){
+        $data = $request->all();
+        //dd($fecha);
+        //dd($data['radio_time']);
+        foreach ($data['hora'] as $key) {
+            $dispo = Disponibilidad::create([
+                'fecha'=>$data['fecha'],
+                'hora'=>$key,
+                'doctor_id'=>$id
+            ]);
+        };
+        //dd($dispo);
+        $request->session()->flash('status', 'Horarios agregados correctamente');
+        return redirect()->route('profile');
     }
 
     public function store_image(){

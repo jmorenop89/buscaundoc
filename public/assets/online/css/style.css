@@ -4,7 +4,7 @@ Theme URI: http://www.ansonika.com/BUSCAUNDOC/
 Author: Ansonika
 Author URI: http://themeforest.net/user/Ansonika/
 
-[Table of contents] 
+[Table of contents]
 
 1. SITE STRUCTURE and TYPOGRAPHY
 - 1.1 Typography
@@ -21,7 +21,7 @@ Author URI: http://themeforest.net/user/Ansonika/
 - 2.7 Contact page
 - 2.8 Booking page/confirm
 - 2.9 Pricing page
-- 2.10 Submit review 
+- 2.10 Submit review
 - 2.11 Home with map
 - 2.12 About
 
@@ -821,7 +821,7 @@ ul#additional_links {
   width: 650px;
   margin: auto;
   position: relative; }
-  
+
   @media (max-width: 991px) {
     #custom-search-input {
       /* For less than 991px */
@@ -856,7 +856,7 @@ ul#additional_links {
 
 
   #custom-search-input ul {
-    text-align: center; 
+    text-align: center;
     margin-top: 25px; }
     #custom-search-input ul li {
       display: inline-block;
@@ -873,7 +873,7 @@ ul#additional_links {
         #custom-search-input ul li input[type="radio"]:hover + label {
           background-color: #3173ec;
           color: #fff; }
-          
+
       #custom-search-input ul li label {
         display: inline-block;
         -moz-transition: all 0.3s ease-in-out;
@@ -2418,7 +2418,6 @@ ul.list_edu {
   color: #fff !important; }
 
 .datepicker .day:hover {
-  background: #8ec549 !important;
   color: #fff;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -2427,7 +2426,6 @@ ul.list_edu {
   transition: all 0.3s ease-in-out; }
 
 .datepicker .active.day:hover {
-  background: #333 !important;
   color: #fff; }
 
 ul.legend li {

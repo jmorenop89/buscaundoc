@@ -27,7 +27,7 @@ Route::group(['prefix' => 'register'], function(){
 
 Route::get('/list','OnlineController@busqueda');
 Route::get('/detalle','OnlineController@det_hora');
-      
+
 Route::get('/doc', function () {
     return view('online.log-doc.index');
 });
@@ -39,10 +39,11 @@ Route::get('/doc', function () {
 Route::group(['middleware' => 'auth'],function(){
     Route::group(['prefix' => 'profile'],function(){
         Route::get('/',['as' =>'profile','uses'=>'Online\ProfileController@index']);
+        Route::post('/horas/{id}',['as' =>'horarios','uses'=>'Online\ProfileController@guardar_horarios']);
         Route::post('save-image',['as'=>'profile.image.store','uses'=>'Online\ProfileController@store_image']);
         Route::post('delete-image',['as'=>'profile.image.delete','uses'=>'Online\ProfileController@delete_image']);
     });
-    
+
 });
 
 
@@ -79,7 +80,7 @@ Route::group(['prefix' => 'admin'],function(){
             Route::get('/delete/{id}',['as' => 'pac.eliminar', 'uses' => 'admin\PacientesController@eliminar']);
             Route::get('/show',['as' => 'pac.mostrar', 'uses' => 'admin\PacientesController@mostrar']);
         });
-        
+
         Route::group(['prefix' => 'doctor'],function(){
             Route::get('/',['as' => 'doc.index', 'uses' => 'admin\DoctoresController@index']);
             Route::get('/editar/{id}',['as' => 'doc.editar', 'uses' => 'admin\DoctoresController@editar']);
@@ -98,7 +99,7 @@ Route::group(['prefix' => 'admin'],function(){
             Route::post('/agregar',['as' => 'espec.agregar', 'uses' => 'admin\EspecialidadesController@agregar']);
             Route::get('/show',['as' => 'espec.mostrar', 'uses' => 'admin\EspecialidadesController@mostrar']);
         });
-    
+
         Route::group(['prefix' => 'ciudad'],function(){
             Route::get('/',['as' => 'ciud.index', 'uses' => 'admin\CiudadController@index']);
             Route::get('/editar/{id}',['as' => 'ciud.editar', 'uses' => 'admin\CiudadController@editar']);
@@ -107,12 +108,12 @@ Route::group(['prefix' => 'admin'],function(){
             Route::post('/agregar',['as' => 'ciud.agregar', 'uses' => 'admin\CiudadController@agregar']);
             Route::get('/show',['as' => 'ciud.mostrar', 'uses' => 'admin\CiudadController@mostrar']);
         });
-    
+
         Route::group(['prefix' => 'dashboard'],function(){
             Route::get('/',['as' => 'dash.index', 'uses' => 'admin\DashboardController@index']);
-           
+
         });
     });
 
-    
+
 });
