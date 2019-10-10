@@ -25,7 +25,7 @@ Route::group(['prefix' => 'register'], function(){
 });
 
 
-Route::get('/list','OnlineController@busqueda');
+Route::post('/list','OnlineController@busqueda')->name('buscar');
 Route::get('/detalle','OnlineController@det_hora');
 
 Route::get('/doc', function () {
