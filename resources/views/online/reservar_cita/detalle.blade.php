@@ -77,11 +77,11 @@
 						<div class="row add_bottom_45">
 							<div class="col-lg-12">
 								<div class="row form-group">
-									<div class="col-lg-4"></div>
-									<div class="col-lg-4">
-										<input class="calendar form-control">
+									<div class="col-lg-3"></div>
+									<div class="col-lg-6">
+										<input class="calendar form-control" style="text-align:center; font-size:20px;">
 									</div>
-									<div class="col-lg-4"></div>
+									<div class="col-lg-3"></div>
 									<input type="hidden" id="my_hidden_input" style="padding: inherit;">
 									<ul class="legend">
 										<li><strong></strong>Disponible</li>
