@@ -1,7 +1,8 @@
 @extends('template.layout')
 
 @section('tittle')
-    BUSCAUNDOC - Find easily a doctor and book online an appointment
+		BuscaUnDoc - Encuentra fácilmente un médico y reserva en linea una cita.
+
 @endsection
 
 @section('content')
