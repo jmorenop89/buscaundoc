@@ -41,20 +41,20 @@
 			.nav-pills .nav-link {
 				width:100%;
 				text-align: center;
-			}		
+			}
 			.celda {
 				vertical-align:middle;
-			}	
+			}
 		}
 
 		@media (max-width: 992px) {
 			.nav-pills .nav-link {
 				width:100%;
 				text-align: center;
-			}		
+			}
 			.celda {
 				vertical-align:middle;
-			}	
+			}
 		}
 
 		@media (max-width: 991px) {
@@ -64,7 +64,7 @@
 			}
 			.box_profile figure{
 				margin:10px auto;
-			}			
+			}
 			.celda {
 				vertical-align:middle;
 			}
@@ -80,30 +80,30 @@
 			}
 			ul.doc.time_select.version_2 li {
 				width:25%;
-			}	
+			}
 			.celda {
 				vertical-align:middle;
-			}		
+			}
 		}
 
 		@media (max-width: 576px) {
 			.nav-pills .nav-link {
 				width:50%;
 				text-align: center;
-			}	
+			}
 			.celda {
 				vertical-align:middle;
-			}		
+			}
 		}
 		@media (max-width: 480px) {
 			ul.doc.time_select.version_2 li {
 				width: 33%;
-		  	}	
+		  	}
 			.letra .celda {
 				padding: 0.3rem;
 				font-size:12px;
 				vertical-align:middle;
-			}			
+			}
 		}
 
 		@media (max-width: 320px) {
@@ -116,10 +116,10 @@
 			}
 			ul.doc.time_select.version_2 li {
 			    width:50%;
-			}			
+			}
 		}
 
-		
+
 	</style>
 	<link rel="stylesheet" href="/assets/plugins/croppic/croppic.css">
 @endsection
@@ -236,13 +236,17 @@
 							      	  <hr>
 								  	<div class="row add_bottom_45">
 										<div class="col-lg-12 table-responsive">
-											<div class="form-group"> 
+											<div class="form-group">
                                                 <table class="table letra" border="1">
                                                         @for($i=0; $i < $fil->count(); $i++)
                                                         <tr>
                                                             <th class="celda">{{ $fil[$i]->fecha }}</th>
                                                             @foreach($fil[$i]->hora as $h)
-                                                            <td class="celda">{{ $h }}</td>
+                                                            <td class="celda">
+                                                                {{ $h }}<button type="button" class="close" aria-label="Close">
+                                                                  <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </td>
                                                             @endforeach
                                                         </tr>
                                                         @endfor
@@ -377,10 +381,6 @@
 	<script src="/assets/online/scripts/croppic.js"></script>
 	<script src="/assets/online/js/bootstrap-datepicker.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script>
-        console.log(new Date(@json($fil)[1].fecha));
-        console.log(@json($fil)[1].fecha);
-    </script>
         <script>
         var app = new Vue({
           el: '#agregar-ho',
@@ -392,16 +392,37 @@
             dessa:["2019/10/03"],
           }
         })
+        var fecha = @json($fil);
+        var fedes = [];
+        // console.log(fecha[0].fecha);
+         for (var i = 0; i < fecha.length; i++) {
+            console.log(fecha[i].fecha);
+            app.dessa.push(fecha[i].fecha);
+         }
+        console.log(app.dessa);
     </script>
     <script>
 		$(document).ready(function(){
+
+            var curr = new Date; // get current date
+            var first = curr.getDate() - curr.getDay()+1; // First day is the day of the month - the day of the week
+            var last = first + 6; // last day is the first day + 6
+
+            var firstday = new Date(curr.setDate(first));
+            var lastday = new Date(curr.setDate(last));
+
+
 			var dd = $('.calendar').datepicker({
 			    todayHighlight: true,
 				daysOfWeekDisabled: [0],
 				weekStart: 1,
 				format: "yyyy-mm-dd",
 				datesDisabled: app.dessa,
+                startDate:firstday,
+                endDate:lastday,
+
 			}).on('changeDate', function(e) {
+                console.log(e.date)
 				    desactivar = e.format("yyyy/mm/dd")
                     app.fec = (e.format('yyyy-mm-dd'));
         		// `e` here contains the extra attributes
