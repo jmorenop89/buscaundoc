@@ -98,7 +98,11 @@
 								</div>
 							</div>
 							<div class="col-lg-5">
+<<<<<<< HEAD
+								<ul class="pac time_select version_2 doc add_top_20">
+=======
 								<ul class="pac time_select version_2 add_top_20 text-center">
+>>>>>>> 2d07c58828447a042938402b20b9941c02af3212
 									<li>
 										<input type="radio" id="radio1" name="radio_time" value="09.30am">
 										<label for="radio1">09.30am</label>

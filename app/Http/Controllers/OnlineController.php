@@ -34,8 +34,19 @@ class OnlineController extends Controller
     	return view('online.log-doc.index');
     }
 
-    public function busqueda(){
-    	return view('online.reservar_cita.listadoc');
+    public function busqueda(Request $request){
+        //dd($request);
+        $es = $request['specialty'];
+        $especial = Especialidad::where('nombre','=',$es)->get('id');
+        //dd($especial->id);
+        $especial = $especial[0]->id;
+        //dd($especial);
+        $ci = $request['city'];
+        $ciud = Ciudad::where('nombre','like',$ci.'%')->get(); 
+        $ciud = $ciud[0]->id;
+        $doc = Doctor::where('especialidad_id','like',$especial)->where('ciudad_id','like',$ciud)->get();
+        //dd($doc);
+    	return view('online.reservar_cita.listadoc',compact('doc'));
     }
 
     public function det_hora(){
