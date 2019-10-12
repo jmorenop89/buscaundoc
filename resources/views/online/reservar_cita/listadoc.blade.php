@@ -36,7 +36,7 @@
 					<div class="strip_list wow fadeIn">
 						<a href="#0" class="wish_bt"></a>
 						<figure>
-							<a href="detail-page.html"><img src="http://via.placeholder.com/565x565.jpg" alt=""></a>
+							<a><img src="http://via.placeholder.com/565x565.jpg" alt=""></a>
 						</figure>
 						<small>{{ $key->especialidad->nombre }}</small>
 						<h3>{{ $key->nombres }} {{ $key->apellidos}}</h3>
