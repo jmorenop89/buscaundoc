@@ -31,7 +31,7 @@
 			ul.pac.time_select.version_2 li {
 				width:50%;
 			}
-    	}
+    	}		
     </style>
 @endsection
 
@@ -87,22 +87,22 @@
 						</div>
 
 						<div class="row add_bottom_45">
-							<div class="col-lg-7">
-								<div class="form-group">
-									<div class="calendar"></div>
-									<input type="hidden" id="my_hidden_input">
+							<div class="col-lg-12">
+								<div class="row form-group">
+									<div class="col-lg-4"></div>
+									<div class="col-lg-4">
+										<input class="calendar form-control">
+									</div>
+									<div class="col-lg-4"></div>
+									<input type="hidden" id="my_hidden_input" style="padding: inherit;">
 									<ul class="legend">
 										<li><strong></strong>Disponible</li>
 										<li><strong></strong>No disponible</li>
 									</ul>
 								</div>
 							</div>
-							<div class="col-lg-5">
-<<<<<<< HEAD
+							<div class="col-lg-12">
 								<ul class="pac time_select version_2 doc add_top_20">
-=======
-								<ul class="pac time_select version_2 add_top_20 text-center">
->>>>>>> 2d07c58828447a042938402b20b9941c02af3212
 									<li>
 										<input type="radio" id="radio1" name="radio_time" value="09.30am">
 										<label for="radio1">09.30am</label>
