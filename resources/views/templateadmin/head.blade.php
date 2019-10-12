@@ -23,7 +23,7 @@
     <link href="/assets/admin/css/responsive.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/admin/css/theme-color.css" rel="stylesheet" type="text/css"/>
 	<!-- favicon -->
-    <link rel="shortcut icon" href="/admin/img/favicon.ico"/>
+    <link rel="shortcut icon" href="/assets/online/img/favicon.ico"/>
     <!-- data tables -->
     <link href="/assets/admin/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
  </head>
