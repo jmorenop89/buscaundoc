@@ -33,7 +33,7 @@
 	                        </a>
 	                    </li>
 	                    <li class="nav-item ">
-	                        <a href="dashboard2.html" class="nav-link ">
+	                        <a href="{{route('dash.index')}}" class="nav-link ">
 	                            <span class="title">Graficas</span>
 	                        </a>
 	                    </li>
