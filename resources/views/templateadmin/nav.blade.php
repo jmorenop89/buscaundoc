@@ -53,7 +53,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="payments.html" class="appoint-icon">
+									<a href="{{route('dash.index')}}" class="appoint-icon">
 										<i class="material-icons">assignment</i>
 										<span class="block">Ver las Graficas</span>
 									</a>

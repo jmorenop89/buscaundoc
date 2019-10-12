@@ -13,9 +13,8 @@
                                 <div class="page-title">Agregar Paciente</div>
                             </div>
                             <ol class="breadcrumb page-breadcrumb pull-right">
-                                <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
-                                </li>
-                                <li><a class="parent-item" href="">Pacientes</a>&nbsp;<i class="fa fa-angle-right"></i>
+                                
+                                <li><a class="parent-item" href="{{route('pac.index')}}">Pacientes</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
                                 <li class="active">Agregar Paciente</li>
                             </ol>
