@@ -10,7 +10,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-						<h4><strong>Mostrando 10</strong> de 140 resultados</h4>
+					@if(count($doc))
+					<h4>Mostrando {{ $doc->firstItem() }} - {{ $doc->lastItem() }} de {{ $doc->total() }}  Resultados</h4>
+					@endif
+
 					</div>
 					<div class="col-md-6">
 						<div class="search_bar_list">
@@ -47,7 +50,9 @@
 					</div>
 					@endforeach
 					<!-- /strip_list -->
-					
+					@if(count($doc))
+					{!! $doc->appends($data)->render() !!} 
+					@endif
 					<nav aria-label="" class="add_top_20">
 						<ul class="pagination pagination-sm">
 							<li class="page-item disabled">

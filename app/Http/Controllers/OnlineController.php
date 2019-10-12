@@ -35,7 +35,11 @@ class OnlineController extends Controller
     }
 
     public function busqueda(Request $request){
+        $data = $request->all();
         //dd($request);
+        //paginacion
+        $pager = @$request['pager']?$request['pager']:5;
+
         $es = $request['specialty'];
         $especial = Especialidad::where('nombre','=',$es)->get('id');
         //dd($especial->id);
@@ -44,9 +48,9 @@ class OnlineController extends Controller
         $ci = $request['city'];
         $ciud = Ciudad::where('nombre','like',$ci.'%')->get(); 
         $ciud = $ciud[0]->id;
-        $doc = Doctor::where('especialidad_id','like',$especial)->where('ciudad_id','like',$ciud)->get();
+        $doc = Doctor::where('especialidad_id','like',$especial)->where('ciudad_id','like',$ciud)->paginate($pager);
         //dd($doc);
-    	return view('online.reservar_cita.listadoc',compact('doc'));
+    	return view('online.reservar_cita.listadoc',compact('doc','pager','data'));
     }
 
     public function det_hora(){
