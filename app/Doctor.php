@@ -20,4 +20,7 @@ class Doctor extends Model
     public function especialidad(){
         return $this->belongsTo('App\Especialidad');
     }
+    public function ciudad(){
+        return $this->belongsTo('App\Ciudad');
+    }
 }

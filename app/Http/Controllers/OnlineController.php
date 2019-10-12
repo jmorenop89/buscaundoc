@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Ciudad;
+use App\Disponibilidad;
 use App\Doctor;
 use App\Especialidad;
 use Illuminate\Http\Request;
@@ -53,8 +54,11 @@ class OnlineController extends Controller
     	return view('online.reservar_cita.listadoc',compact('doc','pager','data'));
     }
 
-    public function det_hora(){
-    	return view('online.reservar_cita.detalle');
+    public function det_hora($id){
+
+        $doc = Doctor::find($id);
+        $dis = Disponibilidad::where('doctor_id','=',$doc->id)->get();
+    	return view('online.reservar_cita.detalle',compact('doc','dis'));
     }
 
     public function prueba(){
