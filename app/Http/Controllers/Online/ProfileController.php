@@ -19,7 +19,26 @@ class ProfileController extends Controller
             return view('online.log-pac.index',compact('model','modela'));
         }else{
             $model = $user->doctor;
-            return view('online.log-doc.index',compact('model'));
+            $fecha = Disponibilidad::get();
+            $fil = $fecha->unique('fecha')->values();
+            // $json = $fecha->toJson();
+            $horas = array();
+            //dd($fil);
+            for ($i=0; $i < $fil->count() ; $i++) {
+                # code...
+                for ($e=0; $e < $fecha->count() ; $e++) {
+                    //dd($fil);
+                    if($fil[$i]->fecha === $fecha[$e]->fecha){
+                        $horas[] =$fecha[$e]->hora;
+                    }
+                }
+                $fil[$i]->hora = $horas;
+                $horas = array();
+            }
+            //dd($fil[0]->hora[0]);
+            //dd($fecha[0]);
+            //dd($fecha->unique('fecha'));
+            return view('online.log-doc.index',compact('model','fil'));
         }
     }
     public function guardar_horarios(Request $request,$id){

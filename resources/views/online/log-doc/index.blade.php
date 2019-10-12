@@ -213,8 +213,16 @@
 								  	<div class="row add_bottom_45">
 										<div class="col-lg-12">
 											<div class="form-group">
-												<div class="calendar"></div>
-												<input type="hidden" id="my_hidden_input">
+                                                <table border="1">
+                                                        @for($i=0; $i < $fil->count(); $i++)
+                                                        <tr>
+                                                            <th>{{ $fil[$i]->fecha }}</th>
+                                                            @foreach($fil[$i]->hora as $h)
+                                                            <td>{{ $h }}</td>
+                                                            @endforeach
+                                                        </tr>
+                                                        @endfor
+                                                </table>
 											</div>
 										</div>
 
@@ -345,6 +353,9 @@
 	<script src="/assets/online/scripts/croppic.js"></script>
 	<script src="/assets/online/js/bootstrap-datepicker.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        //console.log(@json($fil));
+    </script>
         <script>
         var app = new Vue({
           el: '#agregar-ho',
