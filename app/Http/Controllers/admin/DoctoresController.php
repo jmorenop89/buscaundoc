@@ -39,6 +39,7 @@ class DoctoresController extends Controller
     public function agregar(Request $request){
         $data = $request->all();
         $data['role'] = "doctor";
+        $data['password'] = bcrypt($data['password']);
         $use = User::create($data);
         $data['user_id'] = $use->id;
         Doctor::create($data);

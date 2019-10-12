@@ -1,7 +1,7 @@
 @extends('template.layout')
 
 @section('tittle')
-    BUSCAUNDOC - Find easily a doctor and book online an appointment
+		BuscaUnDoc - Encuentra fácilmente un médico y reserva en linea una cita.
 @endsection
 
 @section('css')
@@ -33,7 +33,9 @@
 				text-align: center;
 			}
 			.celda {
-				vertical-align:middle
+				vertical-align:middle;
+				background:#F8F8F8;
+				border: 2px solid #fff;
 			}
 		}
 
@@ -43,8 +45,13 @@
 				text-align: center;
 			}
 			.celda {
+<<<<<<< HEAD
 				vertical-align:middle;
 			}
+=======
+				vertical-align:middle;
+			}
+>>>>>>> 5ec0b2f31481a53620d8e133c15770b20c114eeb
 		}
 
 		@media (max-width: 992px) {
@@ -119,7 +126,16 @@
 			}
 		}
 
+<<<<<<< HEAD
 
+=======
+		.vertical {
+			height: 300px;
+			overflow: auto;
+			padding: 8px;
+		}
+
+>>>>>>> 5ec0b2f31481a53620d8e133c15770b20c114eeb
 	</style>
 	<link rel="stylesheet" href="/assets/plugins/croppic/croppic.css">
 @endsection
@@ -235,11 +251,11 @@
 								  	</div>
 							      	  <hr>
 								  	<div class="row add_bottom_45">
-										<div class="col-lg-12 table-responsive">
+										<div class="col-lg-12 table-responsive vertical">
 											<div class="form-group">
                                                 <table class="table letra" border="1">
                                                         @for($i=0; $i < $fil->count(); $i++)
-                                                        <tr>
+                                                        <tr class="celda">
                                                             <th class="celda">{{ $fil[$i]->fecha }}</th>
                                                             @foreach($fil[$i]->hora as $h)
                                                             <td class="celda">

@@ -40,6 +40,7 @@ class PacientesController extends Controller
         //
         $data = $request->all();
         $data['role'] = "paciente";
+        $data['password'] = bcrypt($data['password']);
         $use = User::create($data);
         $data['users_id'] = $use->id;
         Paciente::create($data);
