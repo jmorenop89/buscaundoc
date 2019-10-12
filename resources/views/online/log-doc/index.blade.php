@@ -32,20 +32,29 @@
 				width:100%;
 				text-align: center;
 			}
+			.celda {
+				vertical-align:middle
+			}
 		}
 
 		@media (max-width: 1200px) {
 			.nav-pills .nav-link {
 				width:100%;
 				text-align: center;
-			}
+			}		
+			.celda {
+				vertical-align:middle;
+			}	
 		}
 
 		@media (max-width: 992px) {
 			.nav-pills .nav-link {
 				width:100%;
 				text-align: center;
-			}
+			}		
+			.celda {
+				vertical-align:middle;
+			}	
 		}
 
 		@media (max-width: 991px) {
@@ -55,6 +64,9 @@
 			}
 			.box_profile figure{
 				margin:10px auto;
+			}			
+			.celda {
+				vertical-align:middle;
 			}
 		}
 
@@ -68,20 +80,30 @@
 			}
 			ul.doc.time_select.version_2 li {
 				width:25%;
-			}
+			}	
+			.celda {
+				vertical-align:middle;
+			}		
 		}
 
 		@media (max-width: 576px) {
 			.nav-pills .nav-link {
 				width:50%;
 				text-align: center;
-			}
-
+			}	
+			.celda {
+				vertical-align:middle;
+			}		
 		}
 		@media (max-width: 480px) {
 			ul.doc.time_select.version_2 li {
 				width: 33%;
-		  	}
+		  	}	
+			.letra .celda {
+				padding: 0.3rem;
+				font-size:12px;
+				vertical-align:middle;
+			}			
 		}
 
 		@media (max-width: 320px) {
@@ -94,8 +116,10 @@
 			}
 			ul.doc.time_select.version_2 li {
 			    width:50%;
-			}
+			}			
 		}
+
+		
 	</style>
 	<link rel="stylesheet" href="/assets/plugins/croppic/croppic.css">
 @endsection
@@ -211,14 +235,14 @@
 								  	</div>
 							      	<hr>
 								  	<div class="row add_bottom_45">
-										<div class="col-lg-12">
-											<div class="form-group">
-                                                <table border="1">
+										<div class="col-lg-12 table-responsive">
+											<div class="form-group"> 
+                                                <table class="table letra" border="1">
                                                         @for($i=0; $i < $fil->count(); $i++)
                                                         <tr>
-                                                            <th>{{ $fil[$i]->fecha }}</th>
+                                                            <th class="celda">{{ $fil[$i]->fecha }}</th>
                                                             @foreach($fil[$i]->hora as $h)
-                                                            <td>{{ $h }}</td>
+                                                            <td class="celda">{{ $h }}</td>
                                                             @endforeach
                                                         </tr>
                                                         @endfor
