@@ -33,7 +33,9 @@
 				text-align: center;
 			}
 			.celda {
-				vertical-align:middle
+				vertical-align:middle;
+				background:#F8F8F8;
+				border: 2px solid #fff;
 			}
 		}
 
@@ -43,7 +45,7 @@
 				text-align: center;
 			}		
 			.celda {
-				vertical-align:middle;
+				vertical-align:middle;				
 			}	
 		}
 
@@ -119,6 +121,11 @@
 			}			
 		}
 
+		.vertical {
+			height: 300px;
+			overflow: auto;					
+			padding: 8px;
+		}
 		
 	</style>
 	<link rel="stylesheet" href="/assets/plugins/croppic/croppic.css">
@@ -235,11 +242,11 @@
 								  	</div>
 							      	<hr>
 								  	<div class="row add_bottom_45">
-										<div class="col-lg-12 table-responsive">
+										<div class="col-lg-12 table-responsive vertical">
 											<div class="form-group"> 
                                                 <table class="table letra" border="1">
                                                         @for($i=0; $i < $fil->count(); $i++)
-                                                        <tr>
+                                                        <tr class="celda">
                                                             <th class="celda">{{ $fil[$i]->fecha }}</th>
                                                             @foreach($fil[$i]->hora as $h)
                                                             <td class="celda">{{ $h }}</td>
