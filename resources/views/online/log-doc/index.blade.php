@@ -240,7 +240,7 @@
 						      		<div class="main_title_4">
 										<h3><i class="icon_circle-slelected"></i>Selecciona fecha para eliminar horarios
 								  	</div>
-							      	<hr>
+							      	  <hr>
 								  	<div class="row add_bottom_45">
 										<div class="col-lg-12 table-responsive vertical">
 											<div class="form-group"> 
@@ -262,12 +262,12 @@
 											</ul>
 										</div>
 									</div>
-									<hr>
+									   <hr>
 									<div class="text-center"><a href="booking-page.html" class="btn_1 medium">Eliminar</a></div>
 						  	  	</div>
 
 							    <div class="tab-pane fade" id="ver-citas" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-								 	 <div class="main_title_4">
+								 	<div class="main_title_4">
 										<h3><i class="icon_circle-slelected"></i>Ver cita de pacientes</h3>
 									</div>
 								  	<hr>
@@ -385,7 +385,8 @@
 	<script src="/assets/online/js/bootstrap-datepicker.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
-        //console.log(@json($fil));
+        console.log(new Date(@json($fil)[1].fecha));
+        console.log(@json($fil)[1].fecha);
     </script>
         <script>
         var app = new Vue({
@@ -400,9 +401,6 @@
         })
     </script>
     <script>
-
-        //app.dessa.push(desactivar)
-
 		$(document).ready(function(){
 			var dd = $('.calendar').datepicker({
 			    todayHighlight: true,
@@ -427,8 +425,12 @@
 		var inter = $('#inter')
 		var botn = $('#crear')
 		var resul = $('#horas')
+        $(document).ready(function(){
+            $('#horas li label').hide()
+        })
         botn.on('click',()=>{
             $('#horas li').remove()
+            $('#horas li label').show()
             if (app.fec.length == 0) {
                 console.log("falta seleccionar una fecha")
             }
@@ -445,7 +447,6 @@
 
                       finMi = parseInt(hf.val().substr(3,2));
                       finHo = parseInt(hf.val().substr(0,2));
-
 
                     var i= 1
                   do {
