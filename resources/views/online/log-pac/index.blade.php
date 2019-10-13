@@ -122,7 +122,8 @@
 										<h3><i class="icon_circle-slelected"></i>Actualizar Datos</h3>
 									</div>
                       <hr>
-							      	<form>
+							      	<form action="{{ route('paciente.edit',$model->id)}}" method="post">
+                        @csrf
 										<!--<div class="box_form">-->
 											<div class="form-row">
 												<div class="form-group col-md-6">
