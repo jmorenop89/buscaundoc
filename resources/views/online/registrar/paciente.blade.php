@@ -10,18 +10,19 @@ BUSCAUNDOC - Encuentra fácilmente un médico y reserva en linea una cita.
 
 @section('content')
 
+
 <div class="bg_color_2"><!--  bg_color_2 -->
 	<div class="container pt-3"> <!-- margin_60_35 -->
 		<!-- <div id="register"> -->
 			<div class="row justify-content-center">
 				<div class="col-md-6">
 				<h2 class="text-center text-white">Registro de Paciente</h2>
-					<form action="{{ route('reg-pac') }}" method="post" id="frm-validate">
+					<form action="{{ route('reg-pac') }}" method="post" id="frm-validate"> 
 						<input type="hidden" name="_token" value="{{ csrf_token()}}">
 						<div class="box_form">
 							<div class="form-group">
 								<label>Nombres</label>
-								<input type="text" class="form-control" placeholder="Ingresa tus nombres" name="nombres" value="{{ old('nombres') }}">
+								<input  type="text"   class="form-control" placeholder="Ingresa tus nombres" id="nombres" name="nombres" value="{{ old('nombres') }}"  >
 							</div>
 							<div class="form-group">
 								<label>Apellidos</label>
@@ -41,22 +42,26 @@ BUSCAUNDOC - Encuentra fácilmente un médico y reserva en linea una cita.
 							</div>
 							<div class="form-group">
 								<label>Contraseña</label>
-								<input type="password" class="form-control" id="password1" placeholder="Ingresa contraseña" name="password">
+								<input type="password" class="form-control" id="password" placeholder="Ingresa contraseña" name="password">
 							</div>
 							<div class="form-group">
 								<label>Confirmar contraseña</label>
-								<input type="password" class="form-control" name="password2"  placeholder="Confirmar contraseña">
-							</div>
+								<input type="password" class="form-control" id="password2" name="password2"  placeholder="Confirmar contraseña">
+							</div> 
 							<div id="pass-info" class="clearfix"></div>
 							<div class="checkbox-holder text-left">
 								<div class="checkbox_2">
-									<input type="checkbox" value="accept_2" id="check_2" name="check_2" checked>
-									<label for="check_2"><span>Estoy de acuerdo con los <strong>terminos y condiciones</strong></span></label>
+									<input type="checkbox"  id="agree" name="agree" > <!-- value="accept_2" checked -->
+									<label for="agree"><span>Estoy de acuerdo con los <strong>terminos y condiciones</strong></span></label>
 								</div>
 							</div>
 							<div class="form-group text-center add_top_30">
 								<input class="btn_1" type="submit" value="Enviar">
 							</div>
+
+
+
+
 						</div>
 			<!-- 			<p class="text-center">
 							<small>Has voluptua vivendum accusamus cu. Ut per assueverit temporibus dissentiet. 
@@ -70,10 +75,22 @@ BUSCAUNDOC - Encuentra fácilmente un médico y reserva en linea una cita.
 		<!-- </div> -->
 		<!-- /register -->
 	</div>
+
 </div>
+
+
+
 @endsection
 
 @section('js')
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> 
+
 	<script src="/assets/online/js/bootstrap-datepicker.js"></script>
+<script src="/assets/plugins/jquery-validation/js/jquery.validate.js"></script>
+	<script src="/assets/plugins/jquery-validation/js/additional-methods.js"></script> 
 	<script src="/assets/online/scripts/patient.js"></script>
+
+
+
+
 @endsection

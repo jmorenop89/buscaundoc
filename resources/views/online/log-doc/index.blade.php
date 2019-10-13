@@ -169,7 +169,10 @@
 												<div class="form-row">
 													<div class="form-group col-md-6">
 														<label>Hora Inico</label>
+
 														<input type="time" class="form-control" id="hora_i">
+
+														
 													</div>
 													<div class="form-group col-md-6">
 														<label>Hora Fin</label>
@@ -204,6 +207,11 @@
                                         @endif
 									</div>
 								</div>
+
+								<form>
+  						<label for="appt-time">Choose an appointment time: </label>
+  								<input id="appt-time" type="time" name="appt-time">
+								</form>
 
 							    <div class="tab-pane fade" id="eliminar-ho" role="tabpanel" aria-labelledby="v-pills-profile-tab">
 						      		<div class="main_title_4">

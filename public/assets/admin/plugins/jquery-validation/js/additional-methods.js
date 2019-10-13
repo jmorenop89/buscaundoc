@@ -83,6 +83,21 @@ $.validator.addMethod("alphanumeric", function(value, element) {
  * We accept the notation with spaces, as that is common.
  * acceptable: 123456789 or 12 34 56 789
  */
+
+/*  $.validator.addMethod(	"regex",
+	function(value, element, regexp) {
+		var re = new RegExp(regexp);
+		return this.optional(element) || re.test(value);
+	},
+	"Please check your input."
+);
+ */
+$.validator.addMethod("regx", function(value, element, regexpr) {          
+    return regexpr.test(value);
+}, "Please enter a valid pasword.");
+
+
+
 $.validator.addMethod("bankaccountNL", function(value, element) {
 	if (this.optional(element)) {
 		return true;
@@ -994,5 +1009,8 @@ $.validator.addMethod("zipcodeUS", function(value, element) {
 $.validator.addMethod("ziprange", function(value, element) {
 	return this.optional(element) || /^90[2-5]\d\{2\}-\d{4}$/.test(value);
 }, "Your ZIP-code must be in the range 902xx-xxxx to 905xx-xxxx");
+
+
+
 
 }));

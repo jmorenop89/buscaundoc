@@ -2831,10 +2831,10 @@ a.social_bt {
 	}
 }
 
-.checkbox_2 {
-	position: relative;
-	display: block;
-	&:before {
+/* .checkbox_2 {
+ 	position: relative;
+	display: block; 
+ 	&:before {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -2843,9 +2843,9 @@ a.social_bt {
 		height: 20px;
 		cursor: pointer;
 		border: 2px solid $border-color-2;
-		background: transparent;
+		background: transparent;  
 	}
-	input[type=checkbox]:focus+label:before {
+	 input[type=checkbox]:focus+label:before {
 		@include rgba(bg,$secondary-color,0.2);
 	}
 	label:after {
@@ -2868,8 +2868,8 @@ a.social_bt {
 			opacity: 1;
 		}
 	}
-}
-
+} 
+ */
 .checkbox-holder span {
 	position: relative;
 	display: inline-block;
