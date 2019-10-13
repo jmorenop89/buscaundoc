@@ -2898,20 +2898,17 @@ a.social_bt {
 .checkbox_2 {
   position: relative;
   display: block; }
-  .checkbox_2:before {
-    content: '';
+  .checkbox_2 input[type=checkbox] {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 5px;
+    left: 5px;
     width: 20px;
     height: 20px;
-    border: 2px solid #e1e8ed;
-    background: transparent;
-    border-radius: 5px }
-  .checkbox_2 input[type=checkbox]:focus + label:before {
+    border: 2px red solid }
+  .checkbox_2 input[type=checkbox]:focus {
     background-color: #1e66ea;
-    background-color: rgba(49, 115, 236, 0.2); }
-  .checkbox_2 label:after {
+    background-color: red; }
+  .checkbox_2 input[type=checkbox]:after {
     content: '';
     position: absolute;
     top: 5px;
@@ -2927,13 +2924,12 @@ a.social_bt {
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     border-radius: 5px }
-  .checkbox_2 input[type=checkbox] {
+/*  .checkbox_2 input[type=checkbox] {
     opacity: 0;
     position: absolute;
-    width: 0;
-    height: 0; }
-    .checkbox_2 input[type=checkbox]:checked + label:after {
-      opacity: 1; }
+    /*borre el width y el height que tenian 0*/
+    .checkbox_2 input[type=checkbox]:checked  {
+      opacity: 0 }
 
 .checkbox-holder span {
   position: relative;

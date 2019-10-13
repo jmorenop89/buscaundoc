@@ -22,8 +22,15 @@ class ProfileController extends Controller
             $pac =$pac[0]->id;
             $cita = Cita::where('paciente_id','=',$pac)->get();
             setlocale(LC_TIME, "es_CO.UTF-8");
-            $fecha = ucfirst(strftime("%A ".date("d/m/Y",strtotime($cita[0]->disponibilidad->fecha))));
-            $hora = strftime("%I:%M %p",strtotime($cita[0]->disponibilidad->hora));
+            $fecha = array();
+            $hora = array();
+            for ($i=0; $i < $cita->count(); $i++) {
+                # code...
+            //dd($cita->count());
+            $fecha[$i] = ucfirst(strftime("%A ".date("d/m/Y",strtotime($cita[$i]->disponibilidad->fecha))));
+            $hora[$i] = strftime("%I:%M %p",strtotime($cita[$i]->disponibilidad->hora));
+            }
+            //dd($hora[0]);
             //dd($hora);
             return view('online.log-pac.index',compact('model','cita','fecha','hora'));
         }else{
