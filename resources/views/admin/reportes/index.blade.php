@@ -13,8 +13,7 @@
                                 <div class="page-title">DASHBOARD</div>
                             </div>
                             <ol class="breadcrumb page-breadcrumb pull-right">
-                                <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">INICIO</a>&nbsp;<i class="fa fa-angle-right"></i>
-                                </li>
+                                
                                 <li class="active">DASHBOARD</li>
                             </ol>
                         </div>
