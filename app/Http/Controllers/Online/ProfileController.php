@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Online;
 
+use App\Cita;
 use App\Disponibilidad;
 use App\Doctor;
 use App\Http\Controllers\Controller;
 use App\Library\Croppic;
+use App\Paciente;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,8 +17,15 @@ class ProfileController extends Controller
         $user = Auth::user();
         if($user->role == 'paciente'){
             $model = $user->paciente;
-
-            return view('online.log-pac.index',compact('model','modela'));
+            //dd($user->id);
+            $pac = Paciente::where('users_id','=',$user->id)->get();
+            $pac =$pac[0]->id;
+            $cita = Cita::where('paciente_id','=',$pac)->get();
+            setlocale(LC_TIME, "es_CO.UTF-8");
+            $fecha = ucfirst(strftime("%A ".date("d/m/Y",strtotime($cita[0]->disponibilidad->fecha))));
+            $hora = strftime("%I:%M %p",strtotime($cita[0]->disponibilidad->hora));
+            //dd($hora);
+            return view('online.log-pac.index',compact('model','cita','fecha','hora'));
         }else{
             $model = $user->doctor;
             $fecha = Disponibilidad::get();

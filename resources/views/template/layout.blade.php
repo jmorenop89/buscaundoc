@@ -45,7 +45,7 @@
 						<h1><a href="/" title="BUSCAUNDOC">BUSCAUNDOC</a></h1>
 					</div>
 				</div>
-				<div class="col-lg-7 col-6">
+				<div class="col-lg-9 col-6">
 
 					<nav id="menu" class="main-menu">
 						<ul  id="top_access">

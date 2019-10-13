@@ -12,6 +12,8 @@
 */
 Auth::routes();
 
+Route::post('/probar/{id}','OnlineController@probar')->name('probar');
+
 Route::get('/','OnlineController@index')->name('inicio');
 Route::get('login',[ 'as' => 'login','uses'=>'Online\LoginController@index']);
 Route::post('login',['as' => 'login','uses'=>'Auth\LoginController@validateLogin']);
@@ -25,8 +27,9 @@ Route::group(['prefix' => 'register'], function(){
 });
 
 
-Route::post('/list','OnlineController@busqueda')->name('buscar');
-Route::get('/detalle','OnlineController@det_hora');
+Route::get('/list','OnlineController@busqueda')->name('buscar');
+Route::get('/detalle/{id}','OnlineController@det_hora')->name('detalle');
+Route::post('/probar/{id}','Online\CitaController@reservar')->name('probar');
 
 Route::get('/doc', function () {
     return view('online.log-doc.index');
@@ -39,6 +42,7 @@ Route::get('/doc', function () {
 Route::group(['middleware' => 'auth'],function(){
     Route::group(['prefix' => 'profile'],function(){
         Route::get('/',['as' =>'profile','uses'=>'Online\ProfileController@index']);
+        Route::post('/{id}',['as' =>'paciente.edit','uses'=>'Online\PacienteController@edit']);
         Route::post('/horas/{id}',['as' =>'horarios','uses'=>'Online\ProfileController@guardar_horarios']);
         Route::post('save-image',['as'=>'profile.image.store','uses'=>'Online\ProfileController@store_image']);
         Route::post('delete-image',['as'=>'profile.image.delete','uses'=>'Online\ProfileController@delete_image']);

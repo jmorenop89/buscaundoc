@@ -1,7 +1,7 @@
 @extends('template.layout')
 
 @section('tittle')
-    BUSCAUNDOC - Find easily a doctor and book online an appointment
+        BuscaUnDoc - Encuentra fácilmente un médico y reserva en linea una cita.
 @endsection
 
 @section('content')
@@ -17,10 +17,10 @@
       </div>
     </div>
     <!-- /breadcrumb -->
-    
+
     <div class="container margin_60">
       <div class="row">
-        
+
         <aside class="col-xl-3 col-lg-4" id=""> <!-- id="sidebar"-->
           <div class="box_profile">
             <figure>
@@ -37,7 +37,7 @@
           </div>
         </aside>
         <!-- /asdide -->
-        
+
         <div class="col-xl-9 col-lg-8">
 
           <div class="tabs_styled_2">
@@ -45,42 +45,22 @@
                   <div class="tab-content" id="v-pills-tabContent">
 
                     <div class="tab-pane fade  show active" id="ver-citas" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                    <div class="main_title_4">
-										<h3><i class="icon_circle-slelected"></i>Mis citas</h3>
-									</div>
-                      <hr>
-                     
-                      <div class="strip_list wow fadeIn">
-                  <figure>
-                      <a href="detail-page.html"><img src="http://via.placeholder.com/565x565.jpg" alt=""></a>
-                    </figure>
-                    
-                    <small>Urólogo</small>
-                    <h3>Dr. Fidel</h3>
-                    <p>Lunes 01/11/2018 4:30 pm</p>
-                    <a class="btn btn-primary" href="#" role="button">Pendiente</a>
-                  </div>
-                   
-                   
-                  <div class="strip_list wow fadeIn">
-                  <figure>
-                      <a href="detail-page.html"><img src="http://via.placeholder.com/565x565.jpg" alt=""></a>
-                    </figure>
-                    
-                    <small>Ginecologo</small>
-                    <h3>Dr. alberto</h3>
-                    <p>Mierecoles 21/03/2018 8:30 am</p>
-                    <a class="btn btn-secondary" href="#" role="button">Atendida</a>
-                  </div>
-                    <div class="strip_list wow fadeIn">
-                  <figure>
-                      <a href="detail-page.html"><img src="http://via.placeholder.com/565x565.jpg" alt=""></a>
-                    </figure>
-                    <small>Pediatra</small>
-                    <h3>Dr. Carlos</h3>
-                    <p>23/10/2018 5:30 pm</p>
-                    <a class="btn btn-info" href="#" role="button">Anulada</a>
-                    </div>
+                        <div class="main_title_4">
+    						<h3><i class="icon_circle-slelected"></i>Mis citas</h3>
+    					</div>
+                            <hr>
+                    @foreach($cita as $c)
+                        <div class="strip_list wow fadeIn">
+                            <figure>
+                              <a href="detail-page.html"><img src="http://via.placeholder.com/565x565.jpg" alt=""></a>
+                            </figure>
+                            <small>{{$c->disponibilidad->doctor->especialidad->nombre}}</small>
+                            <h3>{{$c->disponibilidad->doctor->nombres}}</h3>
+                            <p>{{ $fecha}} {{  $hora }}</p>
+                            <a class="btn btn-primary" href="#" role="button">Pendiente</a>
+                        </div>
+                    @endforeach
+
                     </div>
                     <div class="tab-pane fade" id="notifi" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                     <div class="main_title_4">
@@ -101,28 +81,29 @@
 						          <span aria-hidden="true">&times;</span>
 					            </button>
                       </div>
-                      
+
                       <div class="alert alert-primary mt-1" id="alerta">
 				            	Le recordamos que en 3 dìas tiene una cita agendada con el médico Alberto Campos.
 				            	<button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
 						          <span aria-hidden="true">&times;</span>
 					            </button>
                       </div>
-                      
+
                       <div class="alert alert-primary mt-1" id="alerta">
 				            	Le recordamos que en 3 dìas tiene una cita agendada con el médico Alberto Campos.
 				            	<button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
 						          <span aria-hidden="true">&times;</span>
 					            </button>
 			              	</div>
-                   
+
                     </div>
                     <div class="tab-pane fade" id="config" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                     <div class="main_title_4">
 										<h3><i class="icon_circle-slelected"></i>Actualizar Datos</h3>
 									</div>
                       <hr>
-							      	<form>
+							      	<form action="{{ route('paciente.edit',$model->id)}}" method="post">
+                        @csrf
 										<!--<div class="box_form">-->
 											<div class="form-row">
 												<div class="form-group col-md-6">
@@ -167,13 +148,13 @@
 											<hr>
 											<div class="form-group text-center add_top_30">
 												<input class="btn_1" type="submit" value="Actualizar">
-											</div>								
+											</div>
 										<!--</div> -->
 									</form>
                     </div>
 
                   </div>
-                  
+
             <!-- /tab-content -->
           </div>
           <!-- /tabs_styled -->
@@ -185,5 +166,5 @@
     <!-- /container -->
   </main>
   <!-- /main -->
-  
+
 @endsection

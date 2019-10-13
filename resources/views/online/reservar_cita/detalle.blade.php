@@ -1,7 +1,7 @@
 @extends('template.layout')
 
 @section('tittle')
-    BUSCAUNDOC - Find easily a doctor and book online an appointment
+		BuscaUnDoc - Encuentra fácilmente un médico y reserva en linea una cita.
 @endsection
 
 @section('css')
@@ -55,26 +55,14 @@
 						<figure>
 							<img src="http://via.placeholder.com/565x565.jpg" alt="" class="img-fluid">
 						</figure>
-						<small>Atencion Principal - Medico Cardiologo</small>
-						<h1>Dr. Michel Butron</h1>
-						<span class="rating">
-							<i class="icon_star voted"></i>
-							<i class="icon_star voted"></i>
-							<i class="icon_star voted"></i>
-							<i class="icon_star voted"></i>
-							<i class="icon_star"></i>
-							<small>(145)</small>
-							<a href="badges.html" data-toggle="tooltip" data-placement="top" data-original-title="Badge Level" class="badge_list_1"><img src="img/badges/badge_1.svg" width="15" height="15" alt=""></a>
-						</span>
-						<ul class="statistic">
-							<li>854 Views</li>
-							<li>124 Patients</li>
-						</ul>
+						<small>Atencion Principal - {{$doc-> especialidad->nombre}}</small>
+						<h1>{{ $doc-> nombres }} {{$doc-> apellidos}}</h1>
+						<span> {{$doc-> ciudad->nombre}}</span>
 						<ul class="contacts">
-							<li><h6>Dirección</h6>Los Zafiros # 646 San Isidro</li>
-							<li><h6>Teléfono</h6><a href="tel://000434323342">999-999-999</a></li>
+							<li><h6>Dirección</h6>{{ $doc-> direccion}}</li>
+							<li><h6>Teléfono</h6><a href="tel://000434323342"></a></li>
 						</ul>
-						<div class="text-center"><a href="https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x0:0xa6a9af76b1e2d899!2sAssistance+%E2%80%93+H%C3%B4pitaux+De+Paris!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361" class="btn_1 outline" target="_blank"><i class="icon_pin"></i>Ver en el mapa</a></div>
+						<div class="text-center"><a href="https://www.google.com/maps/place/" class="btn_1 outline" target="_blank"><i class="icon_pin"></i>Ver en el mapa</a></div>
 					</div>
 				</aside>
 				<!-- /asdide -->
@@ -83,82 +71,40 @@
 
 					<div class="box_general_2 add_bottom_45">
 						<div class="main_title_4">
-							<h3><i class="icon_circle-slelected"></i>Selecciona fecha y hora</h3>
+							<h3><i class="icon_circle-slelected"></i>Selecciona tu Fecha</h3>
 						</div>
 
 						<div class="row add_bottom_45">
-							<div class="col-lg-7">
-								<div class="form-group">
-									<div class="calendar"></div>
-									<input type="hidden" id="my_hidden_input">
-									<ul class="legend">
-										<li><strong></strong>Disponible</li>
-										<li><strong></strong>No disponible</li>
-									</ul>
+							<div class="col-lg-12">
+								<div class="row form-group">
+									<div class="col-lg-3"></div>
+									<div class="col-lg-6">
+										<input class="calendar form-control" style="text-align:center; font-size:20px;" form="reserva_cita" name="fecha">
+									   <input type="hidden" id="my_hidden_input" style="padding: inherit;">
+									</div>
+									<div class="col-lg-3"></div>
 								</div>
 							</div>
-							<div class="col-lg-5">
-<<<<<<< HEAD
-								<ul class="pac time_select version_2 doc add_top_20">
-=======
-								<ul class="pac time_select version_2 add_top_20 text-center">
->>>>>>> 2d07c58828447a042938402b20b9941c02af3212
-									<li>
-										<input type="radio" id="radio1" name="radio_time" value="09.30am">
-										<label for="radio1">09.30am</label>
-									</li>
-									<li>
-										<input type="radio" id="radio2" name="radio_time" value="10.00am">
-										<label for="radio2">10.00am</label>
-									</li>
-									<li>
-										<input type="radio" id="radio3" name="radio_time" value="10.30am">
-										<label for="radio3">10.30am</label>
-									</li>
-									<li>
-										<input type="radio" id="radio4" name="radio_time" value="11.00am">
-										<label for="radio4">11.00am</label>
-									</li>
-									<li>
-										<input type="radio" id="radio5" name="radio_time" value="11.30am">
-										<label for="radio5">11.30am</label>
-									</li>
-									<li>
-										<input type="radio" id="radio6" name="radio_time" value="12.00am">
-										<label for="radio6">12.00am</label>
-									</li>
-									<li>
-										<input type="radio" id="radio7" name="radio_time" value="01.30pm">
-										<label for="radio7">01.30pm</label>
-									</li>
-									<li>
-										<input type="radio" id="radio8" name="radio_time" value="02.00pm">
-										<label for="radio8">02.00pm</label>
-									</li>
-									<li>
-										<input type="radio" id="radio9" name="radio_time" value="02.30pm">
-										<label for="radio9">02.30pm</label>
-									</li>
-									<li>
-										<input type="radio" id="radio10" name="radio_time" value="03.00pm">
-										<label for="radio10">03.00pm</label>
-									</li>
-									<li>
-										<input type="radio" id="radio11" name="radio_time" value="03.30pm">
-										<label for="radio11">03.30pm</label>
-									</li>
-									<li>
-										<input type="radio" id="radio12" name="radio_time" value="04.00pm">
-										<label for="radio12">04.00pm</label>
+							<div class="col-lg-12">
+                                <div class="main_title_4">
+                                    <h3><i class="icon_circle-slelected"></i>Selecciona tu Hora</h3>
+                                </div>
+								<ul class="pac time_select version_2 doc add_top_20" id="listar_horarios" class="justify-content-center">
+									<li v-for="(h , index) of horas">
+										<input type="radio" :id="'radio'+index" name="radio_time[]" :value="h" form="reserva_cita">
+										<label :for="'radio'+index">@{{h}}</label>
 									</li>
 								</ul>
+                                <form action="{{route('probar', Auth::user()->id)}}" method="post" id="reserva_cita" hidden>
+                                    @csrf
+                                </form>
 							</div>
 						</div>
 						<!-- /row -->
 
 
 						<hr>
-						<div class="text-center"><a href="booking-page.html" class="btn_1 medium">Reservar Cita</a></div>
+						<div class="text-center"><input type="submit" class="btn_1 medium" value="Reservar Cita" form="reserva_cita">
 					</div>
 					<!-- /box_general -->
 
@@ -175,6 +121,8 @@
 
 @section('js')
 	<script src="/assets/online/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
      <script>
 		$(document).ready(function(){
 			var dd = $('.calendar').datepicker({
@@ -182,7 +130,8 @@
 				daysOfWeekDisabled: [0],
 				weekStart: 1,
 				format: "yyyy-mm-dd",
-				datesDisabled: ["2017/10/20", "2017/11/21","2017/12/21", "2018/01/21","2018/02/21","2018/03/21"],
+                startDate:new Date(),
+                autoclose:true,
 			}).on('changeDate', function(e) {
 				console.log(e.date);
 				console.log(e.format('yyyy-mm-dd'));
@@ -190,4 +139,36 @@
     		});
     	});
 	</script>
+    <script>
+        $hora = [];
+        $contador = 1;
+        $(document).ready(function(){
+            $('.calendar').datepicker({}).on('changeDate',function(e){
+                $di = @json($dis);
+                // console.log(@json($dis));
+                for (var i = 0;i < $di.length; i++) {
+
+                    if($('.calendar').val() === $di[i].fecha){
+                        if ($contador === 1) {
+                        //console.log($contador);
+                        $hora = $di[i].hora;
+                        $contador++;
+                        }
+                    }
+                }
+                if (! $hora.length == 0) {
+                console.log($hora);
+                console.log(app.horas = $hora);
+                console.log(app.horas);
+
+                }
+            })
+        })
+        var app = new Vue({
+          el: '#listar_horarios',
+          data: {
+            horas:[],
+          }
+        })
+    </script>
 @endsection

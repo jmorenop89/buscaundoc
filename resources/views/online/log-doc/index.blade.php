@@ -1,7 +1,7 @@
 @extends('template.layout')
 
 @section('tittle')
-    BUSCAUNDOC - Find easily a doctor and book online an appointment
+		BuscaUnDoc - Encuentra fácilmente un médico y reserva en linea una cita.
 @endsection
 
 @section('css')
@@ -32,6 +32,11 @@
 				width:100%;
 				text-align: center;
 			}
+			.celda {
+				vertical-align:middle;
+				background:#F8F8F8;
+				border: 2px solid #fff;
+			}
 		}
 
 		@media (max-width: 1200px) {
@@ -39,12 +44,18 @@
 				width:100%;
 				text-align: center;
 			}
+			.celda {
+				vertical-align:middle;
+			}
 		}
 
 		@media (max-width: 992px) {
 			.nav-pills .nav-link {
 				width:100%;
 				text-align: center;
+			}
+			.celda {
+				vertical-align:middle;
 			}
 		}
 
@@ -55,6 +66,9 @@
 			}
 			.box_profile figure{
 				margin:10px auto;
+			}
+			.celda {
+				vertical-align:middle;
 			}
 		}
 
@@ -69,6 +83,9 @@
 			ul.doc.time_select.version_2 li {
 				width:25%;
 			}
+			.celda {
+				vertical-align:middle;
+			}
 		}
 
 		@media (max-width: 576px) {
@@ -76,12 +93,19 @@
 				width:50%;
 				text-align: center;
 			}
-
+			.celda {
+				vertical-align:middle;
+			}
 		}
 		@media (max-width: 480px) {
 			ul.doc.time_select.version_2 li {
 				width: 33%;
 		  	}
+			.letra .celda {
+				padding: 0.3rem;
+				font-size:12px;
+				vertical-align:middle;
+			}
 		}
 
 		@media (max-width: 320px) {
@@ -96,6 +120,13 @@
 			    width:50%;
 			}
 		}
+
+		.vertical {
+			height: 300px;
+			overflow: auto;
+			padding: 8px;
+		}
+
 	</style>
 	<link rel="stylesheet" href="/assets/plugins/croppic/croppic.css">
 @endsection
@@ -183,7 +214,7 @@
 														<input type="time" valueAsNumber class="form-control" id="inter">
 													</div>
 												</div>
-												<div class="text-center" id="crear"><div class="btn_1 medium">Guardar</div></div>
+												<div class="text-center" id="crear"><div class="btn_1 small">Crear Horarios</div></div>
 										</div>
 										<div class="col-lg-12">
 											<ul class="doc time_select version_2 doc add_top_20 text-center" id="horas">
@@ -193,9 +224,9 @@
                                                 </li>
 											</ul>
 										</div>
-                                        <div class="col-lg-12">
+                                        <div class="col-lg-12 text-right">
                                             <input type="text"  id="fecha" name="fecha" v-model="fec" hidden form="hor_doc">
-                                            <input type="submit" id="enviar_ho"class="btn btn-primary"value="Añadir Horarios" form="hor_doc">
+                                            <input type="submit" id="enviar_ho"class="btn_1 medium"value="Guardar Horarios" form="hor_doc">
                                         </div>
                                         <form action="{{route('horarios',$model->id)}}" method="post" id="hor_doc" hidden>
                                             @csrf
@@ -217,16 +248,20 @@
 						      		<div class="main_title_4">
 										<h3><i class="icon_circle-slelected"></i>Selecciona fecha para eliminar horarios
 								  	</div>
-							      	<hr>
+							      	  <hr>
 								  	<div class="row add_bottom_45">
-										<div class="col-lg-12">
+										<div class="col-lg-12 table-responsive vertical">
 											<div class="form-group">
-                                                <table border="1">
+                                                <table class="table letra" border="1">
                                                         @for($i=0; $i < $fil->count(); $i++)
-                                                        <tr>
-                                                            <th>{{ $fil[$i]->fecha }}</th>
+                                                        <tr class="celda">
+                                                            <th class="celda">{{ $fil[$i]->fecha }}</th>
                                                             @foreach($fil[$i]->hora as $h)
-                                                            <td>{{ $h }}</td>
+                                                            <td class="celda">
+                                                                {{ $h }}<button type="button" class="close" aria-label="Close">
+                                                                  <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </td>
                                                             @endforeach
                                                         </tr>
                                                         @endfor
@@ -239,12 +274,12 @@
 											</ul>
 										</div>
 									</div>
-									<hr>
+									   <hr>
 									<div class="text-center"><a href="booking-page.html" class="btn_1 medium">Eliminar</a></div>
 						  	  	</div>
 
 							    <div class="tab-pane fade" id="ver-citas" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-								 	 <div class="main_title_4">
+								 	<div class="main_title_4">
 										<h3><i class="icon_circle-slelected"></i>Ver cita de pacientes</h3>
 									</div>
 								  	<hr>
@@ -361,9 +396,6 @@
 	<script src="/assets/online/scripts/croppic.js"></script>
 	<script src="/assets/online/js/bootstrap-datepicker.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script>
-        //console.log(@json($fil));
-    </script>
         <script>
         var app = new Vue({
           el: '#agregar-ho',
@@ -375,19 +407,36 @@
             dessa:["2019/10/03"],
           }
         })
+        var fecha = @json($fil);
+        var fedes = [];
+        // console.log(fecha[0].fecha);
+         for (var i = 0; i < fecha.length; i++) {
+            console.log(fecha[i].fecha);
+            app.dessa.push(fecha[i].fecha);
+         }
+        console.log(app.dessa);
     </script>
     <script>
-
-        //app.dessa.push(desactivar)
-
 		$(document).ready(function(){
+
+            var curr = new Date; // get current date
+            var first = curr.getDate() - curr.getDay()+1; // First day is the day of the month - the day of the week
+            var last = first + 6; // last day is the first day + 6
+
+            var firstday = new Date(curr.setDate(first));
+            var lastday = new Date(curr.setDate(last));
+
+
 			var dd = $('.calendar').datepicker({
 			    todayHighlight: true,
 				daysOfWeekDisabled: [0],
 				weekStart: 1,
 				format: "yyyy-mm-dd",
 				datesDisabled: app.dessa,
+                startDate:firstday,
+                endDate:lastday,
 			}).on('changeDate', function(e) {
+                console.log(e.date)
 				    desactivar = e.format("yyyy/mm/dd")
                     app.fec = (e.format('yyyy-mm-dd'));
         		// `e` here contains the extra attributes
@@ -404,8 +453,11 @@
 		var inter = $('#inter')
 		var botn = $('#crear')
 		var resul = $('#horas')
+        $(document).ready(function(){
+            $('#horas li label').hide()
+            $('#enviar_ho').hide()
+        })
         botn.on('click',()=>{
-            $('#horas li').remove()
             if (app.fec.length == 0) {
                 console.log("falta seleccionar una fecha")
             }
@@ -414,6 +466,9 @@
                     console.log("falta crear sus intervalos")
                 }
                 else{
+                    $('#horas li').remove()
+                    $('#horas li label').show()
+                    $('#enviar_ho').show()
                       inMi = parseInt(hi.val().substr(3,2));
                       inHo = parseInt(hi.val().substr(0,2));
 
@@ -422,7 +477,6 @@
 
                       finMi = parseInt(hf.val().substr(3,2));
                       finHo = parseInt(hf.val().substr(0,2));
-
 
                     var i= 1
                   do {
