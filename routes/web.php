@@ -42,6 +42,7 @@ Route::get('/doc', function () {
 Route::group(['middleware' => 'auth'],function(){
     Route::group(['prefix' => 'profile'],function(){
         Route::get('/',['as' =>'profile','uses'=>'Online\ProfileController@index']);
+        Route::post('/{id}',['as' =>'paciente.edit','uses'=>'Online\PacienteController@edit']);
         Route::post('/horas/{id}',['as' =>'horarios','uses'=>'Online\ProfileController@guardar_horarios']);
         Route::post('save-image',['as'=>'profile.image.store','uses'=>'Online\ProfileController@store_image']);
         Route::post('delete-image',['as'=>'profile.image.delete','uses'=>'Online\ProfileController@delete_image']);

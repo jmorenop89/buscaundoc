@@ -45,13 +45,8 @@
 				text-align: center;
 			}
 			.celda {
-<<<<<<< HEAD
 				vertical-align:middle;
 			}
-=======
-				vertical-align:middle;
-			}
->>>>>>> 5ec0b2f31481a53620d8e133c15770b20c114eeb
 		}
 
 		@media (max-width: 992px) {
@@ -126,16 +121,12 @@
 			}
 		}
 
-<<<<<<< HEAD
-
-=======
 		.vertical {
 			height: 300px;
 			overflow: auto;
 			padding: 8px;
 		}
 
->>>>>>> 5ec0b2f31481a53620d8e133c15770b20c114eeb
 	</style>
 	<link rel="stylesheet" href="/assets/plugins/croppic/croppic.css">
 @endsection
