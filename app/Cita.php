@@ -12,4 +12,12 @@ class Cita extends Model
     protected $fillable = [
     	'disponibilidad_id', 'paciente_id'
     ];
+
+    public function paciente(){
+        return $this->belongsTo('App\Paciente');
+    }
+
+    public function disponibilidad(){
+        return $this->belongsTo('App\Disponibilidad');
+    }
 }

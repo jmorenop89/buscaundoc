@@ -12,4 +12,7 @@ class Disponibilidad extends Model
     protected $fillable = [
         'fecha', 'hora', 'doctor_id',
     ];
+    public function doctor(){
+        return $this->belongsTo('App\Doctor');
+    }
 }

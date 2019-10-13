@@ -93,6 +93,5 @@ class OnlineController extends Controller
         return response($model);
     }
     public function probar(Request $request ,$id){
-        dd($request);
     }
 }
