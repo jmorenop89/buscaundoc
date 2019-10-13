@@ -29,6 +29,7 @@ Route::group(['prefix' => 'register'], function(){
 
 Route::get('/list','OnlineController@busqueda')->name('buscar');
 Route::get('/detalle/{id}','OnlineController@det_hora')->name('detalle');
+Route::post('/probar/{id}','Online\CitaController@reservar')->name('probar');
 
 Route::get('/doc', function () {
     return view('online.log-doc.index');
