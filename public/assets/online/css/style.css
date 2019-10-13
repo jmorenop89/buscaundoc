@@ -2900,8 +2900,8 @@ a.social_bt {
   display: block; }
   .checkbox_2 input[type=checkbox] {
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 2px;
+    left: 0;
     width: 20px;
     height: 20px;
     border: 2px red solid }
@@ -2911,8 +2911,6 @@ a.social_bt {
   .checkbox_2 input[type=checkbox]:after {
     content: '';
     position: absolute;
-    top: 5px;
-    left: 5px;
     width: 10px;
     height: 10px;
     cursor: pointer;
@@ -2929,7 +2927,7 @@ a.social_bt {
     position: absolute;
     /*borre el width y el height que tenian 0*/
     .checkbox_2 input[type=checkbox]:checked  {
-      opacity: 0 }
+      opacity: 1 }
 
 .checkbox-holder span {
   position: relative;

@@ -39,6 +39,7 @@
 		                        <div class="form-group col-md-6">
 		                        	<label>Ciudad</label>
 		                            <select class="form-control" name="ciudad_id" id="country_register">
+                                        <option disabled selected >Seleccionar una ciudad</option>
 		                                @foreach($ciud as $ciuds)
 				                            <option value="{{ $ciuds->id }}" >{{$ciuds->nombre}}</option>
 				                        @endforeach
@@ -76,8 +77,8 @@
 							<div id="pass-info" class="clearfix"></div>
 							<div class="checkbox-holder text-left">
 								<div class="checkbox_2">
-									<input type="checkbox" value="accept_2" id="check_2" name="check_2" checked>
 									<label for="check_2"><span>Estoy de acuerdo con los <strong>terminos y condiciones</strong></span></label>
+									<input type="checkbox" id="agree" name="agree">
 								</div>
 							</div>
 							<div class="form-group text-center add_top_30">
