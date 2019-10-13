@@ -13,8 +13,8 @@
 	                        <img src="/assets/admin/img/casa.png" class="img-circle user-img-circle" alt="User Image" />
 	                    </div>
 	                    <div class="pull-left info">
-	                        <p>BuscaUnDoc</p>
-	                        <small>Admin</small>
+	                        <h4>BuscaUnDoc</h4>
+	                       
 	                    </div>
 	                </div>
 	            </li>
