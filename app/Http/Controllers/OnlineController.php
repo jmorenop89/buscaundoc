@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class OnlineController extends Controller
 {
     public function index(){
-        $objects = Doctor::all();      
+        $objects = Doctor::all();
     	return view('online.index', compact('objects'));
     }
 
@@ -23,7 +23,7 @@ class OnlineController extends Controller
         $espe = Especialidad::all();
         $ciud = Ciudad::all();
         #dd($espe);
-    	return view('online.registrar.doctor', compact('espe','ciud'));	
+    	return view('online.registrar.doctor', compact('espe','ciud'));
     }
 
     public function paciente(){
@@ -31,7 +31,7 @@ class OnlineController extends Controller
     }
 
     public function doctor(){
-         
+
     	return view('online.log-doc.index');
     }
 
@@ -47,7 +47,7 @@ class OnlineController extends Controller
         $especial = $especial[0]->id;
         //dd($especial);
         $ci = $request['city'];
-        $ciud = Ciudad::where('nombre','like',$ci.'%')->get(); 
+        $ciud = Ciudad::where('nombre','like',$ci.'%')->get();
         $ciud = $ciud[0]->id;
         $doc = Doctor::where('especialidad_id','like',$especial)->where('ciudad_id','like',$ciud)->paginate($pager);
         //dd($doc);
@@ -58,13 +58,28 @@ class OnlineController extends Controller
 
         $doc = Doctor::find($id);
         $dis = Disponibilidad::where('doctor_id','=',$doc->id)->get();
+        $fil = $dis->unique('fecha')->values();
+        $horas = array();
+            //dd($fil);
+            for ($i=0; $i < $fil->count() ; $i++) {
+                # code...
+                for ($e=0; $e < $dis->count() ; $e++) {
+                    //dd($fil);
+                    if($fil[$i]->fecha === $dis[$e]->fecha){
+                        $horas[] =$dis[$e]->hora;
+                    }
+                }
+                $fil[$i]->hora = $horas;
+                $horas = array();
+            }
+        //dd($fil);
     	return view('online.reservar_cita.detalle',compact('doc','dis'));
     }
 
     public function prueba(){
         return "estamos haciendo algo mal";
     }
-    
+
 
     public function json_specialty(){
         $model = Especialidad::all('id','nombre as name')
@@ -76,5 +91,8 @@ class OnlineController extends Controller
         $model = Ciudad::all('id','nombre as name')
             ->toJson(JSON_UNESCAPED_UNICODE);
         return response($model);
+    }
+    public function probar(Request $request ,$id){
+        dd($request);
     }
 }

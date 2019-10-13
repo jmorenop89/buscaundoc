@@ -12,6 +12,8 @@
 */
 Auth::routes();
 
+Route::post('/probar/{id}','OnlineController@probar')->name('probar');
+
 Route::get('/','OnlineController@index')->name('inicio');
 Route::get('login',[ 'as' => 'login','uses'=>'Online\LoginController@index']);
 Route::post('login',['as' => 'login','uses'=>'Auth\LoginController@validateLogin']);

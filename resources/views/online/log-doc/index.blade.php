@@ -220,7 +220,7 @@
 														<input type="time" valueAsNumber class="form-control" id="inter">
 													</div>
 												</div>
-												<div class="text-center" id="crear"><div class="btn_1 medium">Guardar</div></div>
+												<div class="text-center" id="crear"><div class="btn_1 small">Crear Horarios</div></div>
 										</div>
 										<div class="col-lg-12">
 											<ul class="doc time_select version_2 doc add_top_20 text-center" id="horas">
@@ -230,9 +230,9 @@
                                                 </li>
 											</ul>
 										</div>
-                                        <div class="col-lg-12">
+                                        <div class="col-lg-12 text-right">
                                             <input type="text"  id="fecha" name="fecha" v-model="fec" hidden form="hor_doc">
-                                            <input type="submit" id="enviar_ho"class="btn btn-primary"value="Añadir Horarios" form="hor_doc">
+                                            <input type="submit" id="enviar_ho"class="btn_1 medium"value="Guardar Horarios" form="hor_doc">
                                         </div>
                                         <form action="{{route('horarios',$model->id)}}" method="post" id="hor_doc" hidden>
                                             @csrf
@@ -436,7 +436,6 @@
 				datesDisabled: app.dessa,
                 startDate:firstday,
                 endDate:lastday,
-
 			}).on('changeDate', function(e) {
                 console.log(e.date)
 				    desactivar = e.format("yyyy/mm/dd")
@@ -457,10 +456,9 @@
 		var resul = $('#horas')
         $(document).ready(function(){
             $('#horas li label').hide()
+            $('#enviar_ho').hide()
         })
         botn.on('click',()=>{
-            $('#horas li').remove()
-            $('#horas li label').show()
             if (app.fec.length == 0) {
                 console.log("falta seleccionar una fecha")
             }
@@ -469,6 +467,9 @@
                     console.log("falta crear sus intervalos")
                 }
                 else{
+                    $('#horas li').remove()
+                    $('#horas li label').show()
+                    $('#enviar_ho').show()
                       inMi = parseInt(hi.val().substr(3,2));
                       inHo = parseInt(hi.val().substr(0,2));
 

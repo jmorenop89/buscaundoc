@@ -31,7 +31,7 @@
 			ul.pac.time_select.version_2 li {
 				width:50%;
 			}
-    	}		
+    	}
     </style>
 @endsection
 
@@ -71,7 +71,7 @@
 
 					<div class="box_general_2 add_bottom_45">
 						<div class="main_title_4">
-							<h3><i class="icon_circle-slelected"></i>Selecciona fecha y hora</h3>
+							<h3><i class="icon_circle-slelected"></i>Selecciona tu Fecha</h3>
 						</div>
 
 						<div class="row add_bottom_45">
@@ -79,32 +79,32 @@
 								<div class="row form-group">
 									<div class="col-lg-3"></div>
 									<div class="col-lg-6">
-										<input class="calendar form-control" style="text-align:center; font-size:20px;">
+										<input class="calendar form-control" style="text-align:center; font-size:20px;" form="reserva_cita" name="fecha">
+									   <input type="hidden" id="my_hidden_input" style="padding: inherit;">
 									</div>
 									<div class="col-lg-3"></div>
-									<input type="hidden" id="my_hidden_input" style="padding: inherit;">
-									<ul class="legend">
-										<li><strong></strong>Disponible</li>
-										<li><strong></strong>No disponible</li>
-									</ul>
 								</div>
 							</div>
 							<div class="col-lg-12">
-								<ul class="pac time_select version_2 doc add_top_20">
-								
-									<li>
-										<input type="radio" id="radio1" name="radio_time" value="09.30am">
-										<label for="radio1">09.30am</label>
+                                <div class="main_title_4">
+                                    <h3><i class="icon_circle-slelected"></i>Selecciona tu Hora</h3>
+                                </div>
+								<ul class="pac time_select version_2 doc add_top_20" id="listar_horarios" class="justify-content-center">
+									<li v-for="(h , index) of horas">
+										<input type="radio" :id="'radio'+index" name="radio_time[]" :value="h" form="reserva_cita">
+										<label :for="'radio'+index">@{{h}}</label>
 									</li>
-								
 								</ul>
+                                <form action="{{route('probar', Auth::user()->id)}}" method="post" id="reserva_cita" hidden>
+                                    @csrf
+                                </form>
 							</div>
 						</div>
 						<!-- /row -->
 
 
 						<hr>
-						<div class="text-center"><a href="booking-page.html" class="btn_1 medium">Reservar Cita</a></div>
+						<div class="text-center"><input type="submit" class="btn_1 medium" value="Reservar Cita" form="reserva_cita">
 					</div>
 					<!-- /box_general -->
 
@@ -121,6 +121,8 @@
 
 @section('js')
 	<script src="/assets/online/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
      <script>
 		$(document).ready(function(){
 			var dd = $('.calendar').datepicker({
@@ -128,7 +130,8 @@
 				daysOfWeekDisabled: [0],
 				weekStart: 1,
 				format: "yyyy-mm-dd",
-				datesDisabled: ["2017/10/20", "2017/11/21","2017/12/21", "2018/01/21","2018/02/21","2018/03/21"],
+                startDate:new Date(),
+                autoclose:true,
 			}).on('changeDate', function(e) {
 				console.log(e.date);
 				console.log(e.format('yyyy-mm-dd'));
@@ -136,4 +139,36 @@
     		});
     	});
 	</script>
+    <script>
+        $hora = [];
+        $contador = 1;
+        $(document).ready(function(){
+            $('.calendar').datepicker({}).on('changeDate',function(e){
+                $di = @json($dis);
+                // console.log(@json($dis));
+                for (var i = 0;i < $di.length; i++) {
+
+                    if($('.calendar').val() === $di[i].fecha){
+                        if ($contador === 1) {
+                        //console.log($contador);
+                        $hora = $di[i].hora;
+                        $contador++;
+                        }
+                    }
+                }
+                if (! $hora.length == 0) {
+                console.log($hora);
+                console.log(app.horas = $hora);
+                console.log(app.horas);
+
+                }
+            })
+        })
+        var app = new Vue({
+          el: '#listar_horarios',
+          data: {
+            horas:[],
+          }
+        })
+    </script>
 @endsection
