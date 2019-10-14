@@ -340,22 +340,22 @@
 										</div>
 										<div class="form-row">
 											<div class="form-group col-md-6">
-												<label>Sexo</label>
-												<input type="text" class="form-control"  placeholder="Sexo" >
+												<label>Codigo CMP</label>
+												<input type="text" class="form-control"  placeholder="Ingresar CMP" name="cod_colegiatura" value="{{ $model->cod_colegiatura}}">
 											</div>
 											<div class="form-group col-md-6">
-												<label>Edad</label>
-												<input type="text" class="form-control"  placeholder="Ingresa tus edad">
+												<label>Direccion</label>
+												<input type="text" class="form-control"  placeholder="Ingresa Direccion" name="direccion" value="{{ $model->direccion}}"> 
 											</div>
 										</div>
 										<div class="form-row">
 											<div class="form-group col-md-6">
-												<label>Telefono Celular</label>
-												<input type="text" class="form-control"  placeholder="Ingresa Nº Celular">
+												<label>Especialidad</label>
+												<input type="text" class="form-control"  placeholder="Ingresa Especialidad" name="especialidad_id" value="{{ $model->especialidad}}">
 											</div>
 											<div class="form-group col-md-6">
 												<label>Correo</label>
-												<input type="email" class="form-control"  placeholder="Ingresa tu Correo">
+												<input type="email" class="form-control"  placeholder="Ingresa tu Correo" name="email" value="{{ $model->user->email}}"> 
 											</div>
 										</div>
 										<div class="form-row">
