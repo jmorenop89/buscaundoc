@@ -11,18 +11,18 @@
 				<div class="col-lg-3 col-md-4 d-md-block d-sm-none d-none">
 					<h5>Nosotros</h5>
 					<ul class="links">
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="#0">FAQ</a></li>
-						<li><a href="login.html">Iniciar Sesion</a></li>
-						<li><a href="register.html">Registrate</a></li>
+						<li><a >Blog</a></li>
+						<li><a >FAQ</a></li>
+						<li><a href="{{route('login')}}">Iniciar Sesion</a></li>
+						<li><a href="{{ route('reg-pac')}}">Registrate</a></li>
 					</ul>
 				</div>
 				<div class="col-lg-3 col-md-4 d-md-block d-sm-none d-none">
 					<h5>Enlaces Utiles</h5>
 					<ul class="links">
-						<li><a href="#0">Especializaciones</a></li>
-						<li><a href="#0">Reserva una cita</a></li>
-						<li><a href="#0">¿Eres médico?</a></li>						
+						<li><a>Especializaciones</a></li>
+						<li><a>Reserva una cita</a></li>
+						<li><a href="{{ route('reg-doc')}}">¿Eres médico?</a></li>
 					</ul>
 				</div>
 				<div class="col-lg-3 col-md-4 col-sm-6 col-12">
@@ -47,8 +47,8 @@
 			<div class="row">
 				<div class="col-md-8">
 					<ul id="additional_links">
-						<li><a href="#0">Terminos y condiciones</a></li>
-						<li><a href="#0">Privacidad</a></li>
+						<li><a>Terminos y condiciones</a></li>
+						<li><a>Privacidad</a></li>
 					</ul>
 				</div>
 				<div class="col-md-4">

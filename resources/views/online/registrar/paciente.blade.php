@@ -17,7 +17,7 @@ BuscaUnDoc - Encuentra fácilmente un médico y reserva en linea una cita.
 			<div class="row justify-content-center">
 				<div class="col-md-6">
 				<h2 class="text-center text-white">Registro de Paciente</h2>
-					<form action="{{ route('reg-pac') }}" method="post" id="frm-validate"> 
+					<form action="{{ route('reg-pac') }}" method="post" id="frm-validate">
 						<input type="hidden" name="_token" value="{{ csrf_token()}}">
 						<div class="box_form">
 							<div class="form-group">
@@ -47,12 +47,14 @@ BuscaUnDoc - Encuentra fácilmente un médico y reserva en linea una cita.
 							<div class="form-group">
 								<label>Confirmar contraseña</label>
 								<input type="password" class="form-control" id="password2" name="password2"  placeholder="Confirmar contraseña">
-							</div> 
+							</div>
 							<div id="pass-info" class="clearfix"></div>
 							<div class="checkbox-holder text-left">
 								<div class="checkbox_2">
+									<label for="agree">
+                                        <span>Estoy de acuerdo con los <strong>terminos y condiciones</strong></span>
+                                    </label>
 									<input type="checkbox"  id="agree" name="agree" > <!-- value="accept_2" checked -->
-									<label for="agree"><span>Estoy de acuerdo con los <strong>terminos y condiciones</strong></span></label>
 								</div>
 							</div>
 							<div class="form-group text-center add_top_30">
@@ -64,7 +66,7 @@ BuscaUnDoc - Encuentra fácilmente un médico y reserva en linea una cita.
 
 						</div>
 			<!-- 			<p class="text-center">
-							<small>Has voluptua vivendum accusamus cu. Ut per assueverit temporibus dissentiet. 
+							<small>Has voluptua vivendum accusamus cu. Ut per assueverit temporibus dissentiet.
 								Eum no atqui putant democritum, velit nusquam sententiae vis no.
 							</small>
 						</p> -->
