@@ -67,7 +67,7 @@
 						@endguest
 							<li>
                                 <span id="reserva">
-                                <div><a href="{{ route('reg-pac') }}" class="btn_1 text-white">Reserva una cita</a></div>
+                                <div><a href="/" class="btn_1 text-white">Reserva una cita</a></div>
                             </span>
 							</li>
                         @auth
