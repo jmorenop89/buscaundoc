@@ -3722,7 +3722,7 @@ a.box_feat_about {
 
 .bg_color_2 {
   /*background: #00c3a5;  /*url(../img/iniciarr.png) repeat fixed }*/
-  background: url(../img/iniciadoc.png) no-repeat left bottom #00c3a5 ;
+  background: url(../img/iniciadoc.png) no-repeat right center #00c3a5 ;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
