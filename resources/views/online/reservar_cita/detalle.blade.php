@@ -55,10 +55,10 @@
 							<img src="http://via.placeholder.com/565x565.jpg" alt="" class="img-fluid">
 						</figure>
 						<small>{{$doc-> especialidad->nombre}}</small>
-						<h1>{{ $doc-> nombres }} {{$doc-> apellidos}}</h1>
+						<h1>{{ $doc->nombres }} {{$doc->apellidos}}</h1>
 						<span> {{$doc-> ciudad->nombre}}</span>
 						<ul class="contacts">
-							<li><h6>Dirección</h6>{{ $doc-> direccion}}</li>
+							<li><h6>Dirección</h6>{{ $doc->direccion}}</li>
 							<li><h6>Teléfono</h6><a href="tel://000434323342"></a></li>
 						</ul>
 						<div class="text-center"><a href="https://www.google.com/maps/place/" class="btn_1 outline" target="_blank"><i class="icon_pin"></i>Ver en el mapa</a></div>
