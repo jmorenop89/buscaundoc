@@ -33,8 +33,8 @@ Route::group(['middleware' => 'auth'],function(){
         Route::post('/{id}',['as' =>'paciente.edit','uses'=>'Online\PacienteController@edit']);
         Route::post('/doctor/{id}',['as' =>'doctor.edit','uses'=>'Online\DoctorController@edit']);
         Route::post('/horas/{id}',['as' =>'horarios','uses'=>'Online\ProfileController@guardar_horarios']);
-        Route::post('save-image',['as'=>'profile.image.store','uses'=>'Online\ProfileController@store_image']);
-        Route::post('delete-image',['as'=>'profile.image.delete','uses'=>'Online\ProfileController@delete_image']);
+        Route::post('/image/save-image',['as'=>'profile.image.store','uses'=>'Online\ProfileController@store_image']);
+        Route::post('/image/delete-image',['as'=>'profile.image.delete','uses'=>'Online\ProfileController@delete_image']);
     });
     Route::get('/detalle/{id}','OnlineController@det_hora')->name('detalle');
     Route::post('/reservar/{id}','Online\CitaController@reservar')->name('reservar');

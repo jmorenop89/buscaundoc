@@ -55,10 +55,10 @@
 							<img src="http://via.placeholder.com/565x565.jpg" alt="" class="img-fluid">
 						</figure>
 						<small>{{$doc-> especialidad->nombre}}</small>
-						<h1>{{ $doc-> nombres }} {{$doc-> apellidos}}</h1>
+						<h1>{{ $doc->nombres }} {{$doc->apellidos}}</h1>
 						<span> {{$doc-> ciudad->nombre}}</span>
 						<ul class="contacts">
-							<li><h6>Dirección</h6>{{ $doc-> direccion}}</li>
+							<li><h6>Dirección</h6>{{ $doc->direccion}}</li>
 							<li><h6>Teléfono</h6><a href="tel://000434323342"></a></li>
 						</ul>
 						<div class="text-center"><a href="https://www.google.com/maps/place/" class="btn_1 outline" target="_blank"><i class="icon_pin"></i>Ver en el mapa</a></div>
@@ -143,21 +143,23 @@
         $contador = 1;
         $(document).ready(function(){
             $('.calendar').datepicker({}).on('changeDate',function(e){
+                $hora = []
+                app.horas = []
+                $contador = 1;
                 $di = @json($dis);
                 // console.log(@json($dis));
-                for (var i = 0;i < $di.length; i++) {
+                    for (var i = 0;i < $di.length; i++) {
 
                     if($('.calendar').val() === $di[i].fecha){
                         if ($contador === 1) {
-                        //console.log($contador);
+                        console.log($contador);
                         $hora = $di[i].hora;
                         $contador++;
                         }
                     }
                 }
                 if (! $hora.length == 0) {
-                console.log($hora);
-                console.log(app.horas = $hora);
+                app.horas = $hora;
                 console.log(app.horas);
 
                 }

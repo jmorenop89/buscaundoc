@@ -545,6 +545,6 @@
                 }
             }
         })
-		fn_croppic('cropImgProfile', '/profile/save-image', '/profile/delete-image');
+		fn_croppic('cropImgProfile', "{{ route('profile.image.store') }}", "{{ route('profile.image.delete') }}");
 	</script>
 @endsection
