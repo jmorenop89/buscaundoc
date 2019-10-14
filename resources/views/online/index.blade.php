@@ -113,7 +113,7 @@
     	<div  id="reserva" class="content">
     		<h3>Busca un médico</h3>
     		<p>Selecciona una especialidad y ciudad donde te encuentras.</p>
-			<form method="get" action="{{ route('buscar') }}">
+			<form id = "frm-buscador" method="get" action="{{ route('buscar') }}">
 	    			<div id="custom-search-input"> <!-- custom-search-input revisar mañana-->
         			<input name="specialty" type="text" class="tspecialty especialidad" placeholder="Especialidad">
         			<input name="city" type="text" class="tcity ciudad" placeholder="Ciudad" value="Trujillo">
@@ -213,5 +213,7 @@
 		});
 
 </script>
+
+	<script src="/assets/online/scripts/inicio.js"></script> 
 
 @endsection
