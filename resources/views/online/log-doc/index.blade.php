@@ -340,7 +340,7 @@
 										<div class="form-row">
 											<div class="form-group col-md-6">
 												<label>Sexo</label>
-												<input type="text" class="form-control"  placeholder="Sexo" >
+												<input type="text" class="form-control"  placeholder="Sexo" name="sexo" value="{{ $model->sexo }}" >
 											</div>
 											<div class="form-group col-md-6">
 												<label>Edad</label>

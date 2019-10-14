@@ -18,6 +18,8 @@ class CreateDoctorTable extends Migration
             $table->string('nombres');
             $table->string('apellidos');
             $table->string('fecha_nac');
+            $table->string('telefono');
+            $table->enum('sexo',['M','F']);
             $table->string('cod_colegiatura');
             $table->string('direccion');
             $table->unsignedBigInteger('user_id');
