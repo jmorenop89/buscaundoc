@@ -34,7 +34,7 @@ class ProfileController extends Controller
             //dd($hora);
             return view('online.log-pac.index',compact('model','cita','fecha','hora'));
         }else{
-            $model = $user->doctor;
+            $model = $user->doctor;          
             $fecha = Disponibilidad::get();
             $fil = $fecha->unique('fecha')->values();
             // $json = $fecha->toJson();

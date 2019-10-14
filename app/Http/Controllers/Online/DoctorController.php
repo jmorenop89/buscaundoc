@@ -25,7 +25,7 @@ class DoctorController extends Controller
         return view('online.login.confirmado',compact('bi'));
     }
 
-    public function edit(Request $request,$id){
+   public function edit(Request $request,$id){
         $data = $request->all();
         $model = Doctor::find($id);
         $model->update($data);
