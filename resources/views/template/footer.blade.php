@@ -21,7 +21,7 @@
 					<h5>Enlaces Utiles</h5>
 					<ul class="links">
 						<li><a>Especializaciones</a></li>
-						<li><a>Reserva una cita</a></li>
+						<li><a href="/">Reserva una cita</a></li>
 						<li><a href="{{ route('reg-doc')}}">¿Eres médico?</a></li>
 					</ul>
 				</div>
@@ -34,10 +34,10 @@
 					<div class="follow_us">
 						<h5>Siguenos</h5>
 						<ul>
-							<li><a href="#0"><i class="social_facebook"></i></a></li>
-							<li><a href="#0"><i class="social_twitter"></i></a></li>
-							<li><a href="#0"><i class="social_linkedin"></i></a></li>
-							<li><a href="#0"><i class="social_instagram"></i></a></li>
+							<li><a href="https:\\www.facebook.com"><i class="social_facebook"></i></a></li>
+							<li><a href="https:\\www.twitter.com"><i class="social_twitter"></i></a></li>
+							<li><a href="https:\\www.linkedin.com"><i class="social_linkedin"></i></a></li>
+							<li><a href="https:\\www.instagram.com"><i class="social_instagram"></i></a></li>
 						</ul>
 					</div>
 				</div>
