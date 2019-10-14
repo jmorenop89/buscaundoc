@@ -12,8 +12,6 @@
 */
 Auth::routes();
 
-Route::post('/probar/{id}','OnlineController@probar')->name('probar');
-
 Route::get('/','OnlineController@index')->name('inicio');
 Route::get('login',[ 'as' => 'login','uses'=>'Online\LoginController@index']);
 Route::post('login',['as' => 'login','uses'=>'Auth\LoginController@validateLogin']);
@@ -28,16 +26,6 @@ Route::group(['prefix' => 'register'], function(){
 
 
 Route::get('/list','OnlineController@busqueda')->name('buscar');
-Route::get('/detalle/{id}','OnlineController@det_hora')->name('detalle');
-Route::post('/probar/{id}','Online\CitaController@reservar')->name('probar');
-
-Route::get('/doc', function () {
-    return view('online.log-doc.index');
-});
-
- Route::get('/pac', function () {
-    return view('online.log-pac.index');
-});
 
 Route::group(['middleware' => 'auth'],function(){
     Route::group(['prefix' => 'profile'],function(){
@@ -47,26 +35,13 @@ Route::group(['middleware' => 'auth'],function(){
         Route::post('save-image',['as'=>'profile.image.store','uses'=>'Online\ProfileController@store_image']);
         Route::post('delete-image',['as'=>'profile.image.delete','uses'=>'Online\ProfileController@delete_image']);
     });
+    Route::get('/detalle/{id}','OnlineController@det_hora')->name('detalle');
+    Route::post('/reservar/{id}','Online\CitaController@reservar')->name('reservar');
 
 });
-
-
 
 Route::get('getspec','OnlineController@json_specialty');
 Route::get('getcity','OnlineController@json_city');
-//Route::get('/home', 'HomeController@index')->name('home');
-
-/*Route::get('/logeado', function () {
-    return view('online.logeado.index');
-});*/
-
-/*Route::get('/logeadolista', function () {
-    return view('online.logeado.listadoc');
-});
-
-Route::get('/logeadodetalle', function () {
-    return view('online.logeado.detalle');
-});*/
 
 // ADMIN
 Route::group(['prefix' => 'admin'],function(){

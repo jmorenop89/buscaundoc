@@ -95,7 +95,7 @@
 										<label :for="'radio'+index">@{{h}}</label>
 									</li>
 								</ul>
-                                <form action="{{route('probar', Auth::user()->id)}}" method="post" id="reserva_cita" hidden>
+                                <form action="{{route('reservar', Auth::user()->id)}}" method="post" id="reserva_cita" hidden>
                                     @csrf
                                 </form>
 							</div>

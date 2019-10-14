@@ -13,15 +13,20 @@
 					<div class="col-md-6">
 					@if(count($doc))
 					<h4>Mostrando {{ $doc->firstItem() }} - {{ $doc->lastItem() }} de {{ $doc->total() }}  Resultados</h4>
+                    @else
+                    <h4>Lo sentimos no encontramos registros</h4>
 					@endif
 
 					</div>
 					<div class="col-md-6">
 						<div class="search_bar_list">
-							<input type="text" class="tspecialty form-control" placeholder="Especialidades....">
+							<input type="text" class="tspecialty form-control" placeholder="Especialidades...." name="specialty" form="espes">
 							<!-- form-control -->
-							<input type="submit" value="Buscar">
+							<input type="submit" value="Buscar" form="espes">
 						</div>
+                        <form method="get" action="{{ route('buscar') }}" hidden id="espes">
+                            <input name="city" type="text" class="tcity ciudad" placeholder="Ciudad" value="Trujillo">
+                        </form>
 					</div>
 				</div>
 				<!-- /row -->
@@ -32,9 +37,10 @@
 		<div class="container margin_60_35">
 			<div class="row">
 				<div class="col-lg-7">
+                    @if(count($doc))
 					@foreach($doc as $key)
 					<div class="strip_list wow fadeIn">
-						<a href="#0" class="wish_bt"></a>
+						<a class="wish_bt"></a>
 						<figure>
 							<a><img src="http://via.placeholder.com/565x565.jpg" alt=""></a>
 						</figure>
@@ -42,14 +48,19 @@
 						<h3>{{ $key->nombres }} {{ $key->apellidos}}</h3>
 						<p>Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cuodo....</p>
 						<ul>
-							<li><a href="#0" onclick="onHtmlClick('Doctors', 1)" class="btn_listing">Ver en el Mapa</a></li>
+							<li><a onclick="onHtmlClick('Doctors', 1)" class="btn_listing">Ver en el Mapa</a></li>
 							<li><a href="https://www.google.com/maps/place/" target="_blank">Direcciones</a></li>
 							<li><a href="{{ route ('detalle',$key->id)}}">Reservar ahora</a></li>
 						</ul>
 					</div>
 					@endforeach
+                    @else
+                    <div class="strip_list wow fadeIn">
+                        <h3>Lo sentimos no hay resultados</h3>
+                    </div>
 					<!-- /strip_list -->
-					@if(count($doc))
+                    @endif
+                    @if(count($doc))
 					{!! $doc->appends($data)->render() !!}
 					@endif
 					<!-- /pagination -->

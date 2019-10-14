@@ -116,7 +116,7 @@
 			<form method="get" action="{{ route('buscar') }}">
 	    			<div id="custom-search-input"> <!-- custom-search-input revisar mañana-->
         			<input name="specialty" type="text" class="tspecialty especialidad" placeholder="Especialidad">
-        			<input name="city" type="text" class="tcity ciudad" placeholder="Ciudad">
+        			<input name="city" type="text" class="tcity ciudad" placeholder="Ciudad" value="Trujillo">
 					<input type="submit" class="buscar" value="Buscar">
 		    	</div>
     		</form>
@@ -160,22 +160,22 @@
 					<h2>Médicos registrados</h2>
 					<p>Forma parte de nuestro staff y aumenta tus atenciones.</p>
 				</div>
-				
+
 				<div id="reccomended" class="owl-carousel owl-theme">
 					@foreach($objects as $object)
-					<div class="item">					
-						<a href="detail-page.html">						
-							<div class="title">						
+					<div class="item">
+						<a href="detail-page.html">
+							<div class="title">
 								{{-- <h4>Dr. Julia Holmes<em>Pediatrician - Cardiologist</em></h4> --}}
 								<h4>Dr. {{ $object->nombres}} {{ $object->apellidos}}
 								<em>{{ $object->especialidad->nombre}}</em>
-								</h4>						
-							</div><img src="http://via.placeholder.com/350x500.jpg" alt="">							
-						</a>						
-					</div>					
-					@endforeach					
+								</h4>
+							</div><img src="http://via.placeholder.com/350x500.jpg" alt="">
+						</a>
+					</div>
+					@endforeach
 				</div>
-				
+
 				<!-- /carousel -->
 			</div>
 			<!-- /container -->
