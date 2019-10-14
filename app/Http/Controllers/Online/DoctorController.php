@@ -24,4 +24,13 @@ class DoctorController extends Controller
         $bi = $data['nombres'];
         return view('online.login.confirmado',compact('bi'));
     }
+
+    public function edit(Request $request,$id){
+        $data = $request->all();
+        $model = Doctor::find($id);
+        $model->update($data);
+        $model->save();
+        //dd($model);
+        return redirect()->route('profile');
+    }
 }

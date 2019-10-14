@@ -289,8 +289,8 @@
 												<th scope="col">#</th>
 												<th scope="col">Nombres</th>
 												<th scope="col">Apellidos</th>
-												<th scope="col">Sexo</th>
-												<th scope="col">Edad</th>
+												<th scope="col">Email</th>
+												<th scope="col">Celular</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -298,22 +298,22 @@
 												<th scope="row">1</th>
 												<td>Manuel</td>
 												<td>Campos</td>
-												<td>M</td>
-												<td>30</td>
+												<td>m@campos</td>
+												<td>987789087</td>
 												</tr>
 												<tr>
 												<th scope="row">2</th>
 												<td>Carlos</td>
 												<td>Malpartida</td>
-												<td>M</td>
-												<td>45</td>
+												<td>c@mail.com</td>
+												<td>678987654</td>
 												</tr>
 												<tr>
 												<th scope="row">3</th>
 												<td>Maribel</td>
 												<td>Terrones</td>
-												<td>F</td>
-												<td>20</td>
+												<td>m@mail.com</td>
+												<td>543678987</td>
 												</tr>
 											</tbody>
 										</table>
@@ -325,7 +325,8 @@
 											<h3><i class="icon_circle-slelected"></i>Configura tu cuenta
 									</div>
 							      	<hr>
-							      	<form>
+							      	<form action="{{ route('doctor.edit',$model->id)}}" method="post">
+									  @csrf
 										<!--<div class="box_form">-->
 										<div class="form-row">
 											<div class="form-group col-md-6">
