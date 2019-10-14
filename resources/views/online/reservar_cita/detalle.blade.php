@@ -40,9 +40,8 @@
 		<div id="breadcrumb">
 			<div class="container">
 				<ul>
-					<li><a href="#">Inicio</a></li>
-					<li><a href="#">Categoria</a></li>
-					<li>Pagina Activa</li>
+					<li><a href="/">Inicio</a></li>
+					<li>Reservar Cita</li>
 				</ul>
 			</div>
 		</div>
@@ -55,7 +54,7 @@
 						<figure>
 							<img src="http://via.placeholder.com/565x565.jpg" alt="" class="img-fluid">
 						</figure>
-						<small>Atencion Principal - {{$doc-> especialidad->nombre}}</small>
+						<small>{{$doc-> especialidad->nombre}}</small>
 						<h1>{{ $doc-> nombres }} {{$doc-> apellidos}}</h1>
 						<span> {{$doc-> ciudad->nombre}}</span>
 						<ul class="contacts">
