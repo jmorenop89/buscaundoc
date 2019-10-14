@@ -56,8 +56,8 @@
                             <li>
 								<span><a style="cursor:pointer">Regístrate</a></span>
 								<ul>
-									<li><a href="{{ route('reg-pac') }}">Como Paciente</a></li>
-									<li><a href="{{ route('reg-doc') }}">Como Médico</a></li>
+									<li><a href="{{ route('reg-pac') }}">Soy Paciente</a></li>
+									<li><a href="{{ route('reg-doc') }}">Soy Médico</a></li>
 								</ul>
 							</li>
 
@@ -67,7 +67,7 @@
 						@endguest
 							<li>
                                 <span id="reserva">
-                                <div><a class="btn_1 text-white">Reserva una cita</a></div>
+                                <div><a href="{{ route('reg-pac') }}" class="btn_1 text-white">Reserva una cita</a></div>
                             </span>
 							</li>
                         @auth
