@@ -137,8 +137,9 @@
 		<div id="breadcrumb">
 			<div class="container">
 				<ul>
-					<li><a href="/">Inicio</a></li>
-					<li>Doctor</li>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Category</a></li>
+					<li>Page active</li>
 				</ul>
 			</div>
 		</div>
@@ -349,12 +350,12 @@
 										</div>
 										<div class="form-row">
 											<div class="form-group col-md-6">
-												<label>Especialidad</label>
-												<input type="text" class="form-control"  placeholder="Ingresa Especialidad" name="especialidad_id" value="{{ $model->especialidad}}">
+												<label>Fecha Nacimiento</label>
+												<input type="text" class="form-control"  placeholder="Ingresa Fecha Nacimiento" value="{{ $model->fecha_nac}}">
 											</div>
 											<div class="form-group col-md-6">
 												<label>Correo</label>
-												<input type="email" class="form-control"  placeholder="Ingresa tu Correo" name="email" value="{{ $model->user->email}}"> 
+												<input type="email" class="form-control"  placeholder="Ingresa tu Correo" name="email" value="{{ $model->user->email}}">
 											</div>
 										</div>
 										<div class="form-row">
