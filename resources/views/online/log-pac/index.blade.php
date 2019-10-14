@@ -49,14 +49,14 @@
     						<h3><i class="icon_circle-slelected"></i>Mis citas</h3>
     					</div>
                             <hr>
-                    @foreach($cita as $c)
+                    @foreach($cita as $k => $c)
                         <div class="strip_list wow fadeIn">
                             <figure>
                               <a href="detail-page.html"><img src="http://via.placeholder.com/565x565.jpg" alt=""></a>
                             </figure>
                             <small>{{$c->disponibilidad->doctor->especialidad->nombre}}</small>
                             <h3>{{$c->disponibilidad->doctor->nombres}}</h3>
-                            <p>{{ $fecha}} {{  $hora }}</p>
+                            <p>{{ $fecha[$k]}} {{  $hora[$k] }}</p>
                             <a class="btn btn-primary" href="#" role="button">Pendiente</a>
                         </div>
                     @endforeach

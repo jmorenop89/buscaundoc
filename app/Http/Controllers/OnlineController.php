@@ -41,14 +41,23 @@ class OnlineController extends Controller
         //paginacion
         $pager = @$request['pager']?$request['pager']:5;
 
-        $es = $request['specialty'];
+        $es = $request['specialty']?$request['specialty']:null;
+        if ($request['specialty']===null) {
+            $especial = "";
+        }else{
         $especial = Especialidad::where('nombre','=',$es)->get('id');
-        //dd($especial->id);
         $especial = $especial[0]->id;
+
+        };
+        //dd($especial->id);
         //dd($especial);
-        $ci = $request['city'];
+        $ci = $request['city']?$request['city']:null;
+        if ($request['city']===null) {
+            $ciud = "";
+        }else{
         $ciud = Ciudad::where('nombre','like',$ci.'%')->get();
         $ciud = $ciud[0]->id;
+        }
         $doc = Doctor::where('especialidad_id','like',$especial)->where('ciudad_id','like',$ciud)->paginate($pager);
         //dd($doc);
     	return view('online.reservar_cita.listadoc',compact('doc','pager','data'));
