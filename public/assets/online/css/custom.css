@@ -65,8 +65,11 @@ ul#top_access li a:hover {
     }
 
 
-
-
+    .text-white {
+      
+      background-color:#0e636542;
+      border: 1px solid;
+    }
 
 
 
