@@ -3721,7 +3721,12 @@ a.box_feat_about {
   background-color: #fff; }
 
 .bg_color_2 {
-  background: #00c3a5; /* url(../img/hero_bg_1.svg) repeat fixed */}
+  /*background: #00c3a5;  /*url(../img/iniciarr.png) repeat fixed }*/
+  background: url(../img/iniciadoc.png) no-repeat left bottom #00c3a5 ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: auto; }
 
 .form-control {
   font-size: 14px;
