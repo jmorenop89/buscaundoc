@@ -163,8 +163,10 @@
                         	</div>
 						</figure>
 
-						<small>Primary care - Internist</small>
-						<h1>DR. {{$model->nombres }}</h1>
+						<small>{{$model-> especialidad->nombre}}</small>
+						<h1>Dr. {{ $model->nombres }} {{ $model->apellidos }}</h1>
+						<span>{{$model-> ciudad->nombre}}</span>
+					
 
 						<hr>
 					    <div class="nav text-justify nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">

@@ -16,7 +16,7 @@ BuscaUnDoc - Encuentra fácilmente un médico y reserva en linea una cita.
 		<!-- <div id="register"> -->
 			<div class="row justify-content-center">
 				<div class="col-md-6">
-				<h2 class="text-center text-white">Registro de Paciente</h2>
+				<h2 class="text-center text-white">Registrate como Paciente</h2>
 					<form action="{{ route('reg-pac') }}" method="post" id="frm-validate">
 						<input type="hidden" name="_token" value="{{ csrf_token()}}">
 						<div class="box_form">

@@ -4,6 +4,16 @@
         BuscaUnDoc - Encuentra fácilmente un médico y reserva en linea una cita.
 @endsection
 
+@section('css')
+<style>
+		.croppic img{
+			width: 100%;
+		}
+  </style>
+  <link href="/assets/online/css/date_picker.css" rel="stylesheet">  
+  <link rel="stylesheet" href="/assets/plugins/croppic/croppic.css">
+@endsection 
+
 @section('content')
 
     <main>
@@ -23,10 +33,22 @@
         <aside class="col-xl-3 col-lg-4" id=""> <!-- id="sidebar"-->
           <div class="box_profile">
             <figure>
-              <img src="http://via.placeholder.com/565x565.jpg" alt="" class="img-fluid">
+            <div class="croppic" style="width: 250px;height: 250px;margin:0px"
+                             	id="cropImgProfile"
+                             	data-model="{{ $model->id }}"
+                             	data-id="{{ $model->id }}"
+                             	data-image="{{ $model->imagen?true:false }}"
+                             	data-width="500"
+                             	data-placement="bottom">
+                            	@if($model->imagen)
+                                	<img src="/{{ config('app.dir_image').$model->imagen }}" class="croppedImg">
+						        	@endif
+            </div>
+              
             </figure>
             <small>Paciente</small>
-            <h1>{{ $model->nombres }}</h1>
+            <h1>{{ $model->nombres }} {{ $model->apellidos }}</h1>
+            
             <hr>
                   <div  class="nav text-justify nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="display:inline-block;">
                     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#ver-citas" role="tab" aria-controls="v-pills-home" aria-selected="true">Ver mis citas </a>
@@ -167,3 +189,14 @@
   <!-- /main -->
 
 @endsection
+
+@section('js')
+
+<script src="/assets/plugins/croppic/croppic.min.js"></script>
+	<script src="/assets/online/scripts/croppic.js"></script>
+  <script src="/assets/online/js/bootstrap-datepicker.js"></script>
+  <script>
+	
+		fn_croppic('cropImgProfile', '/profile/save-image', '/profile/delete-image');
+	</script>
+  @endsection
