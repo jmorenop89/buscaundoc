@@ -137,9 +137,8 @@
 		<div id="breadcrumb">
 			<div class="container">
 				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Category</a></li>
-					<li>Page active</li>
+					<li><a href="/">Inicio</a></li>
+					<li>Doctor</li>
 				</ul>
 			</div>
 		</div>
@@ -331,17 +330,17 @@
 										<div class="form-row">
 											<div class="form-group col-md-6">
 												<label>Nombres</label>
-												<input type="text" class="form-control"  placeholder="Ingresa tus nombres">
+												<input type="text" class="form-control"  placeholder="Ingresa tus nombres" name="nombres" value="{{ $model->nombres }}">
 											</div>
 											<div class="form-group col-md-6">
 												<label>Apellidos</label>
-												<input type="text" class="form-control"  placeholder="Ingresa tus apellidos">
+												<input type="text" class="form-control"  placeholder="Ingresa tus apellidos" name="apellidos" value="{{ $model->apellidos}}">
 											</div>
 										</div>
 										<div class="form-row">
 											<div class="form-group col-md-6">
 												<label>Sexo</label>
-												<input type="text" class="form-control"  placeholder="Sexo">
+												<input type="text" class="form-control"  placeholder="Sexo" >
 											</div>
 											<div class="form-group col-md-6">
 												<label>Edad</label>
