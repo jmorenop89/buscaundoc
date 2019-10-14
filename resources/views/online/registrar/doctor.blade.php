@@ -68,11 +68,11 @@
 	                        </div>
 							<div class="form-group">
 								<label>Contraseña</label>
-								<input type="password" class="form-control" id="password1" name="password" placeholder="Ingresar contraseña">
+								<input type="password" class="form-control" id="password" name="password" placeholder="Ingresar contraseña">
 							</div>
 							<div class="form-group">
 								<label>Verificar contraseña</label>
-								<input type="password" class="form-control" id="" name="password2" placeholder="Confirmar constraseña">
+								<input type="password" class="form-control" id="password2" name="password2" placeholder="Confirmar constraseña">
 							</div>
 							<div id="pass-info" class="clearfix"></div>
 							<div class="checkbox-holder text-left">

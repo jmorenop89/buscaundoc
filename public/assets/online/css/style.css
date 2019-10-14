@@ -2895,17 +2895,24 @@ a.social_bt {
     margin: 0 0 30px 0;
     color: #fff; }
 
-.checkbox_2 {
+ .checkbox_2 {
   position: relative;
   display: block; }
-  .checkbox_2 input[type=checkbox] {
+
+ /*
+  
+  .checkbox_2:before {
+    content: '';
     position: absolute;
     top: 2px;
     left: 0;
-    width: 20px;
+    width: 20px; 
     height: 20px;
-    border: 2px red solid }
-  .checkbox_2 input[type=checkbox]:focus {
+    border: 2px solid #e1e8ed;
+    background: transparent;
+    border-radius: 5px }   
+
+  .checkbox_2 input[type=checkbox]:focus + label:before {
     background-color: #1e66ea;
     background-color: red; }
   .checkbox_2 input[type=checkbox]:after {
@@ -2922,12 +2929,14 @@ a.social_bt {
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     border-radius: 5px }
-/*  .checkbox_2 input[type=checkbox] {
+  .checkbox_2 input[type=checkbox] {
     opacity: 0;
     position: absolute;
-    /*borre el width y el height que tenian 0*/
-    .checkbox_2 input[type=checkbox]:checked  {
-      opacity: 1 }
+    width: 0;
+    height: 0; } 
+    .checkbox_2 input[type=checkbox]:checked + label:after {
+      opacity: 1; } 
+      */
 
 .checkbox-holder span {
   position: relative;
@@ -3742,7 +3751,8 @@ a.box_feat_about {
     font-weight: 500;
     font-size: 13px;
     font-size: 0.8125rem;
-    margin-bottom: 3px; }
+    margin-bottom: 3px;
+    margin-right: 5px; }
   .box_form .form-group {
     margin-bottom: 25px; }
 
