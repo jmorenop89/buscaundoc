@@ -323,8 +323,7 @@
 									</div>
 							      	<hr>
 							      	<form action="{{ route('doctor.edit',$model->id)}}" method="post">
-									  @csrf
-										<!--<div class="box_form">-->
+									  @csrf								<!--<div class="box_form">-->
 										<div class="form-row">
 											<div class="form-group col-md-6">
 												<label>Nombres</label>
