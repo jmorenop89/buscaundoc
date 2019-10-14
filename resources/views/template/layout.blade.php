@@ -102,6 +102,7 @@
     <script src="/assets/online/js/common_scripts.min.js"></script>
 	<script src="/assets/online/js/functions.js"></script>
 	<script src="/assets/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+	<script src="/assets/plugins/jquery-validation/js/additional-methods.js"></script>
 	<script src="/assets/plugins/jquery-validation/js/localization/messages_es_PE.js"></script>
 
 	{{-- CSRF Token --}}

@@ -83,12 +83,12 @@ BuscaUnDoc - Encuentra fácilmente un médico y reserva en linea una cita.
 @endsection
 
 @section('js')
-<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> 
+<!-- <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>  -->
 
 	<script src="/assets/online/js/bootstrap-datepicker.js"></script>
-<script src="/assets/plugins/jquery-validation/js/jquery.validate.js"></script>
-	<script src="/assets/plugins/jquery-validation/js/additional-methods.js"></script> 
-	<script src="/assets/online/scripts/patient.js"></script>
+<!-- <script src="/assets/plugins/jquery-validation/js/jquery.validate.js"></script>
+	<script src="/assets/plugins/jquery-validation/js/additional-methods.js"></script> -->
+	<script src="/assets/online/scripts/patient.js"></script> 
 
 
 
