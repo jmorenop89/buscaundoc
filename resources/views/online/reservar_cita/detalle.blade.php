@@ -143,21 +143,23 @@
         $contador = 1;
         $(document).ready(function(){
             $('.calendar').datepicker({}).on('changeDate',function(e){
+                $hora = []
+                app.horas = []
+                $contador = 1;
                 $di = @json($dis);
                 // console.log(@json($dis));
-                for (var i = 0;i < $di.length; i++) {
+                    for (var i = 0;i < $di.length; i++) {
 
                     if($('.calendar').val() === $di[i].fecha){
                         if ($contador === 1) {
-                        //console.log($contador);
+                        console.log($contador);
                         $hora = $di[i].hora;
                         $contador++;
                         }
                     }
                 }
                 if (! $hora.length == 0) {
-                console.log($hora);
-                console.log(app.horas = $hora);
+                app.horas = $hora;
                 console.log(app.horas);
 
                 }
