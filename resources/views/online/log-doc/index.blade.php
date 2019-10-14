@@ -137,9 +137,8 @@
 		<div id="breadcrumb">
 			<div class="container">
 				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Category</a></li>
-					<li>Page active</li>
+					<li><a href="/">Inicio</a></li>
+					<li>Doctor</li>
 				</ul>
 			</div>
 		</div>
@@ -340,8 +339,10 @@
 										</div>
 										<div class="form-row">
 											<div class="form-group col-md-6">
+
 												<label>Codigo CMP</label>
 												<input type="text" class="form-control"  placeholder="Ingresar CMP" name="cod_colegiatura" value="{{ $model->cod_colegiatura}}">
+
 											</div>
 											<div class="form-group col-md-6">
 												<label>Direccion</label>
