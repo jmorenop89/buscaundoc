@@ -47,12 +47,13 @@
               
             </figure>
             <small>Paciente</small>
-            <h1>{{ $model->nombres }}</h1>
+            <h1>{{ $model->nombres }} {{ $model->apellidos }}</h1>
+            
             <hr>
                   <div  class="nav text-justify nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="display:inline-block;">
                     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#ver-citas" role="tab" aria-controls="v-pills-home" aria-selected="true">Ver mis citas </a>
                     <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#notifi" role="tab" aria-controls="v-pills-profile" aria-selected="false">Notificaciones</a>
-                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#config" role="tab" aria-controls="v-pills-messages" aria-selected="false">Configuración</a>
+                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#config" role="tab" aria-controls="v-pills-messages" aria-selected="false">Editar Perfil</a>
                   </div>
           </div>
         </aside>

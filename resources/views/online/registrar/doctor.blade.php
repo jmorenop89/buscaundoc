@@ -14,7 +14,7 @@
 	<div class="container pt-3"> <!-- margin_120_95 -->
 		<div class="row justify-content-center">
 			<div class="col-md-6"> <!-- cambie el valor 5 , ml-auto    col-lg-5-->
-			<h2 class="text-center text-white">Registro de Médico</h2>
+			<h2 class="text-center text-white">Registrate como Médico</h2>
 					<form method="post" action="{{ route('reg-doc') }}" id="frm-doctor-vld">
 						<input type="hidden" name="_token" value="{{ csrf_token()}}">
 						<div class="box_form">
