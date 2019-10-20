@@ -38,6 +38,8 @@ Route::group(['middleware' => 'auth'],function(){
     });
     Route::get('/detalle/{id}','OnlineController@det_hora')->name('detalle');
     Route::post('/reservar/{id}','Online\CitaController@reservar')->name('reservar');
+    Route::get('/eliminar/{id}','Online\DoctorController@dele_hora')->name('dispo.e');
+
 
 });
 

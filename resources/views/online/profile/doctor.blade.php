@@ -21,7 +21,8 @@
         /* Enviar horarios*/
         #enviar_ho{
             margin: 0 auto;
-            display: block
+            display: block;
+            margin-top: 15px;
         }
         #horas li input[type="text"]{
             display: none;
@@ -33,10 +34,21 @@
 				text-align: center;
 			}
 			.celda {
-				vertical-align:middle;
-				background:#F8F8F8;
-				border: 2px solid #fff;
-			}
+                vertical-align:top;
+                display: inline-grid;
+                background:#F8F8F8;
+                border: 2px solid #fff;
+            }
+            .celda th, .celda td{
+                width: 150px;
+                display: list-item;
+            }
+            .celda td{
+                text-align: center;
+            }
+            .table-responsive{
+                width: auto;
+            }
 		}
 
 		@media (max-width: 1200px) {
@@ -44,9 +56,7 @@
 				width:100%;
 				text-align: center;
 			}
-			.celda {
-				vertical-align:middle;
-			}
+
 		}
 
 		@media (max-width: 992px) {
@@ -54,9 +64,9 @@
 				width:100%;
 				text-align: center;
 			}
-			.celda {
+			/*.celda {
 				vertical-align:middle;
-			}
+			}*/
 		}
 
 		@media (max-width: 991px) {
@@ -67,9 +77,9 @@
 			.box_profile figure{
 				margin:10px auto;
 			}
-			.celda {
+			/*.celda {
 				vertical-align:middle;
-			}
+			}*/
 		}
 
 		@media (max-width: 768px) {
@@ -83,9 +93,9 @@
 			ul.doc.time_select.version_2 li {
 				width:25%;
 			}
-			.celda {
+			/*.celda {
 				vertical-align:middle;
-			}
+			}*/
 		}
 
 		@media (max-width: 576px) {
@@ -93,19 +103,19 @@
 				width:50%;
 				text-align: center;
 			}
-			.celda {
+			/*.celda {
 				vertical-align:middle;
-			}
+			}*/
 		}
 		@media (max-width: 480px) {
 			ul.doc.time_select.version_2 li {
 				width: 33%;
 		  	}
-			.letra .celda {
+			/*.letra .celda {
 				padding: 0.3rem;
 				font-size:12px;
 				vertical-align:middle;
-			}
+			}*/
 		}
 
 		@media (max-width: 320px) {
@@ -122,10 +132,81 @@
 		}
 
 		.vertical {
-			height: 300px;
-			overflow: auto;
-			padding: 8px;
+			height: 400px;
+            overflow: auto;
+            display: flow-root;
 		}
+        #horarios{
+            display: flexbox;
+        }
+        #horarios > tbody{
+            display: inline-flex;
+        }
+        /*scrollbar*/
+        #horarios::-webkit-scrollbar {
+            width: 8px;     /* Tamaño del scroll en vertical */
+            height: 5px;    /* Tamaño del scroll en horizontal */
+           /* display: none;*/  /* Ocultar scroll */
+        }
+        #d-d::-webkit-scrollbar {
+            width: 8px;     /* Tamaño del scroll en vertical */
+            height: 5px;    /* Tamaño del scroll en horizontal */
+           /* display: none;*/  /* Ocultar scroll */
+        }
+        /* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+        #horarios::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+        #d-d::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+
+        /* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+        #horarios::-webkit-scrollbar-thumb:hover {
+            background: #b3b3b3;
+            box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+        }
+        #d-d::-webkit-scrollbar-thumb:hover {
+            background: #b3b3b3;
+            box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Cambiamos el fondo cuando esté en active */
+        #horarios::-webkit-scrollbar-thumb:active {
+            background-color: #999999;
+        }
+        #d-d::-webkit-scrollbar-thumb:active {
+            background-color: #999999;
+        }
+        /* Ponemos un color de fondo y redondeamos las esquinas del track */
+        #horarios::-webkit-scrollbar-track {
+            background: #e1e1e1;
+            border-radius: 4px;
+        }
+        #d-d::-webkit-scrollbar-track {
+            background: #e1e1e1;
+            border-radius: 4px;
+        }
+
+        /* Cambiamos el fondo cuando esté en active o hover */
+        #horarios::-webkit-scrollbar-track:hover,
+        #horarios::-webkit-scrollbar-track:active {
+          background: #d4d4d4;
+        }
+        #d-d::-webkit-scrollbar-track:hover,
+        #d-d::-webkit-scrollbar-track:active {
+          background: #d4d4d4;
+        }
+        #mas{
+            color: green;
+            padding: 0;
+        }
+        #equis{
+            color: red;
+            padding: 0;
+        }
 
 	</style>
 	<link rel="stylesheet" href="/assets/plugins/croppic/croppic.css">
@@ -166,7 +247,7 @@
 						<small>{{$model-> especialidad->nombre}}</small>
 						<h1>Dr. {{ $model->nombres }} {{ $model->apellidos }}</h1>
 						<span>{{$model-> ciudad->nombre}}</span>
-					
+
 
 						<hr>
 					    <div class="nav text-justify nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -204,7 +285,7 @@
 
 														<input type="time" class="form-control" id="hora_i">
 
-														
+
 													</div>
 													<div class="form-group col-md-6">
 														<label>Hora Fin</label>
@@ -240,36 +321,35 @@
 									</div>
 								</div>
 
-							
-
 							    <div class="tab-pane fade" id="eliminar-ho" role="tabpanel" aria-labelledby="v-pills-profile-tab">
 						      		<div class="main_title_4">
 										<h3><i class="icon_circle-slelected"></i>Selecciona fecha para eliminar horarios
+                                        </h3>
 								  	</div>
-							      	  <hr>
+							      	      <hr>
 								  	<div class="row add_bottom_45">
-										<div class="col-lg-12 table-responsive vertical">
-											<div class="form-group">
-                                                <table class="table letra" border="1">
+										<div class="col-lg-12">
+											<div class="form-group ">
+                                                @csrf
+                                                <table class="table letra table-responsive" id="horarios">
                                                         @for($i=0; $i < $fil->count(); $i++)
-                                                        <tr class="celda">
-                                                            <th class="celda">{{ $fil[$i]->fecha }}</th>
+                                                        <tr class="celda table-responsive vertical" id="d-d">
+                                                            <th class="celda">
+                                                                {{ $fil[$i]->fecha }}
+                                                                <button class="btn close" id="mas">+</button>
+                                                            </th>
                                                             @foreach($fil[$i]->hora as $h)
                                                             <td class="celda">
-                                                                {{ $h }}<button type="button" class="close" aria-label="Close">
-                                                                  <span aria-hidden="true">&times;</span>
-                                                                </button>
+                                                                {{ $h['hora'] }}
+                                                                <a href="{{ route('dispo.e',$h['id'])}}"  class="btn close" aria-label="Close" id="equis">
+                                                                  &times;
+                                                                </a>
                                                             </td>
                                                             @endforeach
                                                         </tr>
                                                         @endfor
                                                 </table>
 											</div>
-										</div>
-
-										<div class="col-lg-12">
-											<ul class="doc time_select version_2 add_top_20 text-center">
-											</ul>
 										</div>
 									</div>
 									   <hr>
@@ -322,6 +402,7 @@
 						      	<div class="tab-pane fade" id="config" role="tabpanel" aria-labelledby="v-pills-messages-tab">
 									<div class="main_title_4">
 											<h3><i class="icon_circle-slelected"></i>Configura tu cuenta
+                                            </h3>
 									</div>
 							      	<hr>
 							      	<form action="{{ route('doctor.edit',$model->id)}}" method="post">
@@ -345,7 +426,7 @@
 											</div>
 											<div class="form-group col-md-6">
 												<label>Direccion</label>
-												<input type="text" class="form-control"  placeholder="Ingresa Direccion" name="direccion" value="{{ $model->direccion}}"> 
+												<input type="text" class="form-control"  placeholder="Ingresa Direccion" name="direccion" value="{{ $model->direccion}}">
 											</div>
 										</div>
 										<div class="form-row">
@@ -376,7 +457,6 @@
 									</form>
 				     	 		</div>
 						    </div>
-
 						<!-- /tab-content -->
 					</div>
 					<!-- /tabs_styled -->

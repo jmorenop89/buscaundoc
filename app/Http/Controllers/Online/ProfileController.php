@@ -32,10 +32,11 @@ class ProfileController extends Controller
             }
             //dd($hora[0]);
             //dd($hora);
-            return view('online.log-pac.index',compact('model','cita','fecha','hora'));
+            return view('online.profile.paciente',compact('model','cita','fecha','hora'));
         }else{
-            $model = $user->doctor;          
-            $fecha = Disponibilidad::get();
+            $model = $user->doctor;
+            $fecha = Disponibilidad::where('doctor_id','=',$model->id)->get();
+            //dd($fecha);
             $fil = $fecha->unique('fecha')->values();
             // $json = $fecha->toJson();
             $horas = array();
@@ -43,18 +44,21 @@ class ProfileController extends Controller
             for ($i=0; $i < $fil->count() ; $i++) {
                 # code...
                 for ($e=0; $e < $fecha->count() ; $e++) {
-                    //dd($fil);
                     if($fil[$i]->fecha === $fecha[$e]->fecha){
-                        $horas[] =$fecha[$e]->hora;
+                        //dump($fecha[$e]->id);
+                        $horas[] =['hora'=>$fecha[$e]->hora,'id'=>$fecha[$e]->id];
+                        //$horas[] ='id'=>$fecha[$e]->id;
                     }
                 }
+                //dd($horas);
                 $fil[$i]->hora = $horas;
                 $horas = array();
             }
             //dd($fil[0]->hora[0]);
+            //dd($fil);
             //dd($fecha[0]);
             //dd($fecha->unique('fecha'));
-            return view('online.log-doc.index',compact('model','fil'));
+            return view('online.profile.doctor',compact('model','fil'));
         }
     }
     public function guardar_horarios(Request $request,$id){

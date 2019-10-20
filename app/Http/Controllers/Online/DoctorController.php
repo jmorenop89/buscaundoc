@@ -33,4 +33,12 @@ class DoctorController extends Controller
         //dd($model);
         return redirect()->route('profile');
     }
+
+    public function dele_hora($id){
+        dd($id);
+        $doc = Disponibilidad::find($id);
+        $doc->delete();
+        return redirect()->route('doc.index');
+
+    }
 }
