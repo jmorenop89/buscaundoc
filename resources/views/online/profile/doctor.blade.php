@@ -15,8 +15,11 @@
         /* Alerta */
         div[role=alert]{
             position: absolute;
-            right: -90px;
-            top: -114px;
+            right: 20px;
+            top: -100%;
+        }
+        .alert-dismissible .close {
+            padding: 0.50rem 1rem;
         }
         /* Enviar horarios*/
         #enviar_ho{
@@ -64,9 +67,6 @@
 				width:100%;
 				text-align: center;
 			}
-			/*.celda {
-				vertical-align:middle;
-			}*/
 		}
 
 		@media (max-width: 991px) {
@@ -77,9 +77,6 @@
 			.box_profile figure{
 				margin:10px auto;
 			}
-			/*.celda {
-				vertical-align:middle;
-			}*/
 		}
 
 		@media (max-width: 768px) {
@@ -93,9 +90,6 @@
 			ul.doc.time_select.version_2 li {
 				width:25%;
 			}
-			/*.celda {
-				vertical-align:middle;
-			}*/
 		}
 
 		@media (max-width: 576px) {
@@ -103,19 +97,11 @@
 				width:50%;
 				text-align: center;
 			}
-			/*.celda {
-				vertical-align:middle;
-			}*/
 		}
 		@media (max-width: 480px) {
 			ul.doc.time_select.version_2 li {
 				width: 33%;
 		  	}
-			/*.letra .celda {
-				padding: 0.3rem;
-				font-size:12px;
-				vertical-align:middle;
-			}*/
 		}
 
 		@media (max-width: 320px) {
@@ -136,65 +122,37 @@
             overflow: auto;
             display: flow-root;
 		}
-        #horarios{
-            display: flexbox;
-        }
         #horarios > tbody{
             display: inline-flex;
         }
         /*scrollbar*/
-        #horarios::-webkit-scrollbar {
-            width: 8px;     /* Tamaño del scroll en vertical */
-            height: 5px;    /* Tamaño del scroll en horizontal */
-           /* display: none;*/  /* Ocultar scroll */
-        }
-        #d-d::-webkit-scrollbar {
+        #horarios::-webkit-scrollbar,#d-d::-webkit-scrollbar {
             width: 8px;     /* Tamaño del scroll en vertical */
             height: 5px;    /* Tamaño del scroll en horizontal */
            /* display: none;*/  /* Ocultar scroll */
         }
         /* Ponemos un color de fondo y redondeamos las esquinas del thumb */
-        #horarios::-webkit-scrollbar-thumb {
+        #horarios::-webkit-scrollbar-thumb,#d-d::-webkit-scrollbar-thumb {
             background: #ccc;
             border-radius: 4px;
         }
-        #d-d::-webkit-scrollbar-thumb {
-            background: #ccc;
-            border-radius: 4px;
-        }
-
         /* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
-        #horarios::-webkit-scrollbar-thumb:hover {
+        #horarios::-webkit-scrollbar-thumb:hover,#d-d::-webkit-scrollbar-thumb:hover {
             background: #b3b3b3;
             box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
         }
-        #d-d::-webkit-scrollbar-thumb:hover {
-            background: #b3b3b3;
-            box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-        }
-
         /* Cambiamos el fondo cuando esté en active */
-        #horarios::-webkit-scrollbar-thumb:active {
-            background-color: #999999;
-        }
-        #d-d::-webkit-scrollbar-thumb:active {
+        #horarios::-webkit-scrollbar-thumb:active,#d-d::-webkit-scrollbar-thumb:active {
             background-color: #999999;
         }
         /* Ponemos un color de fondo y redondeamos las esquinas del track */
-        #horarios::-webkit-scrollbar-track {
+        #horarios::-webkit-scrollbar-track,#d-d::-webkit-scrollbar-track {
             background: #e1e1e1;
             border-radius: 4px;
         }
-        #d-d::-webkit-scrollbar-track {
-            background: #e1e1e1;
-            border-radius: 4px;
-        }
-
         /* Cambiamos el fondo cuando esté en active o hover */
         #horarios::-webkit-scrollbar-track:hover,
-        #horarios::-webkit-scrollbar-track:active {
-          background: #d4d4d4;
-        }
+        #horarios::-webkit-scrollbar-track:active,
         #d-d::-webkit-scrollbar-track:hover,
         #d-d::-webkit-scrollbar-track:active {
           background: #d4d4d4;
@@ -213,261 +171,292 @@
 @endsection
 
 @section('content')
+<section>
 
-	<main>
-		<div id="breadcrumb">
-			<div class="container">
-				<ul>
-					<li><a href="/">Inicio</a></li>
-					<li>Doctor</li>
-				</ul>
-			</div>
-		</div>
-		<!-- /breadcrumb -->
+	<div id="breadcrumb">
+        <div class="position-relative">
+            <div class="ml-5">
+            <ul>
+                <li><a href="{{route('inicio')}}">Inicio</a></li>
+                <li>Doctor</li>
+            </ul>
+        </div>
+        @if($message = Session::get('success'))
+            <div class="alert alert-success alert-block alert-dismissible fade show" role="alert">
+                {{ $message }}
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            </div>
+        @endif
+        @if($message = Session::get('error'))
+            <div class="alert alert-danger alert-block alert-dismissible fade show" role="alert">
+                {{ $message }}
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            </div>
+        @endif
+        </div>
+	</div>
+	<!-- /breadcrumb -->
 
-		<div class="container margin_60">
-			<div class="row">
+	<div class="container margin_60">
+		<div class="row">
 
-				<aside class="col-xl-3 col-lg-4" id=""> <!--id="sidebar"-->
-					<div class="box_profile">
-						<figure>
-							<div class="croppic" style="width: 250px;height: 250px;margin:0px"
-                             	id="cropImgProfile"
-                             	data-model="{{ $model->id }}"
-                             	data-id="{{ $model->id }}"
-                             	data-image="{{ $model->imagen?true:false }}"
-                             	data-width="500"
-                             	data-placement="bottom">
-                            	@if($model->imagen)
-                                	<img src="/{{ config('app.dir_image').$model->imagen }}" class="croppedImg">
-								@endif
-                        	</div>
-						</figure>
+			<aside class="col-xl-3 col-lg-4" id=""> <!--id="sidebar"-->
+				<div class="box_profile">
+					<figure>
+						<div class="croppic" style="width: 250px;height: 250px;margin:0px"
+                         	id="cropImgProfile"
+                         	data-model="{{ $model->id }}"
+                         	data-id="{{ $model->id }}"
+                         	data-image="{{ $model->imagen?true:false }}"
+                         	data-width="500"
+                         	data-placement="bottom">
+                        	@if($model->imagen)
+                            	<img src="/{{ config('app.dir_image').$model->imagen }}" class="croppedImg">
+							@endif
+                    	</div>
+					</figure>
 
-						<small>{{$model-> especialidad->nombre}}</small>
-						<h1>Dr. {{ $model->nombres }} {{ $model->apellidos }}</h1>
-						<span>{{$model-> ciudad->nombre}}</span>
+					<small>{{$model-> especialidad->nombre}}</small>
+					<h1>Dr. {{ $model->nombres }} {{ $model->apellidos }}</h1>
+					<span>{{$model-> ciudad->nombre}}</span>
 
 
-						<hr>
-					    <div class="nav text-justify nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-					      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#agregar-ho" role="tab" aria-controls="v-pills-home" aria-selected="true">Agregar Horarios</a>
-					      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#eliminar-ho" role="tab" aria-controls="v-pills-profile" aria-selected="false">Ver Horarios</a>
-					      <a class="nav-link" id="" data-toggle="pill" href="#ver-citas" role="tab" aria-controls="v-pills-messages" aria-selected="false">Ver Citas</a>
-					      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#config" role="tab" aria-controls="v-pills-messages" aria-selected="false">Editar Perfil</a>
-					    </div>
-					</div>
-				</aside>
-				<!-- /asdide -->
+					<hr>
+				    <div class="nav text-justify nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+				      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#agregar-ho" role="tab" aria-controls="v-pills-home" aria-selected="true">Agregar Horarios</a>
+				      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#eliminar-ho" role="tab" aria-controls="v-pills-profile" aria-selected="false">Ver Horarios</a>
+				      <a class="nav-link" id="" data-toggle="pill" href="#ver-citas" role="tab" aria-controls="v-pills-messages" aria-selected="false">Ver Citas</a>
+				      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#config" role="tab" aria-controls="v-pills-messages" aria-selected="false">Editar Perfil</a>
+				    </div>
+				</div>
+			</aside>
+			<!-- /asdide -->
 
-				<div class="col-xl-9 col-lg-8">
+			<div class="col-xl-9 col-lg-8">
 
-					<div class="tabs_styled_2">
-						<!--/nav-tabs -->
-							<div class="tab-content" id="v-pills-tabContent">
+				<div class="tabs_styled_2">
+					<!--/nav-tabs -->
+						<div class="tab-content" id="v-pills-tabContent">
 
-							    <div class="tab-pane fade show active" id="agregar-ho" role="tabpanel" aria-labelledby="v-pills-home-tab">
-								  	<div class="main_title_4">
-										<h3><i class="icon_circle-slelected"></i>Selecciona fecha para agregar horarios</h3>
+						    <div class="tab-pane fade show active" id="agregar-ho" role="tabpanel" aria-labelledby="v-pills-home-tab">
+							  	<div class="main_title_4">
+									<h3><i class="icon_circle-slelected"></i>Selecciona fecha para agregar horarios</h3>
+								</div>
+						      	<hr>
+								<div class="row add_bottom_45">
+									<div class="col-lg-7">
+										<div class="form-group">
+											<div class="calendar"></div>
+											<input type="hidden" id="my_hidden_input">
+										</div>
 									</div>
-							      	<hr>
-									<div class="row add_bottom_45">
-										<div class="col-lg-7">
-											<div class="form-group">
-												<div class="calendar"></div>
-												<input type="hidden" id="my_hidden_input">
-											</div>
-										</div>
-										<div class="col-lg-5 ">
-												<div class="form-row">
-													<div class="form-group col-md-6">
-														<label>Hora Inico</label>
-
-														<input type="time" class="form-control" id="hora_i">
-
-
-													</div>
-													<div class="form-group col-md-6">
-														<label>Hora Fin</label>
-														<input type="time" class="form-control" id="hora_f">
-													</div>
-													<div class="form-group col-6">
-														<label>Intervalo</label>
-														<input type="time" valueAsNumber class="form-control" id="inter">
-													</div>
+									<div class="col-lg-5 ">
+											<div class="form-row">
+												<div class="form-group col-md-6">
+													<label>Hora Inico</label>
+													<input type="time" class="form-control" id="hora_i">
 												</div>
-												<div class="text-center" id="crear"><div class="btn_1 small">Crear Horarios</div></div>
-										</div>
-										<div class="col-lg-12">
-											<ul class="doc time_select version_2 doc add_top_20 text-center" id="horas">
-                                                <li v-for="horai of horas">
-                                                    <input type="text" name="hora[]" :id="horai.name" form="hor_doc" v-model="horai.hora">
-                                                    <label :for=horai.name>@{{horai.hora}}</label>
-                                                </li>
-											</ul>
-										</div>
-                                        <div class="col-lg-12 text-right">
-                                            <input type="text"  id="fecha" name="fecha" v-model="fec" hidden form="hor_doc">
-                                            <input type="submit" id="enviar_ho"class="btn_1 medium"value="Guardar Horarios" form="hor_doc">
-                                        </div>
-                                        <form action="{{route('horarios',$model->id)}}" method="post" id="hor_doc" hidden>
+												<div class="form-group col-md-6">
+													<label>Hora Fin</label>
+													<input type="time" class="form-control" id="hora_f">
+												</div>
+												<div class="form-group col-6">
+													<label>Intervalo</label>
+													<input type="time" valueAsNumber class="form-control" id="inter">
+												</div>
+											</div>
+											<div class="text-center" id="crear"><div class="btn_1 small">Crear Horarios</div></div>
+									</div>
+									<div class="col-lg-12">
+										<ul class="doc time_select version_2 doc add_top_20 text-center" id="horas">
+                                            <li v-for="horai of horas">
+                                                <input type="text" name="hora[]" :id="horai.name" form="hor_doc" v-model="horai.hora">
+                                                <label :for=horai.name>@{{horai.hora}}</label>
+                                            </li>
+										</ul>
+									</div>
+                                    <div class="col-lg-12 text-right">
+                                        <input type="text"  id="fecha" name="fecha" v-model="fec" hidden form="hor_doc">
+                                        <input type="submit" id="enviar_ho"class="btn_1 medium"value="Guardar Horarios" form="hor_doc">
+                                    </div>
+                                    <form action="{{route('horarios',$model->id)}}" method="post" id="hor_doc" hidden>
+                                        @csrf
+                                    </form>
+								</div>
+							</div>
+
+						    <div class="tab-pane fade" id="eliminar-ho" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+					      		<div class="main_title_4">
+									<h3><i class="icon_circle-slelected"></i>Selecciona fecha para eliminar horarios
+                                    </h3>
+							  	</div>
+						      	      <hr>
+							  	<div class="row add_bottom_45">
+									<div class="col-lg-12">
+										<div class="form-group ">
                                             @csrf
-                                        </form>
-                                        @if (session('status'))
-                                        <div class="alert alert-primary" role="alert">
-                                        {{ session('status') }}
-                                        </div>
-                                        @endif
+                                            <table class="table letra table-responsive" id="horarios">
+                                                    @for($i=0; $i < $fil->count(); $i++)
+                                                    <tr class="celda table-responsive vertical" id="d-d">
+                                                        <th class="celda">
+                                                            {{ $fil[$i]->fecha }}
+                                                            <button type="button" class="btn close btn-info btn-lg" data-toggle="modal" data-target="#nuevoHorario" id="mas">+</button>
+                                                            <!-- modal -->
+                                                            <div class="modal hide fade in"" id="nuevoHorario" tabindex="-1" >
+                                                              <div class="modal-dialog modal-dialog-centered">
+                                                                <div class="modal-content">
+                                                                  <div class="modal-header">
+                                                                    <h5 class="modal-title">Añade un nuevo horario a esta fecha</h5>
+                                                                    <button type="button" class="close" data-dismiss="modal">
+                                                                      <span>&times;</span>
+                                                                    </button>
+                                                                  </div>
+                                                                  <div class="modal-body">
+                                                                    <form action="{{route('horarios',$model->id)}}" method="post" id="nue">
+                                                                        @csrf
+                                                                    <input type="text" hidden value="{{ $fil[$i]->fecha }}" name="fecha">
+                                                                    <input type="time" class="form-control" name="hora">
+                                                                    </form>
+                                                                  </div>
+                                                                  <div class="modal-footer">
+                                                                    <input  type="submit" form="nue" class="btn btn-primary" value="Añadir">
+                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                        </th>
+                                                        @foreach($fil[$i]->hora as $h)
+                                                        <td class="celda">
+                                                            {{ $h['hora'] }}
+                                                            <a href="{{ route('dispo.e',$h['id'])}}"  class="btn close" aria-label="Close" id="equis">
+                                                              &times;
+                                                            </a>
+                                                        </td>
+                                                        @endforeach
+                                                    </tr>
+                                                    @endfor
+                                            </table>
+										</div>
 									</div>
 								</div>
+								   <hr>
+								<div class="text-center"><a href="booking-page.html" class="btn_1 medium">Eliminar</a></div>
+					  	  	</div>
 
-							    <div class="tab-pane fade" id="eliminar-ho" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-						      		<div class="main_title_4">
-										<h3><i class="icon_circle-slelected"></i>Selecciona fecha para eliminar horarios
+						    <div class="tab-pane fade" id="ver-citas" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+							 	<div class="main_title_4">
+									<h3><i class="icon_circle-slelected"></i>Ver cita de pacientes</h3>
+								</div>
+							  	<hr>
+							  	<div class="doc_citas">
+								  	<table class="table">
+										<thead class="thead-primary">
+											<tr>
+											<th scope="col">#</th>
+											<th scope="col">Nombres</th>
+											<th scope="col">Apellidos</th>
+											<th scope="col">Email</th>
+											<th scope="col">Celular</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+											<th scope="row">1</th>
+											<td>Manuel</td>
+											<td>Campos</td>
+											<td>m@campos</td>
+											<td>987789087</td>
+											</tr>
+											<tr>
+											<th scope="row">2</th>
+											<td>Carlos</td>
+											<td>Malpartida</td>
+											<td>c@mail.com</td>
+											<td>678987654</td>
+											</tr>
+											<tr>
+											<th scope="row">3</th>
+											<td>Maribel</td>
+											<td>Terrones</td>
+											<td>m@mail.com</td>
+											<td>543678987</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+					      	</div>
+
+					      	<div class="tab-pane fade" id="config" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+								<div class="main_title_4">
+										<h3><i class="icon_circle-slelected"></i>Configura tu cuenta
                                         </h3>
-								  	</div>
-							      	      <hr>
-								  	<div class="row add_bottom_45">
-										<div class="col-lg-12">
-											<div class="form-group ">
-                                                @csrf
-                                                <table class="table letra table-responsive" id="horarios">
-                                                        @for($i=0; $i < $fil->count(); $i++)
-                                                        <tr class="celda table-responsive vertical" id="d-d">
-                                                            <th class="celda">
-                                                                {{ $fil[$i]->fecha }}
-                                                                <button class="btn close" id="mas">+</button>
-                                                            </th>
-                                                            @foreach($fil[$i]->hora as $h)
-                                                            <td class="celda">
-                                                                {{ $h['hora'] }}
-                                                                <a href="{{ route('dispo.e',$h['id'])}}"  class="btn close" aria-label="Close" id="equis">
-                                                                  &times;
-                                                                </a>
-                                                            </td>
-                                                            @endforeach
-                                                        </tr>
-                                                        @endfor
-                                                </table>
-											</div>
+								</div>
+						      	<hr>
+						      	<form action="{{ route('doctor.edit',$model->id)}}" method="post">
+								  @csrf								<!--<div class="box_form">-->
+									<div class="form-row">
+										<div class="form-group col-md-6">
+											<label>Nombres</label>
+											<input type="text" class="form-control"  placeholder="Ingresa tus nombres" name="nombres" value="{{ $model->nombres }}">
+										</div>
+										<div class="form-group col-md-6">
+											<label>Apellidos</label>
+											<input type="text" class="form-control"  placeholder="Ingresa tus apellidos" name="apellidos" value="{{ $model->apellidos}}">
 										</div>
 									</div>
-									   <hr>
-									<div class="text-center"><a href="booking-page.html" class="btn_1 medium">Eliminar</a></div>
-						  	  	</div>
+									<div class="form-row">
+										<div class="form-group col-md-6">
 
-							    <div class="tab-pane fade" id="ver-citas" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-								 	<div class="main_title_4">
-										<h3><i class="icon_circle-slelected"></i>Ver cita de pacientes</h3>
+											<label>Codigo CMP</label>
+											<input type="text" class="form-control"  placeholder="Ingresar CMP" name="cod_colegiatura" value="{{ $model->cod_colegiatura}}">
+
+										</div>
+										<div class="form-group col-md-6">
+											<label>Direccion</label>
+											<input type="text" class="form-control"  placeholder="Ingresa Direccion" name="direccion" value="{{ $model->direccion}}">
+										</div>
 									</div>
-								  	<hr>
-								  	<div class="doc_citas">
-									  	<table class="table">
-											<thead class="thead-primary">
-												<tr>
-												<th scope="col">#</th>
-												<th scope="col">Nombres</th>
-												<th scope="col">Apellidos</th>
-												<th scope="col">Email</th>
-												<th scope="col">Celular</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-												<th scope="row">1</th>
-												<td>Manuel</td>
-												<td>Campos</td>
-												<td>m@campos</td>
-												<td>987789087</td>
-												</tr>
-												<tr>
-												<th scope="row">2</th>
-												<td>Carlos</td>
-												<td>Malpartida</td>
-												<td>c@mail.com</td>
-												<td>678987654</td>
-												</tr>
-												<tr>
-												<th scope="row">3</th>
-												<td>Maribel</td>
-												<td>Terrones</td>
-												<td>m@mail.com</td>
-												<td>543678987</td>
-												</tr>
-											</tbody>
-										</table>
+									<div class="form-row">
+										<div class="form-group col-md-6">
+											<label>Fecha Nacimiento</label>
+											<input type="text" class="form-control"  placeholder="Ingresa Fecha Nacimiento" value="{{ $model->fecha_nac}}">
+										</div>
+										<div class="form-group col-md-6">
+											<label>Correo</label>
+											<input type="email" class="form-control"  placeholder="Ingresa tu Correo" name="email" value="{{ $model->user->email}}">
+										</div>
 									</div>
-						      	</div>
-
-						      	<div class="tab-pane fade" id="config" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-									<div class="main_title_4">
-											<h3><i class="icon_circle-slelected"></i>Configura tu cuenta
-                                            </h3>
+									<div class="form-row">
+										<div class="form-group col-md-6">
+											<label>Contraseña</label>
+											<input type="password" class="form-control"  placeholder="Ingresa contraseña">
+										</div>
+										<div class="form-group col-md-6">
+											<label>Confirmar contraseña</label>
+											<input type="password" class="form-control"  placeholder="Confirmar contraseña">
+										</div>
 									</div>
-							      	<hr>
-							      	<form action="{{ route('doctor.edit',$model->id)}}" method="post">
-									  @csrf								<!--<div class="box_form">-->
-										<div class="form-row">
-											<div class="form-group col-md-6">
-												<label>Nombres</label>
-												<input type="text" class="form-control"  placeholder="Ingresa tus nombres" name="nombres" value="{{ $model->nombres }}">
-											</div>
-											<div class="form-group col-md-6">
-												<label>Apellidos</label>
-												<input type="text" class="form-control"  placeholder="Ingresa tus apellidos" name="apellidos" value="{{ $model->apellidos}}">
-											</div>
-										</div>
-										<div class="form-row">
-											<div class="form-group col-md-6">
-
-												<label>Codigo CMP</label>
-												<input type="text" class="form-control"  placeholder="Ingresar CMP" name="cod_colegiatura" value="{{ $model->cod_colegiatura}}">
-
-											</div>
-											<div class="form-group col-md-6">
-												<label>Direccion</label>
-												<input type="text" class="form-control"  placeholder="Ingresa Direccion" name="direccion" value="{{ $model->direccion}}">
-											</div>
-										</div>
-										<div class="form-row">
-											<div class="form-group col-md-6">
-												<label>Fecha Nacimiento</label>
-												<input type="text" class="form-control"  placeholder="Ingresa Fecha Nacimiento" value="{{ $model->fecha_nac}}">
-											</div>
-											<div class="form-group col-md-6">
-												<label>Correo</label>
-												<input type="email" class="form-control"  placeholder="Ingresa tu Correo" name="email" value="{{ $model->user->email}}">
-											</div>
-										</div>
-										<div class="form-row">
-											<div class="form-group col-md-6">
-												<label>Contraseña</label>
-												<input type="password" class="form-control"  placeholder="Ingresa contraseña">
-											</div>
-											<div class="form-group col-md-6">
-												<label>Confirmar contraseña</label>
-												<input type="password" class="form-control"  placeholder="Confirmar contraseña">
-											</div>
-										</div>
-										<hr>
-										<div class="form-group text-center add_top_30">
-											<input class="btn_1" type="submit" value="Guardar">
-										</div>
-										<!--</div> -->
-									</form>
-				     	 		</div>
-						    </div>
-						<!-- /tab-content -->
-					</div>
-					<!-- /tabs_styled -->
+									<hr>
+									<div class="form-group text-center add_top_30">
+										<input class="btn_1" type="submit" value="Guardar">
+									</div>
+									<!--</div> -->
+								</form>
+			     	 		</div>
+					    </div>
+					<!-- /tab-content -->
 				</div>
-				<!-- /col -->
+				<!-- /tabs_styled -->
 			</div>
-			<!-- /row -->
+			<!-- /col -->
 		</div>
-		<!-- /container -->
-	</main>
-	<!-- /main -->
+		<!-- /row -->
+	</div>
+	<!-- /container -->
+</section>
+<!-- /main -->
+
 
 @endsection
 
@@ -476,6 +465,11 @@
 	<script src="/assets/online/scripts/croppic.js"></script>
 	<script src="/assets/online/js/bootstrap-datepicker.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+    </script>
         <script>
         var app = new Vue({
           el: '#agregar-ho',

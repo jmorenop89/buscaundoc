@@ -10,6 +10,7 @@ use App\Library\Croppic;
 use App\Paciente;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class ProfileController extends Controller
 {
@@ -35,7 +36,7 @@ class ProfileController extends Controller
             return view('online.profile.paciente',compact('model','cita','fecha','hora'));
         }else{
             $model = $user->doctor;
-            $fecha = Disponibilidad::where('doctor_id','=',$model->id)->get();
+            $fecha = Disponibilidad::where('doctor_id','=',$model->id)->orderBy('hora', 'asc')->get();
             //dd($fecha);
             $fil = $fecha->unique('fecha')->values();
             // $json = $fecha->toJson();
@@ -64,17 +65,35 @@ class ProfileController extends Controller
     public function guardar_horarios(Request $request,$id){
         $data = $request->all();
         //dd($fecha);
+        //dd(count(array($data),1));
+        //dd($data);
         //dd($data['radio_time']);
-        foreach ($data['hora'] as $key) {
+        if (count(array($data),1) > 4) {
+            foreach ($data['hora'] as $key) {
+                $dispo = Disponibilidad::create([
+                    'fecha'=>$data['fecha'],
+                    'hora'=>$key,
+                    'doctor_id'=>$id
+                ]);
+            }
+            $request->session()->flash('status', 'Horarios agregados');
+            return redirect()->route('profile')->with('success','Horarios agregados');
+        }
+        else{
+            $query =Disponibilidad::where('hora','=',$data['hora'])->get();
+            //dd(count($query));
+            if (count($query) > 0){
+                return Redirect::back()->with('error','Horario no disponible');
+            }
+            else{
             $dispo = Disponibilidad::create([
-                'fecha'=>$data['fecha'],
-                'hora'=>$key,
-                'doctor_id'=>$id
-            ]);
-        };
-        //dd($dispo);
-        $request->session()->flash('status', 'Horarios agregados correctamente');
-        return redirect()->route('profile');
+                    'fecha'=>$data['fecha'],
+                    'hora'=>$data['hora'],
+                    'doctor_id'=>$id
+                ]);
+            return redirect()->route('profile')->with('success','Horario agregado');
+            }
+        }
     }
 
     public function store_image(){

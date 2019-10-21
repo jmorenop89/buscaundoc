@@ -423,8 +423,7 @@ header {
       border-bottom: 1px solid #ededed;
       position: fixed;
       left: 0;
-      top: 0;
-      z-index: 99999999; }
+      top: 0; }
       @media (max-width: 991px) {
         header.header_sticky.sticky {
           /* For less than 991px */
@@ -2900,17 +2899,17 @@ a.social_bt {
   display: block; }
 
  /*
-  
+
   .checkbox_2:before {
     content: '';
     position: absolute;
     top: 2px;
     left: 0;
-    width: 20px; 
+    width: 20px;
     height: 20px;
     border: 2px solid #e1e8ed;
     background: transparent;
-    border-radius: 5px }   
+    border-radius: 5px }
 
   .checkbox_2 input[type=checkbox]:focus + label:before {
     background-color: #1e66ea;
@@ -2933,9 +2932,9 @@ a.social_bt {
     opacity: 0;
     position: absolute;
     width: 0;
-    height: 0; } 
+    height: 0; }
     .checkbox_2 input[type=checkbox]:checked + label:after {
-      opacity: 1; } 
+      opacity: 1; }
       */
 
 .checkbox-holder span {

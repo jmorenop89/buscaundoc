@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Online;
 
-use Illuminate\Http\Request;
+use App\Disponibilidad;
+use App\Doctor;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\DoctorRequest;
-use App\Doctor;
 use App\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 
@@ -35,10 +36,10 @@ class DoctorController extends Controller
     }
 
     public function dele_hora($id){
-        dd($id);
+        //dd($id);
         $doc = Disponibilidad::find($id);
         $doc->delete();
-        return redirect()->route('doc.index');
+        return redirect()->route('profile')->with('success','Horario eliminado');
 
     }
 }
