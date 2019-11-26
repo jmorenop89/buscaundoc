@@ -96,6 +96,7 @@
 								</ul>
                                 <form action="{{route('reservar', Auth::user()->id)}}" method="post" id="reserva_cita" hidden>
                                     @csrf
+                                    <input type="text" value="{{$doc->id}}" name="doctor_id">
                                 </form>
 							</div>
 						</div>

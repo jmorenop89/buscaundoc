@@ -10,9 +10,9 @@
 			width: 100%;
 		}
   </style>
-  <link href="/assets/online/css/date_picker.css" rel="stylesheet">  
+  <link href="/assets/online/css/date_picker.css" rel="stylesheet">
   <link rel="stylesheet" href="/assets/plugins/croppic/croppic.css">
-@endsection 
+@endsection
 
 @section('content')
 
@@ -44,11 +44,11 @@
                                 	<img src="/{{ config('app.dir_image').$model->imagen }}" class="croppedImg">
 						        	@endif
             </div>
-              
+
             </figure>
             <small>Paciente</small>
             <h1>{{ $model->nombres }} {{ $model->apellidos }}</h1>
-            
+
             <hr>
                   <div  class="nav text-justify nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="display:inline-block;">
                     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#ver-citas" role="tab" aria-controls="v-pills-home" aria-selected="true">Ver mis citas </a>
@@ -83,6 +83,7 @@
                     @endforeach
 
                     </div>
+
                     <div class="tab-pane fade" id="notifi" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                     <div class="main_title_4">
 										<h3><i class="icon_circle-slelected"></i>Notificaciones</h3>
@@ -118,6 +119,7 @@
 			              	</div>
 
                     </div>
+
                     <div class="tab-pane fade" id="config" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                     <div class="main_title_4">
 										<h3><i class="icon_circle-slelected"></i>Actualizar Datos</h3>
@@ -196,7 +198,7 @@
 	<script src="/assets/online/scripts/croppic.js"></script>
   <script src="/assets/online/js/bootstrap-datepicker.js"></script>
   <script>
-	
+
 		fn_croppic('cropImgProfile', '/profile/save-image', '/profile/delete-image');
 	</script>
   @endsection

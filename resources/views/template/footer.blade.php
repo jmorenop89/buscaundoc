@@ -3,7 +3,7 @@
 			<div class="row">
 				<div class="col-lg-3 col-md-12 col-sm-6 col-12">
 					<p>
-						<a href="index.html" title="BUSCAUNDOC">
+						<a href="{{route('inicio')}}" title="BUSCAUNDOC">
 							<img src="/assets/online/img/logo.png" data-retina="true" alt="" width="163" height="36" class="img-fluid">
 						</a>
 					</p>

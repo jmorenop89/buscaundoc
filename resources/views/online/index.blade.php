@@ -5,105 +5,103 @@
 @endsection
 
 @section('css')
-<style>
-    .especialidad, .ciudad{
-        height: 45px;
-        padding-left: 20px;
-        margin-bottom:10px;
-    }
-@media (max-width: 1200px) {
-  .especialidad {
-    width:360px;
-  }
-  .ciudad {
-    width:360px;
-  }
-  #custom-search-input input[type='submit'] {
-    position: relative;
-    width: 100px;
-    height: 45px;
-    top:0px;
-    }
-}
+    <style>
+        .especialidad, .ciudad{
+            height: 45px;
+            padding-left: 20px;
+            margin-bottom:10px;
+        }
+        @media (max-width: 1200px) {
+          .especialidad {
+            width:360px;
+          }
+          .ciudad {
+            width:360px;
+          }
+          #custom-search-input input[type='submit'] {
+            position: relative;
+            width: 100px;
+            height: 45px;
+            top:0px;
+            }
+        }
 
-@media (max-width: 991px) {
-  .especialidad {
-    width:440px;
-  }
-  .ciudad {
-    width:440px;
-  }
-  #custom-search-input input[type='submit'] {
-    position: relative;
-    width: 440px;
-    height: 45px;
-    top:0px;
-    }
-}
+        @media (max-width: 991px) {
+          .especialidad {
+            width:440px;
+          }
+          .ciudad {
+            width:440px;
+          }
+          #custom-search-input input[type='submit'] {
+            position: relative;
+            width: 440px;
+            height: 45px;
+            top:0px;
+            }
+        }
 
-@media (max-width: 768px) {
-  .especialidad {
-    width:360px;
-  }
-  .ciudad {
-    width:360px;
-  }
-  #custom-search-input input[type='submit'] {
-    position: relative;
-    width: 360px;
-    height: 45px;
-    top:0px;
-    }
-}
+        @media (max-width: 768px) {
+          .especialidad {
+            width:360px;
+          }
+          .ciudad {
+            width:360px;
+          }
+          #custom-search-input input[type='submit'] {
+            position: relative;
+            width: 360px;
+            height: 45px;
+            top:0px;
+            }
+        }
 
-@media (max-width: 576px) {
-  .especialidad {
-    width:260px;
-  }
-  .ciudad {
-    width:260px;
-  }
-  #custom-search-input input[type='submit'] {
-    position: relative;
-    width: 260px;
-    height: 45px;
-    top:0px;
-    }
-}
+        @media (max-width: 576px) {
+          .especialidad {
+            width:260px;
+          }
+          .ciudad {
+            width:260px;
+          }
+          #custom-search-input input[type='submit'] {
+            position: relative;
+            width: 260px;
+            height: 45px;
+            top:0px;
+            }
+        }
 
-@media (max-width: 320px) {
-  .especialidad {
-    width:250px;
-  }
-  .ciudad {
-    width:250px;
-  }
-  #custom-search-input input[type='submit'] {
-    position: relative;
-    width: 250px;
-    height: 45px;
-    top:0px;
-    }
-}
+        @media (max-width: 320px) {
+          .especialidad {
+            width:250px;
+          }
+          .ciudad {
+            width:250px;
+          }
+          #custom-search-input input[type='submit'] {
+            position: relative;
+            width: 250px;
+            height: 45px;
+            top:0px;
+            }
+        }
 
-@media (max-width: 280px) {
-  .especialidad {
-    width:200px;
-  }
-  .ciudad {
-    width:200px;
-  }
-  #custom-search-input input[type='submit'] {
-    position: relative;
-    width: 200px;
-    height: 45px;
-    top:0px;
+        @media (max-width: 280px) {
+          .especialidad {
+            width:200px;
+          }
+          .ciudad {
+            width:200px;
+          }
+          #custom-search-input input[type='submit'] {
+            position: relative;
+            width: 200px;
+            height: 45px;
+            top:0px;
 
-    }
-}
-
-</style>
-
+            }
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -214,6 +212,6 @@
 
 </script>
 
-	<script src="/assets/online/scripts/inicio.js"></script> 
+	<script src="/assets/online/scripts/inicio.js"></script>
 
 @endsection

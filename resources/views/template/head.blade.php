@@ -11,6 +11,7 @@
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="/assets/online/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 
 	<!-- BASE CSS -->
 	<link href="/assets/online/css/bootstrap.css" rel="stylesheet">

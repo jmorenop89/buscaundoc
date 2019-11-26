@@ -17,6 +17,7 @@ class CreateDisponibilidadTable extends Migration
             $table->bigIncrements('id');
             $table->date('fecha');
             $table->time('hora');
+            $table->enum('estado',['activo','inactivo']);
             $table->unsignedBigInteger('doctor_id');
             $table->foreign('doctor_id')->references('id')->on('doctor');
             $table->timestamps();

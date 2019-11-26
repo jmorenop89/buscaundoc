@@ -13,7 +13,7 @@
                                 <div class="page-title">Lista de Pacientes</div>
                             </div>
                             <ol class="breadcrumb page-breadcrumb pull-right">
-                                
+
                                 <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="{{route('dash.index')}}">Dashboard</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
                                 <li class="active">Lista de Pacientes</li>
@@ -74,7 +74,7 @@
 																		<a href="{{ route('pac.eliminar', $pacs->id)}}"  class="btn btn-tbl-delete btn-xs">
 																			<i class="fa fa-trash-o "></i>
 																		</a>
-																		
+
 																	</td>
 																</tr>
 																@endforeach
@@ -93,12 +93,12 @@
 				                                <div class="card card-box">
 				                                    <div class="card-body no-padding ">
 				                                    	<div class="doctor-profile">
-				                                                <img src="" class="doctor-pic" alt=""> 
+				                                                <img src="" class="doctor-pic" alt="">
 					                                        <div class="profile-usertitle">
 					                                            <div class="doctor-name">{{ $pacs->nombres}}  {{ $pacs->apellidos}}</div>
 															</div>
 															<div>{{ $pacs->user->email}}</div>
-				                                                <p><br />{{ $pacs->fecha_nac}}</p> 
+				                                                <p><br />{{ $pacs->fecha_nac}}</p>
 				                                                <div><p><i class="fa fa-phone"></i>{{ $pacs->celular}}</p> </div>
 					                                        <div class="profile-userbuttons">
 					                                            <a href="{{route('pac.index')}}" class="btn btn-circle deepPink-bgcolor btn-sm">Read More</a>

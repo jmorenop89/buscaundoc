@@ -13,12 +13,12 @@
                                 <div class="page-title">DASHBOARD</div>
                             </div>
                             <ol class="breadcrumb page-breadcrumb pull-right">
-                                
+
                                 <li class="active">DASHBOARD</li>
                             </ol>
                         </div>
                     </div>
-               
+
 					<!-- start widget -->
 					<div class="state-overview">
 						<div class="row">
@@ -57,7 +57,7 @@
 					          <!-- /.info-box -->
 					        </div>
 					    </div>
-                    </div>     
+                    </div>
                         <div class="row">
                         	<div class="col-12 col-sm-12 col-md-6">
 					          <div class="info-box bg-white">
@@ -94,8 +94,8 @@
 					          <!-- /.info-box -->
 					        </div>
                         </div>
-                       
-                      
+
+
 					<!-- end widget -->
 
                     <!-- start new patient list -->
@@ -107,7 +107,7 @@
                                     <div class="tools">
                                         <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
 	                                    <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
-	                                    <!--<a class="t-close btn-color fa fa-times" href="javascript:;"></a> -->
+	                                    <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
                                     </div>
                                 </div>
                                 <div class="card-body ">
@@ -122,15 +122,17 @@
 													</tr>
 												</thead>
 												<tbody>
+                                                    @foreach($cont as $key=>$index)
 													<tr>
-														<td>01</td>
-														<td>Dr.Rajesh</td>
+														<td>{{$key}}</td>
+														<td>{{$index['nombre']}}</td>
 
-														<td>
-															<span class="label label-sm label-success">70</span>
+														<td class="text-center">
+															<span class="label label-success">{{$index['nro']}}</span>
 														</td>
 
 													</tr>
+                                                    @endforeach
 												</tbody>
 											</table>
 										</div>
@@ -139,7 +141,7 @@
                             </div>
                         </div>
                      </div>
-                 </div>     
+                 </div>
             </div>
         </div>
 @endsection

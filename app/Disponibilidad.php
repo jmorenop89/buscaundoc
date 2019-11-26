@@ -10,7 +10,7 @@ class Disponibilidad extends Model
     public $table = 'disponibilidad';
 
     protected $fillable = [
-        'fecha', 'hora', 'doctor_id',
+        'fecha', 'hora','estado', 'doctor_id',
     ];
     public function doctor(){
         return $this->belongsTo('App\Doctor');

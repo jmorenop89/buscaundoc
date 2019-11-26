@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class AuthDoctor
 {
@@ -15,6 +16,12 @@ class AuthDoctor
      */
     public function handle($request, Closure $next)
     {
+        if (Auth::user()) {
+            if (Auth::user()->role == 'doctor') {
+                   return redirect('profile');
+            }
+            return $next($request);
+        }
         return $next($request);
     }
 }

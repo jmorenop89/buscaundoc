@@ -1,0 +1,159 @@
+.croppic img{
+    width: 100%;
+}
+
+/*----------------------*/
+
+/* Alerta */
+div[role=alert]{
+    position: absolute;
+    right: 20px;
+    top: -100%;
+}
+.alert-dismissible .close {
+    padding: 0.50rem 1rem;
+}
+/* Enviar horarios*/
+#enviar_ho{
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+}
+#horas li input[type="text"]{
+    display: none;
+}
+/* Menù */
+@media (max-width: 2560px) {
+    .nav-pills .nav-link {
+        width:100%;
+        text-align: center;
+    }
+    .celda {
+        vertical-align:top;
+        display: inline-grid;
+        background:#F8F8F8;
+        border: 2px solid #fff;
+    }
+    .celda th, .celda td{
+        width: 150px;
+        display: list-item;
+    }
+    .celda td{
+        text-align: center;
+    }
+    .table-responsive{
+        width: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav-pills .nav-link {
+        width:100%;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .nav-pills .nav-link {
+        width:100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 991px) {
+    .nav-pills .nav-link {
+        width:50%;
+        text-align: center;
+    }
+    .box_profile figure{
+        margin:10px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-pills .nav-link {
+        width:50%;
+        text-align: center;
+    }
+    .container{
+        max-width: 540px
+    }
+    ul.doc.time_select.version_2 li {
+        width:25%;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-pills .nav-link {
+        width:50%;
+        text-align: center;
+    }
+}
+@media (max-width: 480px) {
+    ul.doc.time_select.version_2 li {
+        width: 33%;
+    }
+}
+
+@media (max-width: 320px) {
+    .nav-pills .nav-link {
+        width:100%;
+        text-align: center;
+    }
+    .doc_citas {
+        overflow-x:scroll;
+    }
+    ul.doc.time_select.version_2 li {
+        width:50%;
+    }
+}
+
+.vertical {
+    height: 400px;
+    overflow: auto;
+    display: flow-root;
+}
+#horarios > tbody{
+    display: inline-flex;
+}
+/*scrollbar*/
+#horarios::-webkit-scrollbar,#d-d::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 5px;    /* Tamaño del scroll en horizontal */
+   /* display: none;*/  /* Ocultar scroll */
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+#horarios::-webkit-scrollbar-thumb,#d-d::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+#horarios::-webkit-scrollbar-thumb:hover,#d-d::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* Cambiamos el fondo cuando esté en active */
+#horarios::-webkit-scrollbar-thumb:active,#d-d::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+#horarios::-webkit-scrollbar-track,#d-d::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+/* Cambiamos el fondo cuando esté en active o hover */
+#horarios::-webkit-scrollbar-track:hover,
+#horarios::-webkit-scrollbar-track:active,
+#d-d::-webkit-scrollbar-track:hover,
+#d-d::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+#mas{
+    color: green;
+    padding: 0;
+}
+#equis{
+    color: red;
+    padding: 0;
+}

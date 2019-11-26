@@ -4,10 +4,10 @@
     <style>
     	@media(min-width: 992px){
     		.container ul ul{
-                margin: 5px 0 0 0;
                 border-top: blue 2px solid;
     		}
             .container ul ul li{
+                width: 80%;
                 margin-right: 20px
             }
             .container ul ul li p{
@@ -48,11 +48,16 @@
 				<div class="col-lg-9 col-6">
 
 					<nav id="menu" class="main-menu">
+                        @auth
+                        @if(Auth::user()->role == "doctor")
+
+                        @endif
+                        @endauth
 						<ul  id="top_access">
 							<li>
 								<span><a href="/">Inicio</a></span>
 							</li>
-                            @guest
+                        @guest
                             <li>
 								<span><a style="cursor:pointer">Regístrate</a></span>
 								<ul>
@@ -65,11 +70,16 @@
                                 <span><a href="{{ route('login')}}">Iniciar Sesión</a></span>
                             </li>
 						@endguest
+                        @auth
+                        @if(Auth::user()->role == "doctor")
+                        @else
 							<li>
                                 <span id="reserva">
-                                <div><a href="/" class="btn_1 text-white">Reserva una cita</a></div>
+                                <div><a href="{{route('buscar')}}" class="btn_1 text-white">Reserva una cita</a></div>
                             </span>
 							</li>
+                        @endif
+                        @endauth
                         @auth
                             <li id="user">
                                 <figure><img src="http://via.placeholder.com/150x150.jpg" alt=""></figure>

@@ -12,7 +12,7 @@
 */
 Auth::routes();
 
-Route::get('/','OnlineController@index')->name('inicio');
+Route::get('/',['middleware'=>'auth.doctor','uses'=>'OnlineController@index'])->name('inicio');
 Route::get('login',[ 'as' => 'login','uses'=>'Online\LoginController@index']);
 Route::post('login',['as' => 'login','uses'=>'Auth\LoginController@validateLogin']);
 Route::post('logout',[ 'as' => 'logout','uses'=>'Online\LoginController@logout']);
@@ -25,19 +25,26 @@ Route::group(['prefix' => 'register'], function(){
 });
 
 
-Route::get('/list','OnlineController@busqueda')->name('buscar');
+Route::get('/list',['middleware'=>'auth.doctor','uses'=>'OnlineController@busqueda'])->name('buscar');
 
 Route::group(['middleware' => 'auth'],function(){
     Route::group(['prefix' => 'profile'],function(){
         Route::get('/',['as' =>'profile','uses'=>'Online\ProfileController@index']);
+
         Route::post('/{id}',['as' =>'paciente.edit','uses'=>'Online\PacienteController@edit']);
+
+        Route::get('/horarios',['as' =>'doctor.hor','uses'=>'Online\DoctorController@hor']);
+        Route::get('/citas',['as' =>'doctor.cit','uses'=>'Online\DoctorController@cit']);
+        Route::get('/config',['as' =>'doctor.conf','uses'=>'Online\DoctorController@conf']);
         Route::post('/doctor/{id}',['as' =>'doctor.edit','uses'=>'Online\DoctorController@edit']);
-        Route::post('/horas/{id}',['as' =>'horarios','uses'=>'Online\ProfileController@guardar_horarios']);
+        Route::post('/horas/{id}',['as' =>'horarios','uses'=>'Online\DoctorController@guardar_horarios']);
+        Route::get('/cita/{id}',['as' =>'cita','uses'=>'Online\CitaController@order_asc']);
+
         Route::post('/image/save-image',['as'=>'profile.image.store','uses'=>'Online\ProfileController@store_image']);
         Route::post('/image/delete-image',['as'=>'profile.image.delete','uses'=>'Online\ProfileController@delete_image']);
     });
-    Route::get('/detalle/{id}','OnlineController@det_hora')->name('detalle');
-    Route::post('/reservar/{id}','Online\CitaController@reservar')->name('reservar');
+    Route::get('/detalle/{id}',['middleware'=>'auth.doctor','uses'=>'OnlineController@det_hora'])->name('detalle');
+    Route::post('/reservar/{id}',['middleware'=>'auth.doctor','uses'=>'Online\CitaController@reservar'])->name('reservar');
     Route::get('/eliminar/{id}','Online\DoctorController@dele_hora')->name('dispo.e');
 
 

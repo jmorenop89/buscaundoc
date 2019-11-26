@@ -7,6 +7,7 @@ use App\Disponibilidad;
 use App\Doctor;
 use App\Especialidad;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OnlineController extends Controller
 {
@@ -22,23 +23,13 @@ class OnlineController extends Controller
     public function regdoc(){
         $espe = Especialidad::all();
         $ciud = Ciudad::all();
-        #dd($espe);
+
     	return view('online.registrar.doctor', compact('espe','ciud'));
-    }
-
-    public function paciente(){
-    	return view('online.log-pac.index');
-    }
-
-    public function doctor(){
-
-    	return view('online.log-doc.index');
     }
 
     public function busqueda(Request $request){
         $data = $request->all();
-        //dd($request);
-        //paginacion
+
         $pager = @$request['pager']?$request['pager']:5;
 
         $es = $request['specialty']?$request['specialty']:null;
@@ -66,8 +57,11 @@ class OnlineController extends Controller
     public function det_hora($id){
 
         $doc = Doctor::find($id);
+        // dd($doc);
         $dis = Disponibilidad::where('doctor_id','=',$doc->id)->get();
-        $fil = $dis->unique('fecha')->values();
+        // dd($dis);
+        $fil = $dis->unique('fecha');
+        // dd($fil);
         $horas = array();
             //dd($fil);
             for ($i=0; $i < $fil->count() ; $i++) {
@@ -81,7 +75,7 @@ class OnlineController extends Controller
                 $fil[$i]->hora = $horas;
                 $horas = array();
             }
-        //dd($fil);
+        // dd($dis->count());
     	return view('online.reservar_cita.detalle',compact('doc','dis'));
     }
 
